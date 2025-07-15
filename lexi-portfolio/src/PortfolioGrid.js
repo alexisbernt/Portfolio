@@ -1,6 +1,7 @@
 // PortfolioGrid.js
 import React from 'react';
-import './PortfolioGrid.css';
+import './css/PortfolioGrid.css';
+
 
 function PortfolioGrid() {
   return (
