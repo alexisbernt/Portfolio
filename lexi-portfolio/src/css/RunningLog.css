@@ -1,0 +1,28 @@
+/* // RunningLog.css */
+.running-log {
+  padding: 2rem;
+  text-align: center;
+}
+
+.log-image {
+  margin: 1rem auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.checkbox-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.checkbox-item {
+  font-size: 1.2rem;
+}
+
+.checkbox-item input {
+  margin-right: 0.5rem;
+}
