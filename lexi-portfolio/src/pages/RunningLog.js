@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './RunningLog.css';
+import '../css/RunningLog.css';
 
 function RunningLog() {
   const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];

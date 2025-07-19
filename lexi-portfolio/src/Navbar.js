@@ -1,17 +1,17 @@
-// Navbar.js
 import React from 'react';
 import './css/Navbar.css';
-
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-brand">Lexi's Portfolio</div>
       <ul className="nav-links">
-        <li><a href="/about">About</a></li>
-        <li><a href="https://www.theratext.site/">TheraText</a></li>
-        <li><a href="/cyberclub">Lexi's Cyber Club</a></li>
-        <li><a href="/more">More</a></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/theratext">TheraText</Link></li>
+        <li><Link to="/cyberclub">Lexi's Cyber Club</Link></li>
+        <li><Link to="/more">More</Link></li>
+        <li><Link to="/running-log">Running Log</Link></li>
       </ul>
     </nav>
   );
