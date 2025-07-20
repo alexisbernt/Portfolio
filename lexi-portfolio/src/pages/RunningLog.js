@@ -2,7 +2,11 @@ import React, { useState, useEffect } from 'react';
 import '../css/RunningLog.css';
 
 function RunningLog() {
-  const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun',
+    'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun',
+    'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun',
+    'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun',
+  ];
   const [checked, setChecked] = useState(() => {
     const saved = localStorage.getItem('running-log');
     return saved ? JSON.parse(saved) : Array(7).fill(false);
@@ -20,11 +24,12 @@ function RunningLog() {
 
   return (
     <div className="running-log">
-      <h2>Lexi's Running Log</h2>
+      <h2>Lexi's Running Log. August 2025.</h2>
       <img 
-        src="https://via.placeholder.com/300x200?text=Running+Log" 
+        src="https://hips.hearstapps.com/hmg-prod/images/rw-4-wk-half-marathon-plan-67cb0a36c30e6.png" 
         alt="Running Log" 
         className="log-image" 
+        width="500px"
       />
       <div className="checkbox-grid">
         {days.map((day, index) => (
