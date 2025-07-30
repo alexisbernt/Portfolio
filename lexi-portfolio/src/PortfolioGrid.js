@@ -1,14 +1,18 @@
 // PortfolioGrid.js
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './css/PortfolioGrid.css'
 
 function PortfolioGrid() {
   return (
-    <div className="grid-container">
-      <Link to="/about" className="grid-box">About</Link>
-      <Link to="/theratext" className="grid-box">TheraText</Link>
-      <Link to="/cyberclub" className="grid-box">Lexi's Cyber Club</Link>
-      <Link to="/more" className="grid-box">More</Link>
+    <div className="portfolio-container">
+      <h2 className="portfolio-heading">Check Out The Work!</h2>
+      <div className="portfolio-grid">
+        <Link to="/about" className="portfolio-box">About</Link>
+        <Link to="/theratext" className="portfolio-box">TheraText</Link>
+        <Link to="/cyberclub" className="portfolio-box">Lexi's Cyber Club</Link>
+        <Link to="/more" className="portfolio-box">More</Link>
+      </div>
     </div>
   );
 }

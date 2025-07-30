@@ -1,24 +1,44 @@
-/* // PortfolioGrid.css */
-.grid-container {
+/* PortfolioGrid.css */
+
+.portfolio-container {
+  min-height: 100vh;
+  padding: 60px 20px;
+  background-color: #ffffff;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.portfolio-heading {
+  font-size: 36px;
+  color: #1e3a8a; /* A deep blue tone */
+  margin-bottom: 40px;
+}
+
+.portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  padding: 2rem;
-  max-width: 900px;
-  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.grid-box {
-  background-color: white;
-  padding: 3rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  font-size: 1.2rem;
-  font-weight: bold;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.portfolio-box {
+  background-color: #e0f2ff; /* Light blue */
+  color: #0f172a; /* Near black */
+  padding: 30px 20px;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.grid-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+.portfolio-box:hover {
+  background-color: #bae6fd; /* Slightly darker blue on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
 }
