@@ -14,6 +14,7 @@ import TheraText from './pages/TheraText';
 import CyberClub from './pages/CyberClub';
 import More from './pages/More';
 import RunningLog from './pages/RunningLog';
+import LearningLog from './pages/LearningLog';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/cyberclub" element={<CyberClub />} />
           <Route path="/more" element={<More />} />
           <Route path="/running-log" element={<RunningLog />} />
+          <Route path="/learninglog" element={<LearningLog />} />
         </Routes>
       </div>
     </Router>

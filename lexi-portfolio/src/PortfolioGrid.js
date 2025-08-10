@@ -12,6 +12,7 @@ function PortfolioGrid() {
         <Link to="/theratext" className="portfolio-box">TheraText</Link>
         <Link to="/cyberclub" className="portfolio-box">Lexi's Cyber Club</Link>
         <Link to="/more" className="portfolio-box">More</Link>
+        <Link to="/learninglog" className="portfolio-box">Learning Log</Link>
       </div>
     </div>
   );

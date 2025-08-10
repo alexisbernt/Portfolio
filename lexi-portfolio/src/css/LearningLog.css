@@ -1,0 +1,45 @@
+.learning-log-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+.learning-log-card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.learning-log-card-content {
+  padding: 1.5rem;
+}
+
+.learning-log-input,
+.learning-log-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+.learning-log-input:focus,
+.learning-log-textarea:focus {
+  border-color: #3b82f6;
+  outline: none;
+}
+
+.learning-log-button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #3b82f6;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.learning-log-button:hover {
+  background: #2563eb;
+}
