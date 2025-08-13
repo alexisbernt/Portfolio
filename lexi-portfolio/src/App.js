@@ -20,16 +20,18 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<PortfolioGrid />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/theratext" element={<TheraText />} />
-          <Route path="/cyberclub" element={<CyberClub />} />
-          <Route path="/more" element={<More />} />
-          <Route path="/running-log" element={<RunningLog />} />
-          <Route path="/learninglog" element={<LearningLog />} />
-        </Routes>
+        <div className="main-container">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<PortfolioGrid />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/theratext" element={<TheraText />} />
+            <Route path="/cyberclub" element={<CyberClub />} />
+            <Route path="/more" element={<More />} />
+            <Route path="/running-log" element={<RunningLog />} />
+            <Route path="/learninglog" element={<LearningLog />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   );

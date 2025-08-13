@@ -8,10 +8,27 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Modern framed header style */
 .portfolio-heading {
+  display: inline-block;
+  padding: 12px 24px;
   font-size: 36px;
-  color: #1e3a8a; /* A deep blue tone */
+  color: #1e3a8a; /* Deep blue */
+  border-radius: 12px;
+  background: white;
+  border: 2px solid #d1d5db; /* Light gray border */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   margin-bottom: 40px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+/* Optional hover for interactivity */
+.portfolio-heading:hover {
+  border-color: #1e3a8a;
+  box-shadow: 0 6px 16px rgba(30, 58, 138, 0.15);
+  transform: translateY(-2px);
 }
 
 .portfolio-grid {
