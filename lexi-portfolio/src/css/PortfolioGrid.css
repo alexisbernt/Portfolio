@@ -64,8 +64,51 @@
   text-decoration: none;
 }
 
-.portfolio-heading-link:hover .portfolio-heading {
+/* .portfolio-heading-link:hover .portfolio-heading {
   border-color: #1e3a8a;
   box-shadow: 0 6px 16px rgba(30, 58, 138, 0.15);
   transform: translateY(-2px);
+} */
+/* Banner wrapper for positioning heading on top */
+.portfolio-banner-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+/* Banner image */
+.portfolio-banner {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+/* Heading overlay */
+.portfolio-heading-link {
+  text-decoration: none;
+}
+
+.portfolio-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.85);
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: 2px solid #d1d5db;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  font-size: 28px;
+  color: #1e3a8a;
+  font-weight: bold;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.portfolio-heading:hover {
+  border-color: #1e3a8a;
+  box-shadow: 0 6px 16px rgba(30, 58, 138, 0.15);
+  transform: translate(-50%, -50%) scale(1.03);
 }
