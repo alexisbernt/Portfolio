@@ -5,7 +5,13 @@ import { Link } from 'react-router-dom';
 function Navbar() {
   return (
     <nav className="navbar">
-      <Link to="/" className="nav-brand">Lexi's Portfolio</Link>
+      <Link to="/" className="nav-brand">
+        <img 
+          src="/lexi-sketch.png"  
+          alt="Lexi's Portfolio Logo"
+          className="nav-logo"
+        />
+      </Link>
       <ul className="nav-links">
         <li><Link to="/about">🥳About</Link></li>
         <li><Link to="/theratext">📝TheraText</Link></li>

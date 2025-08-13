@@ -32,3 +32,9 @@
 .nav-links li a:hover {
   color: #007acc;
 }
+
+.nav-logo {
+  height: 120px;
+  width: auto;
+  display: block;
+}
