@@ -59,3 +59,13 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   transform: translateY(-3px);
 }
+
+.portfolio-heading-link {
+  text-decoration: none;
+}
+
+.portfolio-heading-link:hover .portfolio-heading {
+  border-color: #1e3a8a;
+  box-shadow: 0 6px 16px rgba(30, 58, 138, 0.15);
+  transform: translateY(-2px);
+}

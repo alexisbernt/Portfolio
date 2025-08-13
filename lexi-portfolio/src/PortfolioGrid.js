@@ -6,7 +6,12 @@ import './css/PortfolioGrid.css'
 function PortfolioGrid() {
   return (
     <div className="portfolio-container">
-      <h2 className="portfolio-heading">A basic website that needs a good name 101:</h2>
+      <Link to="/funding" className="portfolio-heading-link">
+        <h2 className="portfolio-heading">
+          A basic website that needs a good name 101:
+        </h2>
+      </Link>
+
       <div className="portfolio-grid">
         <Link to="/about" className="portfolio-box">About</Link>
         <Link to="/theratext" className="portfolio-box">TheraText</Link>
@@ -19,3 +24,4 @@ function PortfolioGrid() {
 }
 
 export default PortfolioGrid;
+
