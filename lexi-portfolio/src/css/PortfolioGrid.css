@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap');
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
 /* General container */
 .portfolio-container {
   min-height: 100vh;
   background-color: #fff;
-  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Playfair Display', serif;
   padding-bottom: 60px;
 }
 

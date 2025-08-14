@@ -13,11 +13,11 @@ function Navbar() {
         />
       </Link>
       <ul className="nav-links">
-        <li><Link to="/about">🥳About</Link></li>
-        <li><Link to="/theratext">📝TheraText</Link></li>
-        <li><Link to="/cyberclub">🧠Lexi's Cyber Club</Link></li>
-        <li><Link to="/more">✨More</Link></li>
-        <li><Link to="/running-log">🏃Running Log</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/theratext">TheraText</Link></li>
+        <li><Link to="/cyberclub">Lexi's Cyber Club</Link></li>
+        <li><Link to="/more">More</Link></li>
+        <li><Link to="/running-log">Running Log   ✨</Link></li>
       </ul>
     </nav>
   );

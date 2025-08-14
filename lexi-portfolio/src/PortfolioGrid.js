@@ -23,7 +23,7 @@ function PortfolioGrid() {
         />
         <Link to="/funding" className="portfolio-heading-link">
           <h1 className="portfolio-heading">
-            A basic website that needs a good name 101
+            Kind In Business
           </h1>
         </Link>
       </div>
