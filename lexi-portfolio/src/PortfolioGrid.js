@@ -9,7 +9,7 @@ function PortfolioGrid() {
       {/* Banner with overlay heading */}
       <div className="portfolio-banner-wrapper">
         <img 
-          src="/bannerA.png" 
+          src="/bannerB.png" 
           alt="Portfolio Banner" 
           className="portfolio-banner"
         />
