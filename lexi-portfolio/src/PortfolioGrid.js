@@ -4,9 +4,17 @@ import { Link } from 'react-router-dom';
 import './css/PortfolioGrid.css'
 
 function PortfolioGrid() {
+  const posts = [
+    { title: "About", desc: "A glimpse into my journey and passions.", link: "/about" },
+    { title: "TheraText", desc: "An AI-powered writing companion for mental clarity.", link: "/theratext" },
+    { title: "Lexi's Cyber Club", desc: "A hub for tech lovers and security enthusiasts.", link: "/cyberclub" },
+    { title: "More", desc: "Other cool things I’m working on right now.", link: "/more" },
+    { title: "Learning Log", desc: "Tracking my progress & growth along the way.", link: "/learninglog" }
+  ];
+
   return (
     <div className="portfolio-container">
-      {/* Banner with overlay heading */}
+      {/* Blog-style Banner */}
       <div className="portfolio-banner-wrapper">
         <img 
           src="/bannerB.png" 
@@ -14,18 +22,21 @@ function PortfolioGrid() {
           className="portfolio-banner"
         />
         <Link to="/funding" className="portfolio-heading-link">
-          <h2 className="portfolio-heading">
-            A basic website that needs a good name 101:
-          </h2>
+          <h1 className="portfolio-heading">
+            A basic website that needs a good name 101
+          </h1>
         </Link>
       </div>
 
-      <div className="portfolio-grid">
-        <Link to="/about" className="portfolio-box">About</Link>
-        <Link to="/theratext" className="portfolio-box">TheraText</Link>
-        <Link to="/cyberclub" className="portfolio-box">Lexi's Cyber Club</Link>
-        <Link to="/more" className="portfolio-box">More</Link>
-        <Link to="/learninglog" className="portfolio-box">Learning Log</Link>
+      {/* Blog Post Style Cards */}
+      <div className="portfolio-grid blog-style">
+        {posts.map((post, index) => (
+          <div key={index} className="portfolio-post-card">
+            <h2>{post.title}</h2>
+            <p>{post.desc}</p>
+            <Link to={post.link} className="read-more">Read More →</Link>
+          </div>
+        ))}
       </div>
     </div>
   );
