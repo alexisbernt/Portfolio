@@ -13,20 +13,31 @@ function PortfolioGrid() {
   ];
 
   return (
-    <div className="portfolio-container">
-      {/* Blog-style Banner */}
-      <div className="portfolio-banner-wrapper">
-        <img 
-          src="/bannerB.png" 
-          alt="Portfolio Banner" 
+    <div className="portfolio-container"> 
+    {/* Blog-style Video Banner */}
+    <div className="portfolio-banner-wrapper">
+      <Link to="/funding" className="portfolio-banner-link">
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline
           className="portfolio-banner"
-        />
-        <Link to="/funding" className="portfolio-heading-link">
-          <h1 className="portfolio-heading">
-            Kind In Business
-          </h1>
-        </Link>
-      </div>
+        >
+          <source src="/banner.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </Link>
+    </div>
+
+      {/* Intro Area */}
+      {/* Hey! What's UP? 
+... Aside from the headache that comes with funding and living the life that you want for you and your family ...
+        NOT MUCH
+The constant race of working to find a job that pays better, allows for a better work-life balance, let's you work from home, is exhausting.
+Kind In Business supports you and your needs when it comes to navigating your job in business.  */}
+      {/* "Hi , I'm Lexi and this is my real take on starting a job in corporate America in 2025.
+This site is full of incredible resources and ideas that can help you as you navigate your career path." */}
 
       {/* Blog Post Style Cards */}
       <div className="portfolio-grid blog-style">
