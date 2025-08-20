@@ -13,8 +13,8 @@ function PortfolioGrid() {
   ];
 
   return (
-    <div className="portfolio-container"> 
-    {/* Blog-style Video Banner */}
+    <div>
+    {/* Full-width Banner */}
     <div className="portfolio-banner-wrapper">
       <Link to="/funding" className="portfolio-banner-link">
         <video 
@@ -29,6 +29,11 @@ function PortfolioGrid() {
         </video>
       </Link>
     </div>
+
+    {/* Framed Main Content */}
+    {/* <div className="main-container">
+      <PortfolioGrid />
+    </div> */}
 
       {/* Intro Area */}
       {/* Hey! What's UP? 

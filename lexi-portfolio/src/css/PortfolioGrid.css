@@ -12,21 +12,24 @@ h1, h2, h3 {
   padding-bottom: 60px;
 }
 
-/* Banner */
+/* Banner wrapper - full bleed (escapes container) */
 .portfolio-banner-wrapper {
   position: relative;
-  width: 100%;
+  width: 100vw;       /* Full viewport width */
+  height: 100vh;      /* Full viewport height */
+  left: 50%;          /* Align trick */
+  right: 50%;
+  margin-left: -50vw; /* Force banner to span edge-to-edge */
+  margin-right: -50vw;
+  overflow: hidden;
 }
 
+/* Banner video */
 .portfolio-banner {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
   object-fit: cover;
-}
-
-.portfolio-heading-link {
-  text-decoration: none;
+  display: block;
 }
 
 .portfolio-heading {
