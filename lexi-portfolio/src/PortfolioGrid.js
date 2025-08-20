@@ -47,33 +47,14 @@ function ModernLandingPage() {
     padding: 0
   };
 
-  const heroStyle = {
-    height: '70vh',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    position: 'relative',
-    backgroundColor: 'black',
-    width: '100vw',
-    overflow: 'hidden'
-  };
-
-  const videoStyle = {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    objectFit: 'cover',
-    zIndex: -1
-  };
-
-  const heroTextStyle = {
-    color: 'white',
+  const headerStyle = {
+    backgroundColor: '#1e3a8a',
+    color: '#ffffff',
+    padding: '100px 20px',
+    textAlign: 'center',
     fontSize: '2.5rem',
     fontWeight: '700',
-    textAlign: 'center',
-    zIndex: 1
+    letterSpacing: '1px'
   };
 
   const gridStyle = {
@@ -115,12 +96,7 @@ function ModernLandingPage() {
 
   return (
     <div style={containerStyle}>
-      <div style={heroStyle}>
-        <video style={videoStyle} autoPlay loop muted playsInline>
-          <source src='/banner.mp4' type='video/mp4' />
-        </video>
-        <div style={heroTextStyle}>Welcome to My Portfolio</div>
-      </div>
+      <header style={headerStyle}>Spreading the word of tech.</header>
       <div style={gridStyle}>
         {posts.map((post, index) => (
           <motion.div
@@ -149,7 +125,6 @@ function ModernLandingPage() {
 }
 
 export default ModernLandingPage;
-
 
 
     {/* Framed Main Content */}
