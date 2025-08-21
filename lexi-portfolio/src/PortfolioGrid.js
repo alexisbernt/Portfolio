@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Float } from '@react-three/drei';
 import { motion } from 'framer-motion';
+import Footer from './Footer';
 
 // 3D Shape Renderer
 const Shape = ({ type }) => {
@@ -178,6 +179,8 @@ function ModernLandingPage() {
           </motion.div>
         ))}
       </div>
+      {/* Footer at the bottom */}
+      <Footer />
     </div>
   );
 }
