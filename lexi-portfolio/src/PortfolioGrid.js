@@ -93,6 +93,18 @@ function ModernLandingPage() {
   // ===== Return =====
   return (
     <div style={container}>
+      {/* Section Header */}
+      <h2 style={{
+        fontSize: '1.8rem',
+        fontWeight: '700',
+        marginBottom: '1.5rem',
+        color: '#1e293b', // slate-800 kind of vibe
+        borderBottom: '2px solid #e5e7eb', // subtle divider
+        paddingBottom: '0.5rem'
+      }}>
+        Most Recent Developments
+      </h2>
+
       {/* HEADER SECTION */}
       <div style={headerGrid}>
         
@@ -126,6 +138,18 @@ function ModernLandingPage() {
           </Link>
         </div>
       </div>
+
+      {/* Section Header */}
+      <h2 style={{
+        fontSize: '1.8rem',
+        fontWeight: '700',
+        marginBottom: '1.5rem',
+        color: '#1e293b', // slate-800 kind of vibe
+        borderBottom: '2px solid #e5e7eb', // subtle divider
+        paddingBottom: '0.5rem'
+      }}>
+        My Business Tools
+      </h2>
 
       {/* 3D CARDS SECTION */}
       <div style={cardGrid}>
@@ -174,4 +198,6 @@ The constant race of working to find a job that pays better, allows for a better
 Kind In Business supports you and your needs when it comes to navigating your job in business.  */}
       {/* "Hi , I'm Lexi and this is my real take on starting a job in corporate America in 2025.
 This site is full of incredible resources and ideas that can help you as you navigate your career path." */}
+
+// The word of tech
 
