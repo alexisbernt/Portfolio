@@ -19,8 +19,8 @@ const Shape = ({ type }) => {
 function ModernLandingPage() {
   // Split posts into two groups
   const headerPosts = [
-    { title: 'Ways to Encourage Creativity in Kids This Summer', desc: 'Fun, educational, and engaging ways to spark imagination.', link: '/creativity-kids', img: '/images/creativity.jpg' },
-    { title: 'Dorm Room Must Haves for New College Students', desc: 'Essential items to make your dorm feel like home.', link: '/dorm-room', img: '/images/dorm-room.jpg' }
+    { title: 'Ways to Encourage Creativity in Kids This Summer', desc: 'Fun, educational, and engaging ways to spark imagination.', link: '/creativity-kids', img: 'creativity.png' },
+    { title: 'Dorm Room Must Haves for New College Students', desc: 'Essential items to make your dorm feel like home.', link: '/dorm-room', img: '/public/dorm-room.png' }
   ];
 
   const cardPosts = [
@@ -112,7 +112,7 @@ function ModernLandingPage() {
         {/* Right: Bio card */}
         <div style={profileCard}>
           <img 
-            src="/images/profile.jpg" 
+            src="profile.png" 
             alt="Profile" 
             style={profileImg}
           />
