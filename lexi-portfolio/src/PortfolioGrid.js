@@ -4,34 +4,26 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Float } from '@react-three/drei';
 import { motion } from 'framer-motion';
 
+// 3D Shape Renderer
 const Shape = ({ type }) => {
   switch (type) {
-    case 'box': return <mesh>
-        <boxGeometry args={[2, 2, 2]} />
-        <meshStandardMaterial color='#2563eb' />
-      </mesh>;
-    case 'sphere': return <mesh>
-        <sphereGeometry args={[1.2, 32, 32]} />
-        <meshStandardMaterial color='#2563eb' />
-      </mesh>;
-    case 'torus': return <mesh>
-        <torusGeometry args={[1, 0.4, 16, 100]} />
-        <meshStandardMaterial color='#2563eb' />
-      </mesh>;
-    case 'cone': return <mesh>
-        <coneGeometry args={[1, 2, 32]} />
-        <meshStandardMaterial color='#2563eb' />
-      </mesh>;
-    case 'icosahedron': return <mesh>
-        <icosahedronGeometry args={[1.2, 0]} />
-        <meshStandardMaterial color='#2563eb' />
-      </mesh>;
+    case 'box': return <mesh><boxGeometry args={[2, 2, 2]} /><meshStandardMaterial color="#2563eb" /></mesh>;
+    case 'sphere': return <mesh><sphereGeometry args={[1.2, 32, 32]} /><meshStandardMaterial color="#2563eb" /></mesh>;
+    case 'torus': return <mesh><torusGeometry args={[1, 0.4, 16, 100]} /><meshStandardMaterial color="#2563eb" /></mesh>;
+    case 'cone': return <mesh><coneGeometry args={[1, 2, 32]} /><meshStandardMaterial color="#2563eb" /></mesh>;
+    case 'icosahedron': return <mesh><icosahedronGeometry args={[1.2, 0]} /><meshStandardMaterial color="#2563eb" /></mesh>;
     default: return null;
   }
 };
 
 function ModernLandingPage() {
-  const posts = [
+  // Split posts into two groups
+  const headerPosts = [
+    { title: 'Ways to Encourage Creativity in Kids This Summer', desc: 'Fun, educational, and engaging ways to spark imagination.', link: '/creativity-kids', img: '/images/creativity.jpg' },
+    { title: 'Dorm Room Must Haves for New College Students', desc: 'Essential items to make your dorm feel like home.', link: '/dorm-room', img: '/images/dorm-room.jpg' }
+  ];
+
+  const cardPosts = [
     { title: 'About', desc: 'A glimpse into my journey and passions.', link: '/about', shape: 'box' },
     { title: 'TheraText', desc: 'An AI-powered writing companion for mental clarity.', link: '/theratext', shape: 'sphere' },
     { title: "Lexi's Cyber Club", desc: 'A hub for tech lovers and security enthusiasts.', link: '/cyberclub', shape: 'torus' },
@@ -39,76 +31,116 @@ function ModernLandingPage() {
     { title: 'Learning Log', desc: 'Tracking my progress & growth along the way.', link: '/learninglog', shape: 'icosahedron' }
   ];
 
-  const containerStyle = {
-    minHeight: '100vh',
-    fontFamily: 'Playfair Display, serif',
-    backgroundColor: '#fefefe',
-    margin: 0,
-    padding: 0
+  // ===== Styles =====
+  const container = {
+    maxWidth: '1200px',
+    margin: '0 auto',
+    padding: '40px 20px',
+    fontFamily: 'Georgia, serif',
   };
 
-  const headerStyle = {
-    backgroundColor: '#1e3a8a',
-    color: '#ffffff',
-    padding: '100px 20px',
-    textAlign: 'center',
-    fontSize: '2.5rem',
-    fontWeight: '700',
-    letterSpacing: '1px'
-  };
-
-  const gridStyle = {
+  const headerGrid = {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-    gap: '32px',
-    maxWidth: '1100px',
-    margin: '50px auto',
-    padding: '0 20px'
+    gridTemplateColumns: '2fr 1fr',
+    gap: '40px',
+    alignItems: 'flex-start',
+    marginBottom: '60px'
   };
 
-  const cardStyle = {
-    backgroundColor: 'rgba(255,255,255,0.9)',
-    borderRadius: '16px',
-    padding: '24px',
-    boxShadow: '0 6px 16px rgba(0,0,0,0.08)',
+  const cardGrid = {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+    gap: '20px'
+  };
+
+  const card = {
+    backgroundColor: '#fff',
+    borderRadius: '12px',
+    overflow: 'hidden',
+    boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+    textDecoration: 'none',
+    color: 'inherit',
     display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    cursor: 'pointer',
-    transition: 'transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease',
-    textDecoration: 'none',
-    color: '#1e3a8a',
-    border: '2px solid rgba(0,0,0,0.15)'
+    flexDirection: 'column'
   };
 
-  const cardHoverStyle = {
-    transform: 'translateY(-6px)',
-    boxShadow: '0 12px 24px rgba(0,0,0,0.12)',
-    border: '2px solid rgba(0,0,0,0.35)'
+  const imgStyle = {
+    width: '100%',
+    height: '160px',
+    objectFit: 'cover'
   };
 
-  const linkStyle = {
-    marginTop: '16px',
-    color: '#2563eb',
-    textDecoration: 'none',
-    fontWeight: 600
+  const cardContent = {
+    padding: '16px'
   };
 
+  const profileCard = {
+    textAlign: 'center',
+    backgroundColor: '#fff',
+    borderRadius: '12px',
+    padding: '24px',
+    boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+  };
+
+  const profileImg = {
+    width: '140px',
+    height: '140px',
+    borderRadius: '50%',
+    border: '4px solid #3b82f6',
+    objectFit: 'cover'
+  };
+
+  // ===== Return =====
   return (
-    <div style={containerStyle}>
-      <header style={headerStyle}>Spreading the word of tech.</header>
-      <div style={gridStyle}>
-        {posts.map((post, index) => (
+    <div style={container}>
+      {/* HEADER SECTION */}
+      <div style={headerGrid}>
+        
+        {/* Left: Image cards */}
+        <div style={cardGrid}>
+          {headerPosts.map((post, i) => (
+            <Link to={post.link} key={i} style={card}>
+              <img src={post.img} alt={post.title} style={imgStyle} />
+              <div style={cardContent}>
+                <h3 style={{ fontSize: '1.1rem', fontWeight: 'bold', marginBottom: '8px' }}>{post.title}</h3>
+                <p style={{ fontSize: '0.9rem', color: '#555' }}>{post.desc}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Right: Bio card */}
+        <div style={profileCard}>
+          <img 
+            src="/images/profile.jpg" 
+            alt="Profile" 
+            style={profileImg}
+          />
+          <h2 style={{ fontSize: '1.8rem', color: '#1e40af', marginTop: '16px' }}>Hi!</h2>
+          <p style={{ fontSize: '0.95rem', color: '#333', marginTop: '12px', lineHeight: '1.6' }}>
+            I'm [Your Name], a passionate [your role or tagline].  
+            I love building projects, sharing tech knowledge, and helping others grow.  
+          </p>
+          <Link to="/about" style={{ color: '#2563eb', fontWeight: 'bold', marginTop: '12px', display: 'inline-block' }}>
+            Read more →
+          </Link>
+        </div>
+      </div>
+
+      {/* 3D CARDS SECTION */}
+      <div style={cardGrid}>
+        {cardPosts.map((post, index) => (
           <motion.div
             key={index}
             whileHover={{ scale: 1.05 }}
-            style={cardStyle}
-            onMouseEnter={e => Object.assign(e.currentTarget.style, cardHoverStyle)}
-            onMouseLeave={e => Object.assign(e.currentTarget.style, { transform: 'translateY(0)', boxShadow: '0 6px 16px rgba(0,0,0,0.08)', border: '2px solid rgba(0,0,0,0.15)' })}
+            style={{
+              ...card,
+              padding: '16px'
+            }}
           >
-            <h2>{post.title}</h2>
-            <p>{post.desc}</p>
-            <Canvas style={{ height: '180px' }}>
+            <h2 style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#1e3a8a' }}>{post.title}</h2>
+            <p style={{ fontSize: '0.9rem', color: '#444', marginBottom: '12px' }}>{post.desc}</p>
+            <Canvas style={{ height: '180px', marginBottom: '12px' }}>
               <ambientLight intensity={0.5} />
               <directionalLight position={[0, 2, 5]} />
               <Float floatIntensity={0.4} rotationIntensity={0.2}>
@@ -116,7 +148,9 @@ function ModernLandingPage() {
               </Float>
               <OrbitControls enableZoom={false} enablePan={false} autoRotate />
             </Canvas>
-            <Link to={post.link} style={linkStyle}>Read More →</Link>
+            <Link to={post.link} style={{ color: '#2563eb', fontWeight: 'bold' }}>
+              Read More →
+            </Link>
           </motion.div>
         ))}
       </div>
