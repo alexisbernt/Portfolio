@@ -20,7 +20,7 @@ const Shape = ({ type }) => {
 function ModernLandingPage() {
   // Split posts into two groups
   const headerPosts = [
-    { title: 'Ways to Encourage Creativity in Kids This Summer', desc: 'Fun, educational, and engaging ways to spark imagination.', link: '/creativity-kids', img: 'creativity.png' },
+    { title: "Hey! What's UP? Start here.", desc: "Hi , I'm Lexi and this is my real take on starting a job in corporate America in 2025.", link: '/about', img: 'sky.png' },
     { title: 'Artificial Intelligence', desc: 'Essential items to make your dorm feel like home.', link: '/dorm-room', img: '/public/dorm-room.png' }
   ];
 
@@ -194,7 +194,7 @@ export default ModernLandingPage;
     </div> */}
 
       {/* Intro Area */}
-      {/* Hey! What's UP? 
+      {/* Hey! What's UP? Start here.
 ... Aside from the headache that comes with funding and living the life that you want for you and your family ...
         NOT MUCH
 The constant race of working to find a job that pays better, allows for a better work-life balance, let's you work from home, is exhausting.
