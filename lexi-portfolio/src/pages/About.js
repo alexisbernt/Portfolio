@@ -3,10 +3,10 @@ import "../css/About.css";
 
 const timelineEvents = [
   {
-    date: "April 10, 2021",
-    title: "Senior Prom",
-    img: "https://source.unsplash.com/400x400/?prom,couple",
-    description: "A night to remember at senior prom."
+    date: "Est. 2025",
+    title: "About",
+    img: 'business-image.png',
+    description: "Hi , I'm Lexi and this is my real take on starting a job in corporate America in 2025."
   },
   {
     date: "May 23, 2021",
