@@ -9,10 +9,10 @@ const timelineEvents = [
     description: "Hi , I'm Lexi and this is my real take on starting a job in corporate America in 2025."
   },
   {
-    date: "May 23, 2021",
-    title: "High School Graduation",
+    date: "A Ongoing Compilation of Resources",
+    title: "The World of Tech",
     img: "https://source.unsplash.com/400x400/?graduation,students",
-    description: "Celebrating high school graduation with family and friends."
+    description: "This site is full of incredible resources and ideas that can help you as you navigate your career path."
   },
   {
     date: "May 12, 2022",
