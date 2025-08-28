@@ -11,14 +11,14 @@ const timelineEvents = [
   {
     date: "A Ongoing Compilation of Resources",
     title: "The World of Tech",
-    img: "https://source.unsplash.com/400x400/?graduation,students",
+    img: "VS_Git_Alexis.png",
     description: "This site is full of incredible resources and ideas that can help you as you navigate your career path."
   },
   {
     date: "May 12, 2022",
-    title: "Basic Training Graduation",
-    img: "https://source.unsplash.com/400x400/?army,training",
-    description: "Graduated from Army Basic Training at Fort Sill."
+    title: "A Goal To Help Grow",
+    img: "iPhone_Alexis.png",
+    description: "The goal is to help oneanother grow in technology, business, and experiences."
   }
 ];
 

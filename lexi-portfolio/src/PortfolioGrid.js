@@ -131,8 +131,8 @@ function ModernLandingPage() {
           />
           <h2 style={{ fontSize: '1.8rem', color: '#1e40af', marginTop: '16px' }}>Hi!</h2>
           <p style={{ fontSize: '0.95rem', color: '#333', marginTop: '12px', lineHeight: '1.6' }}>
-            I'm [Your Name], a passionate [your role or tagline].  
-            I love building projects, sharing tech knowledge, and helping others grow.  
+            I'm Lexi, and I like to learn and make things.  
+            If you like to learn and make things too you should follow along. 
           </p>
           <Link to="/about" style={{ color: '#2563eb', fontWeight: 'bold', marginTop: '12px', display: 'inline-block' }}>
             Read more →
