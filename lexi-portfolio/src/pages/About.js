@@ -26,9 +26,15 @@ export default function About() {
   return (
     <div className="about-container">
       <header className="about-header">
-        <h1>Hey! What's Up?</h1>
-        <p> ...Probably the sky or the ceiling... </p><br></br>
-        <p> If you like business or bad jokes (or even better business AND bad jokes) you're at the right place.</p>
+        <div className="framed-text">
+          <h1>Hey! What's Up?</h1>
+          <p>...Probably the sky or the ceiling...</p>
+          <br />
+          <p>
+            If you like business or bad jokes (or even better business AND bad jokes) 
+            you're at the right place.
+          </p>
+        </div>
       </header>
 
       <div className="timeline">
