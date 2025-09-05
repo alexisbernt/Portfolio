@@ -34,6 +34,9 @@ export default function About() {
             If you like business or bad jokes (or even better business AND bad jokes) 
             you're at the right place.
           </p>
+          <p>
+            🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️
+          </p>
         </div>
       </header>
 
