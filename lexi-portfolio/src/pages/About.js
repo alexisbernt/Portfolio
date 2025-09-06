@@ -35,7 +35,7 @@ export default function About() {
             you're at the right place.
           </p>
           <p>
-            🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️
+            Read more for more info!
           </p>
         </div>
       </header>

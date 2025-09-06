@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { FaGithub, FaInstagram, FaTiktok, FaPinterest, FaYoutube, FaEnvelope } from "react-icons/fa";
 import './css/Navbar.css';
+import { useState } from 'react';
 
 function ThreeMenu() {
   return (
@@ -35,15 +35,6 @@ function Navbar() {
         <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
       </div>
 
-      {/* CENTER: Logo */}
-      {/* <Link to="/" className="nav-brand">
-        <img 
-          src="/lexi-sketch.png"  
-          alt="Lexi's Portfolio Logo"
-          className="nav-logo"
-        />
-      </Link> */}
-
       {/* RIGHT: 3D Dropdown */}
       <div className="dropdown-container">
         <button className="dropdown-toggle" onClick={() => setMenuOpen(!menuOpen)}>
@@ -53,6 +44,7 @@ function Navbar() {
           <div className="dropdown-menu">
             <ThreeMenu />
             <ul>
+              <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
               <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
               <li><Link to="/theratext" onClick={() => setMenuOpen(false)}>TheraText</Link></li>
               <li><Link to="/cyberclub" onClick={() => setMenuOpen(false)}>Lexi's Cyber Club</Link></li>
@@ -67,3 +59,13 @@ function Navbar() {
 }
 
 export default Navbar;
+
+
+      {/* CENTER: Logo */}
+      {/* <Link to="/" className="nav-brand">
+        <img 
+          src="/lexi-sketch.png"  
+          alt="Lexi's Portfolio Logo"
+          className="nav-logo"
+        />
+      </Link> */}
