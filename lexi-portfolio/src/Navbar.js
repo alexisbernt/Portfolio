@@ -47,7 +47,7 @@ function Navbar() {
               <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
               <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
               <li><Link to="/theratext" onClick={() => setMenuOpen(false)}>TheraText</Link></li>
-              <li><Link to="/cyberclub" onClick={() => setMenuOpen(false)}>Lexi's Cyber Club</Link></li>
+              {/* <li><Link to="/cyberclub" onClick={() => setMenuOpen(false)}>Lexi's Cyber Club</Link></li> */}
               <li><Link to="/more" onClick={() => setMenuOpen(false)}>More</Link></li>
               <li><Link to="/running-log" onClick={() => setMenuOpen(false)}>Running Log ✨</Link></li>
             </ul>

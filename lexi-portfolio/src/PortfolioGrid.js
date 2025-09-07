@@ -27,7 +27,7 @@ function ModernLandingPage() {
   const cardPosts = [
     { title: 'About', desc: 'A glimpse into my journey and passions.', link: '/about', shape: 'box' },
     { title: 'TheraText', desc: 'An AI-powered writing companion for mental clarity.', link: '/theratext', shape: 'sphere' },
-    { title: "Lexi's Cyber Club", desc: 'A hub for tech lovers and security enthusiasts.', link: '/cyberclub', shape: 'torus' },
+    // { title: "Lexi's Cyber Club", desc: 'A hub for tech lovers and security enthusiasts.', link: '/cyberclub', shape: 'torus' },
     { title: 'More', desc: 'Other cool things I’m working on right now.', link: '/more', shape: 'cone' },
     { title: 'Learning Log', desc: 'Tracking my progress & growth along the way.', link: '/learninglog', shape: 'icosahedron' }
   ];
