@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 import { Link } from 'react-router-dom';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Float } from '@react-three/drei';
@@ -26,8 +26,7 @@ function ModernLandingPage() {
 
   const cardPosts = [
     { title: 'About', desc: 'A glimpse into my journey and passions.', link: '/about', shape: 'box' },
-    { title: 'TheraText', desc: 'An AI-powered writing companion for mental clarity.', link: '/theratext', shape: 'sphere' },
-    // { title: "Lexi's Cyber Club", desc: 'A hub for tech lovers and security enthusiasts.', link: '/cyberclub', shape: 'torus' },
+    { title: 'TheraText', desc: 'A efficient and fun way for therapists to take on notetaking.', link: 'https://www.theratext.site/', shape: 'sphere' },
     { title: 'More', desc: 'Other cool things I’m working on right now.', link: '/more', shape: 'cone' },
     { title: 'Learning Log', desc: 'Tracking my progress & growth along the way.', link: '/learninglog', shape: 'icosahedron' }
   ];
@@ -62,7 +61,8 @@ function ModernLandingPage() {
     textDecoration: 'none',
     color: 'inherit',
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    cursor: 'pointer'
   };
 
   const imgStyle = {
@@ -99,8 +99,8 @@ function ModernLandingPage() {
         fontSize: '1.8rem',
         fontWeight: '700',
         marginBottom: '1.5rem',
-        color: '#1e293b', // slate-800 kind of vibe
-        borderBottom: '2px solid #e5e7eb', // subtle divider
+        color: '#1e293b',
+        borderBottom: '2px solid #e5e7eb',
         paddingBottom: '0.5rem'
       }}>
         Most Recent Developments
@@ -145,8 +145,8 @@ function ModernLandingPage() {
         fontSize: '1.8rem',
         fontWeight: '700',
         marginBottom: '1.5rem',
-        color: '#1e293b', // slate-800 kind of vibe
-        borderBottom: '2px solid #e5e7eb', // subtle divider
+        color: '#1e293b',
+        borderBottom: '2px solid #e5e7eb',
         paddingBottom: '0.5rem'
       }}>
         My Business Tools
@@ -154,31 +154,43 @@ function ModernLandingPage() {
 
       {/* 3D CARDS SECTION */}
       <div style={cardGrid}>
-        {cardPosts.map((post, index) => (
-          <motion.div
-            key={index}
-            whileHover={{ scale: 1.05 }}
-            style={{
-              ...card,
-              padding: '16px'
-            }}
-          >
-            <h2 style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#1e3a8a' }}>{post.title}</h2>
-            <p style={{ fontSize: '0.9rem', color: '#444', marginBottom: '12px' }}>{post.desc}</p>
-            <Canvas style={{ height: '180px', marginBottom: '12px' }}>
-              <ambientLight intensity={0.5} />
-              <directionalLight position={[0, 2, 5]} />
-              <Float floatIntensity={0.4} rotationIntensity={0.2}>
-                <Shape type={post.shape} />
-              </Float>
-              <OrbitControls enableZoom={false} enablePan={false} autoRotate />
-            </Canvas>
-            <Link to={post.link} style={{ color: '#2563eb', fontWeight: 'bold' }}>
-              Read More →
-            </Link>
-          </motion.div>
-        ))}
+        {cardPosts.map((post, index) => {
+          const isExternal = post.link.startsWith("http");
+
+          const CardContent = () => (
+            <div style={{ padding: '16px' }}>
+              <h2 style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#1e3a8a' }}>{post.title}</h2>
+              <p style={{ fontSize: '0.9rem', color: '#444', marginBottom: '12px' }}>{post.desc}</p>
+              <Canvas style={{ height: '180px', marginBottom: '12px' }}>
+                <ambientLight intensity={0.5} />
+                <directionalLight position={[0, 2, 5]} />
+                <Float floatIntensity={0.4} rotationIntensity={0.2}>
+                  <Shape type={post.shape} />
+                </Float>
+                <OrbitControls enableZoom={false} enablePan={false} autoRotate />
+              </Canvas>
+              <span style={{ color: '#2563eb', fontWeight: 'bold' }}>Read More →</span>
+            </div>
+          );
+
+          return (
+            <motion.div key={index} whileHover={{ scale: 1.05 }} style={card}>
+              {isExternal ? (
+                <a href={post.link} target="_blank" rel="noopener noreferrer" 
+                   style={{ textDecoration: 'none', color: 'inherit', display: 'block', height: '100%' }}>
+                  <CardContent />
+                </a>
+              ) : (
+                <Link to={post.link} 
+                      style={{ textDecoration: 'none', color: 'inherit', display: 'block', height: '100%' }}>
+                  <CardContent />
+                </Link>
+              )}
+            </motion.div>
+          );
+        })}
       </div>
+
       {/* Footer at the bottom */}
       <Footer />
     </div>

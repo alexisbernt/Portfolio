@@ -95,8 +95,24 @@ h1, h2, h3 {
   color: #1e40af;
 }
 
-/* Card Hover Effect */
+/* Make entire card clickable */
+.portfolio-post-card a {
+  display: block;
+  text-decoration: none;
+  color: inherit; /* keep text colors */
+  height: 100%;
+  width: 100%;
+}
+
+/* Ensure inner text inherits */
+.portfolio-post-card a h2,
+.portfolio-post-card a p {
+  color: inherit;
+}
+
+/* Keep hover effect on whole card */
 .portfolio-post-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
+
