@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import { FaGithub, FaInstagram, FaTiktok, FaPinterest, FaYoutube, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaTiktok, FaPinterest, FaYoutube, FaEnvelope, FaHome } from "react-icons/fa";
 import './css/Navbar.css';
 import { useState } from 'react';
 
@@ -35,24 +35,29 @@ function Navbar() {
         <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
       </div>
 
-      {/* RIGHT: 3D Dropdown */}
-      <div className="dropdown-container">
-        <button className="dropdown-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-          ☰
-        </button>
-        {menuOpen && (
-          <div className="dropdown-menu">
-            <ThreeMenu />
-            <ul>
-              <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
-              <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
-              <li><Link to="/theratext" onClick={() => setMenuOpen(false)}>TheraText</Link></li>
-              {/* <li><Link to="/cyberclub" onClick={() => setMenuOpen(false)}>Lexi's Cyber Club</Link></li> */}
-              <li><Link to="/more" onClick={() => setMenuOpen(false)}>More</Link></li>
-              <li><Link to="/running-log" onClick={() => setMenuOpen(false)}>Running Log ✨</Link></li>
-            </ul>
-          </div>
-        )}
+      {/* RIGHT: Home + 3D Dropdown */}
+      <div className="right-menu">
+        <Link to="/" className="home-icon">
+          <FaHome />
+        </Link>
+        <div className="dropdown-container">
+          <button className="dropdown-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+            ☰
+          </button>
+          {menuOpen && (
+            <div className="dropdown-menu">
+              <ThreeMenu />
+              <ul>
+                <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
+                <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
+                <li><Link to="/theratext" onClick={() => setMenuOpen(false)}>TheraText</Link></li>
+                {/* <li><Link to="/cyberclub" onClick={() => setMenuOpen(false)}>Lexi's Cyber Club</Link></li> */}
+                <li><Link to="/more" onClick={() => setMenuOpen(false)}>More</Link></li>
+                <li><Link to="/running-log" onClick={() => setMenuOpen(false)}>Running Log ✨</Link></li>
+              </ul>
+            </div>
+          )}
+        </div>
       </div>
     </nav>
   );
