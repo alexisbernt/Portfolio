@@ -10,6 +10,7 @@ import Navbar from './Navbar';
 import PortfolioGrid from './PortfolioGrid';
 
 import About from './pages/About';
+import AI from './pages/AI';
 import TheraText from './pages/TheraText';
 import CyberClub from './pages/CyberClub';
 import More from './pages/More';
@@ -26,6 +27,7 @@ function App() {
           <Routes>
             <Route path="/" element={<PortfolioGrid />} />
             <Route path="/about" element={<About />} />
+            <Route path="/ai" element={<AI />} />
             <Route path="/theratext" element={<TheraText />} />
             {/* <Route path="/cyberclub" element={<CyberClub />} /> */}
             <Route path="/more" element={<More />} />

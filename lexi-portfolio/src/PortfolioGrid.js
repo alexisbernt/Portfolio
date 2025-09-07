@@ -149,7 +149,7 @@ function ModernLandingPage() {
         borderBottom: '2px solid #e5e7eb',
         paddingBottom: '0.5rem'
       }}>
-        My Business Tools
+        The Things:
       </h2>
 
       {/* 3D CARDS SECTION */}
