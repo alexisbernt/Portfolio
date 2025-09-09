@@ -17,6 +17,7 @@ import More from './pages/More';
 import RunningLog from './pages/RunningLog';
 import LearningLog from './pages/LearningLog';
 import Funding from './pages/Funding';
+import Post1 from './pages/LearningPost1-RAG';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
             <Route path="/more" element={<More />} />
             <Route path="/running-log" element={<RunningLog />} />
             <Route path="/learninglog" element={<LearningLog />} />
+            <Route path="/rag-post" element={<Post1 />} />
             <Route path="/funding" element={<Funding />} />
           </Routes>
         </div>
