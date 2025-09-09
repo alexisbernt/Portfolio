@@ -4,48 +4,63 @@ function AI() {
   return (
     <div className="ai-container">
       <div className="ai-grid">
+
+        {/* Lifestyle */}
         <div className="ai-box">
           <h3>AI For Lifestyle</h3>
-          <p>- ChatGPT (OpenAI) – Conversational AI for answering questions, brainstorming, writing, coding, and learning.
-            - Canva AI – AI design assistant for making presentations, posters, and social posts quickly.
-            - Runway – AI for video editing, background removal, and creative video effects.
-            - Perplexity AI – AI search engine that finds and summarizes information with sources.
-            - Khanmigo (by Khan Academy) – AI tutor for personalized learning and explanations.
-            - Reclaim AI – Smart calendar assistant that schedules tasks and habits automatically.
-            - Replika – AI chatbot companion designed for conversation and emotional support.
-            - Socratic (by Google) – Homework helper that explains problems step by step.
-            - Goblin Tools (AI): A collection of small, simple tools for task break down. 
-            People who speak on AI: CatGPT: @CatGPT on Instagram. ArjanCodes: @https://arjancodes.com online/</p>
+          <ul>
+            <li><strong>ChatGPT (OpenAI)</strong> – Conversational AI for Q&A, brainstorming, writing, coding, and learning.</li>
+            <li><strong>Canva AI</strong> – AI design assistant for presentations, posters, and social posts.</li>
+            <li><strong>Runway</strong> – Video editing, background removal, and creative effects.</li>
+            <li><strong>Perplexity AI</strong> – AI search engine that summarizes info with sources.</li>
+            <li><strong>Khanmigo (Khan Academy)</strong> – AI tutor for personalized learning.</li>
+            <li><strong>Reclaim AI</strong> – Smart calendar assistant that schedules tasks automatically.</li>
+            <li><strong>Replika</strong> – AI chatbot companion for conversation and emotional support.</li>
+            <li><strong>Socratic (Google)</strong> – Homework helper with step-by-step explanations.</li>
+            <li><strong>Goblin Tools</strong> – Small, simple tools for breaking down tasks.</li>
+          </ul>
+          <p><em>People who speak on AI:</em> CatGPT (@CatGPT on Instagram), <a href="https://arjancodes.com" target="_blank" rel="noopener noreferrer">ArjanCodes</a>.</p>
         </div>
+
+        {/* Business */}
         <div className="ai-box">
           <h3>AI For Business</h3>
-          <p>- Tableau – A data visualization tool.
-            - Qualisync – AI-based calendar assistant that integrates with Google Calendar.
-            - Zapier (AI Calendar Management) – Automates syncing of meetings across tools, auto-generates summaries and notes, and adapts events based on changes from other systems.
-            - Microsoft 365 Copilot – Integrated across Word, Excel, PowerPoint, Outlook, and Teams.
-            - GitHub Copilot – AI assistant for coding that autocompletes code, suggests functions, and supports multiple languages within editors like VS Code.
-
-          </p>
+          <ul>
+            <li><strong>Tableau</strong> – Data visualization tool.</li>
+            <li><strong>Qualisync</strong> – AI calendar assistant with Google Calendar.</li>
+            <li><strong>Zapier (AI Calendar Management)</strong> – Automates syncing, generates summaries, adapts events dynamically.</li>
+            <li><strong>Microsoft 365 Copilot</strong> – Integrated across Word, Excel, PowerPoint, Outlook, and Teams.</li>
+            <li><strong>GitHub Copilot</strong> – AI code assistant that autocompletes and suggests functions in VS Code.</li>
+          </ul>
         </div>
+
+        {/* School */}
         <div className="ai-box">
           <h3>AI For School</h3>
-          <p>- Socratic (by Google) – Homework helper that explains problems step by step.
-            - Khanmigo (by Khan Academy) – AI tutor for personalized learning and explanations.
-            - Common LLMs: ChatGPT, Gemini, Copilot, and Claude.
-            - ChatGPT: OpenAI’s ChatGPT now features a Study Mode that acts like a personal tutor: students can select subjects, set their skill level, and have the tool generate quizzes, flashcards, and tailored explanations.
-            - Google NotebookLM: Note-taking and research assistant lets students upload their documents (like class notes or PDFs) and ask questions about them.
-          </p>
+          <ul>
+            <li><strong>Socratic (Google)</strong> – Homework helper with explanations.</li>
+            <li><strong>Khanmigo (Khan Academy)</strong> – AI tutor with step-by-step support.</li>
+            <li><strong>Common LLMs</strong>: ChatGPT, Gemini, Copilot, Claude.</li>
+            <li><strong>ChatGPT Study Mode</strong> – Personal tutor that creates quizzes, flashcards, and explanations.</li>
+            <li><strong>Google NotebookLM</strong> – Note-taking assistant for asking questions about your documents.</li>
+          </ul>
         </div>
+
+        {/* Athletics */}
         <div className="ai-box">
           <h3>AI For Athletics</h3>
-          <p>- For workouts → Fitbod, Freeletics, Vi Trainer.
-            - For nutrition → Lumen, Noom, Nutrium.
-            - For sleep/recovery → Whoop, Oura, Fitbit.
-            - For overall health tracking → Ada Health, Headspace AI, Wellory.</p>
+          <ul>
+            <li><strong>Workouts</strong> → Fitbod, Freeletics, Vi Trainer.</li>
+            <li><strong>Nutrition</strong> → Lumen, Noom, Nutrium.</li>
+            <li><strong>Sleep/Recovery</strong> → Whoop, Oura, Fitbit.</li>
+            <li><strong>Health Tracking</strong> → Ada Health, Headspace AI, Wellory.</li>
+          </ul>
         </div>
+
       </div>
     </div>
   );
 }
 
 export default AI;
+
