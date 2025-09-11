@@ -107,8 +107,7 @@ function ModernLandingPage() {
       </h2>
 
       {/* HEADER SECTION */}
-      <div style={headerGrid}>
-        
+      <div className="header-grid">
         {/* Left: Image cards */}
         <div style={cardGrid}>
           {headerPosts.map((post, i) => (
@@ -123,12 +122,8 @@ function ModernLandingPage() {
         </div>
 
         {/* Right: Bio card */}
-        <div style={profileCard}>
-          <img 
-            src="profile.png" 
-            alt="Profile" 
-            style={profileImg}
-          />
+        <div className="profile-card">
+          <img src="profile.png" alt="Profile" style={profileImg} />
           <h2 style={{ fontSize: '1.8rem', color: '#1e40af', marginTop: '16px' }}>Hi!</h2>
           <p style={{ fontSize: '0.95rem', color: '#333', marginTop: '12px', lineHeight: '1.6' }}>
             I'm Lexi, and I like to learn and make things.  

@@ -116,3 +116,25 @@ h1, h2, h3 {
   box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
 
+/* Responsive bio card layout */
+.header-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+  .header-grid {
+    grid-template-columns: 1fr; /* stack on mobile */
+  }
+
+  .profile-card {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
