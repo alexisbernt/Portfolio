@@ -27,12 +27,12 @@ function Navbar() {
       
       {/* LEFT: Social Icons */}
       <div className="social-icons">
-        <a href="https://github.com/" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
-        <a href="mailto:example@email.com"><FaEnvelope /></a>
-        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+        <a href="https://github.com/alexisbernt//" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
+        <a href="mailto:alexisbernthal4@gmail.com"><FaEnvelope /></a>
+        <a href="https://www.instagram.com/alexis.wink/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
         <a href="https://tiktok.com/" target="_blank" rel="noopener noreferrer"><FaTiktok /></a>
         <a href="https://pinterest.com/" target="_blank" rel="noopener noreferrer"><FaPinterest /></a>
-        <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
+        <a href="https://www.youtube.com/@lexicyber" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
       </div>
 
       {/* RIGHT: Home + 3D Dropdown */}

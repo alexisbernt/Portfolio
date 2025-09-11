@@ -21,7 +21,7 @@ function ModernLandingPage() {
   // Split posts into two groups
   const headerPosts = [
     { title: "Hey! What's UP? Start here.", desc: "Hi , I'm Lexi and this is my real take on starting a job in corporate America in 2025.", link: '/about', img: 'sky.png' },
-    { title: 'Artificial Intelligence Toolkit', desc: "What do all of these zeros and ones represent? How to they relate to AI. Whether you know or don't learn come learn more here.", link: '/ai', img: '0101.png' }
+    { title: 'Artificial Intelligence Toolkit', desc: "What do all of these zeros and ones represent? How to they relate to AI? Whether you know or don't know, come learn more here.", link: '/ai', img: '0101.png' }
   ];
 
   const cardPosts = [
