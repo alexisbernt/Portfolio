@@ -21,14 +21,14 @@ function ModernLandingPage() {
   // Split posts into two groups
   const headerPosts = [
     { title: "Hey! What's UP? Start here.", desc: "Hi , I'm Lexi and this is my real take on starting a job in corporate America in 2025.", link: '/about', img: 'sky.png' },
-    { title: 'Artificial Intelligence Toolkit', desc: "What do all of these zeros and ones represent? How to they relate to AI? Whether you know or don't know, come learn more here.", link: '/ai', img: 'photographer-outdoors.png' }
+    { title: 'Artificial Intelligence Toolkit', desc: "AI is a hot topic right now. I mean... it's really hot. Dive into the tools that are changing day-to-day operations.", link: '/ai', img: 'photographer-outdoors.png' }
   ];
 
   const cardPosts = [
-    { title: 'About', desc: 'A glimpse into my journey and passions.', link: '/about', shape: 'box' },
+    { title: 'About', desc: 'A glimpse into my bio.', link: '/about', shape: 'box' },
     { title: 'TheraText', desc: 'A efficient and fun way for therapists to take on notetaking.', link: 'https://www.theratext.site/', shape: 'sphere' },
-    { title: 'More', desc: 'Other cool things I’m working on right now.', link: '/more', shape: 'cone' },
-    { title: 'Learning Log', desc: 'Tracking my progress & growth along the way.', link: '/learninglog', shape: 'icosahedron' }
+    { title: 'More', desc: 'Other things I’m working on right now.', link: '/more', shape: 'cone' },
+    { title: 'Learning Log', desc: 'Tracking progress & growth. Get smarter with learning log.', link: '/learninglog', shape: 'icosahedron' }
   ];
 
   // ===== Styles =====
@@ -146,7 +146,8 @@ function ModernLandingPage() {
           Go to Learning Log →
         </Link>
       </div>
-      
+
+      <br/>
       {/* Section Header */}
       <h2 style={{
         fontSize: '1.8rem',
@@ -179,9 +180,13 @@ function ModernLandingPage() {
           <img src="bernthal_alexis.png" alt="Profile" style={profileImg} />
           <h2 style={{ fontSize: '1.8rem', color: '#1e40af', marginTop: '16px' }}>Hi!</h2>
           <p style={{ fontSize: '0.95rem', color: '#333', marginTop: '12px', lineHeight: '1.6' }}>
-            I'm Lexi, and I like to learn and make things.  
-            If you like to learn and make things too you should follow along. 
+            I'm Lexi. I like to learn and make things.  
+            If you like to learn and make things, you should follow along. 
           </p>
+          <Link to="/funding" style={{ color: '#2563eb', fontWeight: 'bold', marginTop: '12px', display: 'inline-block' }}>
+            Join the club →
+          </Link>
+          <br/>
           <Link to="/about" style={{ color: '#2563eb', fontWeight: 'bold', marginTop: '12px', display: 'inline-block' }}>
             Read more →
           </Link>
