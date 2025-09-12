@@ -21,7 +21,7 @@ function ModernLandingPage() {
   // Split posts into two groups
   const headerPosts = [
     { title: "Hey! What's UP? Start here.", desc: "Hi , I'm Lexi and this is my real take on starting a job in corporate America in 2025.", link: '/about', img: 'sky.png' },
-    { title: 'Artificial Intelligence Toolkit', desc: "What do all of these zeros and ones represent? How to they relate to AI? Whether you know or don't know, come learn more here.", link: '/ai', img: '0101.png' }
+    { title: 'Artificial Intelligence Toolkit', desc: "What do all of these zeros and ones represent? How to they relate to AI? Whether you know or don't know, come learn more here.", link: '/ai', img: 'photographer-outdoors.png' }
   ];
 
   const cardPosts = [
@@ -94,6 +94,59 @@ function ModernLandingPage() {
   // ===== Return =====
   return (
     <div style={container}>
+      
+      {/* Promo Banner */}
+      <div 
+        style={{
+          background: 'linear-gradient(135deg, #3b82f6, #60a5fa)',
+          color: '#fff',
+          textAlign: 'center',
+          padding: '60px 20px',
+          borderRadius: '12px',
+          marginBottom: '50px',
+          boxShadow: '0 6px 16px rgba(0,0,0,0.1)',
+          position: 'relative',
+          overflow: 'hidden',
+          transition: 'all 0.4s ease'
+        }}
+        onMouseEnter={e => {
+          e.currentTarget.style.boxShadow = '0 0 20px rgba(37,99,235,0.6), 0 0 40px rgba(30,58,138,0.6)';
+          e.currentTarget.style.transform = 'scale(1.02)';
+        }}
+        onMouseLeave={e => {
+          e.currentTarget.style.boxShadow = '0 6px 16px rgba(0,0,0,0.1)';
+          e.currentTarget.style.transform = 'scale(1)';
+        }}
+      >
+        <h1 style={{
+          fontSize: 'clamp(1.6rem, 4vw, 2.6rem)',
+          fontWeight: '700',
+          marginBottom: '20px',
+          fontFamily: 'Montserrat, sans-serif',
+          lineHeight: '1.3'
+        }}>
+          Prove you're getting smarter
+        </h1>
+        <Link 
+          to="/learninglog" 
+          style={{
+            display: 'inline-block',
+            padding: 'clamp(10px, 2vw, 14px) clamp(20px, 4vw, 32px)',
+            backgroundColor: '#fff',
+            color: '#2563eb',
+            borderRadius: '8px',
+            fontWeight: '600',
+            textDecoration: 'none',
+            fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
+            transition: 'all 0.3s ease'
+          }}
+          onMouseEnter={e => e.target.style.backgroundColor = '#e5e7eb'}
+          onMouseLeave={e => e.target.style.backgroundColor = '#fff'}
+        >
+          Go to Learning Log →
+        </Link>
+      </div>
+      
       {/* Section Header */}
       <h2 style={{
         fontSize: '1.8rem',
@@ -103,7 +156,7 @@ function ModernLandingPage() {
         borderBottom: '2px solid #e5e7eb',
         paddingBottom: '0.5rem'
       }}>
-        Most Recent Developments
+        MOST RECENT DEVELOPMENTS:
       </h2>
 
       {/* HEADER SECTION */}
@@ -123,7 +176,7 @@ function ModernLandingPage() {
 
         {/* Right: Bio card */}
         <div className="profile-card">
-          <img src="profile.png" alt="Profile" style={profileImg} />
+          <img src="bernthal_alexis.png" alt="Profile" style={profileImg} />
           <h2 style={{ fontSize: '1.8rem', color: '#1e40af', marginTop: '16px' }}>Hi!</h2>
           <p style={{ fontSize: '0.95rem', color: '#333', marginTop: '12px', lineHeight: '1.6' }}>
             I'm Lexi, and I like to learn and make things.  
@@ -144,7 +197,7 @@ function ModernLandingPage() {
         borderBottom: '2px solid #e5e7eb',
         paddingBottom: '0.5rem'
       }}>
-        The Things:
+        THE THINGS:
       </h2>
 
       {/* 3D CARDS SECTION */}
