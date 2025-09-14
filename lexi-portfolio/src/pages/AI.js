@@ -1,7 +1,47 @@
 import "../css/AI.css";
 import "../css/About.css";
 
+import React from "react";
+import { Link } from "react-router-dom";
+
 function AI() {
+  const blogPosts = [
+    { title: "Blog 1", desc: "This is Blog 1 description.", link: "/post1", img: "blog1.png" },
+    { title: "Blog 2", desc: "This is Blog 2 description.", link: "/post2", img: "blog2.png" },
+    { title: "Blog 3", desc: "This is Blog 3 description.", link: "/post3", img: "blog3.png" }
+  ];
+
+  // Reuse card styles
+  const cardGrid = {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+    gap: "20px",
+    margin: "40px 0"
+  };
+
+  const card = {
+    backgroundColor: "#fff",
+    borderRadius: "12px",
+    overflow: "hidden",
+    boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+    textDecoration: "none",
+    color: "inherit",
+    display: "flex",
+    flexDirection: "column",
+    cursor: "pointer",
+    transition: "transform 0.3s ease, box-shadow 0.3s ease"
+  };
+
+  const imgStyle = {
+    width: "100%",
+    height: "160px",
+    objectFit: "cover"
+  };
+
+  const cardContent = {
+    padding: "16px"
+  };
+
   return (
     <div>
       {/* Animated Framed Header */}
@@ -9,14 +49,24 @@ function AI() {
         <div className="framed-text">
           <h1>Welcome to your personal AI Toolkit</h1>
           <p>This is where I post the hot AI tools that can help</p>
-          {/* <br /> */}
-          {/* <p>
-            If you like business or bad jokes (or even better business AND bad
-            jokes) you're at the right place.
-          </p> */}
           <p>Read more for more info!</p>
         </div>
       </header>
+
+      {/* Blog Cards Section */}
+      <div style={cardGrid}>
+        {blogPosts.map((post, i) => (
+          <Link to={post.link} key={i} style={card}>
+            <img src={post.img} alt={post.title} style={imgStyle} />
+            <div style={cardContent}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "bold", marginBottom: "8px" }}>
+                {post.title}
+              </h3>
+              <p style={{ fontSize: "0.9rem", color: "#555" }}>{post.desc}</p>
+            </div>
+          </Link>
+           ))}
+        </div>
 
       {/* AI Grid Section */}
       <div className="ai-container">
