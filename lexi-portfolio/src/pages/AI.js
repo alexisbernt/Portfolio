@@ -133,6 +133,9 @@ function AI() {
                 <strong>Tableau</strong> – Data visualization tool.
               </li>
               <li>
+                <strong>RapidMiner</strong> – Data analytics tool.
+              </li>
+              <li>
                 <strong>Qualisync</strong> – AI calendar assistant with Google
                 Calendar.
               </li>
