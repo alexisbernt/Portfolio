@@ -15,20 +15,34 @@ function Post2() {
           <p>Read more for more info!</p>
         </div>
       </header>
-
-    {/* Image Section */}
+    <div className="post-layout">
+    {/* Left: Image Section */}
     <div className="post-image-container">
-    <img src="/rag.jpg" alt="Post" className="post-image" />
+        <img src="/ai-formula.png" alt="Post" className="post-image" />
+    </div>
     </div>
 
-      {/* Content Section */}
-      <div className="post-content">
-        <p>AI is being incorporated into workflow more regularly. Something to be fully aware of is that AI can hallucinate.
-           When using AI, the more descriptive and precise, the better the answer.
-           Use the following formula: Role + Task + Context + Format
+        {/* Right: Extra Text Section */}
+        <div className="post-extra-text">
+            <h2>Here are the four steps of crafting the perfect prompt to enter into AI:</h2>
+            <ul>
+            <li>One</li>
+            <li>Twee</li>
+            <li>Three</li>
+            <li>Four</li>
+            </ul>
+        </div>
+
+        {/* Content Section (below full width) */}
+        <div className="post-content">
+        <p>
+            AI is being incorporated into workflow more regularly. Something to be fully aware of is
+            that AI can hallucinate. When using AI, the more descriptive and precise, the better the
+            answer. Use the following formula: Role + Task + Context + Format
         </p>
-      </div>
+        </div>
     </div>
+
   );
 }
 
