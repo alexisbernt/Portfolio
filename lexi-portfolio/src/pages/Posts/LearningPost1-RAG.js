@@ -18,7 +18,7 @@ function Post1() {
 
     {/* Image Section */}
     <div className="post-image-container">
-    <img src="/rag.jpg" alt="Post" className="post-image" />
+    <img src="/rag.png" alt="Post" className="post-image" />
     </div>
 
       {/* Content Section */}
