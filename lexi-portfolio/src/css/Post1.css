@@ -1,0 +1,97 @@
+/* General Page Styling */
+body {
+  font-family: "Georgia", serif;
+  line-height: 1.7;
+  background-color: #fafafa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Section */
+.about-header {
+  background: linear-gradient(135deg, #4a90e2, #357ab8);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about-header .framed-text {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-header h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.about-header p {
+  font-size: 1.2rem;
+  margin: 0 auto;
+  max-width: 650px;
+}
+
+/* Blog Content */
+.post-content {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.post-content p {
+  font-size: 1.05rem;
+  margin: 20px 0;
+  text-align: justify;
+}
+
+/* Images */
+.post-image-container {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.post-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Links */
+.post-content a {
+  color: #357ab8;
+  text-decoration: none;
+  border-bottom: 1px solid #357ab8;
+  transition: 0.2s ease;
+}
+
+.post-content a:hover {
+  color: #4a90e2;
+  border-bottom-color: #4a90e2;
+}
+
+/* Special Notes (like side tangents) */
+.post-content p::first-letter {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #4a90e2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-header h1 {
+    font-size: 2.2rem;
+  }
+  .about-header p {
+    font-size: 1rem;
+  }
+  .post-content {
+    margin: 40px 10px;
+    padding: 15px;
+  }
+}
