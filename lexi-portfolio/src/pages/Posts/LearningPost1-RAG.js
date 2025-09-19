@@ -7,9 +7,10 @@ function Post1() {
       <header className="about-header">
         <div className="framed-text">
           <h1>RAG</h1>
-          <p>Retrieval Augmented Generation (RAG) enhances the capabilities of large language models.Retrieval Augmented Generation (RAG) enhances the capabilities of large language models.</p>
+          <p>Retrieval Augmented Generation (RAG) enhances the capabilities of large language models.</p>
           <br />
-          <p>Read more to learn what's new quickly and efficiently! [hopefully have some fun along the way]</p>
+          <p>Read more to learn what's new quickly and efficiently! </p>
+          <p> [hopefully have some fun along the way]</p>
         </div>
       </header>
 
