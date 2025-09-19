@@ -16,11 +16,6 @@ function Post1() {
         </div>
       </header>
 
-    {/* Image Section */}
-    <div className="post-image-container">
-    <img src="/rag.png" alt="Post" className="post-image" />
-    </div>
-
       {/* Content Section */}
       <div className="post-content">
         <p>Artificial Intelligence (AI) is a hot topic right now. If you're wanting an official definition of AI, it can be defined as machine capabilities that mimic human-like intelligence and generate outputs. 
@@ -29,6 +24,10 @@ function Post1() {
           [in fact they're better at replying than that friend who leaves you on sent/delievered for days].</p>
         <p>AI is a broad field that includes many types of systems (not just LLMs). Some other examples of systems include computer vision, robotics, and expert systems. LLMs are still a field of AI though. 
           LLMs are specifically focused on language. LLMs don’t “understand” in a human sense, but they can produce very convincing and useful text based on patterns in the data that they were trained on.</p>
+        {/* Image Section */}
+        <div className="post-image-container">
+        <img src="/rag.png" alt="Post" className="post-image" />
+        </div>
         <p>Now that you have all of that context, let's talk about RAG. RAG models have the information beyond the training data.</p>
         <p>I like to break things down into 3 categories: (1) What is it? (2) What's the purpose? and (3) What are some examples?</p>
         <p>Starting with (1) What is it?  Def Retrieval-Augmented Generation (RAG for short): RAG is a technique used in AI systems, particularly LLMs, to improve accuracy of AI generated responses. RAG goes beyond what it already knows (it's training data) 
@@ -41,8 +40,11 @@ function Post1() {
             Ironically, the abbreviation of Retrieval-Augmented Generation (AKA: RAG), can be related to an actual Rag doll. 
             Think of a Rag doll: It's that toy that can be perceived in various different ways [beautiful, freaky, frightening, interesting, etc.] made from scraps of fabric. 
             Chart for comparison:
-            Rag doll: Made from various scarps of fabric. Will fall/lay as you position it. Can be added to using accessories, piling on more fabric, etc.. 
-            RAG AI: Information made from various relevant sources of information. Will follow the data/information you put into it. Can be added on to when updating the retrival database, when fine-tuning the generator, or through customization of the retrieval process.</p>
+          </p>
+          {/* Image Section */}
+          <div className="post-image-container">
+          <img src="/rag-doll.png" alt="Post" className="post-image" />
+          </div>
           <p>Now for the * REAL WORLD * examples of RAG in action: (i) Customer Support: Chatbots used for customer support rely on retrieving information from guides for troubleshooting or product information data / manuals. This type of usage would be RAG!
             (ii) Academic Help: If a student uses some particular LLMs, if they ask the model a question the RAG model will pull up relevant articles, websites, or textbook pages to better explain that specific concept. That's RAG!
             (iii) The Workplace: Corporate firms in particular are now uploading thousands of documents into their internal RAG models. For example, Microsoft Copilot now has a "Work" and "Web" mode. The "Work" mode is retrieving information from a company's internal document repository for information specific to that company. 
