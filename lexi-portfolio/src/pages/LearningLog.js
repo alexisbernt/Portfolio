@@ -20,14 +20,22 @@ export default function LearningLog() {
   useEffect(() => {
     const saved = JSON.parse(localStorage.getItem("learningLog")) || [];
     const today = getCentralDate();
-    // Only keep today's entries
-    const todaysEntries = saved.filter((entry) => entry.date === today);
-    setEntries(todaysEntries);
+
+    if (saved.length > 0 && saved[0].date === today) {
+      // ✅ Same day → keep entries
+      setEntries(saved);
+    } else {
+      // 🗑️ New day → reset
+      localStorage.removeItem("learningLog");
+      setEntries([]);
+    }
   }, []);
 
   // Save to localStorage whenever entries change
   useEffect(() => {
-    localStorage.setItem("learningLog", JSON.stringify(entries));
+    if (entries.length > 0) {
+      localStorage.setItem("learningLog", JSON.stringify(entries));
+    }
   }, [entries]);
 
   const handleAddEntry = () => {
