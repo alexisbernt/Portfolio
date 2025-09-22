@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function AI() {
   const blogPosts = [
     { title: "Retrieval Augmented Generation (RAG)", desc: "RAG is a technique used in AI systems, particularly LLMs, to improve accuracy of AI generated responses.", link: "/post1", img: "rag.png" },
-    { title: "Blog 2", desc: "This is Blog 2 description.", link: "/post2", img: "blog2.png" },
+    { title: "The Formula For AI", desc: "This is Blog 2 description.", link: "/post2", img: "ai-formula.png" },
     { title: "Blog 3", desc: "This is Blog 3 description.", link: "/post3", img: "blog3.png" }
   ];
 

@@ -35,6 +35,7 @@ export default function About() {
             you're at the right place.
           </p>
           <p>
+            <br/>
             Read more for more info!
           </p>
         </div>
