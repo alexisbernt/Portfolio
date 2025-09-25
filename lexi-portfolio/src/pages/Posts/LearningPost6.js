@@ -20,7 +20,7 @@ function Post6() {
     <div className="post-layout">
     {/* Left: Image Section */}
     <div className="post-image-container">
-        <img src="/azure-pic1.png" alt="Post" className="post-image" />
+        <img src="/azure-cover.png" alt="Post" className="post-image" />
     </div>
     </div>
 
@@ -29,6 +29,9 @@ function Post6() {
             <p> Azure is like toolbox in the cloud. 
                 It is Microsoft's platform full of tools you can use to build and run software, websites, and services.
             </p>
+        </div>
+        <div className="post-image-container">
+            <img src="/azure-pic1.png" alt="Post" className="post-image" />
         </div>
         <h2>Break-down of Azure:</h2>
         <ul>
@@ -39,6 +42,9 @@ function Post6() {
         <li>ML Platform = Azure AI Foundry (gives you everything you need to create smart AI-powered apps — like chatbots, document processors, 
             or automation tools — without worrying about the complex infrastructure behind it.)</li>
         </ul>
+        <div className="post-image-container">
+            <img src="/computing.png" alt="Post" className="post-image" />
+        </div>
         {/* Content Section (below full width) */}
         <div className="post-content">
         <p>
