@@ -163,7 +163,7 @@ function ModernLandingPage() {
       >
         <span
           style={{
-            background: "linear-gradient(90deg, #3b82f6, #06b6d4)",
+            background: "linear-gradient(90deg, #38393bff, #181717ff)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
           }}
@@ -178,7 +178,7 @@ function ModernLandingPage() {
             bottom: 0,
             width: "60px",
             height: "3px",
-            background: "linear-gradient(90deg, #3b82f6, #06b6d4)",
+            background: "linear-gradient(90deg, #38393bff, #181717ff))",
             borderRadius: "2px",
           }}
         />
@@ -232,7 +232,7 @@ function ModernLandingPage() {
       >
         <span
           style={{
-            background: "linear-gradient(90deg, #6b7280, #000000)",
+            background: "linear-gradient(90deg, #38393bff, #000000)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
           }}
@@ -247,7 +247,7 @@ function ModernLandingPage() {
             bottom: 0,
             width: "60px",
             height: "3px",
-            background: "linear-gradient(90deg, #3b82f6, #06b6d4)",
+            background: "linear-gradient(90deg, #38393bff, #000000)",
             borderRadius: "2px",
           }}
         />

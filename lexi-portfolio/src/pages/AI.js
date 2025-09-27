@@ -52,6 +52,42 @@ function AI() {
           <p>Read more for more info!</p>
         </div>
       </header>
+      
+      {/* Section Header */}
+      <h2
+        style={{
+          fontSize: "1.6rem",
+          fontWeight: "700",
+          color: "#0f172a",
+          marginBottom: "2rem",
+          position: "relative",
+          paddingBottom: "0.75rem",
+          letterSpacing: "0.05em",
+          textTransform: "uppercase",
+        }}
+      >
+        <span
+          style={{
+            background: "linear-gradient(90deg, #38393bff, #181717ff)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
+        >
+          Quick Write-ups on AI Tools
+        </span>
+        <span
+          style={{
+            content: '""',
+            position: "absolute",
+            left: 0,
+            bottom: 0,
+            width: "60px",
+            height: "3px",
+            background: "linear-gradient(90deg, #38393bff, #181717ff))",
+            borderRadius: "2px",
+          }}
+        />
+      </h2>
 
       {/* Blog Cards Section */}
       <div style={cardGrid}>
@@ -67,6 +103,42 @@ function AI() {
           </Link>
            ))}
         </div>
+
+      {/* Section Header */}
+      <h2
+        style={{
+          fontSize: "1.6rem",
+          fontWeight: "700",
+          color: "#0f172a",
+          marginBottom: "2rem",
+          position: "relative",
+          paddingBottom: "0.75rem",
+          letterSpacing: "0.05em",
+          textTransform: "uppercase",
+        }}
+      >
+        <span
+          style={{
+            background: "linear-gradient(90deg, #38393bff, #181717ff)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
+        >
+          AI Toolkit Tools
+        </span>
+        <span
+          style={{
+            content: '""',
+            position: "absolute",
+            left: 0,
+            bottom: 0,
+            width: "60px",
+            height: "3px",
+            background: "linear-gradient(90deg, #38393bff, #181717ff))",
+            borderRadius: "2px",
+          }}
+        />
+      </h2>
 
       {/* AI Grid Section */}
       <div className="ai-container">
