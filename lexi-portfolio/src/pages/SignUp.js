@@ -7,7 +7,6 @@ function SignUp() {
     email: "",
     newsletter: false,
   });
-
   const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
@@ -20,13 +19,10 @@ function SignUp() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const response = await fetch("http://localhost:5000/signup", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
@@ -34,7 +30,8 @@ function SignUp() {
         setStatus("✅ Signed up successfully!");
         setFormData({ name: "", email: "", newsletter: false });
       } else {
-        setStatus("⚠️ Failed to sign up. Try again.");
+        const errorData = await response.json();
+        setStatus(`⚠️ ${errorData.error || "Failed to sign up."}`);
       }
     } catch (error) {
       console.error("Error:", error);
@@ -57,7 +54,6 @@ function SignUp() {
             style={{ width: "100%", padding: "8px", marginTop: "4px" }}
           />
         </label>
-
         <label style={{ display: "block", marginBottom: "8px" }}>
           Email:
           <input
@@ -69,7 +65,6 @@ function SignUp() {
             style={{ width: "100%", padding: "8px", marginTop: "4px" }}
           />
         </label>
-
         <label style={{ display: "block", marginBottom: "12px" }}>
           <input
             type="checkbox"
@@ -79,12 +74,13 @@ function SignUp() {
           />{" "}
           I agree to receive non-spam newsletters.
         </label>
-
-        <button type="submit" style={{ padding: "10px 20px", backgroundColor: "#2563eb", color: "#fff", border: "none", borderRadius: "6px", cursor: "pointer" }}>
+        <button
+          type="submit"
+          style={{ padding: "10px 20px", backgroundColor: "#2563eb", color: "#fff", border: "none", borderRadius: "6px", cursor: "pointer" }}
+        >
           Sign Up
         </button>
       </form>
-
       {status && <p style={{ marginTop: "1rem" }}>{status}</p>}
     </div>
   );
