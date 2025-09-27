@@ -149,15 +149,39 @@ function ModernLandingPage() {
 
       <br/>
       {/* Section Header */}
-      <h2 style={{
-        fontSize: '1.8rem',
-        fontWeight: '700',
-        marginBottom: '1.5rem',
-        color: '#1e293b',
-        borderBottom: '2px solid #e5e7eb',
-        paddingBottom: '0.5rem'
-      }}>
-        MOST RECENT DEVELOPMENTS:
+      <h2
+        style={{
+          fontSize: "1.6rem",
+          fontWeight: "700",
+          color: "#0f172a",
+          marginBottom: "2rem",
+          position: "relative",
+          paddingBottom: "0.75rem",
+          letterSpacing: "0.05em",
+          textTransform: "uppercase",
+        }}
+      >
+        <span
+          style={{
+            background: "linear-gradient(90deg, #3b82f6, #06b6d4)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
+        >
+          Most Recent Developments
+        </span>
+        <span
+          style={{
+            content: '""',
+            position: "absolute",
+            left: 0,
+            bottom: 0,
+            width: "60px",
+            height: "3px",
+            background: "linear-gradient(90deg, #3b82f6, #06b6d4)",
+            borderRadius: "2px",
+          }}
+        />
       </h2>
 
       {/* HEADER SECTION */}
@@ -194,15 +218,39 @@ function ModernLandingPage() {
       </div>
 
       {/* Section Header */}
-      <h2 style={{
-        fontSize: '1.8rem',
-        fontWeight: '700',
-        marginBottom: '1.5rem',
-        color: '#1e293b',
-        borderBottom: '2px solid #e5e7eb',
-        paddingBottom: '0.5rem'
-      }}>
-        THE THINGS:
+      <h2
+        style={{
+          fontSize: "1.6rem",
+          fontWeight: "700",
+          color: "#0f172a",
+          marginBottom: "2rem",
+          position: "relative",
+          paddingBottom: "0.75rem",
+          letterSpacing: "0.05em",
+          textTransform: "uppercase",
+        }}
+      >
+        <span
+          style={{
+            background: "linear-gradient(90deg, #6b7280, #000000)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
+        >
+          Most Recent Developments
+        </span>
+        <span
+          style={{
+            content: '""',
+            position: "absolute",
+            left: 0,
+            bottom: 0,
+            width: "60px",
+            height: "3px",
+            background: "linear-gradient(90deg, #3b82f6, #06b6d4)",
+            borderRadius: "2px",
+          }}
+        />
       </h2>
 
       {/* 3D CARDS SECTION */}
