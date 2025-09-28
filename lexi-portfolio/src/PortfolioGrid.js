@@ -237,7 +237,7 @@ function ModernLandingPage() {
             WebkitTextFillColor: "transparent",
           }}
         >
-          Most Recent Developments
+          The Things
         </span>
         <span
           style={{
