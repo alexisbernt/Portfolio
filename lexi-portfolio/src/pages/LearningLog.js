@@ -22,11 +22,9 @@ export default function LearningLog() {
     const today = getCentralDate();
 
     if (saved.length > 0 && saved[0].date === today) {
-      // ✅ Same day → keep entries
-      setEntries(saved);
+      setEntries(saved); // ✅ Same day → keep entries
     } else {
-      // 🗑️ New day → reset
-      localStorage.removeItem("learningLog");
+      localStorage.removeItem("learningLog"); // 🗑️ New day → reset
       setEntries([]);
     }
   }, []);
@@ -53,6 +51,37 @@ export default function LearningLog() {
 
   return (
     <div className="learning-log-container">
+      {/* 🔹 Embedded YouTube Video */}
+      <div className="learning-log-video">
+        <iframe
+          width="100%"
+          height="315"
+          src="https://www.youtube.com/embed/VaqfK5nw-uc?autoplay=1&mute=1&loop=1&playlist=VaqfK5nw-uc&controls=0&modestbranding=1"
+          title="YouTube video"
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+        ></iframe>
+      </div>
+
+      {/* 🔹 Modern Description */}
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1, duration: 0.5 }}
+        className="learning-log-description"
+      >
+        <p>
+          <strong>It is important to learn something everyday.</strong> Studies
+          show learning new things increases our feeling of self-worth, creates more
+          opportunities for career success, and sustains our brain.
+        </p>
+        <p>
+          <strong>Log what you've learned today below. </strong>Then scroll and view what others
+          have learned today.
+        </p>
+      </motion.div>
+
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
