@@ -1,4 +1,5 @@
 import "../../css/Post1.css";
+import Footer from "../../Footer";
 
 function Post1() {
   return (
@@ -53,6 +54,8 @@ function Post1() {
           <p>[It was RAG-ical to have you read this educational page!]. To stay up-to-date with RAG and Artificial Intelligence advancements, join the mailing list (for free!) or just keep searching up this webpage (alexisbernthal.com). The goal of alexisbernthal.com is to get people learning about real-world things and changes together. 
             Thanks for joining!</p>
       </div>
+      {/* Footer at the bottom */}
+          <Footer />
     </div>
   );
 }

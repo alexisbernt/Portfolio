@@ -1,14 +1,15 @@
 import "../css/AI.css";
 import "../css/About.css";
+import Footer from "../Footer";
 
 import React from "react";
 import { Link } from "react-router-dom";
 
 function AI() {
   const blogPosts = [
-    { title: "Retrieval Augmented Generation (RAG)", desc: "RAG is a technique used in AI systems, particularly LLMs, to improve accuracy of AI generated responses.", link: "/post1", img: "rag.png" },
-    { title: "The Formula For AI", desc: "This is Blog 2 description.", link: "/post2", img: "ai-formula.png" },
-    { title: "Blog 3", desc: "This is Blog 3 description.", link: "/post3", img: "blog3.png" }
+    { title: "Retrieval Augmented Generation", desc: "RAG is a technique used in AI systems, particularly LLMs, to improve accuracy of AI generated responses.", link: "/post1", img: "rag.png" },
+    { title: "The Formula For AI", desc: "AI is being incorporated into workflow more regularly. So, how do you get the best output from AI? Check out the formula here.", link: "/post2", img: "ai-formula.png" },
+    { title: "Microsoft's AI Tools", desc: "The Artificial Intelligence Tools Microsoft maintains.", link: "/post6", img: "azure-cover.png" }
   ];
 
   // Reuse card styles
@@ -73,7 +74,7 @@ function AI() {
             WebkitTextFillColor: "transparent",
           }}
         >
-          Quick Write-ups on AI Tools
+          Quick Write-ups to help when using AI Tools
         </span>
         <span
           style={{
@@ -273,6 +274,8 @@ function AI() {
           </div>
         </div>
       </div>
+      {/* Footer at the bottom */}
+          <Footer />
     </div>
   );
 }
