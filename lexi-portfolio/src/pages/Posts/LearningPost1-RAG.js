@@ -18,8 +18,9 @@ function Post1() {
       {/* Content Section */}
       <div className="post-content">
         <p>
-          Side note: This informational article has side tangents. Side tangents are inserted into the square brackets: []. If you prefer a version without the side tangents, navigate to ______ for a clean version.
-        </p>
+          Side note: This informational article has side tangents. </p>
+        <p>Side tangents are inserted into the square brackets: []. </p>
+        {/* If you prefer a version without the side tangents, navigate to ______ for a clean version. */}
         <p>Artificial Intelligence (AI) is a hot topic right now. If you're wanting an official definition of AI, it can be defined as machine capabilities that mimic human-like intelligence and generate outputs. 
           AI systems can perform the types of tasks that have traditionally required human intelligence like reasoning, problem-solving, decision-making, and learning. A Large Language Model (LLM) = a form of AI. 
           Large Language Models generate output(s) from the data [trained off a freaking massive amount of data] and prompt(s) they are given. LLMs respond to prompts, and they're getting pretty good with their replies 

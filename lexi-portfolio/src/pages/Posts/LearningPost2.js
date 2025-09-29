@@ -27,10 +27,10 @@ function Post2() {
         <div className="post-extra-text">
             <h2>Here are the four steps of crafting the perfect prompt to enter into AI:</h2>
             <ul>
-            <li>One</li>
-            <li>Twee</li>
-            <li>Three</li>
-            <li>Four</li>
+            <li><bold>Role: </bold>What type of stance are you taking on? Once you understand the perspective (ex: working like a lawyer, writing like a teacher, investigating like a scientist) and persona (ex: diplomatic, enthusiastic, direct, funny), list that in your prompt.</li>
+            <li><bold>Task: </bold>What are you trying to do? Explain in simple terms what you are doing. State the goal at hand and the deliverable you are seeking.</li>
+            <li><bold>Context: </bold>What is the background information? Provide the information that is helpful to understand the scope. State why you are creating the deliverable that you are looking for.</li>
+            <li><bold>Format: </bold>What are you trying to get out of this particular prompt? Blatantly state what you are looking for. This could be text, an image, code, or something else.</li>
             </ul>
         </div>
 
@@ -41,6 +41,7 @@ function Post2() {
             that AI can hallucinate. When using AI, the more descriptive and precise, the better the
             answer. Use the following formula: Role + Task + Context + Format
         </p>
+        {/* Example prompt here  */}
         </div>
         <Footer/>
     </div>

@@ -1,4 +1,5 @@
 import "../../css/Post1.css";
+import Footer from "../../Footer";
 
 function Post6() {
   return (
@@ -12,7 +13,7 @@ function Post6() {
           <p>
             That means that Azure can do things like:
           </p>
-          <p>- Store data - Run applications - Host websites - Build AI models - Analyze information
+          <p>+ Store data + Run applications + Host websites + Build AI models + Analyze information...
         </p>
         <p>All without needing physical servers or hardware.</p>
         </div>
@@ -58,6 +59,7 @@ Azure AI Content Understanding = multi-model content analysis to extract data fr
 If you need to find accurate information on large sets of data you can look using this tool.
         </p>
         </div>
+        <Footer/>
     </div>
 
   );
