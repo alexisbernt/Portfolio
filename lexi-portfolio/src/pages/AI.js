@@ -9,7 +9,7 @@ function AI() {
   const blogPosts = [
     { title: "Retrieval Augmented Generation", desc: "RAG is a technique used in AI systems, particularly LLMs, to improve accuracy of AI generated responses.", link: "/post1", img: "rag.png" },
     { title: "The Formula For AI", desc: "AI is being incorporated into workflow more regularly. So, how do you get the best output from AI? Check out the formula here.", link: "/post2", img: "ai-formula.png" },
-    { title: "Microsoft's AI Tools", desc: "The Artificial Intelligence Tools Microsoft maintains.", link: "/post6", img: "azure-cover.png" }
+    { title: "Microsoft's AI Tools", desc: "The Artificial Intelligence Tools Microsoft maintains.", link: "/post6", img: "azure-cover2.png" }
   ];
 
   // Reuse card styles

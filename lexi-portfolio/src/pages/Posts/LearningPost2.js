@@ -1,4 +1,5 @@
 import "../../css/Post1.css";
+import Footer from "../../Footer";
 
 function Post2() {
   return (
@@ -41,6 +42,7 @@ function Post2() {
             answer. Use the following formula: Role + Task + Context + Format
         </p>
         </div>
+        <Footer/>
     </div>
 
   );
