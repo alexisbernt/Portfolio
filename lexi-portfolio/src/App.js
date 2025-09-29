@@ -42,7 +42,8 @@ function App() {
             <Route path="/post2" element={<Post2 />} />
             <Route path="/post4" element={<Post4 />} />
             <Route path="/post6" element={<Post6 />} />
-            <Route path="/funding" element={<Funding />} />
+            {/* Funding needs to be linked  */}
+            <Route path="/funding" element={<Funding />} /> 
             <Route path="/signup" element={<SignUp />} />
           </Routes>
         </div>

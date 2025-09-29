@@ -25,7 +25,7 @@ function ModernLandingPage() {
   ];
 
   const cardPosts = [
-    { title: 'About', desc: 'A glimpse into my bio.', link: '/about', shape: 'box' },
+    { title: 'About', desc: 'The person behind this website.', link: '/about', shape: 'box' },
     { title: 'TheraText', desc: 'A efficient and fun way for therapists to take on notetaking.', link: 'https://www.theratext.site/', shape: 'sphere' },
     { title: 'More', desc: 'Other things I’m working on right now.', link: '/more', shape: 'cone' },
     { title: 'Learning Log', desc: 'Tracking progress & growth. Get smarter with learning log.', link: '/learninglog', shape: 'icosahedron' }
@@ -205,9 +205,9 @@ function ModernLandingPage() {
           <h2 style={{ fontSize: '1.8rem', color: '#1e40af', marginTop: '16px' }}>Hi!</h2>
           <p style={{ fontSize: '0.95rem', color: '#333', marginTop: '12px', lineHeight: '1.6' }}>
             I'm Lexi. I like to learn and make things.  
-            If you like to learn and make things, you should follow along. 
+            If you like to learn and make things, you should join by signing up for the mailing list (free and I promise no spam). 
           </p>
-          <Link to="/funding" style={{ color: '#2563eb', fontWeight: 'bold', marginTop: '12px', display: 'inline-block' }}>
+          <Link to="/signup" style={{ color: '#2563eb', fontWeight: 'bold', marginTop: '12px', display: 'inline-block' }}>
             Join the club →
           </Link>
           <br/>

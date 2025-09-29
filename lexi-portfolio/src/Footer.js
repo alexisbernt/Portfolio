@@ -55,7 +55,7 @@ function Footer() {
             About
           </Link>
           <a
-            href="https://yourmailinglistlink.com"
+            href="/signup"
             target="_blank"
             rel="noopener noreferrer"
             style={linkStyle}
@@ -65,7 +65,7 @@ function Footer() {
             Mailing List
           </a>
           <a
-            href="https://instagram.com/yourhandle"
+            href="https://instagram.com/alexis.wink"
             target="_blank"
             rel="noopener noreferrer"
             style={linkStyle}
@@ -75,7 +75,7 @@ function Footer() {
             Instagram
           </a>
           <a
-            href="https://youtube.com/yourchannel"
+            href="https://www.youtube.com/@lexicyber"
             target="_blank"
             rel="noopener noreferrer"
             style={linkStyle}
@@ -86,7 +86,7 @@ function Footer() {
           </a>
         </div>
         <p style={{ fontSize: "0.85rem", color: "#6b7280", marginTop: "1rem" }}>
-          © {new Date().getFullYear()} Your Name. All rights reserved.
+          © {new Date().getFullYear()} Lexi Bernthal. All rights reserved.
         </p>
       </div>
     </footer>
