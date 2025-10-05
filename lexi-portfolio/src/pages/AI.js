@@ -1,23 +1,47 @@
 import "../css/AI.css";
 import "../css/About.css";
 import Footer from "../Footer";
-
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function AI() {
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+
+  const handleAddEntry = () => {
+    if (!title.trim() || !content.trim()) return;
+    console.log("New entry:", { title, content }); // replace with your backend call
+    setTitle("");
+    setContent("");
+  };
+
   const blogPosts = [
-    { title: "Retrieval Augmented Generation", desc: "RAG is a technique used in AI systems, particularly LLMs, to improve accuracy of AI generated responses.", link: "/post1", img: "rag.png" },
-    { title: "The Formula For AI", desc: "AI is being incorporated into workflow more regularly. So, how do you get the best output from AI? Check out the formula here.", link: "/post2", img: "ai-formula.png" },
-    { title: "Microsoft's AI Tools", desc: "The Artificial Intelligence Tools Microsoft maintains.", link: "/post6", img: "azure-cover2.png" }
+    {
+      title: "Retrieval Augmented Generation",
+      desc: "RAG is a technique used in AI systems, particularly LLMs, to improve accuracy of AI generated responses.",
+      link: "/post1",
+      img: "rag.png",
+    },
+    {
+      title: "The Formula For AI",
+      desc: "AI is being incorporated into workflow more regularly. So, how do you get the best output from AI? Check out the formula here.",
+      link: "/post2",
+      img: "ai-formula.png",
+    },
+    {
+      title: "Microsoft's AI Tools",
+      desc: "The Artificial Intelligence Tools Microsoft maintains.",
+      link: "/post6",
+      img: "azure-cover2.png",
+    },
   ];
 
-  // Reuse card styles
   const cardGrid = {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
     gap: "20px",
-    margin: "40px 0"
+    margin: "40px 0",
   };
 
   const card = {
@@ -30,29 +54,52 @@ function AI() {
     display: "flex",
     flexDirection: "column",
     cursor: "pointer",
-    transition: "transform 0.3s ease, box-shadow 0.3s ease"
+    transition: "transform 0.3s ease, box-shadow 0.3s ease",
   };
 
   const imgStyle = {
     width: "100%",
     height: "160px",
-    objectFit: "cover"
+    objectFit: "cover",
   };
 
   const cardContent = {
-    padding: "16px"
+    padding: "16px",
   };
 
   return (
-    <div>
-      {/* Animated Framed Header */}
-      <header className="about-header">
-        <div className="framed-text">
-          <h1>Welcome to your personal AI Toolkit</h1>
-          <p>This is where I post the hot AI tools that can help</p>
-          <p>Read more for more info!</p>
-        </div>
-      </header>
+    <div className="learning-log-container">
+      {/* 🔹 Embedded YouTube Video */}
+      <div className="learning-log-video">
+        <iframe
+          width="100%"
+          height="315"
+          src="https://www.youtube.com/embed/3Jd_U60oxq0"
+          title="YouTube video"
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+        ></iframe>
+      </div>
+
+      <br/>
+
+      {/* 🔹 Modern Description */}
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1, duration: 0.5 }}
+        className="learning-log-description"
+      >
+        <br/>
+        <p>
+          <strong>Welcome to your personal AI Toolkit</strong> This is where I post the hot AI tools that can help.
+          Read more for more info! 
+        </p>
+        <br/>
+      </motion.div>
+
+      <br/>
       
       {/* Section Header */}
       <h2
@@ -84,7 +131,7 @@ function AI() {
             bottom: 0,
             width: "60px",
             height: "3px",
-            background: "linear-gradient(90deg, #38393bff, #181717ff))",
+            background: "linear-gradient(90deg, #38393bff, #181717ff)",
             borderRadius: "2px",
           }}
         />
@@ -96,14 +143,20 @@ function AI() {
           <Link to={post.link} key={i} style={card}>
             <img src={post.img} alt={post.title} style={imgStyle} />
             <div style={cardContent}>
-              <h3 style={{ fontSize: "1.1rem", fontWeight: "bold", marginBottom: "8px" }}>
+              <h3
+                style={{
+                  fontSize: "1.1rem",
+                  fontWeight: "bold",
+                  marginBottom: "8px",
+                }}
+              >
                 {post.title}
               </h3>
               <p style={{ fontSize: "0.9rem", color: "#555" }}>{post.desc}</p>
             </div>
           </Link>
-           ))}
-        </div>
+        ))}
+      </div>
 
       {/* Section Header */}
       <h2
@@ -135,7 +188,7 @@ function AI() {
             bottom: 0,
             width: "60px",
             height: "3px",
-            background: "linear-gradient(90deg, #38393bff, #181717ff))",
+            background: "linear-gradient(90deg, #38393bff, #181717ff)",
             borderRadius: "2px",
           }}
         />
@@ -274,11 +327,11 @@ function AI() {
           </div>
         </div>
       </div>
+
       {/* Footer at the bottom */}
-          <Footer />
+      <Footer />
     </div>
   );
 }
 
 export default AI;
-

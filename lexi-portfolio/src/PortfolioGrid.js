@@ -205,7 +205,7 @@ function ModernLandingPage() {
           <h2 style={{ fontSize: '1.8rem', color: '#1e40af', marginTop: '16px' }}>Hi!</h2>
           <p style={{ fontSize: '0.95rem', color: '#333', marginTop: '12px', lineHeight: '1.6' }}>
             I'm Lexi. I like to learn and make things.  
-            If you like to learn and make things, you should join by signing up for the mailing list (free and I promise no spam). 
+            If you like to learn and make things, you should join this nerdy website fam we've built by signing up for the mailing list (free and I promise no spam). 
           </p>
           <Link to="/signup" style={{ color: '#2563eb', fontWeight: 'bold', marginTop: '12px', display: 'inline-block' }}>
             Join the club →
