@@ -43,13 +43,32 @@ In short: The mind can be overwhelmed when information comes too quickly. More i
            When too much of this information is taken in at once, our brains can become overloaded and it becomes difficult to process and retain the information.
            This is especially true when trying to learn new skills or concepts, as our brains are already working hard to understand and integrate the new information.
 Several research-backed strategies can help prevent cognitive overload:
+        </p>
+        <p>
 - Chunk and space information: Break content into smaller units and spread learning across time. This improves retention.
+        </p>
+        <p>
 - Reduce extraneous load: Focus only on information relevant to the task or goal. Removing distractions and irrelevant details prevents wasted mental effort.
+        </p>
+        <p>
 - Match learning to expertise: Beginners benefit from step-by-step guidance. However, when you're an advanced learner, you often do better with less scaffolding (temporary support provided to a learner to help them learn a new skill or concept). This is known as the “expertise reversal effect."
+        </p>
+        <p>
 - Control information flow: Avoid multitasking.Instead, process one source of information at a time.
+        </p>
+        <p>
 - Manage decision fatigue: Spread complex decisions over time. Use checklists. Prioritize important choices earlier in the day when your mind is fresh.
+        </p>
+        <p>
 By structuring information more deliberately and pacing intake, you can make learning more sustainable and prevent your brain from being overloaded.
         </p>
+        <br/>
+        <p>Here are links to the key research articles mentioned in this write-up:</p>
+        <p>
+... Cowan, N. (2010) — “The core capacity limit of working memory / ~3–4 chunks” — Working Memory Capacity by Nelson Cowan. 
+Routledge. Sweller, J. (1988) — Cognitive Load During Problem Solving: Effects on Learning Literatum Online.
+Raymond, J. E.; Shapiro, K. L.; & Arnell, K. M. (1992) — Temporary suppression of visual processing in an RSVP task: An attentional blink? 
+PubMed. Pignatiello, G. A.; Martin, R. J.; & Hickman, R. L. Jr. (2018) — Decision Fatigue: A Conceptual Analysis OUCI. </p>
         </div>
         <Footer/>
     </div>
