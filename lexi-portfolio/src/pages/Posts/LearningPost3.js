@@ -1,4 +1,5 @@
 import "../../css/Post1.css";
+import Footer from "../../Footer";
 
 function Post3() {
   return (
@@ -18,7 +19,7 @@ function Post3() {
     <div className="post-layout">
     {/* Left: Image Section */}
     <div className="post-image-container">
-        <img src="/ai-formula.png" alt="Post" className="post-image" />
+        <img src="/info-over.png" alt="Post" className="post-image" />
     </div>
     </div>
 
@@ -31,7 +32,7 @@ function Post3() {
 So yes, you can consume too much information. For example, studies on cognitive load theory (Sweller, 1988) demonstrate that either (a) excessive or (b) poorly structured material overwhelms working memory and reduces learning effectiveness. 
 Other phenomena, like the attentional blink (Raymond, Shapiro & Arnell, 1992), show how rapid streams of input can temporarily block our ability to perceive the next piece of information. 
 Likewise, reviews on decision fatigue (Pignatiello et al., 2018) show that when people face too many choices, their quality of decisions declines.
-In short: the mind can be overwhelmed when information comes too quickly. More information isn’t always better. If the information coming in is not structured well, it can actually impair learning.</p>
+In short: The mind can be overwhelmed when information comes too quickly. More information isn’t always better. If the information coming in is not structured well, it can actually impair learning.</p>
         </div>
 
         {/* Content Section (below full width) */}
@@ -50,8 +51,8 @@ Several research-backed strategies can help prevent cognitive overload:
 By structuring information more deliberately and pacing intake, you can make learning more sustainable and prevent your brain from being overloaded.
         </p>
         </div>
+        <Footer/>
     </div>
-
   );
 }
 
