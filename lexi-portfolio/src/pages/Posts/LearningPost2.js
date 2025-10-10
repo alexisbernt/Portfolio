@@ -4,24 +4,29 @@ import Footer from "../../Footer";
 function Post2() {
   return (
     <div>
+      {/* 🔹 Embedded YouTube Video */}
+      <div className="learning-log-video">
+        <iframe
+          width="100%"
+          height="315"
+          src="https://www.youtube.com/embed/ClEBQ588Z8Y"
+          title="YouTube video"
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+        ></iframe>
+      </div>
+
       {/* Header Section */}
       <header className="about-header">
         <div className="framed-text">
           <h1>AI Prompt Formula</h1>
           <p>How do you optimize for the best AI-generated responses?</p>
           <br />
-          <p>
-            The formula is simple: Role + Task + Context + Format
-          </p>
+          <p>The formula is simple: Role + Task + Context + Format</p>
           <p>Read more for more info!</p>
         </div>
       </header>
-    <div className="post-layout">
-    {/* Left: Image Section */}
-    <div className="post-image-container">
-        <img src="/ai-formula.png" alt="Post" className="post-image" />
-    </div>
-    </div>
 
         {/* Right: Extra Text Section */}
         <div className="post-extra-text">
