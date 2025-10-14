@@ -46,6 +46,13 @@ function Post2() {
             that AI can hallucinate. When using AI, the more descriptive and precise, the better the
             answer. Use the following formula: Role + Task + Context + Format
         </p>
+        <p>
+          Having clear goals and clear prompts helps AI know what you're testing and what metrics you need.
+          Moreover, requirements (prompts) and acceptance criteria (validation points) must be clear to get thoughtful test design.
+          Carefully review to understand the AI oupt and review for accuracy.
+          AI does think differently. As a user, you can take advantage of that. You can collaboarate with AI to get the best results.
+          Start the AI discussion early in a project to help get an initial draft and then refine it.
+        </p>
         {/* Example prompt here  */}
         </div>
         <Footer/>
