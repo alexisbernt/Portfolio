@@ -1,63 +1,76 @@
-import "../../css/Post1.css";
+import "../../css/Post2.css";
 import Footer from "../../Footer";
 
 function Post2() {
   return (
-    <div>
+    <div className="post-page">
+      {/* 🔹 Hero Section */}
+      <section className="post-hero">
+        <div className="post-hero-content">
+          <h1>AI Prompt Formula</h1>
+          <p className="subtitle">How do you optimize for the best AI-generated responses?</p>
+          <p className="tagline">The formula is simple: Role + Task + Context + Format</p>
+        </div>
+      </section>
+
       {/* 🔹 Embedded YouTube Video */}
       <div className="learning-log-video">
         <iframe
           width="100%"
-          height="315"
+          height="480"
           src="https://www.youtube.com/embed/ClEBQ588Z8Y"
-          title="YouTube video"
+          title="AI Prompt Formula Video"
           frameBorder="0"
           allow="autoplay; encrypted-media"
           allowFullScreen
         ></iframe>
       </div>
 
-      {/* Header Section */}
-      <header className="about-header">
-        <div className="framed-text">
-          <h1>AI Prompt Formula</h1>
-          <p>How do you optimize for the best AI-generated responses?</p>
-          <br />
-          <p>The formula is simple: Role + Task + Context + Format</p>
-          <p>Read more for more info!</p>
-        </div>
-      </header>
-
-        {/* Right: Extra Text Section */}
-        <div className="post-extra-text">
-            <h2>Here are the four steps of crafting the perfect prompt to enter into AI:</h2>
-            <ul>
-            <li><bold>Role: </bold>What type of stance are you taking on? Once you understand the perspective (ex: working like a lawyer, writing like a teacher, investigating like a scientist) and persona (ex: diplomatic, enthusiastic, direct, funny), list that in your prompt.</li>
-            <li><bold>Task: </bold>What are you trying to do? Explain in simple terms what you are doing. State the goal at hand and the deliverable you are seeking.</li>
-            <li><bold>Context: </bold>What is the background information? Provide the information that is helpful to understand the scope. State why you are creating the deliverable that you are looking for.</li>
-            <li><bold>Format: </bold>What are you trying to get out of this particular prompt? Blatantly state what you are looking for. This could be text, an image, code, or something else.</li>
-            </ul>
-        </div>
-
-        {/* Content Section (below full width) */}
-        <div className="post-content">
+      {/* 🔹 Blog Content */}
+      <article className="post-content">
+        <h2>Crafting the Perfect Prompt</h2>
         <p>
-            AI is being incorporated into workflow more regularly. Something to be fully aware of is
-            that AI can hallucinate. When using AI, the more descriptive and precise, the better the
-            answer. Use the following formula: Role + Task + Context + Format
+          AI is being incorporated into workflows more regularly. One thing to be aware of is that
+          AI can hallucinate. The more descriptive and precise your prompt, the better the answer.
+          Use the following formula: <strong>Role + Task + Context + Format.</strong>
         </p>
-        <p>
-          Having clear goals and clear prompts helps AI know what you're testing and what metrics you need.
-          Moreover, requirements (prompts) and acceptance criteria (validation points) must be clear to get thoughtful test design.
-          Carefully review to understand the AI oupt and review for accuracy.
-          AI does think differently. As a user, you can take advantage of that. You can collaboarate with AI to get the best results.
-          Start the AI discussion early in a project to help get an initial draft and then refine it.
-        </p>
-        {/* Example prompt here  */}
+
+        <div className="highlight-box">
+          <h3>The Four Steps to an Effective Prompt:</h3>
+          <ul>
+            <li>
+              <strong>Role:</strong> Define your stance or persona. Example: act as a lawyer,
+              teacher, or scientist — and choose a tone such as enthusiastic, formal, or witty.
+            </li>
+            <li>
+              <strong>Task:</strong> State clearly what you want to accomplish. Be specific about
+              the goal or deliverable.
+            </li>
+            <li>
+              <strong>Context:</strong> Provide the necessary background information or scenario to
+              frame the AI’s response.
+            </li>
+            <li>
+              <strong>Format:</strong> Specify what kind of output you expect — text, image, code,
+              etc.
+            </li>
+          </ul>
         </div>
-        <Footer/>
+
+        <p>
+          Having clear goals helps AI understand what you're testing and what metrics you need.
+          Requirements (prompts) and acceptance criteria (validation points) must be clear to get
+          thoughtful output. Always review and validate AI results for accuracy.
+        </p>
+
+        <p>
+          Start the AI discussion early in a project to get an initial draft, then refine it.
+          Collaboration between human intent and AI generation creates the most powerful outcomes.
+        </p>
+      </article>
+
+      <Footer />
     </div>
-
   );
 }
 

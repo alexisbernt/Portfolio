@@ -1,0 +1,134 @@
+/* General Page Styling */
+body {
+  font-family: "Inter", "Helvetica Neue", sans-serif;
+  line-height: 1.75;
+  background-color: #fafafa;
+  color: #2c2c2c;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============ HERO SECTION ============ */
+.post-hero {
+  background: linear-gradient(135deg, #c264b5,#c4489e);
+  color: white;
+  padding: 100px 20px 80px;
+  text-align: center;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.post-hero-content {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.post-hero h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* ============ VIDEO SECTION ============ */
+.learning-log-video {
+  max-width: 900px;
+  margin: 50px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* ============ MAIN BLOG CONTENT ============ */
+.post-content {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 50px 40px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+}
+
+.post-content h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: #333;
+}
+
+.post-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #c4489e;
+}
+
+.post-content p {
+  font-size: 1.1rem;
+  margin: 20px 0;
+  text-align: justify;
+}
+
+/* Highlight Box */
+.highlight-box {
+  background: #f7faff;
+  border-left: 5px solid #c4489e;
+  padding: 25px 30px;
+  margin: 40px 0;
+  border-radius: 10px;
+}
+
+.highlight-box ul {
+  margin: 10px 0 0 20px;
+  padding: 0;
+}
+
+.highlight-box li {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.highlight-box strong {
+  color: #c24e9f;
+}
+
+/* ============ LINKS ============ */
+.post-content a {
+  color: #c24e9f;
+  text-decoration: none;
+  border-bottom: 1px solid #c24e9f;
+  transition: 0.25s ease;
+}
+
+.post-content a:hover {
+  color: #c4489e;
+  border-bottom-color: #c4489e;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+  .post-hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .post-content {
+    padding: 30px 20px;
+    margin: 40px 10px;
+  }
+
+  .learning-log-video iframe {
+    height: 250px;
+  }
+}
