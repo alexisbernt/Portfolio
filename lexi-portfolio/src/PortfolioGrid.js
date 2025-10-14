@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Float } from '@react-three/drei';
@@ -18,68 +18,89 @@ const Shape = ({ type }) => {
 };
 
 function ModernLandingPage() {
-  // Split posts into two groups
   const headerPosts = [
-    { title: "Hey! What's UP? Start here.", desc: "Hi , I'm Lexi and this is my real take on starting a job in corporate America in 2025.", link: '/about', img: 'sky.png' },
-    { title: 'Artificial Intelligence Toolkit', desc: "AI is a hot topic right now. I mean... it's really hot. Dive into the tools that are changing day-to-day operations.", link: '/ai', img: 'photographer-outdoors.png' }
+    { title: "Hey! What's UP? Start here.", desc: "Hi, I'm Lexi — here's my real take on starting a job in corporate America in 2025.", link: '/about', img: 'sky.png' },
+    { title: 'Artificial Intelligence Toolkit', desc: "AI is really hot right now. Dive into the tools changing day-to-day operations.", link: '/ai', img: 'photographer-outdoors.png' }
   ];
 
   const cardPosts = [
     { title: 'About', desc: 'The person behind this website.', link: '/about', shape: 'box' },
-    { title: 'TheraText', desc: 'A efficient and fun way for therapists to take on notetaking.', link: 'https://www.theratext.site/', shape: 'sphere' },
+    { title: 'TheraText', desc: 'An efficient and fun way for therapists to take on notetaking.', link: 'https://www.theratext.site/', shape: 'sphere' },
     { title: 'More', desc: 'Other things I’m working on right now.', link: '/more', shape: 'cone' },
     { title: 'Learning Log', desc: 'Tracking progress & growth. Get smarter with learning log.', link: '/learninglog', shape: 'icosahedron' }
   ];
 
-  // ===== Styles =====
   const container = {
-    maxWidth: '1200px',
+    maxWidth: '1300px',
     margin: '0 auto',
     padding: '40px 20px',
-    fontFamily: 'Georgia, serif',
+    fontFamily: 'Inter, system-ui, sans-serif',
+    position: 'relative',
   };
 
+  const background = {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    background: 'linear-gradient(120deg, #f8fafc 0%, #e0f2fe 50%, #eff6ff 100%)',
+    zIndex: -1,
+  };
+
+  // Narrower column to make cards taller
   const headerGrid = {
     display: 'grid',
-    gridTemplateColumns: '2fr 1fr',
+    gridTemplateColumns: '1.3fr 1fr',
     gap: '40px',
     alignItems: 'flex-start',
-    marginBottom: '60px'
+    marginBottom: '80px'
+  };
+
+  // Stack header cards more vertically (narrower & taller)
+  const headerCardsColumn = {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '24px',
+    width: '100%',
+    maxWidth: '550px', // narrower column
   };
 
   const cardGrid = {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-    gap: '20px'
+    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+    gap: '24px',
+    marginTop: '40px',
+    marginBottom: '60px'
   };
 
   const card = {
     backgroundColor: '#fff',
-    borderRadius: '12px',
+    borderRadius: '16px',
     overflow: 'hidden',
-    boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+    boxShadow: '0 6px 16px rgba(0,0,0,0.1)',
     textDecoration: 'none',
     color: 'inherit',
     display: 'flex',
     flexDirection: 'column',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
   };
 
+  // Taller images for the feature cards
   const imgStyle = {
     width: '100%',
-    height: '160px',
-    objectFit: 'cover'
+    height: '380px', // increased height
+    objectFit: 'cover',
   };
 
-  const cardContent = {
-    padding: '16px'
-  };
+  const cardContent = { padding: '20px' };
 
   const profileCard = {
     textAlign: 'center',
     backgroundColor: '#fff',
-    borderRadius: '12px',
-    padding: '24px',
+    borderRadius: '16px',
+    padding: '32px',
     boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
   };
 
@@ -91,35 +112,52 @@ function ModernLandingPage() {
     objectFit: 'cover'
   };
 
-  // ===== Return =====
+  const sectionHeader = (text) => (
+    <div style={{ margin: '80px 0 40px 0' }}>
+      <h2
+        style={{
+          fontSize: '2.3rem',
+          fontWeight: 800,
+          color: '#111827',
+          fontFamily: 'Georgia, "Times New Roman", serif',
+          letterSpacing: '-0.02em',
+          marginBottom: '10px',
+          lineHeight: 1.2,
+        }}
+      >
+        {text}
+      </h2>
+      <div
+        style={{
+          width: '100%',
+          height: '1px',
+          backgroundColor: '#e5e7eb',
+          marginTop: '10px',
+        }}
+      />
+    </div>
+  );
+
   return (
     <div style={container}>
-      
+      <div style={background} />
+
       {/* Promo Banner */}
-      <div 
+      <motion.div
+        whileHover={{ scale: 1.02 }}
+        transition={{ duration: 0.3 }}
         style={{
-          background: 'linear-gradient(135deg, #3b82f6, #60a5fa)',
+          background: 'linear-gradient(135deg, #2563eb, #60a5fa)',
           color: '#fff',
           textAlign: 'center',
-          padding: '60px 20px',
-          borderRadius: '12px',
-          marginBottom: '50px',
-          boxShadow: '0 6px 16px rgba(0,0,0,0.1)',
-          position: 'relative',
-          overflow: 'hidden',
-          transition: 'all 0.4s ease'
-        }}
-        onMouseEnter={e => {
-          e.currentTarget.style.boxShadow = '0 0 20px rgba(37,99,235,0.6), 0 0 40px rgba(30,58,138,0.6)';
-          e.currentTarget.style.transform = 'scale(1.02)';
-        }}
-        onMouseLeave={e => {
-          e.currentTarget.style.boxShadow = '0 6px 16px rgba(0,0,0,0.1)';
-          e.currentTarget.style.transform = 'scale(1)';
+          padding: '70px 20px',
+          borderRadius: '16px',
+          marginBottom: '60px',
+          boxShadow: '0 6px 20px rgba(0,0,0,0.15)',
         }}
       >
         <h1 style={{
-          fontSize: 'clamp(1.6rem, 4vw, 2.6rem)',
+          fontSize: 'clamp(1.8rem, 4vw, 2.6rem)',
           fontWeight: '700',
           marginBottom: '20px',
           fontFamily: 'Montserrat, sans-serif',
@@ -134,94 +172,39 @@ function ModernLandingPage() {
             padding: 'clamp(10px, 2vw, 14px) clamp(20px, 4vw, 32px)',
             backgroundColor: '#fff',
             color: '#2563eb',
-            borderRadius: '8px',
+            borderRadius: '10px',
             fontWeight: '600',
             textDecoration: 'none',
             fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
-            transition: 'all 0.3s ease'
           }}
-          onMouseEnter={e => e.target.style.backgroundColor = '#e5e7eb'}
-          onMouseLeave={e => e.target.style.backgroundColor = '#fff'}
         >
           Go to Learning Log →
         </Link>
-      </div>
-
-      {/* 🔹 Modern Description */}
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1, duration: 0.5 }}
-        className="learning-log-description"
-      >
-        <br/>
-        <p>
-          <strong> AI Toolkit </strong> Prove you are smart enough
-        </p>
-        <br/>
       </motion.div>
 
-      <br/>
-      
-      <br/>
-      {/* Section Header */}
-      <h2
-        style={{
-          fontSize: "1.6rem",
-          fontWeight: "700",
-          color: "#0f172a",
-          marginBottom: "2rem",
-          position: "relative",
-          paddingBottom: "0.75rem",
-          letterSpacing: "0.05em",
-          textTransform: "uppercase",
-        }}
-      >
-        <span
-          style={{
-            background: "linear-gradient(90deg, #38393bff, #181717ff)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-          }}
-        >
-          Most Recent Developments
-        </span>
-        <span
-          style={{
-            content: '""',
-            position: "absolute",
-            left: 0,
-            bottom: 0,
-            width: "60px",
-            height: "3px",
-            background: "linear-gradient(90deg, #38393bff, #181717ff))",
-            borderRadius: "2px",
-          }}
-        />
-      </h2>
-
-      {/* HEADER SECTION */}
-      <div className="header-grid">
-        {/* Left: Image cards */}
-        <div style={cardGrid}>
+      {/* Section 1: Most Recent Developments */}
+      {sectionHeader("Most Recent Developments")}
+      <div style={headerGrid}>
+        {/* Left: Taller Feature Cards */}
+        <div style={headerCardsColumn}>
           {headerPosts.map((post, i) => (
             <Link to={post.link} key={i} style={card}>
               <img src={post.img} alt={post.title} style={imgStyle} />
               <div style={cardContent}>
-                <h3 style={{ fontSize: '1.1rem', fontWeight: 'bold', marginBottom: '8px' }}>{post.title}</h3>
-                <p style={{ fontSize: '0.9rem', color: '#555' }}>{post.desc}</p>
+                <h3 style={{ fontSize: '1.3rem', fontWeight: 'bold', marginBottom: '8px' }}>{post.title}</h3>
+                <p style={{ fontSize: '0.95rem', color: '#555' }}>{post.desc}</p>
               </div>
             </Link>
           ))}
         </div>
 
         {/* Right: Bio card */}
-        <div className="profile-card">
+        <div style={profileCard}>
           <img src="bernthal_alexis.png" alt="Profile" style={profileImg} />
           <h2 style={{ fontSize: '1.8rem', color: '#1e40af', marginTop: '16px' }}>Hi!</h2>
           <p style={{ fontSize: '0.95rem', color: '#333', marginTop: '12px', lineHeight: '1.6' }}>
             I'm Lexi. I like to learn and make things.  
-            If you like to learn and make things, you should join this nerdy website fam we've built by signing up for the mailing list (free and I promise no spam). 
+            If you like to learn and make things, you should join this nerdy website fam we've built by signing up for the mailing list (free and no spam). 
           </p>
           <Link to="/signup" style={{ color: '#2563eb', fontWeight: 'bold', marginTop: '12px', display: 'inline-block' }}>
             Join the club →
@@ -233,49 +216,13 @@ function ModernLandingPage() {
         </div>
       </div>
 
-      {/* Section Header */}
-      <h2
-        style={{
-          fontSize: "1.6rem",
-          fontWeight: "700",
-          color: "#0f172a",
-          marginBottom: "2rem",
-          position: "relative",
-          paddingBottom: "0.75rem",
-          letterSpacing: "0.05em",
-          textTransform: "uppercase",
-        }}
-      >
-        <span
-          style={{
-            background: "linear-gradient(90deg, #38393bff, #000000)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-          }}
-        >
-          The Things
-        </span>
-        <span
-          style={{
-            content: '""',
-            position: "absolute",
-            left: 0,
-            bottom: 0,
-            width: "60px",
-            height: "3px",
-            background: "linear-gradient(90deg, #38393bff, #000000)",
-            borderRadius: "2px",
-          }}
-        />
-      </h2>
-
-      {/* 3D CARDS SECTION */}
+      {/* Section 2: The Things */}
+      {sectionHeader("The Things")}
       <div style={cardGrid}>
         {cardPosts.map((post, index) => {
           const isExternal = post.link.startsWith("http");
-
           const CardContent = () => (
-            <div style={{ padding: '16px' }}>
+            <div style={{ padding: '20px' }}>
               <h2 style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#1e3a8a' }}>{post.title}</h2>
               <p style={{ fontSize: '0.9rem', color: '#444', marginBottom: '12px' }}>{post.desc}</p>
               <Canvas style={{ height: '180px', marginBottom: '12px' }}>
@@ -308,14 +255,12 @@ function ModernLandingPage() {
         })}
       </div>
 
-      {/* Footer at the bottom */}
       <Footer />
     </div>
   );
 }
 
 export default ModernLandingPage;
-
 
     {/* Framed Main Content */}
     {/* <div className="main-container">
