@@ -19,9 +19,26 @@ const Shape = ({ type }) => {
 
 function ModernLandingPage() {
   const headerPosts = [
-    { title: "Hey! What's UP? Start here.", desc: "Hi, I'm Lexi — here's my real take on starting a job in corporate America in 2025.", link: '/about', img: 'sky.png' },
-    { title: 'Artificial Intelligence Toolkit', desc: "AI is really hot right now. Dive into the tools changing day-to-day operations.", link: '/ai', img: 'photographer-outdoors.png' }
+    { 
+      title: "Hey! What's UP? Start here.", 
+      desc: "Hi, I'm Lexi — here's my real take on starting a job in corporate America in 2025.", 
+      link: '/about', 
+      img: 'sky.png' 
+    },
+    { 
+      title: 'Artificial Intelligence Toolkit', 
+      desc: "AI is really hot right now. Dive into the tools changing day-to-day operations.", 
+      link: '/ai', 
+      img: 'photographer-outdoors.png' 
+    },
+    { 
+      title: 'Learning Videos Link', 
+      desc: "Follow along for tech-specific learnings that you can apply to your daily life. In video form.", 
+      link: 'https://www.youtube.com/@lexicyber', 
+      img: 'photographer-outdoors.png' 
+    }
   ];
+
 
   const cardPosts = [
     { title: 'About', desc: 'The person behind this website.', link: '/about', shape: 'box' },
@@ -56,22 +73,14 @@ function ModernLandingPage() {
     alignItems: 'flex-start',
     marginBottom: '80px'
   };
+  const cardContent = { padding: '20px' };
 
-  // Stack header cards more vertically (narrower & taller)
-  const headerCardsColumn = {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '24px',
-    width: '100%',
-    maxWidth: '550px', // narrower column
-  };
-
-  const cardGrid = {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-    gap: '24px',
-    marginTop: '40px',
-    marginBottom: '60px'
+  const profileCard = {
+    textAlign: 'center',
+    backgroundColor: '#fff',
+    borderRadius: '16px',
+    padding: '32px',
+    boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
   };
 
   const card = {
@@ -87,6 +96,14 @@ function ModernLandingPage() {
     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
   };
 
+    const cardGrid = {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+    gap: '24px',
+    marginTop: '40px',
+    marginBottom: '60px'
+  };
+
   // Taller images for the feature cards
   const imgStyle = {
     width: '100%',
@@ -94,15 +111,62 @@ function ModernLandingPage() {
     objectFit: 'cover',
   };
 
-  const cardContent = { padding: '20px' };
-
-  const profileCard = {
-    textAlign: 'center',
-    backgroundColor: '#fff',
-    borderRadius: '16px',
-    padding: '32px',
-    boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+  // Stack header cards more vertically (narrower & taller)
+  const headerCardsColumn = {
+    display: 'grid',
+    gridTemplateColumns: '1fr', // default single column
+    gap: '24px',
+    width: '100%',
+    maxWidth: '550px',
   };
+
+  if (window.innerWidth > 900) {
+    // On wider screens, show 1 full-width card, then 2 side-by-side cards
+    headerCardsColumn.gridTemplateRows = 'auto auto';
+    headerCardsColumn.gridTemplateColumns = '1fr 1fr';
+    headerCardsColumn.gridAutoFlow = 'row dense';
+  }
+
+  <div style={headerCardsColumn}>
+  {/* First card spans both columns */}
+  <Link to={headerPosts[0].link} style={{ ...card, gridColumn: '1 / -1' }}>
+    <img src={headerPosts[0].img} alt={headerPosts[0].title} style={imgStyle} />
+    <div style={cardContent}>
+      <h3 style={{ fontSize: '1.3rem', fontWeight: 'bold', marginBottom: '8px' }}>{headerPosts[0].title}</h3>
+      <p style={{ fontSize: '0.95rem', color: '#555' }}>{headerPosts[0].desc}</p>
+    </div>
+  </Link>
+
+  {/* Second and third cards side-by-side */}
+  {headerPosts.slice(1).map((post, i) => {
+    const isExternal = post.link.startsWith("http");
+    const content = (
+      <>
+        <img src={post.img} alt={post.title} style={imgStyle} />
+        <div style={cardContent}>
+          <h3 style={{ fontSize: '1.3rem', fontWeight: 'bold', marginBottom: '8px' }}>{post.title}</h3>
+          <p style={{ fontSize: '0.95rem', color: '#555' }}>{post.desc}</p>
+        </div>
+      </>
+    );
+
+    return isExternal ? (
+      <a
+        key={i}
+        href={post.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={card}
+      >
+        {content}
+      </a>
+    ) : (
+      <Link key={i} to={post.link} style={card}>
+        {content}
+      </Link>
+    );
+  })}
+</div>
 
   const profileImg = {
     width: '140px',
