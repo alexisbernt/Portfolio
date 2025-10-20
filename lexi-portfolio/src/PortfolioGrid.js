@@ -19,12 +19,12 @@ const Shape = ({ type }) => {
 
 function ModernLandingPage() {
   const headerPosts = [
-    { 
-      title: "Hey! What's UP? Start here.", 
-      desc: "Hi, I'm Lexi — here's my real take on starting a job in corporate America in 2025.", 
-      link: '/about', 
-      img: 'sky.png' 
-    },
+    // { 
+    //   title: "Hey! What's UP? Start here.", 
+    //   desc: "Hi, I'm Lexi — here's my real take on starting a job in corporate America in 2025.", 
+    //   link: '/about', 
+    //   img: 'sky.png' 
+    // },
     { 
       title: 'Artificial Intelligence Toolkit', 
       desc: "AI is really hot right now. Dive into the tools changing day-to-day operations.", 
@@ -206,18 +206,39 @@ function ModernLandingPage() {
     <div style={container}>
       <div style={background} />
 
-      {/* Promo Banner */}
+    {/* Promo Banner with YouTube background */}
+    <div style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden', marginBottom: '60px', boxShadow: '0 6px 20px rgba(0,0,0,0.15)' }}>
+      {/* YouTube video background */}
+      <iframe
+        src="https://www.youtube.com/embed/VaqfK5nw-uc?autoplay=1&mute=1&loop=1&playlist=VaqfK5nw-uc&controls=0&showinfo=0&modestbranding=1&rel=0"
+        title="Promo Video"
+        allow="autoplay; fullscreen"
+        frameBorder="0"
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          zIndex: 0,
+          pointerEvents: 'none', // prevents user from interacting with the video
+          filter: 'brightness(0.6)', // darken for text visibility
+        }}
+      ></iframe>
+
+      {/* Overlay content */}
       <motion.div
         whileHover={{ scale: 1.02 }}
         transition={{ duration: 0.3 }}
         style={{
-          background: 'linear-gradient(135deg, #2563eb, #60a5fa)',
+          position: 'relative',
+          zIndex: 1,
           color: '#fff',
           textAlign: 'center',
           padding: '70px 20px',
           borderRadius: '16px',
-          marginBottom: '60px',
-          boxShadow: '0 6px 20px rgba(0,0,0,0.15)',
+          background: 'rgba(0, 0, 0, 0.3)', // translucent overlay for readability
         }}
       >
         <h1 style={{
@@ -245,6 +266,7 @@ function ModernLandingPage() {
           Go to Learning Log →
         </Link>
       </motion.div>
+    </div>
 
       {/* Section 1: Most Recent Developments */}
       {sectionHeader("Most Recent Developments")}
