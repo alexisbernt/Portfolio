@@ -256,7 +256,7 @@ function ModernLandingPage() {
             display: 'inline-block',
             padding: 'clamp(10px, 2vw, 14px) clamp(20px, 4vw, 32px)',
             backgroundColor: '#fff',
-            color: '#2563eb',
+            color: '#090c13ff',
             borderRadius: '10px',
             fontWeight: '600',
             textDecoration: 'none',
