@@ -35,7 +35,7 @@ function ModernLandingPage() {
       title: 'Learning Videos Link', 
       desc: "Follow along for tech-specific learnings that you can apply to your daily life. In video form.", 
       link: 'https://www.youtube.com/@lexicyber', 
-      img: 'photographer-outdoors.png' 
+      img: 'ai_toolkit.png' 
     }
   ];
 
@@ -44,7 +44,7 @@ function ModernLandingPage() {
     { title: 'About', desc: 'The person behind this website.', link: '/about', shape: 'box' },
     { title: 'TheraText', desc: 'An efficient and fun way for therapists to take on notetaking.', link: 'https://www.theratext.site/', shape: 'sphere' },
     { title: 'More', desc: 'Other things I’m working on right now.', link: '/more', shape: 'cone' },
-    { title: 'Learning Log', desc: 'Tracking progress & growth. Get smarter with learning log.', link: '/learninglog', shape: 'icosahedron' }
+    // { title: 'Learning Log', desc: 'Tracking progress & growth. Get smarter with learning log.', link: '/learninglog', shape: 'icosahedron' }
   ];
 
   const container = {
