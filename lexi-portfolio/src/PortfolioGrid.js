@@ -107,9 +107,11 @@ function ModernLandingPage() {
   // Taller images for the feature cards
   const imgStyle = {
     width: '100%',
-    height: '380px', // increased height
-    objectFit: 'cover',
+    height: '380px',
+    objectFit: 'contain',
+    backgroundColor: '#f8fafc', // optional neutral fill behind image
   };
+
 
   // Stack header cards more vertically (narrower & taller)
   const headerCardsColumn = {
