@@ -9,6 +9,7 @@ body {
   margin: 0;
   background-color: #f2f2f2;
   font-family: 'Montserrat', sans-serif;
+  padding-top: 80px; /* ✅ Add space for fixed Navbar */
 }
 
 .App {
@@ -27,7 +28,7 @@ body {
   border: 1px solid #e0e0e0;
 }
 
-/* Optional: make Navbar stick to top of the frame */
+/* sticky-navbar margin */
 .main-container nav {
   margin-bottom: 1.5rem;
 }
