@@ -23,6 +23,7 @@ import Post3 from './pages/Posts/LearningPost3';
 import Post4 from './pages/Posts/LearningPost4';
 import Post6 from './pages/Posts/LearningPost6';
 import SignUp from './pages/SignUp';
+import Gifts from './pages/Gifts';
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
             {/* Funding needs to be linked  */}
             <Route path="/funding" element={<Funding />} /> 
             <Route path="/signup" element={<SignUp />} />
+            <Route path="/giftcycle" element={<Gifts />} />
           </Routes>
         </div>
       </div>
