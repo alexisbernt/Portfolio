@@ -26,10 +26,10 @@ function AI() {
       img: "azure-cover2.png",
     },
     {
-      title: "AI in Education",
-      desc: "From personalized tutoring to automated grading, discover how AI is reshaping classrooms.",
+      title: "Networking and Webpages",
+      desc: "Click here if you want to know what the following terms mean: DNS, DNS Type, IP Address, IPv4, Proxy, DDoS",
       link: "/post4",
-      img: "education-ai.png",
+      img: "ai-formula.png",
     },
     {
       title: "Ethical AI",
