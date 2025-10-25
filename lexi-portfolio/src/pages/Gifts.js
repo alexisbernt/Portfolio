@@ -1,298 +1,111 @@
-import React from 'react'; 
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Float } from '@react-three/drei';
 import { motion } from 'framer-motion';
 import Footer from '../Footer';
-
-// 3D Shape Renderer
-const Shape = ({ type }) => {
-  switch (type) {
-    case 'box': return <mesh><boxGeometry args={[2, 2, 2]} /><meshStandardMaterial color="#2a9946ff" /></mesh>;
-    case 'sphere': return <mesh><sphereGeometry args={[1.2, 32, 32]} /><meshStandardMaterial color="#2a9946ff" /></mesh>;
-    case 'torus': return <mesh><torusGeometry args={[1, 0.4, 16, 100]} /><meshStandardMaterial color="#2a9946ff" /></mesh>;
-    case 'cone': return <mesh><coneGeometry args={[1, 2, 32]} /><meshStandardMaterial color="#2a9946ff" /></mesh>;
-    case 'icosahedron': return <mesh><icosahedronGeometry args={[1.2, 0]} /><meshStandardMaterial color="#2a9946ff" /></mesh>;
-    default: return null;
-  }
-};
+import '../css/Gifts.css';
 
 function ModernLandingPage() {
   const headerPosts = [
-    { 
-      title: 'Gifts That Give Back', 
-      desc: "13% of all proceeds support environmental recovery initiatives.", 
-      // # NEED TO CREATE THE DONATE PAGE 
-      link: '/donate', 
-      img: 'give.png' 
+    {
+      title: 'Gifts That Give Back',
+      desc: '13% of all proceeds support environmental recovery initiatives.',
+      link: '/donate',
+      img: 'give.png'
     },
-    { 
-      title: 'Upcycling Gifts', 
-      desc: "We give new life to excess and pre-owned goods through cleaning, reimagining, and transforming them into the perfect custom-curated gift.", 
-      // # NEED TO CREATE THE CREATE GIFT PAGE
-      link: '/create-gift', 
-      img: 'shop-bag.png' 
+    {
+      title: 'Upcycling Gifts',
+      desc: 'We give new life to excess and pre-owned goods through cleaning, reimagining, and transforming them into the perfect custom-curated gift.',
+      link: '/create-gift',
+      img: 'shop-bag.png'
     }
   ];
 
   const cardPosts = [
-    { title: 'About', desc: 'The person behind this website.', link: '/about', shape: 'box' },
-    { title: 'TheraText', desc: 'An efficient and fun way for therapists to take on notetaking.', link: 'https://www.theratext.site/', shape: 'sphere' },
-    { title: 'More', desc: 'Other things I’m working on right now.', link: '/more', shape: 'cone' },
+    { title: 'About', desc: 'Learn more about the person behind this website and its mission.', link: '/about' },
+    { title: 'TheraText', desc: 'A fun and efficient tool helping therapists simplify their note-taking process.', link: 'https://www.theratext.site/' },
+    { title: 'More', desc: 'Discover other projects and ideas currently in progress.', link: '/more' },
   ];
 
-  const container = {
-    maxWidth: '1300px',
-    margin: '0 auto',
-    padding: '40px 20px',
-    fontFamily: 'Inter, system-ui, sans-serif',
-    position: 'relative',
-  };
-
-  const background = {
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    background: 'linear-gradient(120deg, #f8fafc 0%, #c8f3da 50%, #e8fff0 100%)',
-    zIndex: -1,
-  };
-
-  const headerGrid = {
-    display: 'grid',
-    gridTemplateColumns: '1.3fr 1fr',
-    gap: '40px',
-    alignItems: 'flex-start',
-    marginBottom: '80px'
-  };
-
-  const cardContent = { 
-    padding: '0px 18px 18px 20px', // less top padding
-    lineHeight: '1.4'
-    };
-
-  const profileCard = {
-    textAlign: 'center',
-    backgroundColor: '#fff',
-    borderRadius: '16px',
-    padding: '32px',
-    boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
-  };
-
-  const card = {
-    backgroundColor: '#fff',
-    borderRadius: '16px',
-    overflow: 'hidden',
-    boxShadow: '0 6px 16px rgba(0,0,0,0.1)',
-    textDecoration: 'none',
-    color: 'inherit',
-    display: 'flex',
-    flexDirection: 'column',
-    cursor: 'pointer',
-    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-  };
-
-  const cardGrid = {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-    gap: '24px',
-    marginTop: '40px',
-    marginBottom: '60px'
-  };
-
-  const imgStyle = {
-    width: '100%',
-    height: '380px',
-    objectFit: 'contain',
-    backgroundColor: '#f8fafc',
-  };
-
-  const headerCardsColumn = {
-    display: 'grid',
-    gridTemplateColumns: '1fr',
-    gap: '24px',
-    width: '100%',
-    maxWidth: '550px',
-  };
-
-  if (window.innerWidth > 900) {
-    headerCardsColumn.gridTemplateRows = 'auto auto';
-    headerCardsColumn.gridTemplateColumns = '1fr 1fr';
-    headerCardsColumn.gridAutoFlow = 'row dense';
-  }
-
-  const profileImg = {
-    width: '140px',
-    height: '140px',
-    borderRadius: '50%',
-    border: '4px solid #2a9946ff',
-    objectFit: 'cover'
-  };
-
-  const sectionHeader = (text) => (
-    <div style={{ margin: '80px 0 40px 0' }}>
-      <h2
-        style={{
-          fontSize: '2.3rem',
-          fontWeight: 800,
-          color: '#111827',
-          fontFamily: 'Georgia, "Times New Roman", serif',
-          letterSpacing: '-0.02em',
-          marginBottom: '10px',
-          lineHeight: 1.2,
-        }}
-      >
-        {text}
-      </h2>
-      <div
-        style={{
-          width: '100%',
-          height: '1px',
-          backgroundColor: '#e5e7eb',
-          marginTop: '10px',
-        }}
-      />
-    </div>
-  );
-
   return (
-    <div style={container}>
-      <div style={background} />
-
-      {/* Promo Banner */}
-      <div style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden', marginBottom: '60px', boxShadow: '0 6px 20px rgba(0,0,0,0.15)' }}>
-        <iframe
-          src="https://www.youtube.com/embed/VaqfK5nw-uc?autoplay=1&mute=1&loop=1&playlist=VaqfK5nw-uc&controls=0&showinfo=0&modestbranding=1&rel=0"
-          title="Promo Video"
-          allow="autoplay; fullscreen"
-          frameBorder="0"
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            zIndex: 0,
-            pointerEvents: 'none',
-            filter: 'brightness(0.6)',
-          }}
-        ></iframe>
-
-        <motion.div
-          whileHover={{ scale: 1.02 }}
-          transition={{ duration: 0.3 }}
-          style={{
-            position: 'relative',
-            zIndex: 1,
-            color: '#fff',
-            textAlign: 'center',
-            padding: '70px 20px',
-            borderRadius: '16px',
-            background: 'rgba(0, 0, 0, 0.3)',
-          }}
-        >
-          <h1 style={{
-            fontSize: 'clamp(1.8rem, 4vw, 2.6rem)',
-            fontWeight: '700',
-            marginBottom: '20px',
-            fontFamily: 'Montserrat, sans-serif',
-            lineHeight: '1.3'
-          }}>
-            Create A Custom Gift Today!
-          </h1>
-          <Link 
-          // # NEED TO CREATE GIFT PAGE
-            to="/create-gift" 
-            style={{
-              display: 'inline-block',
-              padding: 'clamp(10px, 2vw, 14px) clamp(20px, 4vw, 32px)',
-              backgroundColor: '#fff',
-              color: '#2a9946ff',
-              borderRadius: '10px',
-              fontWeight: '600',
-              textDecoration: 'none',
-              fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
-            }}
-          >
-            Go To Gifts →
-          </Link>
-        </motion.div>
-      </div>
-
-      {/* Section 1 */}
-      {/* {sectionHeader("Most Recent Developments")} */}
-      <div style={headerGrid}>
-        <div style={headerCardsColumn}>
-          {headerPosts.map((post, i) => (
-            <Link to={post.link} key={i} style={card}>
-              <img src={post.img} alt={post.title} style={imgStyle} />
-              <div style={cardContent}>
-                <h3 style={{ fontSize: '1.3rem', fontWeight: 'bold', marginBottom: '8px' }}>{post.title}</h3>
-                <p style={{ fontSize: '0.95rem', color: '#555' }}>{post.desc}</p>
-              </div>
-            </Link>
-          ))}
-        </div>
-
-        {/* Profile Card */}
-        <div style={profileCard}>
-          <img src="lug.png" alt="Profile" style={profileImg} />
-          <h2 style={{ fontSize: '1.8rem', color: '#2a9946ff', marginTop: '16px' }}>Hi! Looking For A Gift?</h2>
-          <p style={{ fontSize: '0.95rem', color: '#333', marginTop: '12px', lineHeight: '1.6' }}>
-            Lexi's Gift Cycle Helps You Create Custom Gifts For Affordable Prices.
-            This project was born from a love for gift giving with a goal of sustainable living.  
-            If you like to gift things and are looking for an affordable and eco-friendly way to do so, click here!
-          </p>
-          <Link to="/create-gift" style={{ color: '#2a9946ff', fontWeight: 'bold', marginTop: '12px', display: 'inline-block' }}>
-            Create Your Custom Gift →
-          </Link>
-          <br/>
-          <Link to="/signup" style={{ color: '#2a9946ff', fontWeight: 'bold', marginTop: '12px', display: 'inline-block' }}>
-            Join the club →
-          </Link>
-        </div>
-      </div>
-
-      {/* Section 2 */}
-      {sectionHeader("The Things")}
-      <div style={cardGrid}>
-        {cardPosts.map((post, index) => {
-          const isExternal = post.link.startsWith("http");
-          const CardContent = () => (
-            <div style={{ padding: '20px' }}>
-              <h2 style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#2a9946ff' }}>{post.title}</h2>
-              <p style={{ fontSize: '0.9rem', color: '#444', marginBottom: '12px' }}>{post.desc}</p>
-              <Canvas style={{ height: '180px', marginBottom: '12px' }}>
-                <ambientLight intensity={0.5} />
-                <directionalLight position={[0, 2, 5]} />
-                <Float floatIntensity={0.4} rotationIntensity={0.2}>
-                  <Shape type={post.shape} />
-                </Float>
-                <OrbitControls enableZoom={false} enablePan={false} autoRotate />
-              </Canvas>
-              <span style={{ color: '#2a9946ff', fontWeight: 'bold' }}>Read More →</span>
-            </div>
-          );
-
-          return (
-            <motion.div key={index} whileHover={{ scale: 1.05 }} style={card}>
-              {isExternal ? (
-                <a href={post.link} target="_blank" rel="noopener noreferrer" 
-                   style={{ textDecoration: 'none', color: 'inherit', display: 'block', height: '100%' }}>
-                  <CardContent />
-                </a>
-              ) : (
-                <Link to={post.link} 
-                      style={{ textDecoration: 'none', color: 'inherit', display: 'block', height: '100%' }}>
-                  <CardContent />
-                </Link>
-              )}
+    <div className="shop-container">
+      {/* --- Hero Video Section --- */}
+      <section className="hero-video">
+        <div className="video-overlay">
+          <iframe
+            src="https://www.youtube.com/embed/VaqfK5nw-uc?autoplay=1&mute=1&loop=1&playlist=VaqfK5nw-uc&controls=0&showinfo=0&modestbranding=1&rel=0"
+            title="Promo Video"
+            allow="autoplay; fullscreen"
+            frameBorder="0"
+          ></iframe>
+          <div className="hero-content">
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              Create A Custom Gift Today!
+            </motion.h1>
+            <motion.div whileHover={{ scale: 1.05 }}>
+              <Link to="/create-gift" className="hero-btn">Shop Gifts →</Link>
             </motion.div>
-          );
-        })}
-      </div>
+          </div>
+        </div>
+      </section>
+
+      {/* --- Featured Section --- */}
+      <section className="featured-section">
+        <div className="featured-grid">
+          {headerPosts.map((post, i) => (
+            <motion.div key={i} whileHover={{ scale: 1.03 }} className="featured-card">
+              <Link to={post.link}>
+                <img src={post.img} alt={post.title} className="featured-img" />
+                <div className="featured-content">
+                  <h3>{post.title}</h3>
+                  <p>{post.desc}</p>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
+
+          <div className="profile-card">
+            <img src="lug.png" alt="Profile" className="profile-img" />
+            <h2>Hi! Looking For A Gift?</h2>
+            <p>
+              Lexi's Gift Cycle helps you create custom gifts for affordable prices.
+              Born from a love of gifting and sustainability, we make giving back simple.
+            </p>
+            <Link to="/create-gift" className="profile-link">Create Your Custom Gift →</Link>
+            <Link to="/signup" className="profile-link">Join the Club →</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* --- Info Cards Section --- */}
+      <section className="cards-section">
+        <h2 className="section-header">The Things</h2>
+        <div className="card-grid">
+          {cardPosts.map((post, index) => {
+            const isExternal = post.link.startsWith('http');
+            const content = (
+              <div className="info-card-content">
+                <h3>{post.title}</h3>
+                <p>{post.desc}</p>
+                <span className="read-more">Read More →</span>
+              </div>
+            );
+
+            return (
+              <motion.div key={index} whileHover={{ scale: 1.05 }} className="info-card">
+                {isExternal ? (
+                  <a href={post.link} target="_blank" rel="noopener noreferrer">{content}</a>
+                ) : (
+                  <Link to={post.link}>{content}</Link>
+                )}
+              </motion.div>
+            );
+          })}
+        </div>
+      </section>
 
       <Footer />
     </div>
@@ -300,3 +113,4 @@ function ModernLandingPage() {
 }
 
 export default ModernLandingPage;
+
