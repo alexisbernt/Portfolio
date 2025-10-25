@@ -8,11 +8,11 @@ import Footer from '../Footer';
 // 3D Shape Renderer
 const Shape = ({ type }) => {
   switch (type) {
-    case 'box': return <mesh><boxGeometry args={[2, 2, 2]} /><meshStandardMaterial color="#56d375ff" /></mesh>;
-    case 'sphere': return <mesh><sphereGeometry args={[1.2, 32, 32]} /><meshStandardMaterial color="#56d375ff" /></mesh>;
-    case 'torus': return <mesh><torusGeometry args={[1, 0.4, 16, 100]} /><meshStandardMaterial color="#56d375ff" /></mesh>;
-    case 'cone': return <mesh><coneGeometry args={[1, 2, 32]} /><meshStandardMaterial color="#56d375ff" /></mesh>;
-    case 'icosahedron': return <mesh><icosahedronGeometry args={[1.2, 0]} /><meshStandardMaterial color="#56d375ff" /></mesh>;
+    case 'box': return <mesh><boxGeometry args={[2, 2, 2]} /><meshStandardMaterial color="#2a9946ff" /></mesh>;
+    case 'sphere': return <mesh><sphereGeometry args={[1.2, 32, 32]} /><meshStandardMaterial color="#2a9946ff" /></mesh>;
+    case 'torus': return <mesh><torusGeometry args={[1, 0.4, 16, 100]} /><meshStandardMaterial color="#2a9946ff" /></mesh>;
+    case 'cone': return <mesh><coneGeometry args={[1, 2, 32]} /><meshStandardMaterial color="#2a9946ff" /></mesh>;
+    case 'icosahedron': return <mesh><icosahedronGeometry args={[1.2, 0]} /><meshStandardMaterial color="#2a9946ff" /></mesh>;
     default: return null;
   }
 };
@@ -20,15 +20,17 @@ const Shape = ({ type }) => {
 function ModernLandingPage() {
   const headerPosts = [
     { 
-      title: 'Artificial Intelligence Toolkit', 
-      desc: "AI is really hot right now. Dive into the tools changing day-to-day operations.", 
-      link: '/ai', 
+      title: 'Gifts That Give Back', 
+      desc: "13% of all proceeds support environmental recovery initiatives.", 
+      // # NEED TO CREATE THE DONATE PAGE 
+      link: '/donate', 
       img: 'give.png' 
     },
     { 
-      title: 'Learning Videos Link', 
-      desc: "Follow along for tech-specific learnings that you can apply to your daily life. In video form.", 
-      link: 'https://www.youtube.com/@lexicyber', 
+      title: 'Upcycling Gifts', 
+      desc: "We give new life to excess and pre-owned goods through cleaning, reimagining, and transforming them into the perfect custom-curated gift.", 
+      // # NEED TO CREATE THE CREATE GIFT PAGE
+      link: '/create-gift', 
       img: 'shop-bag.png' 
     }
   ];
@@ -65,7 +67,10 @@ function ModernLandingPage() {
     marginBottom: '80px'
   };
 
-  const cardContent = { padding: '20px' };
+  const cardContent = { 
+    padding: '0px 18px 18px 20px', // less top padding
+    lineHeight: '1.4'
+    };
 
   const profileCard = {
     textAlign: 'center',
@@ -121,7 +126,7 @@ function ModernLandingPage() {
     width: '140px',
     height: '140px',
     borderRadius: '50%',
-    border: '4px solid #56d375ff',
+    border: '4px solid #2a9946ff',
     objectFit: 'cover'
   };
 
@@ -195,22 +200,23 @@ function ModernLandingPage() {
             fontFamily: 'Montserrat, sans-serif',
             lineHeight: '1.3'
           }}>
-            Prove you're getting smarter
+            Create A Custom Gift Today!
           </h1>
           <Link 
-            to="/learninglog" 
+          // # NEED TO CREATE GIFT PAGE
+            to="/create-gift" 
             style={{
               display: 'inline-block',
               padding: 'clamp(10px, 2vw, 14px) clamp(20px, 4vw, 32px)',
               backgroundColor: '#fff',
-              color: '#56d375ff',
+              color: '#2a9946ff',
               borderRadius: '10px',
               fontWeight: '600',
               textDecoration: 'none',
               fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
             }}
           >
-            Go to Learning Log →
+            Go To Gifts →
           </Link>
         </motion.div>
       </div>
@@ -233,17 +239,18 @@ function ModernLandingPage() {
         {/* Profile Card */}
         <div style={profileCard}>
           <img src="lug.png" alt="Profile" style={profileImg} />
-          <h2 style={{ fontSize: '1.8rem', color: '#56d375ff', marginTop: '16px' }}>Hi!</h2>
+          <h2 style={{ fontSize: '1.8rem', color: '#2a9946ff', marginTop: '16px' }}>Hi! Looking For A Gift?</h2>
           <p style={{ fontSize: '0.95rem', color: '#333', marginTop: '12px', lineHeight: '1.6' }}>
-            I'm Lexi. I like to learn and make things.  
-            If you like to learn and make things, you should join this nerdy website fam we've built by signing up for the mailing list (free and no spam). 
+            Lexi's Gift Cycle Helps You Create Custom Gifts For Affordable Prices.
+            This project was born from a love for gift giving with a goal of sustainable living.  
+            If you like to gift things and are looking for an affordable and eco-friendly way to do so, click here!
           </p>
-          <Link to="/signup" style={{ color: '#56d375ff', fontWeight: 'bold', marginTop: '12px', display: 'inline-block' }}>
-            Join the club →
+          <Link to="/create-gift" style={{ color: '#2a9946ff', fontWeight: 'bold', marginTop: '12px', display: 'inline-block' }}>
+            Create Your Custom Gift →
           </Link>
           <br/>
-          <Link to="/about" style={{ color: '#56d375ff', fontWeight: 'bold', marginTop: '12px', display: 'inline-block' }}>
-            Read more →
+          <Link to="/signup" style={{ color: '#2a9946ff', fontWeight: 'bold', marginTop: '12px', display: 'inline-block' }}>
+            Join the club →
           </Link>
         </div>
       </div>
@@ -255,7 +262,7 @@ function ModernLandingPage() {
           const isExternal = post.link.startsWith("http");
           const CardContent = () => (
             <div style={{ padding: '20px' }}>
-              <h2 style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#56d375ff' }}>{post.title}</h2>
+              <h2 style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#2a9946ff' }}>{post.title}</h2>
               <p style={{ fontSize: '0.9rem', color: '#444', marginBottom: '12px' }}>{post.desc}</p>
               <Canvas style={{ height: '180px', marginBottom: '12px' }}>
                 <ambientLight intensity={0.5} />
@@ -265,7 +272,7 @@ function ModernLandingPage() {
                 </Float>
                 <OrbitControls enableZoom={false} enablePan={false} autoRotate />
               </Canvas>
-              <span style={{ color: '#56d375ff', fontWeight: 'bold' }}>Read More →</span>
+              <span style={{ color: '#2a9946ff', fontWeight: 'bold' }}>Read More →</span>
             </div>
           );
 
