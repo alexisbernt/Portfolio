@@ -1,0 +1,111 @@
+/* --- Global Layout --- */
+.gift-form-container {
+  font-family: "Poppins", sans-serif;
+  color: #000;
+  background: linear-gradient(180deg, #f8fafc 0%, #ecfdf5 50%, #f5fdf9 100%);
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- Header Section --- */
+.gift-form-hero {
+  text-align: center;
+  max-width: 700px;
+  margin-bottom: 40px;
+}
+
+.gift-form-hero h1 {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 700;
+  color: #2a9946;
+  margin-bottom: 0.8rem;
+}
+
+.gift-form-hero p {
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* --- Form --- */
+.gift-form {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.gift-form label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.gift-form input,
+.gift-form select,
+.gift-form textarea {
+  margin-top: 6px;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  transition: border 0.2s ease;
+}
+
+.gift-form input:focus,
+.gift-form select:focus,
+.gift-form textarea:focus {
+  border-color: #2a9946;
+  outline: none;
+}
+
+/* --- Submit Button --- */
+.gift-submit-btn {
+  background-color: #2a9946;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  padding: 0.9rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.gift-submit-btn:hover {
+  background-color: #23823c;
+  transform: translateY(-2px);
+}
+
+/* --- Success Message --- */
+.gift-success {
+  background: #e8f5e9;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+}
+
+.gift-success h2 {
+  color: #2a9946;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.gift-success p {
+  color: #333;
+  font-size: 1rem;
+}

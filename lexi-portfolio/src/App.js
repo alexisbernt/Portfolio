@@ -12,7 +12,7 @@ import PortfolioGrid from './PortfolioGrid';
 import About from './pages/About';
 import AI from './pages/AI';
 import TheraText from './pages/TheraText';
-import CyberClub from './pages/CyberClub';
+// import CyberClub from './pages/CyberClub';
 import More from './pages/More';
 import RunningLog from './pages/RunningLog';
 import LearningLog from './pages/LearningLog';
@@ -24,6 +24,7 @@ import Post4 from './pages/Posts/LearningPost4';
 import Post6 from './pages/Posts/LearningPost6';
 import SignUp from './pages/SignUp';
 import Gifts from './pages/Gifts';
+import CreateGift from './pages/CreateGift';
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
             <Route path="/funding" element={<Funding />} /> 
             <Route path="/signup" element={<SignUp />} />
             <Route path="/giftcycle" element={<Gifts />} />
+            <Route path="/create-gift" element={<CreateGift />} />
           </Routes>
         </div>
       </div>
