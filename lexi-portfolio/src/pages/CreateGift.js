@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import "../css/CreateGift.css";
+import emailjs from "emailjs-com"; // ✅ Import EmailJS
+import "../css/CreateGift.css"; 
+// import emailjs from "@emailjs/browser";
+
+// Initialize EmailJS with your Public Key
+emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
 
 function CreateGift() {
   const [formData, setFormData] = useState({
@@ -18,9 +23,24 @@ function CreateGift() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Gift request submitted:", formData);
-    setSubmitted(true);
-    setFormData({ name: "", email: "", giftType: "", message: "" });
+
+    // ✅ EmailJS send call
+    emailjs
+    .send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        formData
+    )
+    .then(
+        (result) => {
+        console.log("SUCCESS!", result.text);
+        setSubmitted(true);
+        },
+        (error) => {
+        console.error("FAILED...", error.text);
+        }
+    );
+
   };
 
   return (
