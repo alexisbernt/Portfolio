@@ -91,10 +91,10 @@ function CreateGift() {
               required
             >
               <option value="">Select a type...</option>
-              <option value="eco-basket">Eco-Friendly Basket</option>
-              <option value="upcycled-item">Upcycled Item</option>
-              <option value="personalized-box">Personalized Box</option>
-              <option value="mystery-gift">Mystery Gift</option>
+              <option value="eco-basket">Less than $10</option>
+              <option value="upcycled-item">$10-20</option>
+              <option value="personalized-box">$25</option>
+              <option value="mystery-gift">$50</option>
             </select>
           </label>
 
@@ -105,7 +105,7 @@ function CreateGift() {
               value={formData.message}
               onChange={handleChange}
               rows="5"
-              placeholder="Tell us what makes this gift special..."
+              placeholder="Tell us what makes this gift special... Any particular themes, colors, or items?"
               required
             />
           </label>
