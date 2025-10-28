@@ -22,7 +22,7 @@ function ModernLandingPage() {
 
   const cardPosts = [
     { title: 'About', desc: 'Learn more about the person behind this website and its mission.', link: '/about' },
-    { title: 'TheraText', desc: 'A fun and efficient tool helping therapists simplify their note-taking process.', link: 'https://www.theratext.site/' },
+    { title: 'Order A Gift', desc: 'Create a cheap, custom arranged, gift!', link: '/create-gift' },
     { title: 'More', desc: 'Discover other projects and ideas currently in progress.', link: '/more' },
   ];
 
@@ -113,4 +113,3 @@ function ModernLandingPage() {
 }
 
 export default ModernLandingPage;
-
