@@ -31,12 +31,13 @@ function ModernLandingPage() {
       {/* --- Hero Video Section --- */}
       <section className="hero-video">
         <div className="video-overlay">
-          <iframe
-            src="https://www.youtube.com/embed/VaqfK5nw-uc?autoplay=1&mute=1&loop=1&playlist=VaqfK5nw-uc&controls=0&showinfo=0&modestbranding=1&rel=0"
-            title="Promo Video"
-            allow="autoplay; fullscreen"
-            frameBorder="0"
-          ></iframe>
+            <iframe
+              src="https://www.youtube.com/embed/FJuH50udo40?autoplay=1&mute=1&loop=1&playlist=FJuH50udo40&controls=0&showinfo=0&modestbranding=1&rel=0"
+              title="Promo Video"
+              allow="autoplay; fullscreen"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
           <div className="hero-content">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
