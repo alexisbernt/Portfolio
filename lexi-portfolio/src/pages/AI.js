@@ -35,13 +35,13 @@ function AI() {
       title: "Ethical AI",
       desc: "What does it mean to build responsible and transparent AI systems?",
       link: "/post5",
-      img: "ethical-ai.png",
+      img: "content-pending.png",
     },
     {
       title: "Creative AI Tools",
       desc: "From text-to-image generation to AI music, these tools are redefining creative expression.",
       link: "/post7",
-      img: "creative-ai.png",
+      img: "content-pending.png",
     },
   ];
 
