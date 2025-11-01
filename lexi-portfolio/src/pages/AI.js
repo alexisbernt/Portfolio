@@ -76,7 +76,7 @@ function AI() {
 
       {/* 🔹 Section Header */}
       <div className="section-header">
-        <h2>Most Recent Developments</h2>
+        <h2>Blog Posts on AI (Quick Reads):</h2>
       </div>
 
       {/* 🔹 Blog Cards */}
@@ -96,7 +96,7 @@ function AI() {
 
       {/* 🔹 Toolkit Section */}
       <div className="section-header">
-        <h2>AI Toolkit Tools</h2>
+        <h2>AI Toolkit Tools:</h2>
       </div>
 
       <div className="ai-container">
