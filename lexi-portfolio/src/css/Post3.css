@@ -11,7 +11,7 @@ body {
 
 /* Header Section */
 .about-header {
-  background: linear-gradient(135deg, #40464d, #24282b);
+  background: linear-gradient(135deg, #4a90e2, #357ab8);
   color: white;
   padding: 60px 20px;
   text-align: center;
@@ -80,7 +80,7 @@ body {
 .post-content p::first-letter {
   font-size: 1.4rem;
   font-weight: bold;
-  color: #202020; /* changed from blue to black */
+  color: #000; /* changed from blue to black */
 }
 
 /* Responsive */

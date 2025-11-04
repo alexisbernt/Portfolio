@@ -1,4 +1,5 @@
-import "../../css/Post1.css";
+
+import "../../css/Post3.css";
 import Footer from "../../Footer";
 
 function Post1() {
@@ -7,15 +8,18 @@ function Post1() {
       {/* Header Section */}
       <header className="about-header">
         <div className="framed-text">
-          <h1>RAG</h1>
-          <p>Retrieval Augmented Generation (RAG) enhances the capabilities of large language models.</p>
-          <br />
-          <p>Read more to learn what's new quickly and efficiently! </p>
-          <p> [hopefully have some fun along the way]</p>
+          <h1>Retrieval-Augmented Generation (RAG)</h1>
+          <p>
+            Retrieval Augmented Generation (RAG) enhances the capabilities of large language models
+            by combining them with external knowledge sources.
+          </p>
+          <p>
+            Read on to understand how RAG works, what makes it powerful, and how you can apply it.
+          </p>
         </div>
       </header>
 
-      {/* Content Section */}
+      {/* Blog Content */}
       <div className="post-content">
         <p>
           Side note: This informational article has side tangents. </p>
