@@ -25,6 +25,7 @@ import Post6 from './pages/Posts/LearningPost6';
 import SignUp from './pages/SignUp';
 import Gifts from './pages/Gifts';
 import CreateGift from './pages/CreateGift';
+import Coins from './pages/eBay';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Routes>
             <Route path="/" element={<PortfolioGrid />} />
             <Route path="/about" element={<About />} />
+            <Route path="/coins" element={<Coins/>} />
             <Route path="/ai" element={<AI />} />
             <Route path="/theratext" element={<TheraText />} />
             {/* <Route path="/cyberclub" element={<CyberClub />} /> */}
