@@ -5,14 +5,14 @@ const timelineEvents = [
   {
     date: "Est. 2025",
     title: "About",
-    img: 'business-image.png',
-    description: "Hi , I'm Lexi and this is my real take on starting a job in corporate America in 2025."
+    img: 'bicentennial.png',
+    description: "Coins that are Grandfather collected & family sold."
   },
   {
     date: "A Ongoing Compilation of Resources",
-    title: "The World of Tech",
-    img: "VS_Git_Alexis.png",
-    description: "This site is full of incredible resources and ideas that can help you as you navigate your career path."
+    title: "Where to find",
+    img: "quarters1.png",
+    description: "Check out the following eBay page: https://www.ebay.com/usr/alexis.coins."
   },
   {
     date: "May 12, 2022",
