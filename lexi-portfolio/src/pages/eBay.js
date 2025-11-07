@@ -25,7 +25,20 @@ const timelineEvents = [
 export default function Coins() {
   return (
     <div className="about-container">
-
+    <header className="about-header">
+        <div className="framed-text">
+        <p>The site that has it all:</p>
+        <a 
+            href="https://www.ebay.com/usr/alexis.coins" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="about-link"
+        >
+            https://www.ebay.com/usr/alexis.coins
+        </a>
+        </div>
+    </header>
+    {/* </div> */}
       <div className="timeline">
         {timelineEvents.map((event, index) => (
           <motion.div
