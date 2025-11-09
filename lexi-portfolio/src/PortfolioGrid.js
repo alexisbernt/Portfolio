@@ -231,6 +231,71 @@ function ModernLandingPage() {
         </div>
       </div>
 
+      {/* Section: Featured Videos */}
+      {sectionHeader("Featured Videos")}
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+        gap: '24px',
+        marginBottom: '80px',
+      }}>
+        {[
+          {
+            title: "How to Stay Curious in Tech",
+            src: "https://www.youtube.com/embed/VaqfK5nw-uc",
+          },
+          {
+            title: "Building Smarter Projects",
+            src: "https://www.youtube.com/embed/DXUAyRRkI6k",
+          },
+          {
+            title: "What I Learned This Month",
+            src: "https://www.youtube.com/embed/LXb3EKWsInQ",
+          },
+        ].map((video, index) => (
+          <motion.div
+            key={index}
+            whileHover={{ scale: 1.03 }}
+            transition={{ duration: 0.3 }}
+            style={{
+              backgroundColor: '#fff',
+              borderRadius: '16px',
+              overflow: 'hidden',
+              boxShadow: '0 6px 16px rgba(0,0,0,0.1)',
+            }}
+          >
+            <div style={{ position: 'relative', paddingTop: '56.25%' }}>
+              <iframe
+                src={`${video.src}?controls=1&modestbranding=1&rel=0`}
+                title={video.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  borderRadius: '16px 16px 0 0',
+                }}
+              ></iframe>
+            </div>
+            <div style={{ padding: '16px', textAlign: 'center' }}>
+              <h3 style={{
+                fontSize: '1.1rem',
+                fontWeight: 'bold',
+                color: '#1e3a8a',
+                margin: '8px 0 4px 0',
+              }}>
+                {video.title}
+              </h3>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+
       {/* Section 2: The Things */}
       {sectionHeader("The Things")}
       <div style={cardGrid}>
