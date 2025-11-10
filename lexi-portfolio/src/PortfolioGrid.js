@@ -241,16 +241,16 @@ function ModernLandingPage() {
       }}>
         {[
           {
-            title: "How to Stay Curious in Tech",
+            title: "Things I've Learned in 2025",
             src: "https://www.youtube.com/embed/VaqfK5nw-uc",
           },
           {
-            title: "Building Smarter Projects",
-            src: "https://www.youtube.com/embed/DXUAyRRkI6k",
+            title: "Building Smarter AI Prompts",
+            src: "https://www.youtube.com/embed/ClEBQ588Z8Y",
           },
           {
-            title: "What I Learned This Month",
-            src: "https://www.youtube.com/embed/LXb3EKWsInQ",
+            title: "Something I Learned This Month",
+            src: "https://www.youtube.com/embed/nYbB-uTSsTw?si=CzV-Hhccl1NBCaT5",
           },
         ].map((video, index) => (
           <motion.div
