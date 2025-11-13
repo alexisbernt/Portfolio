@@ -47,15 +47,15 @@ function AI() {
 
   return (
     <div className="ai-page">
-      {/* 🔹 Dark Intro Section */}
-      <section className="ai-intro-dark">
+      {/* 🔹 Top Hero Section */}
+      <section className="ai-hero">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.6 }}
         >
-          <h1 className="ai-header">Your Personal AI Toolkit</h1>
-          <p className="ai-subtext">
+          <h1 className="ai-hero-title">Your Personal AI Toolkit</h1>
+          <p className="ai-hero-subtitle">
             Explore modern tools, techniques, and insights that help you use AI more effectively in work, school, and life.
           </p>
         </motion.div>
