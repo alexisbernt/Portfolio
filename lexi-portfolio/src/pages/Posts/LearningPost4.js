@@ -12,6 +12,11 @@ function Post4() {
           <br />
           <p>DNS, DNS Type, IP Address, IPv4, Proxy, DDoS</p>
           <p>Read more for more info!</p>
+          <div class="about-meta">
+            <span>By: Alexis Bernthal</span>
+            <span class="dot">•</span>
+            <span>November 12, 2025</span>
+          </div>
         </div>
       </header>
 

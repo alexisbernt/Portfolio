@@ -8,30 +8,61 @@ body {
   padding: 0;
 }
 
-
-/* Header Section */
+/* Modern Blog-Style Header (Compact Version) */
 .about-header {
-  background: linear-gradient(135deg, #40464d, #24282b);
-  color: white;
-  padding: 60px 20px;
+  background: #fafafa;
+  color: #111827;
   text-align: center;
+  padding: 80px 20px 60px; /* ⬅️ reduced height */
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .about-header .framed-text {
-  max-width: 800px;
+  max-width: 760px; /* slightly narrower for focus */
   margin: 0 auto;
 }
 
+/* Title */
 .about-header h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
-  font-weight: bold;
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: clamp(2.2rem, 4.5vw, 3rem);
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  margin-bottom: 14px; /* tighter spacing */
 }
 
+/* Subtitle */
 .about-header p {
-  font-size: 1.2rem;
-  margin: 0 auto;
-  max-width: 650px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  color: #4b5563;
+  line-height: 1.65;
+  max-width: 640px;
+  margin: 0 auto 28px; /* slightly less bottom space */
+}
+
+/* Meta (author/date) */
+.about-meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.about-meta span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.about-meta .dot {
+  font-size: 1.1rem;
+  color: #9ca3af;
 }
 
 /* Blog Content */

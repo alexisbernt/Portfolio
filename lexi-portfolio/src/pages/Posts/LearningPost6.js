@@ -9,13 +9,17 @@ function Post6() {
         <div className="framed-text">
           <h1>Azure AI Services (AI Tools Series: Ep. 3)</h1>
           <p>Azure is Microsoft's cloud computing platform.</p>
-          <br />
           <p>
             That means that Azure can do things like:
           </p>
           <p>+ Store data + Run applications + Host websites + Build AI models + Analyze information...
         </p>
-        <p>All without needing physical servers or hardware.</p>
+        <p>All without needing physical servers or hardware.Read for more.</p>
+        <div class="about-meta">
+            <span>By: Alexis Bernthal</span>
+            <span class="dot">•</span>
+            <span>November 12, 2025</span>
+          </div>
         </div>
       </header>
     <div className="post-layout">

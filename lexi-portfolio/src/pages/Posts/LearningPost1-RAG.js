@@ -16,6 +16,11 @@ function Post1() {
           <p>
             Read on to understand how RAG works, what makes it powerful, and how you can apply it.
           </p>
+          <div class="about-meta">
+            <span>By: Alexis Bernthal</span>
+            <span class="dot">•</span>
+            <span>November 12, 2025</span>
+          </div>
         </div>
       </header>
 
