@@ -45,6 +45,23 @@ function AI() {
     },
   ];
 
+    const sectionHeader = (text) => (
+    <div style={{ margin: '80px 0 40px 0' }}>
+      <h2 style={{
+        fontSize: '2.3rem',
+        fontWeight: 800,
+        color: '#111827',
+        fontFamily: 'Georgia, "Times New Roman", serif',
+        letterSpacing: '-0.02em',
+        marginBottom: '10px',
+        lineHeight: 1.2,
+      }}>
+        {text}
+      </h2>
+      <div style={{ width: '100%', height: '1px', backgroundColor: '#e5e7eb', marginTop: '10px' }} />
+    </div>
+  );
+
   return (
     <div className="ai-page">
       {/* 🔹 Top Hero Section */}
@@ -61,17 +78,68 @@ function AI() {
         </motion.div>
       </section>
 
-      {/* 🔹 Embedded YouTube Video */}
-      <div className="learning-log-video">
-        <iframe
-          width="100%"
-          height="400"
-          src="https://www.youtube.com/embed/3Jd_U60oxq0"
-          title="YouTube video"
-          frameBorder="0"
-          allow="autoplay; encrypted-media"
-          allowFullScreen
-        ></iframe>
+      {/* Section: Featured Videos */}
+      {sectionHeader("Featured Videos")}
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+        gap: '24px',
+        marginBottom: '80px',
+      }}>
+        {[
+          {
+            title: "AI Tools Short!",
+            src: "https://www.youtube.com/embed/3Jd_U60oxq0",
+          },
+          {
+            title: "Building Smarter AI Prompts",
+            src: "https://www.youtube.com/embed/ClEBQ588Z8Y",
+          },
+          {
+            title: "Something I Learned This Month",
+            src: "https://www.youtube.com/embed/nYbB-uTSsTw?si=CzV-Hhccl1NBCaT5",
+          },
+        ].map((video, index) => (
+          <motion.div
+            key={index}
+            whileHover={{ scale: 1.03 }}
+            transition={{ duration: 0.3 }}
+            style={{
+              backgroundColor: '#fff',
+              borderRadius: '16px',
+              overflow: 'hidden',
+              boxShadow: '0 6px 16px rgba(0,0,0,0.1)',
+            }}
+          >
+            <div style={{ position: 'relative', paddingTop: '56.25%' }}>
+              <iframe
+                src={`${video.src}?controls=1&modestbranding=1&rel=0`}
+                title={video.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  borderRadius: '16px 16px 0 0',
+                }}
+              ></iframe>
+            </div>
+            <div style={{ padding: '16px', textAlign: 'center' }}>
+              <h3 style={{
+                fontSize: '1.1rem',
+                fontWeight: 'bold',
+                color: '#1e3a8a',
+                margin: '8px 0 4px 0',
+              }}>
+                {video.title}
+              </h3>
+            </div>
+          </motion.div>
+        ))}
       </div>
 
       {/* 🔹 Section Header */}
