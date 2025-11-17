@@ -100,7 +100,7 @@ function ModernLandingPage() {
     width: '140px',
     height: '140px',
     borderRadius: '50%',
-    border: '4px solid #3b82f6',
+    border: '4px solid #ffffffff',
     objectFit: 'cover',
   };
 
@@ -220,14 +220,14 @@ function ModernLandingPage() {
         {/* Right column: Bio card */}
         <div style={profileCard}>
           <img src="bernthal_alexis.png" alt="Profile" style={profileImg} />
-          <h2 style={{ fontSize: '1.8rem', color: '#1e40af', marginTop: '16px' }}>Hi!</h2>
+          <h2 style={{ fontSize: '1.8rem', color: '#000000ff', marginTop: '16px' }}>Hi!</h2>
           <p style={{ fontSize: '0.95rem', color: '#333', marginTop: '12px', lineHeight: '1.6' }}>
             I'm Lexi. I like to learn and make things.
             If you like to learn and make things, you should join this nerdy website fam we've built by signing up for the mailing list (free and no spam).
           </p>
-          <Link to="/signup" style={{ color: '#2563eb', fontWeight: 'bold', marginTop: '12px', display: 'inline-block' }}>Join the club →</Link>
+          <Link to="/signup" style={{ color: '#000000ff', fontWeight: 'bold', marginTop: '12px', display: 'inline-block' }}>Join the club →</Link>
           <br />
-          <Link to="/about" style={{ color: '#2563eb', fontWeight: 'bold', marginTop: '12px', display: 'inline-block' }}>Read more →</Link>
+          <Link to="/about" style={{ color: '#000000ff', fontWeight: 'bold', marginTop: '12px', display: 'inline-block' }}>Read more →</Link>
         </div>
       </div>
 

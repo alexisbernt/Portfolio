@@ -41,7 +41,7 @@ h1, h2, h3 {
   padding: 20px 40px;
   border-radius: 12px;
   font-size: 2.2rem;
-  color: #1e3a8a;
+  color: #000000;
   font-weight: 700;
   letter-spacing: 1px;
   box-shadow: 0 4px 14px rgba(0,0,0,0.1);
@@ -72,7 +72,7 @@ h1, h2, h3 {
 
 .portfolio-post-card h2 {
   font-size: 1.5rem;
-  color: #1e3a8a;
+  color: #000000;
   margin-bottom: 12px;
 }
 
@@ -84,7 +84,7 @@ h1, h2, h3 {
 }
 
 .read-more {
-  color: #2563eb;
+  color: #000000;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
@@ -92,7 +92,7 @@ h1, h2, h3 {
 }
 
 .read-more:hover {
-  color: #1e40af;
+  color: #000000;
 }
 
 /* Make entire card clickable */
