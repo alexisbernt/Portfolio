@@ -30,20 +30,31 @@ export default function Coins() {
   return (
     <div className="about-container">
 
-      <header className="about-header">
-        <div className="framed-text">
-          <h1>Your Trusted Source for Collectible Coins</h1>
-          <p>Explore rare finds, historic sets, and hand-selected pieces.</p>
+      <header className="store-banner">
+        <div className="store-banner-content">
+          <p className="store-banner-quote">
+            "Your trusted destination for collectible U.S. coins — curated with care,
+            history, and authenticity in every piece."
+          </p>
+
+          <div className="store-banner-stars">
+            <span>⭐</span>
+            <span>⭐</span>
+            <span>⭐</span>
+            <span>⭐</span>
+            <span>⭐</span>
+          </div>
+
           <a
             href="https://www.ebay.com/usr/alexis.coins"
             target="_blank"
             rel="noopener noreferrer"
-            className="about-link"
+            className="store-banner-link"
           >
             Visit the Official Store
           </a>
         </div>
-      </header>
+        </header>
 
       {/* Timeline Section */}
       <div className="timeline">

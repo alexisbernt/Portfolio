@@ -238,3 +238,46 @@
   color: #1d4ed8;
   border-bottom-color: #1d4ed8;
 }
+/* --- Store Header Banner (Testimonial Style) --- */
+.store-banner {
+  width: 100%;
+  background: #efece1; /* soft beige like your screenshot */
+  padding: 4rem 2rem;
+  text-align: center;
+  border-radius: 16px;
+  margin-bottom: 3rem;
+}
+
+.store-banner-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.store-banner-quote {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #333;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.store-banner-stars {
+  font-size: 2rem;
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.store-banner-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.8rem;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.store-banner-link:hover {
+  background: #1e4fcf;
+}
