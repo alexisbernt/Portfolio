@@ -10,13 +10,14 @@ const timelineEvents = [
     description:
       "A curated online storefront offering collectible U.S. coins, curated sets, and rare finds from a long-standing family collection."
   },
-  {
-    date: "Discover Authentic Collectibles",
-    title: "Shop the Collection",
-    img: "quarters1.png",
-    description:
-      "Browse our verified listings, rare sets, and premium pieces. View the full storefront here: https://www.ebay.com/usr/alexis.coins"
-  },
+{
+  date: "Discover Authentic Collectibles",
+  title: "Shop the Collection",
+  img: "quarters1.png",
+  description:
+    "Browse our verified listings, rare sets, and premium pieces.",
+  link: "https://www.ebay.com/usr/alexis.coins"
+},
   {
     date: "A Commitment to Quality",
     title: "Our Mission",
@@ -75,6 +76,16 @@ export default function Coins() {
               <h3>{event.title}</h3>
               <p className="date">{event.date}</p>
               <p>{event.description}</p>
+              {event.link && (
+                <a
+                  href={event.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="timeline-button"
+                >
+                  Visit Store
+                </a>
+              )}
             </div>
           </motion.div>
         ))}
