@@ -1,44 +1,51 @@
 import { motion } from "framer-motion";
 import "../css/About.css";
+import Footer from "../Footer";
 
 const timelineEvents = [
   {
     date: "Est. 2025",
-    title: "About",
-    img: 'bicentennial.png',
-    description: "Coins that are Grandfather collected & family sold."
+    title: "Welcome to Alexis Coins",
+    img: "bicentennial.png",
+    description:
+      "A curated online storefront offering collectible U.S. coins, curated sets, and rare finds from a long-standing family collection."
   },
   {
-    date: "A Ongoing Compilation of Resources",
-    title: "Where to find",
+    date: "Discover Authentic Collectibles",
+    title: "Shop the Collection",
     img: "quarters1.png",
-    description: "Check out the following eBay page: https://www.ebay.com/usr/alexis.coins."
+    description:
+      "Browse our verified listings, rare sets, and premium pieces. View the full storefront here: https://www.ebay.com/usr/alexis.coins"
   },
   {
-    date: "May 12, 2022",
-    title: "A Goal To Help Grow",
+    date: "A Commitment to Quality",
+    title: "Our Mission",
     img: "iPhone_Alexis.png",
-    description: "The goal is to help oneanother grow in technology, business, and experiences."
+    description:
+      "We aim to provide collectors with trustworthy, hand-selected items while growing a community centered around history, authenticity, and shared passion."
   }
 ];
 
 export default function Coins() {
   return (
     <div className="about-container">
-    <header className="about-header">
+
+      <header className="about-header">
         <div className="framed-text">
-        <p>The site that has it all:</p>
-        <a 
-            href="https://www.ebay.com/usr/alexis.coins" 
-            target="_blank" 
+          <h1>Your Trusted Source for Collectible Coins</h1>
+          <p>Explore rare finds, historic sets, and hand-selected pieces.</p>
+          <a
+            href="https://www.ebay.com/usr/alexis.coins"
+            target="_blank"
             rel="noopener noreferrer"
             className="about-link"
-        >
-            https://www.ebay.com/usr/alexis.coins
-        </a>
+          >
+            Visit the Official Store
+          </a>
         </div>
-    </header>
-    {/* </div> */}
+      </header>
+
+      {/* Timeline Section */}
       <div className="timeline">
         {timelineEvents.map((event, index) => (
           <motion.div
@@ -52,6 +59,7 @@ export default function Coins() {
             <div className="timeline-img">
               <img src={event.img} alt={event.title} />
             </div>
+
             <div className="timeline-content">
               <h3>{event.title}</h3>
               <p className="date">{event.date}</p>
@@ -63,12 +71,16 @@ export default function Coins() {
 
       {/* Mailing List CTA */}
       <div className="cta">
-        <h2>Stay in the loop ✉️</h2>
-        <p>Sign up for my mailing list and never miss an update.</p>
+        <h2>Stay Connected ✉️</h2>
+        <p>
+          Join the mailing list for early access to new listings, exclusive deals,
+          and collection insights.
+        </p>
         <a href="/create-gift" className="cta-button">
           Join the Mailing List
         </a>
       </div>
+      <Footer />
     </div>
   );
 }
