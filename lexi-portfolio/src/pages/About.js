@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import "../css/About.css";
-
+import Footer from "../Footer";
 const timelineEvents = [
   {
     date: "Est. 2025",
@@ -67,10 +67,11 @@ export default function About() {
       <div className="cta">
         <h2>Stay in the loop ✉️</h2>
         <p>Sign up for my mailing list and never miss an update.</p>
-        <a href="/create-gift" className="cta-button">
+        <a href="/signup" className="cta-button">
           Join the Mailing List
         </a>
       </div>
+      <Footer />
     </div>
   );
 }

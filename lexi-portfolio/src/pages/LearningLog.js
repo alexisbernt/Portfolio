@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "../css/LearningLog.css";
-
+import Footer from "../Footer";
 export default function LearningLog() {
   const [entries, setEntries] = useState([]);
   const [title, setTitle] = useState("");
@@ -220,7 +220,16 @@ export default function LearningLog() {
             </motion.div>
           ))
         )}
+      {/* Mailing List CTA */}
+      <div className="cta">
+        <h2>Stay in the loop ✉️</h2>
+        <p>Sign up for my mailing list and never miss an update.</p>
+        <a href="/signup" className="cta-button">
+          Join the Mailing List
+        </a>
       </div>
+      </div>
+      <Footer />
     </div>
   );
 }

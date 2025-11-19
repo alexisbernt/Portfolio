@@ -205,8 +205,15 @@ function AI() {
             </ul>
           </div>
         </div>
+              {/* Mailing List CTA */}
+      <div className="cta">
+        <h2>Stay in the loop ✉️</h2>
+        <p>Sign up for my mailing list and never miss an update.</p>
+        <a href="/signup" className="cta-button">
+          Join the Mailing List
+        </a>
       </div>
-
+      </div>
       <Footer />
     </div>
   );

@@ -1,6 +1,7 @@
 // src/pages/SignUp.js
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import Footer from "../Footer";
 
 // Initialize EmailJS using your public key
 emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
@@ -114,6 +115,9 @@ function SignUp() {
       </form>
 
       {status && <p style={{ marginTop: "1rem" }}>{status}</p>}
+    <div>
+      <Footer />
+    </div>
     </div>
   );
 }
