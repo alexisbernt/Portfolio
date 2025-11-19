@@ -1,5 +1,9 @@
 // src/pages/SignUp.js
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
+
+// Initialize EmailJS using your public key
+emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
 
 function SignUp() {
   const [formData, setFormData] = useState({
@@ -7,6 +11,7 @@ function SignUp() {
     email: "",
     newsletter: false,
   });
+
   const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
@@ -17,31 +22,47 @@ function SignUp() {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const response = await fetch("http://localhost:5000/signup", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
 
-      if (response.ok) {
-        setStatus("✅ Signed up successfully!");
-        setFormData({ name: "", email: "", newsletter: false });
-      } else {
-        const errorData = await response.json();
-        setStatus(`⚠️ ${errorData.error || "Failed to sign up."}`);
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      setStatus("❌ Server error. Try again later.");
-    }
+    // Convert boolean to readable text if needed
+    const emailData = {
+      ...formData,
+      newsletter: formData.newsletter ? "Yes" : "No",
+    };
+
+    emailjs
+      .send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        emailData
+      )
+      .then(
+        (result) => {
+          console.log("SUCCESS!", result.text);
+          setStatus("✅ Signed up successfully!");
+          setFormData({ name: "", email: "", newsletter: false });
+        },
+        (error) => {
+          console.error("FAILED...", error.text);
+          setStatus("❌ Failed to submit. Try again later.");
+        }
+      );
   };
 
   return (
-    <div style={{ maxWidth: "400px", margin: "2rem auto", padding: "1.5rem", border: "1px solid #ccc", borderRadius: "10px", backgroundColor: "#fff" }}>
+    <div
+      style={{
+        maxWidth: "400px",
+        margin: "2rem auto",
+        padding: "1.5rem",
+        border: "1px solid #ccc",
+        borderRadius: "10px",
+        backgroundColor: "#fff",
+      }}
+    >
       <h2>Join Our Mailing List</h2>
+
       <form onSubmit={handleSubmit}>
         <label style={{ display: "block", marginBottom: "8px" }}>
           Name:
@@ -54,6 +75,7 @@ function SignUp() {
             style={{ width: "100%", padding: "8px", marginTop: "4px" }}
           />
         </label>
+
         <label style={{ display: "block", marginBottom: "8px" }}>
           Email:
           <input
@@ -65,6 +87,7 @@ function SignUp() {
             style={{ width: "100%", padding: "8px", marginTop: "4px" }}
           />
         </label>
+
         <label style={{ display: "block", marginBottom: "12px" }}>
           <input
             type="checkbox"
@@ -74,13 +97,22 @@ function SignUp() {
           />{" "}
           I agree to receive non-spam newsletters.
         </label>
+
         <button
           type="submit"
-          style={{ padding: "10px 20px", backgroundColor: "#2563eb", color: "#fff", border: "none", borderRadius: "6px", cursor: "pointer" }}
+          style={{
+            padding: "10px 20px",
+            backgroundColor: "#2563eb",
+            color: "#fff",
+            border: "none",
+            borderRadius: "6px",
+            cursor: "pointer",
+          }}
         >
           Sign Up
         </button>
       </form>
+
       {status && <p style={{ marginTop: "1rem" }}>{status}</p>}
     </div>
   );
