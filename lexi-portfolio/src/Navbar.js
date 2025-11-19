@@ -49,12 +49,14 @@ function Navbar() {
               <ThreeMenu />
               <ul>
                 <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
-                <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
-                <li><Link to="/giftcycle" onClick={() => setMenuOpen(false)}>Gift Cycle: Cheap Gifts</Link></li>
+                <li><Link to="/learninglog" onClick={() => setMenuOpen(false)}>Learning Log: Your Daily Learning</Link></li>
                 <li><Link to="/ai" onClick={() => setMenuOpen(false)}>AI Toolkit: Technical Blog Posts</Link></li>
+                <li><Link to="/coins" onClick={() => setMenuOpen(false)}>Selling Coins: What YOU Need to Know About eBay</Link></li>
                 <li><Link to="/theratext" onClick={() => setMenuOpen(false)}>TheraText: Solutions for Therapists</Link></li>
                 {/* <li><Link to="/cyberclub" onClick={() => setMenuOpen(false)}>Lexi's Cyber Club</Link></li> */}
+                <li><Link to="/giftcycle" onClick={() => setMenuOpen(false)}>Gift Cycle: Cheap Gifts</Link></li>
                 <li><Link to="/more" onClick={() => setMenuOpen(false)}>More</Link></li>
+                <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
                 {/* <li><Link to="/running-log" onClick={() => setMenuOpen(false)}>Running Log ✨</Link></li> */}
               </ul>
             </div>

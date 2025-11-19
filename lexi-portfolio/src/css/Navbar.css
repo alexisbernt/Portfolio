@@ -165,3 +165,32 @@ h1, h2, h3 {
     width: 160px;
   }
 }
+/* Make dropdown menu scrollable */
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 60px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  overflow-y: auto;          /* ✅ vertical scroll */
+  overflow-x: hidden;
+  max-height: 70vh;          /* ✅ keeps it within the screen */
+  min-width: 220px;
+  animation: fadeIn 0.3s ease forwards;
+  z-index: 1000;
+}
+
+/* Hide scrollbar (optional, for sleek UI) */
+.dropdown-menu::-webkit-scrollbar {
+  width: 0px;
+}
+.dropdown-menu {
+  scrollbar-width: none; /* Firefox */
+}
+@media (max-width: 480px) {
+  .dropdown-menu {
+    max-height: 75vh;        /* allow a little more space */
+    min-width: 180px;
+  }
+}
