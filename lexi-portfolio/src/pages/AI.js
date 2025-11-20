@@ -205,9 +205,7 @@ function AI() {
             </ul>
           </div>
         </div>
-      import { Link } from "react-router-dom";
-
-      {/* Mailing List CTA */}
+     {/* Mailing List CTA */}
       <div className="cta">
         <h2>Stay in the loop ✉️</h2>
         <p>Sign up for my mailing list and never miss an update.</p>

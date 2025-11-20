@@ -222,8 +222,6 @@ export default function LearningLog() {
             </motion.div>
           ))
         )}
-      import { Link } from "react-router-dom";
-
       {/* Mailing List CTA */}
       <div className="cta">
         <h2>Stay in the loop ✉️</h2>
