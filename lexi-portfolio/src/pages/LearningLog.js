@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "../css/LearningLog.css";
 import Footer from "../Footer";
+import { Link } from 'react-router-dom';
+
 export default function LearningLog() {
   const [entries, setEntries] = useState([]);
   const [title, setTitle] = useState("");

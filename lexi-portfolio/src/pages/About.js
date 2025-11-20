@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import "../css/About.css";
 import Footer from "../Footer";
+import { Link } from 'react-router-dom';
+
 const timelineEvents = [
   {
     date: "Est. 2025",

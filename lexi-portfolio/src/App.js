@@ -5,7 +5,7 @@ import './css/Navbar.css';
 import './css/PortfolioGrid.css';
 import './css/RunningLog.css';
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'; 
 import Navbar from './Navbar';
 import PortfolioGrid from './PortfolioGrid';
 
@@ -36,7 +36,7 @@ function App() {
           <Routes>
             <Route path="/" element={<PortfolioGrid />} />
             <Route path="/about" element={<About />} />
-            <Route path="/coins" element={<Coins/>} />
+            <Route path="/coins" element={<Coins />} />
             <Route path="/ai" element={<AI />} />
             <Route path="/theratext" element={<TheraText />} />
             {/* <Route path="/cyberclub" element={<CyberClub />} /> */}
@@ -48,8 +48,7 @@ function App() {
             <Route path="/post3" element={<Post3 />} />
             <Route path="/post4" element={<Post4 />} />
             <Route path="/post6" element={<Post6 />} />
-            {/* Funding needs to be linked  */}
-            <Route path="/funding" element={<Funding />} /> 
+            <Route path="/funding" element={<Funding />} />
             <Route path="/sign-up" element={<SignUp />} />
             <Route path="/giftcycle" element={<Gifts />} />
             <Route path="/create-gift" element={<CreateGift />} />
