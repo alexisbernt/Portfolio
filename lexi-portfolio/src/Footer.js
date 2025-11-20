@@ -54,16 +54,14 @@ function Footer() {
           >
             About
           </Link>
-          <a
-            href="/signup"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/sign-up"
             style={linkStyle}
             onMouseEnter={(e) => (e.currentTarget.style.color = linkHover.color)}
             onMouseLeave={(e) => (e.currentTarget.style.color = linkStyle.color)}
           >
             Mailing List
-          </a>
+          </Link>
           <a
             href="https://instagram.com/alexis.wink"
             target="_blank"

@@ -50,7 +50,7 @@ function App() {
             <Route path="/post6" element={<Post6 />} />
             {/* Funding needs to be linked  */}
             <Route path="/funding" element={<Funding />} /> 
-            <Route path="/signup" element={<SignUp />} />
+            <Route path="/sign-up" element={<SignUp />} />
             <Route path="/giftcycle" element={<Gifts />} />
             <Route path="/create-gift" element={<CreateGift />} />
           </Routes>
