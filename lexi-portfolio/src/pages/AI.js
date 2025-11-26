@@ -29,7 +29,7 @@ function AI() {
       title: "Networking and Webpages",
       desc: "Click here if you want to know what the following terms mean: DNS, DNS Type, IP Address, IPv4, Proxy, DDoS",
       link: "/post4",
-      img: "ai-formula.png",
+      img: "cloud-servers.png",
     },
     {
       title: "Ethical AI",
