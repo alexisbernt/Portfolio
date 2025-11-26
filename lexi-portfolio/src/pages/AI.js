@@ -64,22 +64,37 @@ function AI() {
 
   return (
     <div className="ai-page">
-      {/* 🔹 Top Hero Section */}
-      <section className="ai-hero">
+      {/* 🔹 Modern Blog-Style Hero */}
+      <section className="ai-hero w-full bg-gradient-to-b from-white to-blue-50">
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1, duration: 0.6 }}
+          transition={{ duration: 0.6 }}
+          className="max-w-3xl mx-auto text-center px-6 py-24"
         >
-          <h1 className="ai-hero-title">Your Personal AI Toolkit</h1>
-          <p className="ai-hero-subtitle">
-            Explore modern tools, techniques, and insights that help you use AI more effectively in work, school, and life.
+          <h1 className="text-5xl font-extrabold tracking-tight text-gray-900 mb-4">
+            Your Personal AI Toolkit
+          </h1>
+
+          <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
+            Explore modern tools, techniques, and insights that help you use AI 
+            more effectively in work, school, and everyday life.
           </p>
+
+          {/* Optional buttons for a true landing page feel */}
+          {/* <div className="mt-8 flex justify-center gap-4">
+            <button className="
+              px-6 py-3 bg-white text-blue-600 rounded-xl border border-blue-200
+              shadow-sm hover:shadow-md hover:border-blue-300 transition-all
+            ">
+              Learn More
+            </button> */}
+          {/* </div> */}
         </motion.div>
       </section>
 
       {/* Section: Featured Videos */}
-      {sectionHeader("Featured Videos")}
+      {sectionHeader("Featured Videos:")}
       <div style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
@@ -144,7 +159,8 @@ function AI() {
 
       {/* 🔹 Section Header */}
       <div className="section-header">
-        <h2>Blog Posts on AI (Quick Reads):</h2>
+        {/* <h2>Blog Posts on AI (Quick Reads):</h2> */}
+        {sectionHeader("Blog Posts on AI (Quick Reads):")}
       </div>
 
       {/* 🔹 Blog Cards */}
