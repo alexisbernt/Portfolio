@@ -225,7 +225,7 @@ function ModernLandingPage() {
             I'm Lexi. I like to learn and make things.
             If you like to learn and make things, you should join this nerdy website fam we've built by signing up for the mailing list (free and no spam).
           </p>
-          <Link to="/signup" style={{ color: '#000000ff', fontWeight: 'bold', marginTop: '12px', display: 'inline-block' }}>Join the club →</Link>
+          <Link to="/sign-up" style={{ color: '#000000ff', fontWeight: 'bold', marginTop: '12px', display: 'inline-block' }}>Join the club →</Link>
           <br />
           <Link to="/about" style={{ color: '#000000ff', fontWeight: 'bold', marginTop: '12px', display: 'inline-block' }}>Read more →</Link>
         </div>
