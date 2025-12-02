@@ -20,10 +20,10 @@ const Shape = ({ type }) => {
 function ModernLandingPage() {
   const headerPosts = [
     {
-      title: 'Artificial Intelligence Toolkit',
-      desc: "AI is really hot right now. Dive into the tools changing day-to-day operations.",
-      link: '/ai',
-      shape: 'box', 
+    title: 'Artificial Intelligence Toolkit',
+    desc: "Check out some of the tools changing day to day operations.",
+    link: '/ai',
+    image: '/ai-dev.png', 
     },
   ];
 
@@ -186,7 +186,7 @@ function ModernLandingPage() {
       </div>
 
       {/* Section 1: Most Recent Developments */}
-      {sectionHeader("Most Recent Developments")}
+      {sectionHeader("The Website For Quick Updates On AI In Business")}
       <div style={headerGrid}>
         {/* Left column: one side-by-side cards */}
         <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '24px' }}>
@@ -194,6 +194,18 @@ function ModernLandingPage() {
             const isExternal = post.link.startsWith('http');
             const content = (
               <>
+                {post.image ? (
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  style={{
+                    width: '100%',
+                    height: '300px',
+                    objectFit: 'cover',
+                    backgroundColor: '#f8fafc',
+                  }}
+                />
+              ) : (
                 <Canvas style={{ height: '300px', backgroundColor: '#f8fafc' }}>
                   <ambientLight intensity={0.5} />
                   <directionalLight position={[0, 2, 5]} />
@@ -202,6 +214,7 @@ function ModernLandingPage() {
                   </Float>
                   <OrbitControls enableZoom={false} enablePan={false} autoRotate />
                 </Canvas>
+              )}
                 <div style={cardContent}>
                   <h3 style={{ fontSize: '1.3rem', fontWeight: 'bold', marginBottom: '8px' }}>{post.title}</h3>
                   <p style={{ fontSize: '0.95rem', color: '#555' }}>{post.desc}</p>
