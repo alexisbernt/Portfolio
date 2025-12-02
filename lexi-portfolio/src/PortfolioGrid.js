@@ -25,15 +25,15 @@ function ModernLandingPage() {
       link: '/ai',
       shape: 'box', 
     },
+  ];
+
+  const cardPosts = [
     {
       title: 'Learning Videos Link',
       desc: "Follow along for tech-specific learnings that you can apply to your daily life. In video form.",
       link: 'https://www.youtube.com/@lexicyber',
       shape: 'icosahedron', 
     },
-  ];
-
-  const cardPosts = [
     { title: 'About', desc: 'The person behind this website.', link: '/about', shape: 'torus' },
     { title: 'TheraText', desc: "The fun way for therapist's notetaking.", link: 'https://www.theratext.site/', shape: 'torus' },
     { title: 'More', desc: 'Other things I’m working on right now.', link: '/more', shape: 'torus' },
@@ -188,9 +188,9 @@ function ModernLandingPage() {
       {/* Section 1: Most Recent Developments */}
       {sectionHeader("Most Recent Developments")}
       <div style={headerGrid}>
-        {/* Left column: two side-by-side cards */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
-          {headerPosts.map((post, i) => {
+        {/* Left column: one side-by-side cards */}
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '24px' }}>
+          {[headerPosts[0]].map((post, i) => {
             const isExternal = post.link.startsWith('http');
             const content = (
               <>
