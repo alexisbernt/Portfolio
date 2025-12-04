@@ -32,10 +32,10 @@ function AI() {
       img: "cloud-servers.png",
     },
     {
-      title: "Ethical AI",
-      desc: "What does it mean to build responsible and transparent AI systems?",
-      link: "/post5",
-      img: "content-pending.png",
+      title: "5 Ways to Use AI in Work",
+      desc: "How should you be using AI in work/business?",
+      link: "/post7",
+      img: "ai_toolkit_doodle.png",
     },
     {
       title: "Creative AI Tools",
