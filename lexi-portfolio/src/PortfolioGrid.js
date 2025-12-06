@@ -21,7 +21,7 @@ function ModernLandingPage() {
   const headerPosts = [
     {
     title: 'Artificial Intelligence Toolkit',
-    desc: "Check out some of the tools changing day to day operations.",
+    desc: "Check out some of the tools you can use for changing your day to day operations (for the better).",
     link: '/ai',
     image: '/ai-dev.png', 
     },
@@ -34,8 +34,14 @@ function ModernLandingPage() {
       link: 'https://www.youtube.com/@lexicyber',
       shape: 'icosahedron', 
     },
-    { title: 'About', desc: 'The person behind this website.', link: '/about', shape: 'torus' },
     { title: 'TheraText', desc: "The fun way for therapist's notetaking.", link: 'https://www.theratext.site/', shape: 'torus' },
+    {
+      title: 'eBay Collectible Coins Store',
+      desc: "Collectable coins and information on how I am building my eBay shop.",
+      link: '/coins',
+      shape: 'icosahedron', 
+    },
+    { title: 'About', desc: 'The person behind this website.', link: '/about', shape: 'torus' },
     { title: 'More', desc: 'Other things I’m working on right now.', link: '/more', shape: 'torus' },
   ];
 
@@ -165,7 +171,7 @@ function ModernLandingPage() {
             fontFamily: 'Montserrat, sans-serif',
             lineHeight: '1.3',
           }}>
-            Prove you're getting smarter
+            where learning meets doing
           </h1>
           <Link
             to="/learninglog"
@@ -186,7 +192,7 @@ function ModernLandingPage() {
       </div>
 
       {/* Section 1: Most Recent Developments */}
-      {sectionHeader("The Website For Quick Updates On AI In Business")}
+      {sectionHeader("The Community For Learners")}
       <div style={headerGrid}>
         {/* Left column: one side-by-side cards */}
         <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '24px' }}>
@@ -235,8 +241,8 @@ function ModernLandingPage() {
           <img src="bernthal_alexis.png" alt="Profile" style={profileImg} />
           <h2 style={{ fontSize: '1.8rem', color: '#000000ff', marginTop: '16px' }}>Hi!</h2>
           <p style={{ fontSize: '0.95rem', color: '#333', marginTop: '12px', lineHeight: '1.6' }}>
-            I'm Lexi. I like to learn and make things.
-            If you like to learn and make things, you should join this nerdy website fam we've built by signing up for the mailing list (free and no spam).
+            I'm Lexi. I want to grow my brain.
+            If you want to grow your brain, you should join this nerdy learning community we've built (on this website!) by signing up for the mailing list (free and no spam).
           </p>
           <Link to="/sign-up" style={{ color: '#000000ff', fontWeight: 'bold', marginTop: '12px', display: 'inline-block' }}>Join the club →</Link>
           <br />
