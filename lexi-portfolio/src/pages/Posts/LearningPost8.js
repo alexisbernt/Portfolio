@@ -64,7 +64,7 @@ If you're using a platform that charges by token (like OpenAI), check your usage
         <div className="post-content">
         <p>
            OpenAI Platform:
-- Can generate your API key. My test key: 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
+- Can generate your API key. My test key: 'sk-proj-[enter key here]497D9ntnDB3nLYc0jYLb3eFcCx2mkXLQbnmGtV0TT3BlbkFJNiZ[will be super long]iAaWFP85PeQOOBg3LX4mItD9dGCNpP8A'
 - An API (Application Programming Interface) is a way for different software systems to talk to each other. In simple terms
 - An API key from OpenAI is like a password that lets your app or script securely connect to OpenAI’s services. It identifies you as the user and tracks your usage, so the system knows who is making requests and how many tokens are being used. You use it in your code to access models like GPT or DALL·E.
 - OpenAI uses both: GPT (Generative Pre-trained Transformer) is used for understanding and generating text—like answering questions, writing code, summarizing content, or chatting. AND DALL·E is used for generating images from text descriptions—like creating artwork, illustrations, or visual concepts.
