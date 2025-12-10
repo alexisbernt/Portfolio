@@ -27,6 +27,7 @@ import SignUp from './pages/SignUp';
 import Gifts from './pages/Gifts';
 import CreateGift from './pages/CreateGift';
 import Coins from './pages/eBay';
+import NewsPage1 from './pages/News';
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
             <Route path="/sign-up" element={<SignUp />} />
             <Route path="/giftcycle" element={<Gifts />} />
             <Route path="/create-gift" element={<CreateGift />} />
+            <Route path="/newsinawink" element={<NewsPage1 />} />
           </Routes>
         </div>
       </div>

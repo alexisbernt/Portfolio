@@ -59,6 +59,8 @@ When writing papers, solving problems, or doing creative work, I strongly sugges
 
 However, for those tedious repetitive tasks, AI can now be a starting point. Watch the video to learn about 5 ways you can use AI in your daily workflow and/or in business.
         </p>
+        <p>My take: (1) big transitions like AI – such as electrification in the 1930s, the Internet in the late 90s, and even the internal combustion engine in the early 1900s –
+           often create “sky is falling” predictions. Usually … the impact of major tech shifts is great, but often not in the ways we predict. (2) if you can learn to work with AI, in a way that is more effective and better than most of your peers, you should be in a decent position to navigate the coming disruption. The changes from AI will </p>
         </div>
         <div className="post-image-container">
           <iframe

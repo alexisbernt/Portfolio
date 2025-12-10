@@ -8,7 +8,7 @@ function Post6() {
       <header className="about-header">
         <div className="framed-text">
           <h1>Azure AI Services (AI Tools Series: Ep. 3)</h1>
-          <p>Azure is Microsoft's cloud computing platform.</p>
+          <p>Azure is Microsoft's cloud computing platform. Hard to say cool to use.</p>
           <p>
             That means that Azure can do things like:
           </p>
@@ -18,7 +18,7 @@ function Post6() {
         <div class="about-meta">
             <span>By: Alexis Bernthal</span>
             <span class="dot">•</span>
-            <span>November 12, 2025</span>
+            <span>December 8, 2025</span>
           </div>
         </div>
       </header>
