@@ -49,6 +49,7 @@ function Navbar() {
               <ThreeMenu />
               <ul>
                 <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
+                <li><Link to="/newsinawink" onClick={() => setMenuOpen(false)}>5 News Facts in 50</Link></li>
                 <li><Link to="/learninglog" onClick={() => setMenuOpen(false)}>Learning Log: Your Daily Learning</Link></li>
                 <li><Link to="/ai" onClick={() => setMenuOpen(false)}>AI Toolkit: Technical Blog Posts</Link></li>
                 <li><Link to="/coins" onClick={() => setMenuOpen(false)}>Selling Coins: What YOU Need to Know About eBay</Link></li>
