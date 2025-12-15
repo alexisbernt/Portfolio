@@ -29,9 +29,9 @@ function ModernLandingPage() {
 
   const cardPosts = [
     {
-      title: 'Learning Videos Link',
-      desc: "Follow along for tech-specific learnings that you can apply to your daily life. In video form.",
-      link: 'https://www.youtube.com/@lexicyber',
+      title: 'News In A Wink',
+      desc: "5 News Facts In 50 Seconds.",
+      link: '/',
       shape: 'icosahedron', 
     },
     { title: 'TheraText', desc: "The fun way for therapist's notetaking.", link: 'https://www.theratext.site/', shape: 'torus' },
@@ -42,7 +42,13 @@ function ModernLandingPage() {
       shape: 'icosahedron', 
     },
     { title: 'About', desc: 'The person behind this website.', link: '/about', shape: 'torus' },
-    { title: 'More', desc: 'Other things I’m working on right now.', link: '/more', shape: 'torus' },
+    {
+      title: 'Learning Videos Link',
+      desc: "Follow along for tech-specific learnings that you can apply to your daily life. In video form.",
+      link: 'https://www.youtube.com/@lexicyber',
+      shape: 'icosahedron', 
+    },
+    { title: 'Learning Log', desc: 'Where learning meets doing.', link: '/learninglog', shape: 'torus' },
   ];
 
   const container = {

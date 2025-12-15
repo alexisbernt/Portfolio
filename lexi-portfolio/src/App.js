@@ -36,7 +36,8 @@ function App() {
         <div className="main-container">
           <Navbar />
           <Routes>
-            <Route path="/" element={<PortfolioGrid />} />
+            <Route path="/" element={<NewsPage1 />} />
+            <Route path="/newsinawink" element={<PortfolioGrid />} />
             <Route path="/about" element={<About />} />
             <Route path="/coins" element={<Coins />} />
             <Route path="/ai" element={<AI />} />
@@ -55,7 +56,6 @@ function App() {
             <Route path="/sign-up" element={<SignUp />} />
             <Route path="/giftcycle" element={<Gifts />} />
             <Route path="/news-signup" element={<CreateGift />} />
-            <Route path="/newsinawink" element={<NewsPage1 />} />
           </Routes>
         </div>
       </div>

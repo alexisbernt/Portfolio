@@ -6,18 +6,18 @@ import { Link } from 'react-router-dom';
 const timelineEvents = [
   {
     date: "Est. 2025",
-    title: "About",
+    title: "About And Contact",
     img: 'business-image.png',
-    description: "Hi , I'm Lexi and this is my real take on starting a job in corporate America in 2025."
+    description: "Hi! I'm Lexi. I'm sharing information on global news, artificial intelligence, and more."
   },
   {
     date: "A Ongoing Compilation of Resources",
     title: "The World of Tech",
     img: "VS_Git_Alexis.png",
-    description: "This site is full of incredible resources and ideas that can help you as you navigate your career path."
+    description: "This site is full of resources and ideas that can help you as you navigate your career path."
   },
   {
-    date: "May 12, 2022",
+    date: "Dec. 15, 2025",
     title: "A Goal To Help Grow",
     img: "iPhone_Alexis.png",
     description: "The goal is to help oneanother grow in technology, business, and experiences."
@@ -27,7 +27,7 @@ const timelineEvents = [
 export default function About() {
   return (
     <div className="about-container">
-      <header className="about-header">
+      {/* <header className="about-header">
         <div className="framed-text">
           <h1>Hey! What's Up?</h1>
           <p>...Probably the sky or the ceiling...</p>
@@ -41,7 +41,7 @@ export default function About() {
             Read more for more info!
           </p>
         </div>
-      </header>
+      </header> */}
 
       <div className="timeline">
         {timelineEvents.map((event, index) => (
