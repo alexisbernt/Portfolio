@@ -53,16 +53,6 @@ function ModernLandingPage() {
     position: 'relative',
   };
 
-  const background = {
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    background: 'linear-gradient(120deg, #f8fafc 0%, #e0f2fe 50%, #eff6ff 100%)',
-    zIndex: -1,
-  };
-
   const headerGrid = {
     display: 'grid',
     gridTemplateColumns: '1.3fr 1fr',
@@ -83,7 +73,7 @@ function ModernLandingPage() {
     backgroundColor: '#fff',
     borderRadius: '16px',
     overflow: 'hidden',
-    boxShadow: '0 6px 16px rgba(0,0,0,0.1)',
+    boxShadow: '0 6px 16px rgba(255, 255, 255, 1)',
     textDecoration: 'none',
     color: 'inherit',
     display: 'flex',
@@ -99,7 +89,7 @@ function ModernLandingPage() {
     backgroundColor: '#fff',
     borderRadius: '16px',
     padding: '32px',
-    boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+    boxShadow: '0 4px 12px rgba(255, 255, 255, 1)',
   };
 
   const profileImg = {
@@ -115,7 +105,7 @@ function ModernLandingPage() {
       <h2 style={{
         fontSize: '2.3rem',
         fontWeight: 800,
-        color: '#111827',
+        color: '#ffffffff',
         fontFamily: 'Georgia, "Times New Roman", serif',
         letterSpacing: '-0.02em',
         marginBottom: '10px',
@@ -128,8 +118,7 @@ function ModernLandingPage() {
   );
 
   return (
-    <div style={container}>
-      <div style={background} />
+    <div className="news-container fade-in" style={container}>
 
       {/* Promo Banner */}
       <div style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden', marginBottom: '60px', boxShadow: '0 6px 20px rgba(0,0,0,0.15)' }}>
@@ -222,7 +211,16 @@ function ModernLandingPage() {
                 </Canvas>
               )}
                 <div style={cardContent}>
-                  <h3 style={{ fontSize: '1.3rem', fontWeight: 'bold', marginBottom: '8px' }}>{post.title}</h3>
+                  <h3
+                    style={{
+                      fontSize: '1.3rem',
+                      fontWeight: 'bold',
+                      marginBottom: '8px',
+                      color: '#000000',
+                    }}
+                  >
+                    {post.title}
+                  </h3>
                   <p style={{ fontSize: '0.95rem', color: '#555' }}>{post.desc}</p>
                 </div>
               </>

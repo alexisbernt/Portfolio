@@ -1,140 +1,93 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
-
-h1, h2, h3 {
-  font-family: 'Montserrat', sans-serif;
+:root {
+  --blue-main: #1a73e8;
+  --blue-dark: #0f4db3;
+  --blue-light: #e8f1ff;
+  --bg-gradient: radial-gradient(circle at top right, #1a73e8, #0f4db3, #061a33, #000);
+  --text-light: #1a1c1f;
+  --text-dim: #c8d6f2;
+  --card-bg: rgba(255, 255, 255, 0.06);
+  --card-border: rgba(255, 255, 255, 0.12);
 }
 
-/* General container */
+/* Page Background */
 .portfolio-container {
   min-height: 100vh;
-  background-color: #fff;
-  font-family: 'Montserrat', sans-serif;
-  padding-bottom: 60px;
+  background: var(--bg-gradient);
+  color: var(--text-light);
+  font-family: 'Inter', sans-serif;
+  padding: 2rem;
+  animation: fadeIn 1s ease forwards;
 }
 
-/* Banner wrapper - full bleed (escapes container) */
-.portfolio-banner-wrapper {
-  position: relative;
-  width: 100vw;       /* Full viewport width */
-  height: 100vh;      /* Full viewport height */
-  left: 50%;          /* Align trick */
-  right: 50%;
-  margin-left: -50vw; /* Force banner to span edge-to-edge */
-  margin-right: -50vw;
-  overflow: hidden;
-}
-
-/* Banner video */
-.portfolio-banner {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.portfolio-heading {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.85);
-  padding: 20px 40px;
-  border-radius: 12px;
-  font-size: 2.2rem;
-  color: #000000;
+/* Section Title */
+.section-header {
+  font-size: 2.6rem;
   font-weight: 700;
-  letter-spacing: 1px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
-/* Blog Grid Layout */
-.portfolio-grid.blog-style {
+/* Grid Layout */
+.project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
-  max-width: 1100px;
-  margin: 50px auto 0 auto;
-  padding: 0 20px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-/* Blog Post Card */
-.portfolio-post-card {
-  background: #f9fafb;
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Project Card */
+.project-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  padding: 1.4rem;
+  backdrop-filter: blur(12px);
+  transition: 0.35s ease;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
 }
 
-.portfolio-post-card h2 {
-  font-size: 1.5rem;
-  color: #000000;
-  margin-bottom: 12px;
+.project-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.33);
 }
 
-.portfolio-post-card p {
-  color: #374151;
-  font-size: 1rem;
-  flex-grow: 1;
-  margin-bottom: 16px;
-}
-
-.read-more {
-  color: #000000;
-  text-decoration: none;
+.project-title {
+  font-size: 1.4rem;
   font-weight: 600;
-  font-size: 0.95rem;
-  transition: color 0.3s ease;
+  margin-bottom: 0.6rem;
 }
 
-.read-more:hover {
-  color: #000000;
+.project-desc {
+  color: var(--text-dim);
+  line-height: 1.6;
 }
 
-/* Make entire card clickable */
-.portfolio-post-card a {
-  display: block;
+/* Buttons */
+.project-btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border-radius: 12px;
+  background: var(--blue-main);
+  color: white;
+  font-weight: 600;
   text-decoration: none;
-  color: inherit; /* keep text colors */
-  height: 100%;
-  width: 100%;
+  transition: 0.3s ease;
 }
 
-/* Ensure inner text inherits */
-.portfolio-post-card a h2,
-.portfolio-post-card a p {
-  color: inherit;
+.project-btn:hover {
+  background: var(--blue-dark);
 }
 
-/* Keep hover effect on whole card */
-.portfolio-post-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+/* Animations */
+.fade-in { animation: fadeIn 1s ease forwards; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive bio card layout */
-.header-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 40px;
-  align-items: flex-start;
-  margin-bottom: 60px;
-}
-
-@media (max-width: 768px) {
-  .header-grid {
-    grid-template-columns: 1fr; /* stack on mobile */
-  }
-
-  .profile-card {
-    margin-top: 20px;
-    width: 100%;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.slide-up { animation: slideUp 0.9s ease forwards; }
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
