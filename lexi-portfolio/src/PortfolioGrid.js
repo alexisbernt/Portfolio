@@ -129,7 +129,7 @@ function ModernLandingPage() {
       {/* Promo Banner */}
       <div style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden', marginBottom: '60px', boxShadow: '0 6px 20px rgba(0,0,0,0.15)' }}>
         <iframe
-          src="https://www.youtube.com/embed/VaqfK5nw-uc?autoplay=1&mute=1&loop=1&playlist=VaqfK5nw-uc&controls=0&showinfo=0&modestbranding=1&rel=0"
+          src="https://www.youtube.com/embed/uI13dmzfg_E?autoplay=1&mute=1&loop=1&playlist=uI13dmzfg_E&controls=0&modestbranding=1&rel=0"
           title="Promo Video"
           allow="autoplay; fullscreen"
           frameBorder="0"
@@ -166,10 +166,10 @@ function ModernLandingPage() {
             fontFamily: 'Montserrat, sans-serif',
             lineHeight: '1.3',
           }}>
-            where learning meets doing
+           50 seconds to know what's going on globally
           </h1>
           <Link
-            to="/learninglog"
+            to="/"
             style={{
               display: 'inline-block',
               padding: 'clamp(10px, 2vw, 14px) clamp(20px, 4vw, 32px)',
@@ -181,7 +181,7 @@ function ModernLandingPage() {
               fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
             }}
           >
-            Go to Learning Log →
+            Get Your "News In A Wink" →
           </Link>
         </motion.div>
       </div>
