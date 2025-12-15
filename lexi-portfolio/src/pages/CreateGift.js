@@ -46,17 +46,17 @@ function CreateGift() {
   return (
     <div className="gift-form-container">
       <div className="gift-form-hero">
-        <h1>Create Your Custom Gift</h1>
+        <h1>Sign-Up For Weekly News Updates!</h1>
         <p>
-          Tell us about your perfect gift idea — we’ll help make it sustainable,
-          affordable, and personal.
+          Once a week on Mondays. To your inbox. No spam. 5 news facts in 50 seconds.
         </p>
       </div>
 
       {submitted ? (
         <div className="gift-success">
           <h2>Thank you for reaching out!</h2>
-          <p>We’ll contact you soon to discuss your custom gift details.</p>
+          {/* <p>We’ll contact you soon to discuss your custom gift details.</p> */}
+          <p>We’ll update you next Monday!</p>
         </div>
       ) : (
         <form className="gift-form" onSubmit={handleSubmit}>
@@ -82,7 +82,7 @@ function CreateGift() {
             />
           </label>
 
-          <label>
+          {/* <label>
             Gift Type
             <select
               name="giftType"
@@ -108,10 +108,10 @@ function CreateGift() {
               placeholder="Tell us what makes this gift special... Any particular themes, colors, or items?"
               required
             />
-          </label>
+          </label> */}
 
           <button type="submit" className="gift-submit-btn">
-            Send Gift Request →
+            Send Yourself The Gift Of News →
           </button>
         </form>
       )}

@@ -54,7 +54,7 @@ function App() {
             <Route path="/funding" element={<Funding />} />
             <Route path="/sign-up" element={<SignUp />} />
             <Route path="/giftcycle" element={<Gifts />} />
-            <Route path="/create-gift" element={<CreateGift />} />
+            <Route path="/news-signup" element={<CreateGift />} />
             <Route path="/newsinawink" element={<NewsPage1 />} />
           </Routes>
         </div>

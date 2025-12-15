@@ -11,7 +11,7 @@ function NewsPage1() {
       <section className="hero-section slide-up">
         <div className="hero-left">
           <h1 className="hero-title">Latest Episode</h1>
-          <p className="hero-sub">Your curated, unbiased news—updated daily.</p>
+          <p className="hero-sub">Week of 12/15/25: Episode 2.</p>
         </div>
         <div className="hero-video-wrapper">
           <iframe
@@ -31,16 +31,16 @@ function NewsPage1() {
         <div className="video-card">
           <div className="video-thumb">
             <iframe
-              src="https://www.youtube.com/embed/Qhbm-ArDGx8"
+              src="https://www.youtube.com/embed/uI13dmzfg_E?autoplay=1&mute=1&loop=1&playlist=uI13dmzfg_E&controls=0&modestbranding=1&rel=0"
               title="Episode 1"
               frameBorder="0"
               allowFullScreen
             ></iframe>
           </div>
           <div className="video-info">
-            <h3>Global Headlines Breakdown</h3>
+            <h3>Week of 12/8/25: Episode 1</h3>
             <p>
-              A deep dive into the top stories influencing world politics, economics, and global stability.
+              Covering a major acquisition in the streaming world, geopolitical tensions, ICE, and sports updates.
             </p>
           </div>
         </div>
@@ -48,8 +48,8 @@ function NewsPage1() {
         <div className="video-card">
           <div className="video-thumb">
             <iframe
-              src="https://www.youtube.com/embed/wH6aKSGYha0"
-              title="Episode 2"
+              src="https://www.youtube.com/embed/ClEBQ588Z8Y"
+              title="Prior Content"
               frameBorder="0"
               allowFullScreen
             ></iframe>
@@ -65,8 +65,8 @@ function NewsPage1() {
 
       {/* --- Actions / Buttons --- */}
       <section className="action-buttons slide-up">
-        <Link to="/create-gift" className="btn-primary">Create a Gift →</Link>
-        <Link to="/signup" className="btn-secondary">Join the Club →</Link>
+        <Link to="/news-signup" className="btn-primary">Sign-Up! →</Link>
+        <Link to="/sign-up" className="btn-secondary">Join the Club →</Link>
       </section>
 
       <Footer />
