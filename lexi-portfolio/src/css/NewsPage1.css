@@ -117,3 +117,138 @@
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+.news-container {
+  background: var(--bg-gradient);
+  min-height: 100vh;
+  color: var(--text-light);
+  font-family: 'Inter', sans-serif;
+  padding: 2rem;
+}
+
+/* ---------------- HERO SECTION ---------------- */
+
+.hero-section {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+}
+
+.hero-video-wrapper {
+  flex: 1;
+  max-width: 100%;
+}
+
+.hero-video-wrapper iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------------- PREVIOUS EPISODES ---------------- */
+
+.section-title {
+  margin-top: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 600;
+}
+
+.video-card {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+.video-thumb {
+  flex-shrink: 0;
+}
+
+.video-thumb iframe {
+  width: 220px;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+}
+
+.video-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+/* ---------------- ACTION BUTTONS ---------------- */
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 0.8rem 1.6rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+/* ---------------- RESPONSIVE BREAKPOINTS ---------------- */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .video-card {
+    flex-direction: column;
+  }
+
+  .video-thumb iframe {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .news-container {
+    padding: 1.25rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .video-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+}

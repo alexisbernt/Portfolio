@@ -1,27 +1,30 @@
+// NewsPage1.js (no breaking changes)
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import Footer from '../Footer';
 import "../css/NewsPage1.css";
 
 function NewsPage1() {
   return (
     <div className="news-container fade-in">
+
       {/* --- Hero Header + Recent Episode --- */}
       <section className="hero-section slide-up">
         <div className="hero-left">
           <h1 className="hero-title">Latest Episode</h1>
           <p className="hero-sub">Week of 12/15/25: Episode 2.</p>
         </div>
+
         <div className="hero-video-wrapper">
           <iframe
-            src="https://www.youtube.com/embed/M1Gl_k-uM5w"
+            src="https://www.youtube.com/embed/M1Gl_k-uM5w?autoplay=1&mute=1&playsinline=1"
             title="Latest News Video"
-            allow="autoplay; fullscreen"
             frameBorder="0"
+            allow="autoplay; fullscreen"
             allowFullScreen
-          ></iframe>
+          />
         </div>
+
       </section>
 
       {/* --- Previous Episodes Section --- */}
@@ -31,16 +34,17 @@ function NewsPage1() {
         <div className="video-card">
           <div className="video-thumb">
             <iframe
-              src="https://www.youtube.com/embed/uI13dmzfg_E?autoplay=1&mute=1&loop=1&playlist=uI13dmzfg_E&controls=0&modestbranding=1&rel=0"
+              src="https://www.youtube.com/embed/uI13dmzfg_E?autoplay=1&mute=1&loop=1&playlist=uI13dmzfg_E&controls=0"
               title="Episode 1"
               frameBorder="0"
               allowFullScreen
-            ></iframe>
+            />
           </div>
           <div className="video-info">
             <h3>Week of 12/8/25: Episode 1</h3>
             <p>
-              Covering a major acquisition in the streaming world, geopolitical tensions, ICE, and sports updates.
+              Covering a major acquisition in the streaming world,
+              geopolitical tensions, ICE, and sports updates.
             </p>
           </div>
         </div>
@@ -52,18 +56,19 @@ function NewsPage1() {
               title="Prior Content"
               frameBorder="0"
               allowFullScreen
-            ></iframe>
+            />
           </div>
           <div className="video-info">
             <h3>Technology & AI Weekly Recap</h3>
             <p>
-              Covering breakthroughs in AI, tech policy shifts, and how innovation is shaping the future.
+              Covering breakthroughs in AI, tech policy shifts,
+              and how innovation is shaping the future.
             </p>
           </div>
         </div>
       </section>
 
-      {/* --- Actions / Buttons --- */}
+      {/* --- Actions --- */}
       <section className="action-buttons slide-up">
         <Link to="/news-signup" className="btn-primary">Sign-Up! →</Link>
         <Link to="/sign-up" className="btn-secondary">Join the Club →</Link>
@@ -75,6 +80,7 @@ function NewsPage1() {
 }
 
 export default NewsPage1;
+
 
 
 //           Netflix announced that it agreed to acquire Warner Bros Discovery's film studio and HBO assets between $72 billion and $82.7 billion (including debt).
