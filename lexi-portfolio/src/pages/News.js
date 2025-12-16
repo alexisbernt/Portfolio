@@ -15,7 +15,7 @@ function NewsPage1() {
         </div>
         <div className="hero-video-wrapper">
           <iframe
-            src="https://www.youtube.com/embed/uI13dmzfg_E?autoplay=1&mute=1&loop=1&playlist=uI13dmzfg_E&controls=0&modestbranding=1&rel=0"
+            src="https://www.youtube.com/embed/M1Gl_k-uM5w"
             title="Latest News Video"
             allow="autoplay; fullscreen"
             frameBorder="0"
