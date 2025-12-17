@@ -38,10 +38,10 @@ function AI() {
       img: "ai_toolkit_doodle.png",
     },
     {
-      title: "Creative AI Tools",
-      desc: "From text-to-image generation to AI music, these tools are redefining creative expression.",
-      link: "/post7",
-      img: "content-pending.png",
+      title: "How To Start A Business On eBay",
+      desc: "Collectable coins and information on how to build an eBay website.",
+      link: "/coins",
+      img: "quarters1.png",
     },
   ];
 
