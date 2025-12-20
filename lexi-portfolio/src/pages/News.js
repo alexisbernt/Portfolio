@@ -11,8 +11,8 @@ function NewsPage1() {
       {/* --- Hero Header + Recent Episode --- */}
       <section className="hero-section slide-up">
         <div className="hero-left">
-          <h1 className="hero-title">Latest Episode</h1>
-          <p className="hero-sub">Week of 12/15/25: Episode 2.</p>
+          <h1 className="hero-title">50 Seconds To Know What Is Going On Globally.</h1>
+          <p className="hero-sub">Episode Every Monday: Week of 12/15/25: Episode 2.</p>
         </div>
 
         <div className="hero-video-wrapper">
