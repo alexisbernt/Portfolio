@@ -71,7 +71,7 @@ function NewsPage1() {
       {/* --- Actions --- */}
       <section className="action-buttons slide-up">
         <Link to="/news-signup" className="btn-primary">Sign-Up! →</Link>
-        <Link to="/sign-up" className="btn-secondary">Join the Club →</Link>
+        <Link to="/sign-up" className="btn-secondary">Free Weekly News Recap →</Link>
       </section>
 
       <Footer />
