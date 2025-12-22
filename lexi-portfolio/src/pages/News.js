@@ -74,6 +74,30 @@ function NewsPage1() {
         <Link to="/sign-up" className="btn-secondary">Free Weekly News Recap →</Link>
       </section>
 
+      {/* --- What Is This Website --- */}
+      <section className="about-site fade-in">
+        <h2 className="about-title">What Is "News In A Wink"?</h2>
+        <p className="about-text">
+          This is your resource for weekly news quick! We bring you 5 of the biggest headlines every Monday from the prior week. 
+          To eliminate bias, we're tracking the news across what you'll see on the Media Bias Chart.
+        </p>
+      </section>
+
+      {/* --- What Is This Website 2 --- */}
+      <section className="about-site fade-in">
+        <h2 className="about-title">Why?</h2>
+        <p className="about-text">
+          Recent studies show not enough Millennials, Gen Zers, and people from Gen Alpha know the full scope of what is going on in the world. 
+        </p>
+        <p className="about-text">
+          News In A Wink targets mainstream social media networks the younger generations are on and gives people the news from the past week in 50 seconds. 50 seconds. That's all! 
+        </p>
+        <p className="about-text">
+          We don't tell you what to think or how to feel about the news.
+          The goal is to give people the information so they can build their own beliefs. 
+        </p>
+      </section>
+
       <Footer />
     </div>
   );

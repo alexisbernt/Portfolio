@@ -273,3 +273,33 @@
   }
 
 }
+/* ---------------- ABOUT SECTION ---------------- */
+
+.about-site {
+  margin: 4rem auto 0;
+  max-width: 900px;
+  padding: 3rem 2rem;
+
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+
+  text-align: center;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+.about-title {
+  font-size: clamp(1.6rem, 4vw, 2rem);
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.about-text {
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  color: var(--text-dim);
+  line-height: 1.7;
+  max-width: 720px;
+  margin: 0 auto;
+}
