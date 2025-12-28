@@ -12,12 +12,12 @@ function NewsPage1() {
       <section className="hero-section slide-up">
         <div className="hero-left">
           <h1 className="hero-title">50 Seconds To Know What Is Going On Globally.</h1>
-          <p className="hero-sub">Episode Every Monday: Week of 12/15/25: Episode 2.</p>
+          <p className="hero-sub">Episode Every Monday: Week of 12/23/25</p>
         </div>
 
         <div className="hero-video-wrapper">
           <iframe
-            src="https://www.youtube.com/embed/M1Gl_k-uM5w?autoplay=1&mute=1&playsinline=1"
+            src="https://www.youtube.com/embed/o7XgvG1-xPA?autoplay=1&mute=1&playsinline=1"
             title="Latest News Video"
             frameBorder="0"
             allow="autoplay; fullscreen"
@@ -30,6 +30,25 @@ function NewsPage1() {
       {/* --- Previous Episodes Section --- */}
       <section className="previous-section slide-up">
         <h2 className="section-title">Previous Episodes</h2>
+
+        <div className="video-card">
+          <div className="video-thumb">
+            <iframe
+              src="https://www.youtube.com/embed/M1Gl_k-uM5w?autoplay=1&mute=1&playsinline=1"
+              title="Episode 2"
+              frameBorder="0"
+              allowFullScreen
+            />
+          </div>
+          <div className="video-info">
+            <h3>Week of 12/15/25: Episode 2</h3>
+            <p>
+              Covering mass shootings in Australia and on the Brown University campus,
+              Washington floods, interest rates in the U.S., and a comeback in professional sports.
+            </p>
+          </div>
+        </div>
+
 
         <div className="video-card">
           <div className="video-thumb">
@@ -49,7 +68,7 @@ function NewsPage1() {
           </div>
         </div>
 
-        <div className="video-card">
+        {/* <div className="video-card">
           <div className="video-thumb">
             <iframe
               src="https://www.youtube.com/embed/ClEBQ588Z8Y"
@@ -65,7 +84,7 @@ function NewsPage1() {
               and how innovation is shaping the future.
             </p>
           </div>
-        </div>
+        </div> */}
       </section>
 
       {/* --- Actions --- */}

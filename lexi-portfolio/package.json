@@ -2,7 +2,7 @@
   "name": "lexi-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://alexisbernthal.com",
+  "homepage": "https://newsinawink.org",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
