@@ -29,7 +29,7 @@ function NewsPage1() {
 
       {/* --- Signup Banner --- */}
       <Link to="/news-signup" className="signup-banner">
-        Sign up here! For free!!
+        Weekly News Recap in 50 Seconds! Sign Up Now →
       </Link>
 
 

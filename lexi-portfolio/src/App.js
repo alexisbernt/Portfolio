@@ -23,6 +23,7 @@ import Post3 from './pages/Posts/LearningPost3';
 import Post4 from './pages/Posts/LearningPost4';
 import Post6 from './pages/Posts/LearningPost6';
 import Post7 from './pages/Posts/LearningPost7';
+import Post9 from './pages/Posts/LearningPost9';
 import SignUp from './pages/SignUp';
 import Gifts from './pages/Gifts';
 import CreateGift from './pages/CreateGift';
@@ -52,6 +53,7 @@ function App() {
             <Route path="/post4" element={<Post4 />} />
             <Route path="/post6" element={<Post6 />} />
             <Route path="/post7" element={<Post7 />} />
+            <Route path="/post9" element={<Post9 />} />
             <Route path="/funding" element={<Funding />} />
             <Route path="/sign-up" element={<SignUp />} />
             <Route path="/giftcycle" element={<Gifts />} />
