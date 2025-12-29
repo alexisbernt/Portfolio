@@ -323,3 +323,43 @@
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
+/* ---------------- EPISODE ROW ---------------- */
+
+.episode-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.episode-text {
+  color: var(--text-dim);
+  font-size: 0.95rem;
+}
+
+/* White button with black text */
+.btn-episode {
+  background: #ffffff;
+  color: #000000;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+/* Hover polish */
+.btn-episode:hover {
+  transform: translateY(-1px);
+  background: #f3f4f6;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+@media (max-width: 600px) {
+  .episode-row {
+    justify-content: center;
+    text-align: center;
+  }
+}

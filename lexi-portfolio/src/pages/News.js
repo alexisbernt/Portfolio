@@ -12,7 +12,15 @@ function NewsPage1() {
       <section className="hero-section slide-up">
         <div className="hero-left">
           <h1 className="hero-title">50 Seconds To Know What Is Going On Globally.</h1>
-          <p className="hero-sub">Episode Every Monday: Week of 12/23/25</p>
+          <div className="episode-row">
+            <span className="episode-text">
+              Episode Every Monday: Week of 12/23/25
+            </span>
+
+            <Link to="/post9" className="btn-episode">
+              Read This Week →
+            </Link>
+          </div>
         </div>
 
         <div className="hero-video-wrapper">
