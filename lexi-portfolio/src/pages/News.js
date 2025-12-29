@@ -27,6 +27,12 @@ function NewsPage1() {
 
       </section>
 
+      {/* --- Signup Banner --- */}
+      <Link to="/news-signup" className="signup-banner">
+        Sign up here! For free!!
+      </Link>
+
+
       {/* --- Previous Episodes Section --- */}
       <section className="previous-section slide-up">
         <h2 className="section-title">Previous Episodes</h2>

@@ -303,3 +303,23 @@
   max-width: 720px;
   margin: 0 auto;
 }
+
+.signup-banner {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 14px;
+  background: linear-gradient(90deg, #ff9800, #ff5722);
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.signup-banner:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
