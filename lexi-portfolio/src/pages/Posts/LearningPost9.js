@@ -13,9 +13,52 @@ function Post9() {
         </div>
       </section>
 
-        <article className="post-content">
+        {/* 🔹 Main Content - RECENT */}
+                <article className="post-content">
 
     {/* 🔹 Embedded YouTube Video */}
+      <div className="learning-log-video">
+        <iframe
+          width="100%"
+          height="480"
+          src="https://www.youtube.com/embed/5g8bPzI7ATk?autoplay=1&mute=1&playsinline=1"
+          title="News Weekly Recap"
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+        ></iframe>
+      </div>
+
+      {/* 🔹 Blog Content */}
+
+        <div className="highlight-box">
+          <h3>Week of 12/31/25: </h3>
+          <ul>
+            <li>
+              <strong>1. </strong>Trump and Zelensky meet to discuss Peace Deal - The presidents met to discuss a possible Peace Deal and both walked away stating that they might be close to a deal that would end a nearly four year war between Russia and Ukraine.
+            </li>
+            <li>
+              <strong>2. </strong>US Strikes ISIS in Nigeria. The US Africa Command announced that strikes in the Sokoto State killed multiple ISIS terrorists.
+            </li>
+            <li>
+              <strong>3. </strong>Let's talk cars - General Motors is on pace to be the top U.S.-traded automaker stock of 2025 - This validates the company’s reemergence from bankruptcy in 2009.
+            </li>
+            <li>
+              <strong>4. </strong> Conservative presidential candidate wins contested election in Honduras amid pushback. He won by less than 1% of the vote and the loser refused to concede.
+            </li>
+            <li>
+              <strong>5. </strong> If you're a Nugget's fan you got a nice Christmas surprise because Nikola Jokic had a historic 56-point triple-double on Christmas. However, he is now out with an injury (as of 12/31/25).
+              In the WNBA, there is ongoing negotiations for a collective bargaining agreement. 
+              The player's union (WNBPA) has authorized players to call a strike if necessary. Players are wanting a larger share of the league's rapidly growing revenue.
+            </li>
+          </ul>
+        </div>
+
+      </article>
+
+    <article className="post-content">
+
+    {/* 🔹 Embedded YouTube Video Last Week */}
       <div className="learning-log-video">
         <iframe
           width="100%"
