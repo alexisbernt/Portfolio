@@ -20,9 +20,9 @@ const Shape = ({ type }) => {
 function ModernLandingPage() {
   const headerPosts = [
     {
-    title: 'Artificial Intelligence Toolkit',
-    desc: "Check out some of the tools you can use for changing your day to day operations (for the better).",
-    link: '/ai',
+    title: "Learn What's Going On Globally. QUICK.",
+    desc: "Recent studies show few Millennials, Gen Zers, and people from Gen Alpha keep up with what is going on in the world. Let's change that. Get your global news from the past week in less than a minute.",
+    link: '/',
     image: '/ai-dev.png', 
     },
   ];
@@ -35,17 +35,12 @@ function ModernLandingPage() {
       shape: 'icosahedron', 
     },
     { title: 'TheraText', desc: "The fun way for therapist's notetaking.", link: 'https://www.theratext.site/', shape: 'torus' },
+    { title: 'Artificial Intelligence Tool', desc: 'Check out some of the tools you can use for changing your day to day operations (for the better).', link: '/ai', shape: 'icosahedron'},
+    { title: 'About', desc: 'The person behind this website.', link: '/about', shape: 'torus' },
     {
       title: 'eBay Collectible Coins Store',
       desc: "Collectable coins and information on how I am building my eBay shop.",
       link: '/coins',
-      shape: 'icosahedron', 
-    },
-    { title: 'About', desc: 'The person behind this website.', link: '/about', shape: 'torus' },
-    {
-      title: 'Learning Videos Link',
-      desc: "Follow along for tech-specific learnings that you can apply to your daily life. In video form.",
-      link: 'https://www.youtube.com/@lexicyber',
       shape: 'icosahedron', 
     },
     { title: 'Learning Log', desc: 'Where learning meets doing.', link: '/learninglog', shape: 'torus' },
