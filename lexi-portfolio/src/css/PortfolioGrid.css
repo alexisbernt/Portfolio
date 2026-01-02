@@ -91,3 +91,51 @@
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
+/* ===========================
+   Mobile Responsiveness
+   =========================== */
+
+@media (max-width: 768px) {
+  .portfolio-container {
+    padding: 1.2rem;
+  }
+
+  .section-header {
+    font-size: 2rem;
+  }
+
+  /* Stack the header section */
+  .header-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+  }
+
+  /* Bio card spacing */
+  .profile-card {
+    text-align: center;
+  }
+
+  .profile-card img {
+    margin: 0 auto;
+  }
+
+  /* Card text scaling */
+  .project-title {
+    font-size: 1.2rem;
+  }
+
+  .project-desc {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header {
+    font-size: 1.7rem;
+  }
+
+  .project-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

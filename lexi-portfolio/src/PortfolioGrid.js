@@ -56,11 +56,11 @@ function ModernLandingPage() {
 
   const headerGrid = {
     display: 'grid',
-    gridTemplateColumns: '1.3fr 1fr',
-    gap: '40px',
-    alignItems: 'flex-start',
-    marginBottom: '80px',
+    gridTemplateColumns: '2fr 1fr',
+    gap: '32px',
+    alignItems: 'stretch',
   };
+
 
   const cardGrid = {
     display: 'grid',
@@ -246,8 +246,8 @@ function ModernLandingPage() {
       </div>
 
       {/* Section 1: Most Recent Developments */}
-      {sectionHeader("The Community For Learners")}
-      <div style={headerGrid}>
+      {sectionHeader("Staying Informed. Efficiently.")}
+      <div style={headerGrid} className="header-grid">
         {/* Left column: one side-by-side cards */}
         <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '24px' }}>
           {[headerPosts[0]].map((post, i) => {
@@ -260,13 +260,13 @@ function ModernLandingPage() {
                   alt={post.title}
                   style={{
                     width: '100%',
-                    height: '300px',
+                    height: 'clamp(200px, 40vw, 300px)',
                     objectFit: 'cover',
                     backgroundColor: '#f8fafc',
                   }}
                 />
               ) : (
-                <Canvas style={{ height: '300px', backgroundColor: '#f8fafc' }}>
+                <Canvas style={{ height: 'clamp(200px, 40vw, 300px)', backgroundColor: '#f8fafc' }}>
                   <ambientLight intensity={0.5} />
                   <directionalLight position={[0, 2, 5]} />
                   <Float floatIntensity={0.6} rotationIntensity={0.3}>
@@ -300,12 +300,12 @@ function ModernLandingPage() {
         </div>
 
         {/* Right column: Bio card */}
-        <div style={profileCard}>
+        <div style={profileCard} className="profile-card">
           <img src="bernthal_alexis.png" alt="Profile" style={profileImg} />
           <h2 style={{ fontSize: '1.8rem', color: '#000000ff', marginTop: '16px' }}>Hi!</h2>
           <p style={{ fontSize: '0.95rem', color: '#333', marginTop: '12px', lineHeight: '1.6' }}>
-            I'm Lexi. I want to grow my brain.
-            If you want to grow your brain, you should join this nerdy learning community we've built (on this website!) by signing up for the mailing list (free and no spam).
+            At News In A Wink, we know it is not our job to tell you how to think. Instead, we provide the information to help you get up-to-date quickly.
+            Then, you decide what to think and what to do. If you want quick news updates, please treat yourself to staying informed by signing up for the mailing list (free and no spam).
           </p>
           <Link to="/sign-up" style={{ color: '#000000ff', fontWeight: 'bold', marginTop: '12px', display: 'inline-block' }}>Join the club →</Link>
           <br />
@@ -314,7 +314,7 @@ function ModernLandingPage() {
       </div>
 
       {/* Section 2: The Things */}
-      {sectionHeader("The Things")}
+      {sectionHeader("The Things.")}
       <div style={cardGrid}>
         {cardPosts.map((post, index) => {
           const isExternal = post.link.startsWith('http');
