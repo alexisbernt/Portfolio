@@ -309,8 +309,8 @@
   width: 100%;
   text-align: center;
   padding: 14px;
-  background: linear-gradient(90deg, #ff9800, #ff5722);
-  color: white;
+  background: linear-gradient(90deg, #99c2e7, #5553e2);
+  color: rgb(255, 255, 255);
   font-weight: 600;
   font-size: 1.1rem;
   text-decoration: none;

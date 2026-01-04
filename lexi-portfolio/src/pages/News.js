@@ -11,7 +11,7 @@ function NewsPage1() {
       {/* --- Hero Header + Recent Episode --- */}
       <section className="hero-section slide-up">
         <div className="hero-left">
-          <h1 className="hero-title">50 Seconds To Know What Is Going On Globally.</h1>
+          <h1 className="hero-title">Learn What's Going On In The World Quick.</h1>
           <div className="episode-row">
             <span className="episode-text">
               Episode Every Monday: Week of 12/31/25
@@ -37,7 +37,7 @@ function NewsPage1() {
 
       {/* --- Signup Banner --- */}
       <Link to="/news-signup" className="signup-banner">
-        Weekly News Recap in 50 Seconds! Sign Up Now →
+        Join the 530+ who get their news updates in less than a minute. Sign Up Now →
       </Link>
 
       {/* --- Previous Episodes --- */}
