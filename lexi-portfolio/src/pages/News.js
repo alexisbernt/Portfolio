@@ -14,7 +14,7 @@ function NewsPage1() {
           <h1 className="hero-title">Learn What's Going On In The World Quick.</h1>
           <div className="episode-row">
             <span className="episode-text">
-              Episode Every Monday: Week of 12/31/25
+              Episode Every Monday: Week of 1/6/26 - Happy New Year!
             </span>
 
             <Link to="/post9" className="btn-episode">
@@ -25,7 +25,7 @@ function NewsPage1() {
 
         <div className="hero-video-wrapper">
           <iframe
-            src="https://www.youtube.com/embed/5g8bPzI7ATk?autoplay=1&mute=1&playsinline=1"
+            src="https://www.youtube.com/embed/xb0dLgMZts8?autoplay=1&mute=1&playsinline=1"
             title="Latest News Video"
             frameBorder="0"
             allow="autoplay; fullscreen"
@@ -43,6 +43,25 @@ function NewsPage1() {
       {/* --- Previous Episodes --- */}
       <section className="previous-section slide-up">
         <h2 className="section-title">Previous Episodes</h2>
+
+        <div className="video-card">
+          <div className="video-thumb">
+            <iframe
+              src="https://www.youtube.com/embed/o7XgvG1-xPA?autoplay=1&mute=1&playsinline=1"
+              title="Episode 4"
+              frameBorder="0"
+              allowFullScreen
+            />
+          </div>
+          <div className="video-info">
+            <h3>Week of 12/31/25: Episode 4</h3>
+            <p>
+              Covering talks of a Peace Deal between Russia and Ukraine,
+              US strikes against ISIS in Nigeria, General Motors' resurgence,
+              contested election in Honduras, and highlights from the NBA and WNBA.
+            </p>
+          </div>
+        </div>
 
         <div className="video-card">
           <div className="video-thumb">
