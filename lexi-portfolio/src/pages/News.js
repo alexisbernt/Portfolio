@@ -11,7 +11,7 @@ function NewsPage1() {
       {/* --- Hero Header + Recent Episode --- */}
       <section className="hero-section slide-up">
         <div className="hero-left">
-          <h1 className="hero-title">Learn What's Going On In The World Quick.</h1>
+          <h1 className="hero-title">The Place To Know What's Going On In The World. Quick.</h1>
           <div className="episode-row">
             <span className="episode-text">
               Episode Every Monday: Week of 1/6/26 - Happy New Year!
@@ -47,7 +47,7 @@ function NewsPage1() {
         <div className="video-card">
           <div className="video-thumb">
             <iframe
-              src="https://www.youtube.com/embed/o7XgvG1-xPA?autoplay=1&mute=1&playsinline=1"
+              src="https://www.youtube.com/embed/5g8bPzI7ATk?autoplay=1&mute=1&playsinline=1"
               title="Episode 4"
               frameBorder="0"
               allowFullScreen
