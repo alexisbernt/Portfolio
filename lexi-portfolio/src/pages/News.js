@@ -147,23 +147,20 @@ function NewsPage1() {
       <section className="about-site fade-in">
         <h2 className="about-title">What Is "News In A Wink"?</h2>
         <p className="about-text">
-          This is your resource for weekly news quick! We bring you 5 of the biggest headlines every Monday from the prior week. 
-          To eliminate bias, we're tracking the news across what you'll see on the Media Bias Chart.
+          This is your resource for weekly news! We bring you 5 of the biggest headlines from the past week every Monday. 
+          To eliminate bias, we're tracking the news across various sources.
         </p>
       </section>
 
       {/* --- What Is This Website 2 --- */}
       <section className="about-site fade-in">
-        <h2 className="about-title">Why?</h2>
+        <h2 className="about-title">Time Is Scarce, News Is Vast.</h2>
         <p className="about-text">
-          Recent studies show not enough Millennials, Gen Zers, and people from Gen Alpha know the full scope of what is going on in the world. 
-        </p>
-        <p className="about-text">
-          News In A Wink targets mainstream social media networks the younger generations are on and gives people the news from the past week in 50 seconds. 50 seconds. That's all! 
+          Pew Research Research ran a study in 2025 that showed "young adults follow the news less closely than any other age group." The goal of News In A Wink is to change that.
         </p>
         <p className="about-text">
           We don't tell you what to think or how to feel about the news.
-          The goal is to give people the information so they can build their own beliefs. 
+          The goal is to provide the information so you can further investigate and build your own beliefs. 
         </p>
       </section>
 
@@ -174,7 +171,7 @@ function NewsPage1() {
 
 export default NewsPage1;
 
-
+// Pew Research: https://www.pewresearch.org/journalism/2025/12/03/young-adults-and-the-future-of-news/
 
 //           Netflix announced that it agreed to acquire Warner Bros Discovery's film studio and HBO assets between $72 billion and $82.7 billion (including debt).
 // - Hollywood Unions aren't happy about this
