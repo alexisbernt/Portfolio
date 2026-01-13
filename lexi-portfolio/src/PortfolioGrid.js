@@ -305,7 +305,7 @@ function ModernLandingPage() {
           <h2 style={{ fontSize: '1.8rem', color: '#000000ff', marginTop: '16px' }}>Hi!</h2>
           <p style={{ fontSize: '0.95rem', color: '#333', marginTop: '12px', lineHeight: '1.6' }}>
             At News In A Wink, we know it is not our job to tell you how to think. Instead, we provide the information to help you get up-to-date quickly.
-            Then, you decide what to think and what to do. If you want quick news updates, please treat yourself to staying informed by signing up for the mailing list (free and no spam).
+            Then, you decide what to think and what to do. If you want quick news updates, please sign up for the mailing list (free and only one email every Tuesday).
           </p>
           <Link to="/sign-up" style={{ color: '#000000ff', fontWeight: 'bold', marginTop: '12px', display: 'inline-block' }}>Join the club →</Link>
           <br />
@@ -313,7 +313,7 @@ function ModernLandingPage() {
         </div>
       </div>
 
-      {/* Section 2: The Things */}
+      {/* Section 2: The Things
       {sectionHeader("The Things.")}
       <div style={cardGrid}>
         {cardPosts.map((post, index) => {
@@ -348,7 +348,7 @@ function ModernLandingPage() {
             </motion.div>
           );
         })}
-      </div>
+      </div> */}
 
       <Footer />
     </div>
