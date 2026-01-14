@@ -8,19 +8,19 @@ const timelineEvents = [
     date: "Est. 2025",
     title: "About And Contact",
     img: 'business-image.png',
-    description: "Hi! I'm Lexi. I'm sharing information on global news, artificial intelligence, and more."
+    description: "The goal of the News In A Wink site is to help you stay informed with quick, unbiased news updates."
   },
   {
     date: "A Ongoing Compilation of Resources",
     title: "The World of Tech",
     img: "VS_Git_Alexis.png",
-    description: "This site is full of resources and ideas that can help you as you navigate your career path."
+    description: "Each week News In A Wink brings you 5 global headlines you should be aware of and an episode that features what a public figure you follow is paying attention to in the news."
   },
   {
     date: "Dec. 15, 2025",
     title: "A Goal To Help Grow",
     img: "iPhone_Alexis.png",
-    description: "The goal is to help oneanother grow in technology, business, and experiences."
+    description: "The goal is to get more young adults following the news and public media."
   }
 ];
 
