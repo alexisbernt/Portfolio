@@ -23,7 +23,7 @@ function ModernLandingPage() {
     title: "Learn What's Going On Globally. QUICK.",
     desc: "Recent studies show few Millennials, Gen Zers, and people from Gen Alpha keep up with what is going on in the world. Let's change that. Get your global news from the past week in less than a minute.",
     link: '/',
-    image: '/ai-dev.png', 
+    image: '/bannerC.png', 
     },
   ];
 
@@ -301,7 +301,7 @@ function ModernLandingPage() {
 
         {/* Right column: Bio card */}
         <div style={profileCard} className="profile-card">
-          <img src="bernthal_alexis.png" alt="Profile" style={profileImg} />
+          <img src="ai-dev.png" alt="Profile" style={profileImg} />
           <h2 style={{ fontSize: '1.8rem', color: '#000000ff', marginTop: '16px' }}>Hi!</h2>
           <p style={{ fontSize: '0.95rem', color: '#333', marginTop: '12px', lineHeight: '1.6' }}>
             At News In A Wink, we know it is not our job to tell you how to think. Instead, we provide the information to help you get up-to-date quickly.
