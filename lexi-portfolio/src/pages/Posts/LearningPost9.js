@@ -21,6 +21,54 @@ function Post9() {
         <iframe
           width="100%"
           height="480"
+          src="https://www.youtube.com/embed/3NgtVP3fInU?autoplay=1&mute=1&playsinline=1"
+          title="News Weekly Recap"
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+        ></iframe>
+      </div>
+
+      {/* 🔹 Blog Content */}
+
+        <div className="highlight-box">
+          <h3>Week of 1/12/26: </h3>
+          <ul>
+            <li>
+              <strong>1. </strong>Iran protests: There have been protests for several weeks. CNN reports "Anti-government protests have erupted across all 31 of Iran’s provinces." The Iranian government has cracked down hard as hundreds have been killed and thousands arrested. US President Donald Trump has threatened to attack Iran.
+            </li>
+            <li>
+              <strong>2. </strong>ICE in Minneapolis: Many more homeland security agents are getting moved into Minnesota. This comes after an ICE officer shot and killed Renee Good which now has an open investigation. 
+            </li>
+            <li>
+              <strong>3. </strong>Federal Reserve Subpoena: A subpoena is a formal court order compelling someone to provide testimony or produce evidence (documents, records) for a legal proceeding. This is over the multi-billion dollar Federal Reserve building makeover. According to NPR, 
+              "The Justice Department has subpoenaed the Federal Reserve for information on the central bank's headquarters renovation." Trump wants lower interest rates and there is speculation that this is part of the administration's pressure campaign to force the central bank to make bigger cuts in interest rates.
+            </li>
+            <li>
+              <strong>4. </strong> Golden Globes: The Golden Globes are an annual awards ceremony that honor the best in film and American television productions. Hamnet won the Golden Globe for Best Picture, Drama. Actors like Timothée Chalamet and Teyana Taylor were honored. The Golden Globes also included a new category, best podcast.
+            </li>
+            <li>
+              <strong>5. </strong> Sources: 
+(1) https://www.nytimes.com/2026/01/12/us/politics/fbi-renee-good-ice-shooting.html, 
+(2) https://www.cbsnews.com/minnesota/video/after-fbi-rejection-county-attorney-moves-forward-with-renee-good-investigation/
+(3) https://www.cnn.com/2026/01/12/middleeast/iran-mass-protests-explained-intl,
+(4) https://www.npr.org/2026/01/11/nx-s1-5674034/fed-powell-subpoena-doj-building-renovation,
+(5) https://www.yahoo.com/entertainment/celebrity/live/2026-golden-globes-live-updates-full-list-of-winners-as-one-battle-after-another-and-hamnet-take-home-top-film-nods-adolescence-recognized-for-tv-with-4-wins-000306961.html
+
+            </li>
+          </ul>
+        </div>
+
+      </article>
+
+    <article className="post-content">
+
+
+    {/* 🔹 Embedded YouTube Video */}
+      <div className="learning-log-video">
+        <iframe
+          width="100%"
+          height="480"
           src="https://www.youtube.com/embed/5g8bPzI7ATk?autoplay=1&mute=1&playsinline=1"
           title="News Weekly Recap"
           frameBorder="0"
@@ -96,36 +144,6 @@ function Post9() {
 
       </article>
 
-        {/* Blog Content */}
-        <h2>PREVIOUS WEEK: Week of 12/23/25: </h2>
-
-    {/* 🔹 Embedded YouTube Video */}
-      <div className="learning-log-video">
-        <iframe
-          width="100%"
-          height="480"
-          src="https://www.youtube.com/embed/M1Gl_k-uM5w?autoplay=1&mute=1&playsinline=1"
-          title="News Weekly Recap"
-          frameBorder="0"
-          allow="autoplay; encrypted-media"
-          allowFullScreen
-        ></iframe>
-      </div>
-
-              <p>
-1. Bondi Beach Shooting - Hundreds of people were celebrating Hanukkah on Bondi Beach in Sydney Australia when two men opened fire. The shooters killed 15 and more are in critical condition. Since then, the Australian officials have vowed to revise and tighten Australian gun laws after this act of terrorism.  
-
-2. Brown University Shooting - A shooting took place at Brown University killing two students and injuring more. The gunman has not yet been found and brought into custody as of December 15th. Students are mourning and fearful after this tragedy.  
-
-3. Fed Cuts interest rates - The Federal Reserve, which manages the U.S. money supply, cut interest rates a quarter percentage this past week. This means there is cheaper borrowing, with a goal of economic activity increasing.
-
-4. Washington State flooding - In Washington state, Rivers North of Seattle are at their high causing a flood. People had to be rescued and evacuated. Now, flood warnings stay in tact as Heavy rain and wind return to western Washington, raising flood concerns once again.
-
-5. Out of retirement - In the sports world, Philip Rivers, who is 44 years old, has agreed to come out of retirement after the NFL's Colts needed a quarterback after their starters experienced injuries. In a close game, the colts lost last night to the Seattle Seahawks.
-
-For resources, please check the description of the video. And please take care of each other during this difficult time. 
-        </p>
-      
       {/* Mailing List CTA */}
       <div className="cta">
         <h2>Stay in the loop ✉️</h2>
