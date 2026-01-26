@@ -14,7 +14,7 @@ function NewsPage1() {
           <h1 className="hero-title">The Place To Know What's Going On In The World. Quick.</h1>
           <div className="episode-row">
             <span className="episode-text">
-              Episode Every Monday: Week of 1/12/26
+              Episode Every Monday: Week of 1/26/26
             </span>
 
             <Link to="/post9" className="btn-episode">
@@ -25,7 +25,7 @@ function NewsPage1() {
 
         <div className="hero-video-wrapper">
           <iframe
-            src="https://www.youtube.com/embed/3NgtVP3fInU?autoplay=1&mute=1&playsinline=1"
+            src="https://www.youtube.com/embed/d2yWmA4bcBE?autoplay=1&mute=1&playsinline=1"
             title="Latest News Video"
             frameBorder="0"
             allow="autoplay; fullscreen"
@@ -43,6 +43,23 @@ function NewsPage1() {
       {/* --- Previous Episodes --- */}
       <section className="previous-section slide-up">
         <h2 className="section-title">Previous Episodes</h2>
+
+        <div className="video-card">
+          <div className="video-thumb">
+            <iframe
+              src="https://www.youtube.com/embed/3NgtVP3fInU?autoplay=1&mute=1&playsinline=1"
+              title="Episode 6"
+              frameBorder="0"
+              allowFullScreen
+            />
+          </div>
+          <div className="video-info">
+            <h3>Week of 1/12/26 - Episode 6</h3>
+            <p>
+              Covering Iran, ICE, US Department of Justice, and Golden Globes highlights.
+            </p>
+          </div>
+        </div>
 
         <div className="video-card">
           <div className="video-thumb">
