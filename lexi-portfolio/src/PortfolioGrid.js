@@ -181,6 +181,63 @@ function ModernLandingPage() {
         </motion.div>
       </div>
 
+      {/* Action Strip Section */}
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+          background: 'linear-gradient(90deg, #ffffff, #ffffff)',
+          borderRadius: '14px',
+          overflow: 'hidden',
+          marginBottom: '80px',
+        }}
+      >
+        {[
+          {
+            title: 'Partner',
+            desc: 'Become a partner today and make a difference.',
+            link: '/partner',
+            icon: '🤝',
+          },
+          {
+            title: 'Volunteer',
+            desc: 'Volunteer today to change lives!',
+            link: '/volunteer',
+            icon: '🙋‍♂️',
+          },
+          {
+            title: 'Pantry / Despensa',
+            desc: 'Book an appointment today!',
+            link: '/pantry',
+            icon: '➕',
+          },
+        ].map((item, i) => (
+          <Link
+            key={i}
+            to={item.link}
+            style={{
+              padding: '40px 30px',
+              color: '#000000',
+              textDecoration: 'none',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '12px',
+              transition: 'background 0.3s ease',
+            }}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.background = 'rgba(255,255,255,0.08)')
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.background = 'transparent')
+            }
+          >
+            <div style={{ fontSize: '2.4rem' }}>{item.icon}</div>
+            <h3 style={{ fontSize: '1.4rem', fontWeight: 700 }}>{item.title}</h3>
+            <p style={{ opacity: 0.9, lineHeight: 1.5 }}>{item.desc}</p>
+          </Link>
+        ))}
+      </div>
+
       {/* Section: Featured Videos */}
       {sectionHeader("Featured Videos")}
       <div style={{
