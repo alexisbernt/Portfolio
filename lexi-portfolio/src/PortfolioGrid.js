@@ -20,8 +20,8 @@ const Shape = ({ type }) => {
 function ModernLandingPage() {
   const headerPosts = [
     {
-    title: "Learn What's Going On Globally. QUICK.",
-    desc: "Recent studies show few Millennials, Gen Zers, and people from Gen Alpha keep up with what is going on in the world. Let's change that. Get your global news from the past week in less than a minute.",
+    title: "THE ISSUES WITH NEWS AND JOURNALISM TODAY",
+    desc: "Too many people have lost trust or interest in world news. Recent studies show Millennials, Gen Zers, and people from Gen Alpha don't keep up with what is going on in the world. Let's change that data. 'News In A Wink' brings quick recaps of what's going on in the world to the platforms young adults and teens are on the most. Moreover, at News In A Wink we fact check against the primary source to reduce bias and misinformation. We're constantly checking out sources across the spectrum to bring you the most accurate information possible.",
     link: '/',
     image: '/bannerC.png', 
     },
