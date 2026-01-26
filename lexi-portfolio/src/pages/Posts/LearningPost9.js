@@ -16,7 +16,55 @@ function Post9() {
         {/* 🔹 Main Content - RECENT */}
                 <article className="post-content">
 
+
+
     {/* 🔹 Embedded YouTube Video */}
+      <div className="learning-log-video">
+        <iframe
+          width="100%"
+          height="480"
+          src="https://www.youtube.com/embed/d2yWmA4bcBE?autoplay=1&mute=1&playsinline=1"
+          title="News Weekly Recap"
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+        ></iframe>
+      </div>
+
+      {/* 🔹 Blog Content */}
+
+        <div className="highlight-box">
+          <h3>Week of 1/26/26: </h3>
+          <ul>
+            <li>
+              <strong>- </strong>Past few days of news in 1 minute. Articles mentioned / shown include:
+            </li>
+            <li>
+              <strong>- </strong>1. USA Today: “Winter Storm Path.”
+2. NY Times: “Demonstrators Flood Minneapolis Streets as Hundreds of Businesses Close to Protest ICE.”
+3. ABC News: “Minneapolis ICE shooting live updates: Man Killed In Shooting Involves Federal Agents.”
+4. AP News Minnesota Updates.
+5. US NEWS: “US To Gain Sovereignty Over American Bases in Greenland.”
+6. AI Summary of European Leader Statement on Greenland (fact checked against the material source).
+7. ABC News: “Europe ‘united’ in face of Trump Greenland threats, tariffs, EU Chief Says.”
+8. AI Recap of Netflix subscribers and Q4 earnings (checked against Q4 source).
+9. Informed.now on Netflix Uodate
+10. NCAA: “Indiana Defeats Miami to Win the College Football Championship.”
+            </li>
+            <li>
+              <strong>- </strong>Although there are some funny faces involved in this weekly news recap, what is going on with ICE in Minnesota is serious. Please check out articles related to Alex Pretti and what’s going on. 
+            </li>
+            <li>
+              <strong>- </strong> Please take care of yourself and others.
+            </li>
+          </ul>
+        </div>
+
+      </article>
+
+    <article className="post-content">
+
+        {/* 🔹 Embedded YouTube Video */}
       <div className="learning-log-video">
         <iframe
           width="100%"
@@ -62,7 +110,6 @@ function Post9() {
       </article>
 
     <article className="post-content">
-
 
     {/* 🔹 Embedded YouTube Video */}
       <div className="learning-log-video">
