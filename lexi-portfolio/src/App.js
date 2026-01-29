@@ -37,16 +37,16 @@ function App() {
         <div className="main-container">
           <Navbar />
           <Routes>
-            <Route path="/" element={<NewsPage1 />} />
-            <Route path="/newsinawink" element={<PortfolioGrid />} />
+            <Route path="/" element={<PortfolioGrid />} />
+            <Route path="/newsinawink" element={<NewsPage1 />} />
             <Route path="/about" element={<About />} />
             <Route path="/coins" element={<Coins />} />
             <Route path="/ai" element={<AI />} />
             <Route path="/theratext" element={<TheraText />} />
             {/* <Route path="/cyberclub" element={<CyberClub />} /> */}
-            <Route path="/more" element={<More />} />
+            {/* <Route path="/more" element={<More />} />
             <Route path="/running-log" element={<RunningLog />} />
-            <Route path="/learninglog" element={<LearningLog />} />
+            <Route path="/learninglog" element={<LearningLog />} /> */}
             <Route path="/post1" element={<Post1 />} />
             <Route path="/post2" element={<Post2 />} />
             <Route path="/post3" element={<Post3 />} />

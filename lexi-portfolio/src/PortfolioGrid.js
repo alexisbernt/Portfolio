@@ -199,7 +199,7 @@ function ModernLandingPage() {
             title: 'What Is News In A Wink?',
             desc: 'A quick news update provided on the platform people tend to be on the most: Social media.',
             // link: '/partner',
-            icon: '🤝',
+            icon: '🎯',
           },
           {
             title: 'Fact Checking',
