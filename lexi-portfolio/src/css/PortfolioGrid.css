@@ -139,3 +139,33 @@
     text-align: center;
   }
 }
+
+/* Action Strip – Mobile Scaling */
+@media (max-width: 640px) {
+  .action-strip {
+    grid-template-columns: 1fr !important;
+  }
+
+  .action-strip-item {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 16px 18px !important;
+  }
+
+  .action-strip-item:last-child {
+    border-bottom: none;
+  }
+
+  .action-strip-icon {
+    font-size: 1.6rem !important;
+  }
+
+  .action-strip-title {
+    font-size: 1rem !important;
+  }
+
+  .action-strip-desc {
+    font-size: 0.85rem !important;
+  }
+}
+

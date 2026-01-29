@@ -181,34 +181,36 @@ function ModernLandingPage() {
         </motion.div>
       </div>
 
-      {/* Action Strip Section */}
+      {/* Condensed Action Strip Section */}
       <div
+        className="action-strip"
         style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-          background: 'linear-gradient(90deg, #ffffff, #ffffff)',
-          borderRadius: '14px',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+          backgroundColor: '#ffffff',
+          borderRadius: '12px',
           overflow: 'hidden',
-          marginBottom: '80px',
+          marginBottom: '60px',
+          boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
         }}
       >
         {[
           {
-            title: 'Partner',
-            desc: 'Become a partner today and make a difference.',
-            link: '/partner',
+            title: 'What Is News In A Wink?',
+            desc: 'A quick news update provided on the platform people tend to be on the most: Social media.',
+            // link: '/partner',
             icon: '🤝',
           },
           {
-            title: 'Volunteer',
-            desc: 'Volunteer today to change lives!',
-            link: '/volunteer',
-            icon: '🙋‍♂️',
+            title: 'Fact Checking',
+            desc: 'Checking: (A) Primary Sources, (B) Various Articles, and (C) Multiple Mediums across the political bias spectrum.',
+            // link: '/volunteer',
+            icon: '🧠',
           },
           {
-            title: 'Pantry / Despensa',
-            desc: 'Book an appointment today!',
-            link: '/pantry',
+            title: 'Initiatives',
+            desc: 'News In A Wink is new. Two series of videos are currently being made: (1) Weekly News Recaps & (2) Asking Public Figures What They Are Paying Attention To In The News.',
+            // link: '/pantry',
             icon: '➕',
           },
         ].map((item, i) => (
@@ -216,24 +218,47 @@ function ModernLandingPage() {
             key={i}
             to={item.link}
             style={{
-              padding: '40px 30px',
-              color: '#000000',
+              padding: '20px 22px',
+              color: '#000',
               textDecoration: 'none',
               display: 'flex',
-              flexDirection: 'column',
-              gap: '12px',
-              transition: 'background 0.3s ease',
+              alignItems: 'center',
+              gap: '14px',
+              borderRight:
+                i !== 2 ? '1px solid rgba(0,0,0,0.08)' : 'none',
+              transition: 'background 0.25s ease',
             }}
             onMouseEnter={(e) =>
-              (e.currentTarget.style.background = 'rgba(255,255,255,0.08)')
+              (e.currentTarget.style.background = 'rgba(0,0,0,0.04)')
             }
             onMouseLeave={(e) =>
               (e.currentTarget.style.background = 'transparent')
             }
           >
-            <div style={{ fontSize: '2.4rem' }}>{item.icon}</div>
-            <h3 style={{ fontSize: '1.4rem', fontWeight: 700 }}>{item.title}</h3>
-            <p style={{ opacity: 0.9, lineHeight: 1.5 }}>{item.desc}</p>
+            <div style={{ fontSize: '1.8rem' }}>{item.icon}</div>
+
+            <div>
+              <h3
+                style={{
+                  fontSize: '1.1rem',
+                  fontWeight: 700,
+                  margin: 0,
+                  lineHeight: 1.2,
+                }}
+              >
+                {item.title}
+              </h3>
+              <p
+                style={{
+                  margin: '4px 0 0',
+                  fontSize: '0.9rem',
+                  opacity: 0.75,
+                  lineHeight: 1.3,
+                }}
+              >
+                {item.desc}
+              </p>
+            </div>
           </Link>
         ))}
       </div>
