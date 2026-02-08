@@ -182,86 +182,107 @@ function ModernLandingPage() {
       </div>
 
       {/* Condensed Action Strip Section */}
-      <div
-        className="action-strip"
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
         style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-          backgroundColor: '#ffffff',
-          borderRadius: '12px',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+          gap: '1px',
+          borderRadius: '18px',
           overflow: 'hidden',
-          marginBottom: '60px',
-          boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
+          marginBottom: '70px',
+          background:
+            'linear-gradient(135deg, rgba(255,255,255,0.9), rgba(245,247,255,0.9))',
+          backdropFilter: 'blur(14px)',
+          boxShadow:
+            '0 20px 40px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.6)',
         }}
       >
         {[
           {
             title: 'What Is News In A Wink?',
-            desc: 'A quick news update provided on the platform people tend to be on the most: Social media.',
-            // link: '/partner',
+            desc: 'Fast, factual news designed for the platforms people actually use.',
             icon: '🎯',
           },
           {
-            title: 'Fact Checking',
-            desc: 'Checking: (A) Primary Sources, (B) Various Articles, and (C) Multiple Mediums across the political bias spectrum.',
-            // link: '/volunteer',
+            title: 'Fact-Checking First',
+            desc: 'Primary sources, multiple outlets, and perspectives across the bias spectrum.',
             icon: '🧠',
           },
           {
-            title: 'Initiatives',
-            desc: 'News In A Wink is new. Two series of videos are currently being made: (1) Weekly News Recaps & (2) Asking Public Figures What They Are Paying Attention To In The News.',
-            // link: '/pantry',
+            title: 'Current Initiatives',
+            desc: 'Weekly recaps and interviews with public figures on what matters now.',
             icon: '➕',
           },
         ].map((item, i) => (
-          <Link
+          <motion.div
             key={i}
-            to={item.link}
+            whileHover={{ y: -4 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 20 }}
             style={{
-              padding: '20px 22px',
-              color: '#000',
-              textDecoration: 'none',
+              padding: '26px 28px',
               display: 'flex',
-              alignItems: 'center',
-              gap: '14px',
-              borderRight:
-                i !== 2 ? '1px solid rgba(0,0,0,0.08)' : 'none',
-              transition: 'background 0.25s ease',
+              alignItems: 'flex-start',
+              gap: '16px',
+              background: 'rgba(255,255,255,0.75)',
+              cursor: 'default',
             }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.background = 'rgba(0,0,0,0.04)')
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.background = 'transparent')
-            }
           >
-            <div style={{ fontSize: '1.8rem' }}>{item.icon}</div>
+            {/* Icon Pill */}
+            <div
+              style={{
+                width: '44px',
+                height: '44px',
+                borderRadius: '12px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '1.4rem',
+                background:
+                  'linear-gradient(135deg, #2563eb, #1e40af)',
+                color: '#fff',
+                boxShadow: '0 8px 18px rgba(37,99,235,0.35)',
+                flexShrink: 0,
+              }}
+            >
+              {item.icon}
+            </div>
 
+            {/* Text */}
             <div>
               <h3
                 style={{
-                  fontSize: '1.1rem',
+                  fontSize: '1.05rem',
                   fontWeight: 700,
                   margin: 0,
-                  lineHeight: 1.2,
+                  color: '#0f172a',
+                  letterSpacing: '-0.01em',
                 }}
               >
                 {item.title}
               </h3>
               <p
                 style={{
-                  margin: '4px 0 0',
+                  marginTop: '6px',
                   fontSize: '0.9rem',
-                  opacity: 0.75,
-                  lineHeight: 1.3,
+                  lineHeight: 1.5,
+                  color: '#475569',
                 }}
               >
                 {item.desc}
               </p>
             </div>
-          </Link>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
+
+      {/* --- Signup Banner --- */}
+      <Link to="/news-signup" className="signup-banner">
+        Join the 530+ who get their news updates in less than a minute. Sign Up Now →
+      </Link>
 
       {/* Section: Featured Videos */}
       {sectionHeader("Featured Videos")}
