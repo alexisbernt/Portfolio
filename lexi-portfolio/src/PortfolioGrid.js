@@ -164,7 +164,7 @@ function ModernLandingPage() {
            50 seconds to know what's going on globally
           </h1>
           <Link
-            to="/"
+            to="/news-signup"
             style={{
               display: 'inline-block',
               padding: 'clamp(10px, 2vw, 14px) clamp(20px, 4vw, 32px)',
@@ -204,7 +204,7 @@ function ModernLandingPage() {
         {[
           {
             title: 'What Is News In A Wink?',
-            desc: 'Fast, factual news designed for the platforms people actually use.',
+            desc: 'Fast and factual news designed for the platforms people actually use.',
             icon: '🎯',
           },
           {
