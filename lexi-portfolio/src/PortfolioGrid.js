@@ -204,12 +204,12 @@ function ModernLandingPage() {
         {[
           {
             title: 'What Is News In A Wink?',
-            desc: 'Fast and factual news designed for the platforms people actually use.',
+            desc: 'Journalism that translates complex current events into conversational insights.',
             icon: '🎯',
           },
           {
-            title: 'Fact-Checking First',
-            desc: 'Primary sources, multiple outlets, and perspectives across the bias spectrum.',
+            title: 'The Mission',
+            desc: 'Mission to make news approachable, factual, and motivating. The goal is to help people stay informed and get involved in their communities.',
             icon: '🧠',
           },
           {
