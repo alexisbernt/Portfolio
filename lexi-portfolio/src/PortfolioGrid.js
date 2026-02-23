@@ -299,11 +299,11 @@ function ModernLandingPage() {
           },
           {
             title: "Catch Up With Global Events Fast",
-            src: "https://www.youtube.com/embed/o7XgvG1-xPA",
+            src: "https://www.youtube.com/embed/aO8flTH06-8",
           },
           {
             title: "News Pulled From Sources Across The Spectrum & Globe",
-            src: "https://www.youtube.com/embed/M1Gl_k-uM5w",
+            src: "https://www.youtube.com/embed/1CNhia3X828",
           },
         ].map((video, index) => (
           <motion.div
