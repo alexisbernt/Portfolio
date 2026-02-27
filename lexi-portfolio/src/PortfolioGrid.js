@@ -4,6 +4,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Float } from '@react-three/drei';
 import { motion } from 'framer-motion';
 import Footer from './Footer';
+import { MessageSquareText } from 'lucide-react';
 
 // 3D Shape Renderer
 const Shape = ({ type }) => {
@@ -278,6 +279,94 @@ function ModernLandingPage() {
           </motion.div>
         ))}
       </motion.div>
+      
+      {/* --- Survey CTA Section --- */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4 }}
+        viewport={{ once: true }}
+        style={{
+          margin: '10px 0 20px 0',
+          padding: '24px 20px',
+          borderRadius: '20px',
+          background: '#ffffff',
+          boxShadow: '0 20px 50px rgba(15,23,42,0.08)',
+          display: 'flex',
+          flexDirection: 'column', // stack vertically
+          alignItems: 'center',     // center horizontally
+          justifyContent: 'center',
+          textAlign: 'center',
+          gap: '18px',
+        }}
+      >
+        {/* Icon */}
+        <div
+          style={{
+            background: 'rgba(37,99,235,0.1)',
+            padding: '12px',
+            borderRadius: '16px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <MessageSquareText size={24} color="#2563eb" />
+        </div>
+
+        {/* Text */}
+        <div>
+          <h3
+            style={{
+              margin: 0,
+              fontSize: '1.05rem',
+              fontWeight: 700,
+              color: '#0f172a',
+            }}
+          >
+            What News Is On Your Mind?
+          </h3>
+          <p
+            style={{
+              margin: '6px 0 0 0',
+              fontSize: '0.9rem',
+              color: '#475569',
+            }}
+          >
+            Share what stories matter most to you.
+          </p>
+        </div>
+
+        {/* Button */}
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSevB8KwJ3scUNJjpomz_Ts-Nmesbcz8dSaZpY9YFVlCc_l_Tw/viewform?usp=dialog"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            background: '#2563eb',
+            color: '#ffffff',
+            padding: '11px 22px',
+            borderRadius: '999px',
+            fontWeight: 600,
+            fontSize: '0.9rem',
+            textDecoration: 'none',
+            transition: 'all 0.2s ease',
+            boxShadow: '0 8px 20px rgba(37,99,235,0.3)',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-2px)';
+            e.currentTarget.style.boxShadow =
+              '0 12px 28px rgba(37,99,235,0.35)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow =
+              '0 8px 20px rgba(37,99,235,0.3)';
+          }}
+        >
+          Take the Survey
+        </a>
+      </motion.section>
 
       {/* --- Perspective Statement Section --- */}
       <motion.section
