@@ -204,12 +204,12 @@ function ModernLandingPage() {
         {[
           {
             title: 'What Is News In A Wink?',
-            desc: 'Journalism that translates complex current events into conversational insights.',
+            desc: 'A Journalism Project to get more people talking about world news.',
             icon: '🎯',
           },
           {
             title: 'The Mission',
-            desc: 'Mission to make news approachable, factual, and motivating. The goal is to help people stay informed and get involved in their communities.',
+            desc: 'The goal is to help people: (1) Stay informed. (2) Feel motivated to get involved in their communities.',
             icon: '🧠',
           },
           {
