@@ -162,7 +162,7 @@ function ModernLandingPage() {
             fontFamily: 'Montserrat, sans-serif',
             lineHeight: '1.3',
           }}>
-           50 seconds to know what's going on globally
+           “The Week Ahead, Made Clear.”
           </h1>
           <Link
             to="/news-signup"
@@ -177,7 +177,7 @@ function ModernLandingPage() {
               fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
             }}
           >
-            Get Your "News In A Wink" →
+            Get The News Forecast →
           </Link>
         </motion.div>
       </div>
@@ -209,14 +209,14 @@ function ModernLandingPage() {
             icon: '🎯',
           },
           {
-            title: 'The Mission',
-            desc: 'The goal is to help people: (1) Stay informed. (2) Feel motivated to get involved in their communities.',
-            icon: '🧠',
+            title: 'What to Expect:',
+            desc: 'Monday: Weekly news rundown. Thursday: Interview with a journalist or public figure.',
+            icon: '➕',
           },
           {
-            title: 'Current Initiatives',
-            desc: 'Weekly recaps and interviews with public figures on what matters now.',
-            icon: '➕',
+            title: 'The Mission:',
+            desc: 'The goal is to help people: (1) Stay informed. (2) Feel motivated to get involved in their communities.',
+            icon: '🧠',
           },
         ].map((item, i) => (
           <motion.div
