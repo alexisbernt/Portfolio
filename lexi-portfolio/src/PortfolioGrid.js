@@ -368,38 +368,6 @@ function ModernLandingPage() {
         </a>
       </motion.section>
 
-      {/* --- Perspective Statement Section --- */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-        style={{
-          margin: '15px 0',
-          padding: '15px 15px',
-          borderRadius: '20px',
-          textAlign: 'center',
-          background: '#ffffff',
-          boxShadow: '0 20px 50px rgba(15,23,42,0.08)',
-        }}
-      >
-        <div style={{ maxWidth: '760px', margin: '0 auto' }}>
-          <h2
-            style={{
-              fontSize: 'clamp(0.7rem, 2.5vw, 1.4rem)',
-              fontWeight: 800,
-              lineHeight: 1.4,
-              letterSpacing: '-0.01em',
-              color: '#0f172a',
-              margin: 0,
-            }}
-          >
-            News exposes the pathological problems in society,
-            <span style={{ color: '#2563eb' }}> but awareness of these issues inspires us to improve, take action, and accomplish big things.</span>
-          </h2>
-        </div>
-      </motion.section>
-
       {/* --- Signup Banner --- */}
       <Link to="/news-signup" className="signup-banner">
         Join the 530+ who get their news updates in less than a minute. Sign Up Now →
@@ -468,6 +436,38 @@ function ModernLandingPage() {
           </motion.div>
         ))}
       </div>
+
+      {/* --- Perspective Statement Section --- */}
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        style={{
+          margin: '15px 0',
+          padding: '15px 15px',
+          borderRadius: '20px',
+          textAlign: 'center',
+          background: '#ffffff',
+          boxShadow: '0 20px 50px rgba(15,23,42,0.08)',
+        }}
+      >
+        <div style={{ maxWidth: '760px', margin: '0 auto' }}>
+          <h2
+            style={{
+              fontSize: 'clamp(0.7rem, 2.5vw, 1.4rem)',
+              fontWeight: 800,
+              lineHeight: 1.4,
+              letterSpacing: '-0.01em',
+              color: '#0f172a',
+              margin: 0,
+            }}
+          >
+            "News exposes the pathological problems in society,
+            <span style={{ color: '#2563eb' }}> but awareness of these issues inspires us to improve, take action, and accomplish big things."</span>
+          </h2>
+        </div>
+      </motion.section>
 
       {/* Section 1: Most Recent Developments */}
       {sectionHeader("Staying Informed. Efficiently.")}
