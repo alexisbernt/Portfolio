@@ -48,18 +48,21 @@ function ModernLandingPage() {
   ];
 
   const container = {
-    maxWidth: '1300px',
-    margin: '0 auto',
-    padding: '40px 20px',
-    fontFamily: 'Inter, system-ui, sans-serif',
-    position: 'relative',
+  maxWidth: "1200px",
+  margin: "0 auto",
+  padding: "clamp(16px, 4vw, 32px)",
+  fontFamily: "Inter, system-ui, sans-serif",
+};
+
+  const section = {
+    marginTop: "clamp(40px, 6vw, 80px)",
   };
 
   const headerGrid = {
-    display: 'grid',
-    gridTemplateColumns: '2fr 1fr',
-    gap: '32px',
-    alignItems: 'stretch',
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+    gap: "clamp(16px, 3vw, 24px)",
+    alignItems: "stretch",
   };
 
 
@@ -374,7 +377,8 @@ function ModernLandingPage() {
       </Link>
 
       {/* Section: Featured Videos */}
-      {sectionHeader("Featured Videos")}
+      <div style={section}>
+        {sectionHeader("Featured Videos")}
       <div style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
@@ -436,6 +440,7 @@ function ModernLandingPage() {
           </motion.div>
         ))}
       </div>
+      </div>
 
       {/* --- Perspective Statement Section --- */}
       <motion.section
@@ -470,6 +475,7 @@ function ModernLandingPage() {
       </motion.section>
 
       {/* Section 1: Most Recent Developments */}
+      <div style={section}>
       {sectionHeader("Staying Informed. Efficiently.")}
       <div style={headerGrid} className="header-grid">
         {/* Left column: one side-by-side cards */}
@@ -522,6 +528,7 @@ function ModernLandingPage() {
             );
           })}
         </div>
+        </div>
 
         {/* Right column: Bio card */}
         <div style={profileCard} className="profile-card">
@@ -537,7 +544,15 @@ function ModernLandingPage() {
         </div>
       </div>
 
+      <Footer />
+    </div>
+  );
+}
+
+export default ModernLandingPage;
+
       {/* Section 2: The Things
+      <div style={section}>
       {sectionHeader("The Things.")}
       <div style={cardGrid}>
         {cardPosts.map((post, index) => {
@@ -573,10 +588,3 @@ function ModernLandingPage() {
           );
         })}
       </div> */}
-
-      <Footer />
-    </div>
-  );
-}
-
-export default ModernLandingPage;
