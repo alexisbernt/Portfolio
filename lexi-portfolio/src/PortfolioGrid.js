@@ -95,6 +95,9 @@ function ModernLandingPage() {
     borderRadius: '16px',
     padding: '32px',
     boxShadow: '0 4px 12px rgba(255, 255, 255, 1)',
+    width: "100%",
+    maxWidth: "420px",
+    margin: "0 auto",
   };
 
   const profileImg = {
@@ -126,7 +129,13 @@ function ModernLandingPage() {
     <div className="news-container fade-in" style={container}>
 
       {/* Promo Banner */}
-      <div style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden', marginBottom: '60px', boxShadow: '0 6px 20px rgba(0,0,0,0.15)' }}>
+      <div
+        style={{
+          position: "relative",
+          width: "100%",
+          paddingTop: "40%",
+          minHeight: "240px",
+        }}  >
         <iframe
           src="https://www.youtube.com/embed/uI13dmzfg_E?autoplay=1&mute=1&loop=1&playlist=uI13dmzfg_E&controls=0&modestbranding=1&rel=0"
           title="Promo Video"
@@ -159,7 +168,7 @@ function ModernLandingPage() {
           }}
         >
           <h1 style={{
-            fontSize: 'clamp(1.8rem, 4vw, 2.6rem)',
+            fontSize: "clamp(1.6rem, 4vw, 2.4rem)",
             fontWeight: '700',
             marginBottom: '20px',
             fontFamily: 'Montserrat, sans-serif',
@@ -193,8 +202,8 @@ function ModernLandingPage() {
         viewport={{ once: true }}
         style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-          gap: '1px',
+          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+          gap: "clamp(16px, 3vw, 24px)",
           borderRadius: '18px',
           overflow: 'hidden',
           marginBottom: '70px',
@@ -290,17 +299,21 @@ function ModernLandingPage() {
         transition={{ duration: 0.4 }}
         viewport={{ once: true }}
         style={{
-          margin: '10px 0 20px 0',
-          padding: '24px 20px',
-          borderRadius: '20px',
-          background: '#ffffff',
-          boxShadow: '0 20px 50px rgba(15,23,42,0.08)',
-          display: 'flex',
-          flexDirection: 'column', // stack vertically
-          alignItems: 'center',     // center horizontally
-          justifyContent: 'center',
-          textAlign: 'center',
-          gap: '18px',
+          margin: "clamp(30px,5vw,50px) 0",
+          padding: "clamp(20px,4vw,28px)",
+          borderRadius: "20px",
+          background: "#ffffff",
+          boxShadow: "0 20px 50px rgba(15,23,42,0.08)",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          textAlign: "center",
+          gap: "16px",
+          maxWidth: "720px",
+          width: "100%",
+          marginLeft: "auto",
+          marginRight: "auto",
         }}
       >
         {/* Icon */}
@@ -383,7 +396,7 @@ function ModernLandingPage() {
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
         gap: '24px',
-        marginBottom: '80px',
+        marginBottom: "clamp(20px, 3vw, 32px)"
       }}>
         {[
           {
