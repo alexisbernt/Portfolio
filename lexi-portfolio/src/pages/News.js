@@ -14,7 +14,7 @@ function NewsPage1() {
           <h1 className="hero-title">The Place To Know What's Going On In The World. Quick.</h1>
           <div className="episode-row">
             <span className="episode-text">
-              Episode Every Monday: Week of 1/26/26
+              Episode Every Monday: Week of 3/9/26
             </span>
 
             <Link to="/post9" className="btn-episode">
@@ -23,9 +23,9 @@ function NewsPage1() {
           </div>
         </div>
 
-        <div className="hero-video-wrapper">
+        <div className="hero-video-wrapper"> 
           <iframe
-            src="https://www.youtube.com/embed/d2yWmA4bcBE?autoplay=1&mute=1&playsinline=1"
+            src="https://www.youtube.com/embed/kteuqWL9hmE?autoplay=1&mute=1&playsinline=1"
             title="Latest News Video"
             frameBorder="0"
             allow="autoplay; fullscreen"
@@ -43,6 +43,40 @@ function NewsPage1() {
       {/* --- Previous Episodes --- */}
       <section className="previous-section slide-up">
         <h2 className="section-title">Previous Episodes</h2>
+
+        <div className="video-card">
+          <div className="video-thumb">
+            <iframe
+              src="https://www.youtube.com/embed/hH20kOSHH70?autoplay=1&mute=1&playsinline=1"
+              title="Episode 7"
+              frameBorder="0"
+              allowFullScreen
+            />
+          </div>
+          <div className="video-info">
+            <h3>Week of 3/1/26 - Episode 8</h3>
+            <p>
+              Covering the latest on Iran, 'El Mencho,' the AI wipeout, and free pancakes.
+            </p>
+          </div>
+        </div>
+        
+        <div className="video-card">
+          <div className="video-thumb">
+            <iframe
+              src="https://www.youtube.com/embed/d2yWmA4bcBE?autoplay=1&mute=1&playsinline=1"
+              title="Episode 7"
+              frameBorder="0"
+              allowFullScreen
+            />
+          </div>
+          <div className="video-info">
+            <h3>Week of 1/26/26 - Episode 7</h3>
+            <p>
+              Covering ICE protests, Winter Storm, and more.
+            </p>
+          </div>
+        </div>
 
         <div className="video-card">
           <div className="video-thumb">

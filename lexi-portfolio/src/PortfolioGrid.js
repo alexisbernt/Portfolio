@@ -188,7 +188,7 @@ function ModernLandingPage() {
                 justifyContent: 'center',
                 fontSize: '1.4rem',
                 background:
-                  'linear-gradient(135deg, #adb0b6, #636670)',
+                  'linear-gradient(135deg, #abbee6, #647bc4)',
                 color: '#fff',
                 boxShadow: '0 8px 18px rgba(37,99,235,0.35)',
                 flexShrink: 0,
@@ -377,7 +377,7 @@ function ModernLandingPage() {
               <h3 style={{
                 fontSize: '1.1rem',
                 fontWeight: 'bold',
-                color: '#757d8d',
+                color: '#22252c',
                 margin: '8px 0 4px 0',
               }}>
                 {video.title}
