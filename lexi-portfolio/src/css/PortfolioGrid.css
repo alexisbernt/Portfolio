@@ -1,8 +1,8 @@
 :root {
-  --blue-main: #1a73e8;
-  --blue-dark: #0f4db3;
+  --blue-main: #757d8d; 
+  --blue-dark: #636670;
   --blue-light: #e8f1ff;
-  --bg-gradient: radial-gradient(circle at top right, #1a73e8, #0f4db3, #061a33, #000);
+  --bg-gradient: radial-gradient(circle at top right, #757d8d, #636670, #061a33, #000);
   --text-light: #1a1c1f;
   --text-dim: #c8d6f2;
   --card-bg: rgba(255, 255, 255, 0.06);

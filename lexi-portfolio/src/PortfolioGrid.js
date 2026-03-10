@@ -1,93 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Float } from '@react-three/drei';
 import { motion } from 'framer-motion';
 import Footer from './Footer';
 import { MessageSquareText } from 'lucide-react';
-
-// 3D Shape Renderer
-const Shape = ({ type }) => {
-  switch (type) {
-    case 'box': return <mesh><boxGeometry args={[2, 2, 2]} /><meshStandardMaterial color="#2563eb" /></mesh>;
-    case 'sphere': return <mesh><sphereGeometry args={[1.2, 32, 32]} /><meshStandardMaterial color="#2563eb" /></mesh>;
-    case 'torus': return <mesh><torusGeometry args={[1, 0.4, 16, 100]} /><meshStandardMaterial color="#2563eb" /></mesh>;
-    case 'cone': return <mesh><coneGeometry args={[1, 2, 32]} /><meshStandardMaterial color="#2563eb" /></mesh>;
-    case 'icosahedron': return <mesh><icosahedronGeometry args={[1.2, 0]} /><meshStandardMaterial color="#2563eb" /></mesh>;
-    default: return null;
-  }
-};
+import PortfolioGrid from "./PortfolioGrid";
 
 function ModernLandingPage() {
-  const headerPosts = [
-    {
-    title: "THE ISSUES WITH NEWS AND JOURNALISM TODAY",
-    desc: "Too many people have lost trust or interest in world news. Recent studies show Millennials, Gen Zers, and people from Gen Alpha don't keep up with what is going on in the world. Let's change that data. 'News In A Wink' brings quick recaps of what's going on in the world to the platforms young adults and teens are on the most. Moreover, at News In A Wink we fact check against the primary source to reduce bias and misinformation. We're constantly checking out sources across the spectrum to bring you the most accurate information possible.",
-    link: '/',
-    image: '/bannerC.png', 
-    },
-  ];
-
-  const cardPosts = [
-    {
-      title: 'News In A Wink',
-      desc: "5 News Facts In 50 Seconds.",
-      link: '/',
-      shape: 'icosahedron', 
-    },
-    { title: 'TheraText', desc: "The fun way for therapist's notetaking.", link: 'https://www.theratext.site/', shape: 'torus' },
-    { title: 'Artificial Intelligence Tool', desc: 'Check out some of the tools you can use for changing your day to day operations (for the better).', link: '/ai', shape: 'icosahedron'},
-    { title: 'About', desc: 'The person behind this website.', link: '/about', shape: 'torus' },
-    {
-      title: 'eBay Collectible Coins Store',
-      desc: "Collectable coins and information on how I am building my eBay shop.",
-      link: '/coins',
-      shape: 'icosahedron', 
-    },
-    { title: 'Learning Log', desc: 'Where learning meets doing.', link: '/learninglog', shape: 'torus' },
-  ];
 
   const container = {
-  maxWidth: "1200px",
-  margin: "0 auto",
-  padding: "clamp(16px, 4vw, 32px)",
-  fontFamily: "Inter, system-ui, sans-serif",
-};
+      maxWidth: "1200px",
+      margin: "0 auto",
+      padding: "clamp(20px,4vw,40px)",
+      fontFamily: "Inter, system-ui, sans-serif",
+      position: "relative",
+      backgroundColor: "#757d8d",
+      minHeight: "100vh",
+    };
 
   const section = {
     marginTop: "clamp(40px, 6vw, 80px)",
   };
-
-  const headerGrid = {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-    gap: "clamp(16px, 3vw, 24px)",
-    alignItems: "stretch",
-  };
-
-
-  const cardGrid = {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-    gap: '24px',
-    marginTop: '40px',
-    marginBottom: '60px',
-  };
-
-  const card = {
-    backgroundColor: '#fff',
-    borderRadius: '16px',
-    overflow: 'hidden',
-    boxShadow: '0 6px 16px rgba(255, 255, 255, 1)',
-    textDecoration: 'none',
-    color: 'inherit',
-    display: 'flex',
-    flexDirection: 'column',
-    cursor: 'pointer',
-    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-  };
-
-  const cardContent = { padding: '20px' };
 
   const profileCard = {
     textAlign: 'center',
@@ -256,7 +188,7 @@ function ModernLandingPage() {
                 justifyContent: 'center',
                 fontSize: '1.4rem',
                 background:
-                  'linear-gradient(135deg, #2563eb, #1e40af)',
+                  'linear-gradient(135deg, #adb0b6, #636670)',
                 color: '#fff',
                 boxShadow: '0 8px 18px rgba(37,99,235,0.35)',
                 flexShrink: 0,
@@ -360,7 +292,7 @@ function ModernLandingPage() {
           target="_blank"
           rel="noopener noreferrer"
           style={{
-            background: '#2563eb',
+            background: '#757d8d',
             color: '#ffffff',
             padding: '11px 22px',
             borderRadius: '999px',
@@ -445,7 +377,7 @@ function ModernLandingPage() {
               <h3 style={{
                 fontSize: '1.1rem',
                 fontWeight: 'bold',
-                color: '#1e3a8a',
+                color: '#757d8d',
                 margin: '8px 0 4px 0',
               }}>
                 {video.title}
@@ -575,94 +507,3 @@ function ModernLandingPage() {
 }
 
 export default ModernLandingPage;
-
-
-      {/* Left column: one side-by-side cards
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '24px' }}>
-          {[headerPosts[0]].map((post, i) => {
-            const isExternal = post.link.startsWith('http');
-            const content = (
-              <>
-                {post.image ? (
-                <img
-                  src={post.image}
-                  alt={post.title}
-                  style={{
-                    width: '100%',
-                    height: 'clamp(200px, 40vw, 300px)',
-                    objectFit: 'cover',
-                    backgroundColor: '#f8fafc',
-                  }}
-                />
-              ) : (
-                <Canvas style={{ height: 'clamp(200px, 40vw, 300px)', backgroundColor: '#f8fafc' }}>
-                  <ambientLight intensity={0.5} />
-                  <directionalLight position={[0, 2, 5]} />
-                  <Float floatIntensity={0.6} rotationIntensity={0.3}>
-                    <Shape type={post.shape} />
-                  </Float>
-                  <OrbitControls enableZoom={false} enablePan={false} autoRotate />
-                </Canvas>
-              )}
-                <div style={cardContent}>
-                  <h3
-                    style={{
-                      fontSize: '1.3rem',
-                      fontWeight: 'bold',
-                      marginBottom: '8px',
-                      color: '#000000',
-                    }}
-                  >
-                    {post.title}
-                  </h3>
-                  <p style={{ fontSize: '0.95rem', color: '#555' }}>{post.desc}</p>
-                </div>
-              </>
-            );
-
-            return isExternal ? (
-              <a key={i} href={post.link} target="_blank" rel="noopener noreferrer" style={card}>{content}</a>
-            ) : (
-              <Link key={i} to={post.link} style={card}>{content}</Link>
-            );
-          })}
-        </div>
-        </div> */}
-
-      {/* Section 2: The Things
-      <div style={section}>
-      {sectionHeader("The Things.")}
-      <div style={cardGrid}>
-        {cardPosts.map((post, index) => {
-          const isExternal = post.link.startsWith('http');
-          const CardContent = () => (
-            <div style={{ padding: '20px' }}>
-              <h2 style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#1e3a8a' }}>{post.title}</h2>
-              <p style={{ fontSize: '0.9rem', color: '#444', marginBottom: '12px' }}>{post.desc}</p>
-              <Canvas style={{ height: '180px', marginBottom: '12px' }}>
-                <ambientLight intensity={0.5} />
-                <directionalLight position={[0, 2, 5]} />
-                <Float floatIntensity={0.4} rotationIntensity={0.2}>
-                  <Shape type={post.shape} />
-                </Float>
-                <OrbitControls enableZoom={false} enablePan={false} autoRotate />
-              </Canvas>
-              <span style={{ color: '#2563eb', fontWeight: 'bold' }}>Read More →</span>
-            </div>
-          );
-
-          return (
-            <motion.div key={index} whileHover={{ scale: 1.05 }} style={card}>
-              {isExternal ? (
-                <a href={post.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit', display: 'block', height: '100%' }}>
-                  <CardContent />
-                </a>
-              ) : (
-                <Link to={post.link} style={{ textDecoration: 'none', color: 'inherit', display: 'block', height: '100%' }}>
-                  <CardContent />
-                </Link>
-              )}
-            </motion.div>
-          );
-        })}
-      </div> */}
