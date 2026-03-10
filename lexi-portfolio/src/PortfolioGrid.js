@@ -467,9 +467,9 @@ function ModernLandingPage() {
             >
               At News In A Wink, we know it is not our job to tell you how to think.
               Instead, we provide the information to help you get up-to-date quickly.
-              Then, you decide what to think and what to do. If you want quick news
+              Then, you decide what to do about it. If you want quick news
               updates, please sign up for the mailing list (free and only one email
-              every Tuesday).
+              every month).
             </p>
 
             <Link
