@@ -129,13 +129,14 @@ function ModernLandingPage() {
     <div className="news-container fade-in" style={container}>
 
       {/* Promo Banner */}
-      <div
-        style={{
+        <div style={{ 
           position: "relative",
-          width: "100%",
-          paddingTop: "40%",
-          minHeight: "240px",
-        }}  >
+          borderRadius: "16px",
+          overflow: "hidden",
+          marginBottom: "clamp(30px,5vw,50px)",
+          boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
+          minHeight: "200px",
+        }}>
         <iframe
           src="https://www.youtube.com/embed/uI13dmzfg_E?autoplay=1&mute=1&loop=1&playlist=uI13dmzfg_E&controls=0&modestbranding=1&rel=0"
           title="Promo Video"
@@ -462,36 +463,121 @@ function ModernLandingPage() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
         style={{
-          margin: '15px 0',
-          padding: '15px 15px',
-          borderRadius: '20px',
-          textAlign: 'center',
-          background: '#ffffff',
-          boxShadow: '0 20px 50px rgba(15,23,42,0.08)',
+          margin: "clamp(40px,6vw,70px) 0",
+          padding: "clamp(20px,4vw,32px)",
+          borderRadius: "20px",
+          textAlign: "center",
+          background: "#ffffff",
+          boxShadow: "0 20px 50px rgba(15,23,42,0.08)",
         }}
       >
-        <div style={{ maxWidth: '760px', margin: '0 auto' }}>
+        <div style={{ maxWidth: "760px", margin: "0 auto" }}>
           <h2
             style={{
-              fontSize: 'clamp(0.7rem, 2.5vw, 1.4rem)',
+              fontSize: "clamp(1rem,2.5vw,1.4rem)",
               fontWeight: 800,
               lineHeight: 1.4,
-              letterSpacing: '-0.01em',
-              color: '#0f172a',
+              letterSpacing: "-0.01em",
+              color: "#0f172a",
               margin: 0,
             }}
           >
             "News exposes the pathological problems in society,
-            <span style={{ color: '#2563eb' }}> but awareness of these issues inspires us to improve, take action, and accomplish big things."</span>
+            <span style={{ color: "#2563eb" }}>
+              {" "}but awareness of these issues inspires us to improve, take action,
+              and accomplish big things.
+            </span>
+            "
           </h2>
         </div>
       </motion.section>
 
       {/* Section 1: Most Recent Developments */}
       <div style={section}>
-      {sectionHeader("Staying Informed. Efficiently.")}
-      <div style={headerGrid} className="header-grid">
-        {/* Left column: one side-by-side cards */}
+        {sectionHeader("Staying Informed. Efficiently.")}
+
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            width: "100%",
+            marginTop: "20px",
+          }}
+        >
+          {/* Bio card */}
+          <div
+            style={{
+              ...profileCard,
+              maxWidth: "500px",
+              width: "100%",
+            }}
+            className="profile-card"
+          >
+            <img src="ai-dev.png" alt="Profile" style={profileImg} />
+
+            <h2
+              style={{
+                fontSize: "1.8rem",
+                color: "#000",
+                marginTop: "16px",
+              }}
+            >
+              Hi!
+            </h2>
+
+            <p
+              style={{
+                fontSize: "0.95rem",
+                color: "#333",
+                marginTop: "12px",
+                lineHeight: "1.6",
+              }}
+            >
+              At News In A Wink, we know it is not our job to tell you how to think.
+              Instead, we provide the information to help you get up-to-date quickly.
+              Then, you decide what to think and what to do. If you want quick news
+              updates, please sign up for the mailing list (free and only one email
+              every Tuesday).
+            </p>
+
+            <Link
+              to="/sign-up"
+              style={{
+                color: "#000",
+                fontWeight: "bold",
+                marginTop: "14px",
+                display: "inline-block",
+              }}
+            >
+              Join the club →
+            </Link>
+
+            <br />
+
+            <Link
+              to="/about"
+              style={{
+                color: "#000",
+                fontWeight: "bold",
+                marginTop: "10px",
+                display: "inline-block",
+              }}
+            >
+              Read more →
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      <Footer />
+      </div>
+  );
+}
+
+export default ModernLandingPage;
+
+
+      {/* Left column: one side-by-side cards
         <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '24px' }}>
           {[headerPosts[0]].map((post, i) => {
             const isExternal = post.link.startsWith('http');
@@ -541,28 +627,7 @@ function ModernLandingPage() {
             );
           })}
         </div>
-        </div>
-
-        {/* Right column: Bio card */}
-        <div style={profileCard} className="profile-card">
-          <img src="ai-dev.png" alt="Profile" style={profileImg} />
-          <h2 style={{ fontSize: '1.8rem', color: '#000000ff', marginTop: '16px' }}>Hi!</h2>
-          <p style={{ fontSize: '0.95rem', color: '#333', marginTop: '12px', lineHeight: '1.6' }}>
-            At News In A Wink, we know it is not our job to tell you how to think. Instead, we provide the information to help you get up-to-date quickly.
-            Then, you decide what to think and what to do. If you want quick news updates, please sign up for the mailing list (free and only one email every Tuesday).
-          </p>
-          <Link to="/sign-up" style={{ color: '#000000ff', fontWeight: 'bold', marginTop: '12px', display: 'inline-block' }}>Join the club →</Link>
-          <br />
-          <Link to="/about" style={{ color: '#000000ff', fontWeight: 'bold', marginTop: '12px', display: 'inline-block' }}>Read more →</Link>
-        </div>
-      </div>
-
-      <Footer />
-    </div>
-  );
-}
-
-export default ModernLandingPage;
+        </div> */}
 
       {/* Section 2: The Things
       <div style={section}>
