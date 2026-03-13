@@ -70,7 +70,7 @@ function ModernLandingPage() {
           minHeight: "200px",
         }}>
         <iframe
-          src="https://www.youtube.com/embed/uI13dmzfg_E?autoplay=1&mute=1&loop=1&playlist=uI13dmzfg_E&controls=0&modestbranding=1&rel=0"
+          src="https://www.youtube.com/embed/0TZ_UzZETCs?autoplay=1&mute=1&loop=1&playlist=0TZ_UzZETCs&controls=0&modestbranding=1&rel=0"
           title="Promo Video"
           allow="autoplay; fullscreen"
           frameBorder="0"
@@ -110,7 +110,7 @@ function ModernLandingPage() {
            “The Week Ahead, Made Clear.”
           </h1>
           <Link
-            to="/news-signup"
+            to="/newsinawink"
             style={{
               display: 'inline-block',
               padding: 'clamp(10px, 2vw, 14px) clamp(20px, 4vw, 32px)',
