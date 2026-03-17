@@ -257,6 +257,11 @@ function ModernLandingPage() {
             display: "flex",
             flexDirection: "column",
             gap: "12px",
+            alignItems: "center",     // ✅ centers horizontally
+            textAlign: "center",      // ✅ centers text
+            justifyContent: "center", // ✅ centers vertically (nice balance)
+            width: "fit-content",
+            margin: "0 auto", // ✅ forces center
           }}
         >
           {/* Icon */}
@@ -342,7 +347,7 @@ function ModernLandingPage() {
 
           {/* Button */}
           <a
-            href="/news"
+            href="/"
             style={{
               background: "#10b981",
               color: "#ffffff",
