@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Footer from './Footer';
-import { MessageSquareText } from 'lucide-react';
+import { MessageSquareText, Newspaper } from "lucide-react";
 import PortfolioGrid from "./PortfolioGrid";
 
 function ModernLandingPage() {
@@ -238,83 +238,131 @@ function ModernLandingPage() {
           background: "#ffffff",
           boxShadow: "0 20px 50px rgba(15,23,42,0.08)",
           display: "flex",
-          flexDirection: "column",
+          flexDirection: "row",
           alignItems: "center",
-          justifyContent: "center",
-          textAlign: "center",
-          gap: "16px",
-          maxWidth: "720px",
+          justifyContent: "space-between",
+          gap: "24px",
+          maxWidth: "900px",
           width: "100%",
           marginLeft: "auto",
           marginRight: "auto",
+          flexWrap: "wrap", // makes it stack on small screens
         }}
       >
-        {/* Icon */}
+        {/* LEFT SIDE */}
         <div
           style={{
-            background: 'rgba(37,99,235,0.1)',
-            padding: '12px',
-            borderRadius: '16px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
+            flex: 1,
+            minWidth: "260px",
+            display: "flex",
+            flexDirection: "column",
+            gap: "12px",
           }}
         >
-          <MessageSquareText size={24} color="#2563eb" />
-        </div>
-
-        {/* Text */}
-        <div>
-          <h3
+          {/* Icon */}
+          <div
             style={{
-              margin: 0,
-              fontSize: '1.05rem',
-              fontWeight: 700,
-              color: '#0f172a',
+              background: "rgba(37,99,235,0.1)",
+              padding: "12px",
+              borderRadius: "16px",
+              width: "fit-content",
             }}
           >
-            What News Is On Your Mind?
-          </h3>
-          <p
+            <MessageSquareText size={24} color="#2563eb" />
+          </div>
+
+          {/* Text */}
+          <div>
+            <h3
+              style={{
+                margin: 0,
+                fontSize: "1.1rem",
+                fontWeight: 700,
+                color: "#0f172a",
+              }}
+            >
+              What News Is On Your Mind?
+            </h3>
+            <p
+              style={{
+                margin: "6px 0 0 0",
+                fontSize: "0.9rem",
+                color: "#475569",
+              }}
+            >
+              Share what stories matter most to you.
+            </p>
+          </div>
+
+          {/* Button */}
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSevB8KwJ3scUNJjpomz_Ts-Nmesbcz8dSaZpY9YFVlCc_l_Tw/viewform?usp=dialog"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
-              margin: '6px 0 0 0',
-              fontSize: '0.9rem',
-              color: '#475569',
+              background: "#757d8d",
+              color: "#ffffff",
+              padding: "11px 22px",
+              borderRadius: "999px",
+              fontWeight: 600,
+              fontSize: "0.9rem",
+              textDecoration: "none",
+              width: "fit-content",
             }}
           >
-            Share what stories matter most to you.
-          </p>
+            Take the Survey
+          </a>
         </div>
 
-        {/* Button */}
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSevB8KwJ3scUNJjpomz_Ts-Nmesbcz8dSaZpY9YFVlCc_l_Tw/viewform?usp=dialog"
-          target="_blank"
-          rel="noopener noreferrer"
+        {/* RIGHT SIDE */}
+        <div
           style={{
-            background: '#757d8d',
-            color: '#ffffff',
-            padding: '11px 22px',
-            borderRadius: '999px',
-            fontWeight: 600,
-            fontSize: '0.9rem',
-            textDecoration: 'none',
-            transition: 'all 0.2s ease',
-            boxShadow: '0 8px 20px rgba(37,99,235,0.3)',
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.transform = 'translateY(-2px)';
-            e.currentTarget.style.boxShadow =
-              '0 12px 28px rgba(37,99,235,0.35)';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = 'translateY(0)';
-            e.currentTarget.style.boxShadow =
-              '0 8px 20px rgba(37,99,235,0.3)';
+            flex: 1,
+            minWidth: "260px",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "16px",
+            textAlign: "center",
+            borderLeft: "1px solid #e2e8f0",
+            paddingLeft: "24px",
           }}
         >
-          Take the Survey
-        </a>
+          {/* News Icon */}
+          <div
+            style={{
+              background: "rgba(16,185,129,0.1)",
+              padding: "16px",
+              borderRadius: "16px",
+            }}
+          >
+            <Newspaper size={28} color="#10b981" />
+          </div>
+
+          {/* Button */}
+          <a
+            href="/news"
+            style={{
+              background: "#10b981",
+              color: "#ffffff",
+              padding: "11px 22px",
+              borderRadius: "999px",
+              fontWeight: 600,
+              fontSize: "0.9rem",
+              textDecoration: "none",
+              boxShadow: "0 8px 20px rgba(16,185,129,0.3)",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateY(-2px)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateY(0)";
+            }}
+          >
+            Get Your News
+          </a>
+        </div>
       </motion.section>
 
       {/* --- Signup Banner --- */}
