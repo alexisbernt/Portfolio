@@ -14,7 +14,7 @@ function NewsPage1() {
           <h1 className="hero-title">The Place To Know What's Going On In The World. Quick.</h1>
           <div className="episode-row">
             <span className="episode-text">
-              Episode Every Monday: Week of 3/9/26
+              Episode Every Monday: Week of 3/24/26
             </span>
 
             <Link to="/post9" className="btn-episode">
@@ -25,7 +25,7 @@ function NewsPage1() {
 
         <div className="hero-video-wrapper"> 
           <iframe
-            src="https://www.youtube.com/embed/kteuqWL9hmE?autoplay=1&mute=1&playsinline=1"
+            src="https://www.youtube.com/embed/frtynW3M6pY?autoplay=1&mute=1&playsinline=1" 
             title="Latest News Video"
             frameBorder="0"
             allow="autoplay; fullscreen"
@@ -47,8 +47,25 @@ function NewsPage1() {
         <div className="video-card">
           <div className="video-thumb">
             <iframe
+              src="https://www.youtube.com/embed/kteuqWL9hmE?autoplay=1&mute=1&playsinline=1"
+              title="Episode 9"
+              frameBorder="0"
+              allowFullScreen
+            />
+          </div>
+          <div className="video-info">
+            <h3>Week of 3/1/26 - Episode 9</h3>
+            <p>
+              Covering the latest on Iran, gas prices, the start of March Madness, and more.
+            </p>
+          </div>
+        </div>
+          
+        <div className="video-card">
+          <div className="video-thumb">
+            <iframe
               src="https://www.youtube.com/embed/hH20kOSHH70?autoplay=1&mute=1&playsinline=1"
-              title="Episode 7"
+              title="Episode 8"
               frameBorder="0"
               allowFullScreen
             />
