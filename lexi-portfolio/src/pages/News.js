@@ -221,7 +221,7 @@ function NewsPage1() {
         </p>
       </section>
 
-      {/* --- What Is This Website 2 --- */}
+      {/* --- What Is This Website 2 ---
       <section className="about-site fade-in">
         <h2 className="about-title">Time Is Scarce, News Is Vast.</h2>
         <p className="about-text">
@@ -231,7 +231,7 @@ function NewsPage1() {
           We don't tell you what to think or how to feel about the news.
           The goal is to provide the information so you can further investigate and build your own beliefs. 
         </p>
-      </section>
+      </section> */}
 
       <Footer />
     </div>

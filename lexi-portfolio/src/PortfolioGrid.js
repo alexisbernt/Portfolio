@@ -150,7 +150,7 @@ function ModernLandingPage() {
         {[
           {
             title: 'What Is News In A Wink?',
-            desc: 'A Journalism Project to get more people talking about world news.',
+            desc: 'Your resource to catch up on world news.',
             icon: '🎯',
           },
           {
@@ -160,7 +160,7 @@ function ModernLandingPage() {
           },
           {
             title: 'The Mission:',
-            desc: 'The goal is to help people: (1) Stay informed. (2) Feel motivated to get involved in their communities.',
+            desc: 'To build informed citizens who are motivated to get involved in their communities.',
             icon: '🧠',
           },
         ].map((item, i) => (
