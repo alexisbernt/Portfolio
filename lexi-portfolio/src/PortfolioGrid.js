@@ -224,6 +224,78 @@ function ModernLandingPage() {
           </motion.div>
         ))}
       </motion.div>
+
+      {/* --- Signup Banner --- */}
+      <Link to="/news-signup" className="signup-banner">
+        Join the 530+ who get their news updates in less than a minute. Sign Up Now →
+      </Link>
+
+      {/* Section: Featured Videos */}
+      <div style={section}>
+        {sectionHeader("Featured Videos")}
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+        gap: '24px',
+        marginBottom: "clamp(20px, 3vw, 32px)"
+      }}>
+        {[
+          {
+            title: "News For The Week In Less Than A Minute",
+            src: "https://www.youtube.com/embed/5g8bPzI7ATk",
+          },
+          {
+            title: "Catch Up With Global Events Fast",
+            src: "https://www.youtube.com/embed/aO8flTH06-8",
+          },
+          {
+            title: "News Pulled From Sources Across The Spectrum & Globe",
+            src: "https://www.youtube.com/embed/1CNhia3X828",
+          },
+        ].map((video, index) => (
+          <motion.div
+            key={index}
+            whileHover={{ scale: 1.03 }}
+            transition={{ duration: 0.3 }}
+            style={{
+              backgroundColor: '#fff',
+              borderRadius: '16px',
+              overflow: 'hidden',
+              boxShadow: '0 6px 16px rgba(0,0,0,0.1)',
+            }}
+          >
+            <div style={{ position: 'relative', paddingTop: '56.25%' }}>
+              <iframe
+                src={`${video.src}?controls=1&modestbranding=1&rel=0`}
+                title={video.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  borderRadius: '16px 16px 0 0',
+                }}
+              ></iframe>
+            </div>
+            <div style={{ padding: '16px', textAlign: 'center' }}>
+              <h3 style={{
+                fontSize: '1.1rem',
+                fontWeight: 'bold',
+                color: '#22252c',
+                margin: '8px 0 4px 0',
+              }}>
+                {video.title}
+              </h3>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+      </div>
+
       
       {/* --- Survey CTA Section --- */}
       <motion.section
@@ -347,7 +419,7 @@ function ModernLandingPage() {
 
           {/* Button */}
           <a
-            href="/"
+            href="/newsinawink"
             style={{
               background: "#10b981",
               color: "#ffffff",
@@ -360,7 +432,7 @@ function ModernLandingPage() {
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = "translateY(-2px)";
-            }}
+            }}get 
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = "translateY(0)";
             }}
@@ -369,77 +441,6 @@ function ModernLandingPage() {
           </a>
         </div>
       </motion.section>
-
-      {/* --- Signup Banner --- */}
-      <Link to="/news-signup" className="signup-banner">
-        Join the 530+ who get their news updates in less than a minute. Sign Up Now →
-      </Link>
-
-      {/* Section: Featured Videos */}
-      <div style={section}>
-        {sectionHeader("Featured Videos")}
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-        gap: '24px',
-        marginBottom: "clamp(20px, 3vw, 32px)"
-      }}>
-        {[
-          {
-            title: "News For The Week In Less Than A Minute",
-            src: "https://www.youtube.com/embed/5g8bPzI7ATk",
-          },
-          {
-            title: "Catch Up With Global Events Fast",
-            src: "https://www.youtube.com/embed/aO8flTH06-8",
-          },
-          {
-            title: "News Pulled From Sources Across The Spectrum & Globe",
-            src: "https://www.youtube.com/embed/1CNhia3X828",
-          },
-        ].map((video, index) => (
-          <motion.div
-            key={index}
-            whileHover={{ scale: 1.03 }}
-            transition={{ duration: 0.3 }}
-            style={{
-              backgroundColor: '#fff',
-              borderRadius: '16px',
-              overflow: 'hidden',
-              boxShadow: '0 6px 16px rgba(0,0,0,0.1)',
-            }}
-          >
-            <div style={{ position: 'relative', paddingTop: '56.25%' }}>
-              <iframe
-                src={`${video.src}?controls=1&modestbranding=1&rel=0`}
-                title={video.title}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  width: '100%',
-                  height: '100%',
-                  borderRadius: '16px 16px 0 0',
-                }}
-              ></iframe>
-            </div>
-            <div style={{ padding: '16px', textAlign: 'center' }}>
-              <h3 style={{
-                fontSize: '1.1rem',
-                fontWeight: 'bold',
-                color: '#22252c',
-                margin: '8px 0 4px 0',
-              }}>
-                {video.title}
-              </h3>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-      </div>
 
       {/* --- Perspective Statement Section --- */}
       <motion.section
