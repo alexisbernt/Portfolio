@@ -150,7 +150,7 @@ function ModernLandingPage() {
         {[
           {
             title: 'What Is News In A Wink?',
-            desc: 'Your resource to catch up on world news.',
+            desc: 'Journalism updates that come in the form of short videos.',
             icon: '🎯',
           },
           {
@@ -160,7 +160,7 @@ function ModernLandingPage() {
           },
           {
             title: 'The Mission:',
-            desc: 'To build informed citizens who are motivated to get involved in their communities.',
+            desc: 'To bring together informed citizens who are motivated to get involved in their communities.',
             icon: '🧠',
           },
         ].map((item, i) => (
@@ -228,6 +228,11 @@ function ModernLandingPage() {
       {/* --- Signup Banner --- */}
       <Link to="/news-signup" className="signup-banner">
         Join the 530+ who get their news updates in less than a minute. Sign Up Now →
+      </Link>
+
+      {/* --- informed.now Banner --- */}
+      <Link to="https://informed.audiencetap.com/form/yJDt7P?referral_code=WINK" className="signup-banner">
+        To get news updates by text daily (informed.now) →
       </Link>
 
       {/* Section: Featured Videos */}
