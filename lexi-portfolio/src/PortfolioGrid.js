@@ -3,41 +3,21 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Footer from './Footer';
 import { MessageSquareText, Newspaper } from "lucide-react";
-import PortfolioGrid from "./PortfolioGrid";
 
 function ModernLandingPage() {
 
   const container = {
-      maxWidth: "1200px",
-      margin: "0 auto",
-      padding: "clamp(20px,4vw,40px)",
-      fontFamily: "Inter, system-ui, sans-serif",
-      position: "relative",
-      backgroundColor: "#757d8d",
-      minHeight: "100vh",
-    };
+    maxWidth: "1200px",
+    margin: "0 auto",
+    padding: "clamp(20px,4vw,40px)",
+    fontFamily: '"Inter", system-ui, sans-serif',
+    position: "relative",
+    backgroundColor: "#6b7280",
+    minHeight: "100vh",
+  };
 
   const section = {
     marginTop: "clamp(40px, 6vw, 80px)",
-  };
-
-  const profileCard = {
-    textAlign: 'center',
-    backgroundColor: '#fff',
-    borderRadius: '16px',
-    padding: '32px',
-    boxShadow: '0 4px 12px rgba(255, 255, 255, 1)',
-    width: "100%",
-    maxWidth: "420px",
-    margin: "0 auto",
-  };
-
-  const profileImg = {
-    width: '140px',
-    height: '140px',
-    borderRadius: '50%',
-    border: '4px solid #ffffffff',
-    objectFit: 'cover',
   };
 
   const sectionHeader = (text) => (
@@ -45,11 +25,9 @@ function ModernLandingPage() {
       <h2 style={{
         fontSize: '2.3rem',
         fontWeight: 800,
-        color: '#ffffffff',
-        fontFamily: 'Georgia, "Times New Roman", serif',
+        color: '#fff',
+        fontFamily: '"Playfair Display", Georgia, serif',
         letterSpacing: '-0.02em',
-        marginBottom: '10px',
-        lineHeight: 1.2,
       }}>
         {text}
       </h2>
@@ -58,510 +36,198 @@ function ModernLandingPage() {
   );
 
   return (
-    <div className="news-container fade-in" style={container}>
+    <div style={container}>
 
-      {/* Promo Banner */}
-        <div style={{ 
-          position: "relative",
-          borderRadius: "16px",
-          overflow: "hidden",
-          marginBottom: "clamp(30px,5vw,50px)",
-          boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
-          minHeight: "200px",
-        }}>
+      {/* --- PROMO HERO --- */}
+      <div style={{
+        position: "relative",
+        borderRadius: "16px",
+        overflow: "hidden",
+        marginBottom: "50px",
+        boxShadow: "0 6px 18px rgba(0,0,0,0.15)",
+        minHeight: "220px",
+      }}>
         <iframe
-          src="https://www.youtube.com/embed/0TZ_UzZETCs?autoplay=1&mute=1&loop=1&playlist=0TZ_UzZETCs&controls=0&modestbranding=1&rel=0"
+          src="https://www.youtube.com/embed/0TZ_UzZETCs?autoplay=1&mute=1&loop=1&playlist=0TZ_UzZETCs&controls=0"
           title="Promo Video"
-          allow="autoplay; fullscreen"
-          frameBorder="0"
+          allow="autoplay"
           style={{
             position: 'absolute',
             top: 0,
             left: 0,
             width: '100%',
             height: '100%',
-            objectFit: 'cover',
-            zIndex: 0,
-            pointerEvents: 'none',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center', // ✅ vertical center
+            alignItems: 'center',     // ✅ horizontal center
+            textAlign: 'center',
+            color: '#fff',
+            padding: '20px',
+            zIndex: 1,
             filter: 'brightness(0.6)',
           }}
-        ></iframe>
+        />
 
-        <motion.div
-          whileHover={{ scale: 1.02 }}
-          transition={{ duration: 0.3 }}
-          style={{
-            position: 'relative',
-            zIndex: 1,
-            color: '#fff',
-            textAlign: 'center',
-            padding: '70px 20px',
-            borderRadius: '16px',
-            background: 'rgba(0, 0, 0, 0.3)',
-          }}
-        >
-          <h1 style={{
-            fontSize: "clamp(1.6rem, 4vw, 2.4rem)",
-            fontWeight: '700',
-            marginBottom: '20px',
-            fontFamily: 'Montserrat, sans-serif',
-            lineHeight: '1.3',
-          }}>
-           “The Week Ahead, Made Clear.”
+        <div style={{
+          position: 'relative',
+          color: '#fff',
+          textAlign: 'center',
+          padding: '70px 20px',
+        }}>
+          <h1 style={{ fontSize: "2.2rem", fontWeight: 700 }}>
+            “The Week Ahead, Made Clear.”
           </h1>
-          <Link
-            to="/newsinawink"
-            style={{
-              display: 'inline-block',
-              padding: 'clamp(10px, 2vw, 14px) clamp(20px, 4vw, 32px)',
-              backgroundColor: '#fff',
-              color: '#090c13ff',
-              borderRadius: '10px',
-              fontWeight: '600',
-              textDecoration: 'none',
-              fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
-            }}
-          >
+
+          <Link to="/newsinawink" style={{
+            marginTop: "20px",
+            display: 'inline-block',
+            padding: '12px 28px',
+            backgroundColor: '#fff',
+            color: '#111',
+            borderRadius: '10px',
+            fontWeight: 600,
+            textDecoration: 'none',
+          }}>
             Get The News Forecast →
           </Link>
-        </motion.div>
+        </div>
       </div>
 
-      {/* Condensed Action Strip Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-        style={{
-          display: 'grid',
-          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-          gap: "clamp(16px, 3vw, 24px)",
-          borderRadius: '18px',
-          overflow: 'hidden',
-          marginBottom: '70px',
-          background:
-            'linear-gradient(135deg, rgba(255,255,255,0.9), rgba(245,247,255,0.9))',
-          backdropFilter: 'blur(14px)',
-          boxShadow:
-            '0 20px 40px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.6)',
-        }}
-      >
-        {[
-          {
-            title: 'What Is News In A Wink?',
-            desc: 'Journalism updates that come in the form of short videos.',
-            icon: '🎯',
-          },
-          {
-            title: 'What to Expect:',
-            desc: 'Monday: Weekly news rundown. Thursday: Interview with a journalist or public figure.',
-            icon: '➕',
-          },
-          {
-            title: 'The Mission:',
-            desc: 'To bring together informed citizens who are motivated to get involved in their communities.',
-            icon: '🧠',
-          },
-        ].map((item, i) => (
-          <motion.div
-            key={i}
-            whileHover={{ y: -4 }}
-            transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-            style={{
-              padding: '26px 28px',
-              display: 'flex',
-              alignItems: 'flex-start',
-              gap: '16px',
-              background: 'rgba(255,255,255,0.75)',
-              cursor: 'default',
-            }}
-          >
-            {/* Icon Pill */}
-            <div
-              style={{
-                width: '44px',
-                height: '44px',
-                borderRadius: '12px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '1.4rem',
-                background:
-                  'linear-gradient(135deg, #abbee6, #647bc4)',
-                color: '#fff',
-                boxShadow: '0 8px 18px rgba(37,99,235,0.35)',
-                flexShrink: 0,
-              }}
-            >
-              {item.icon}
-            </div>
+      {/* --- 📰 LATEST STORIES (NEW BLOG SECTION) --- */}
+      <div style={{ marginBottom: "60px" }}>
+        {sectionHeader("Latest Stories")}
 
-            {/* Text */}
-            <div>
-              <h3
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+          gap: "24px",
+        }}>
+          {[
+            {
+              title: "Global Tensions Rise in Eastern Europe",
+              desc: "A quick breakdown of what’s happening and why it matters.",
+              img: "/blog1.jpg",
+              link: "/story/1",
+            },
+            {
+              title: "Tech Giants Face New Regulations",
+              desc: "What new policies mean for users and companies.",
+              img: "/blog2.jpg",
+              link: "/story/2",
+            },
+            {
+              title: "Economic Outlook for the Next Quarter",
+              desc: "Key trends that could shape your financial future.",
+              img: "/blog3.jpg",
+              link: "/story/3",
+            },
+          ].map((post, i) => (
+            <Link key={i} to={post.link} style={{ textDecoration: "none" }}>
+              <motion.div
+                whileHover={{ y: -6 }}
                 style={{
-                  fontSize: '1.05rem',
-                  fontWeight: 700,
-                  margin: 0,
-                  color: '#0f172a',
-                  letterSpacing: '-0.01em',
+                  background: "#fff",
+                  borderRadius: "16px",
+                  overflow: "hidden",
+                  boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
                 }}
               >
-                {item.title}
-              </h3>
-              <p
-                style={{
-                  marginTop: '6px',
-                  fontSize: '0.9rem',
-                  lineHeight: 1.5,
-                  color: '#475569',
-                }}
-              >
-                {item.desc}
-              </p>
-            </div>
-          </motion.div>
-        ))}
-      </motion.div>
+                <div style={{ height: "180px" }}>
+                  <img src={post.img} alt="" style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                  }} />
+                </div>
 
-      {/* --- Signup Banner --- */}
-      <Link to="/news-signup" className="signup-banner">
-        Join the 530+ who get their news updates in less than a minute. Sign Up Now →
-      </Link>
+                <div style={{ padding: "18px" }}>
+                  <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#111" }}>
+                    {post.title}
+                  </h3>
 
-      {/* --- informed.now Banner --- */}
-      <Link to="https://informed.audiencetap.com/form/yJDt7P?referral_code=WINK" className="signup-banner">
-        To get news updates by text daily (informed.now) →
-      </Link>
+                  <p style={{ fontSize: "0.9rem", color: "#555" }}>
+                    {post.desc}
+                  </p>
 
-      {/* Section: Featured Videos */}
+                  <span style={{
+                    marginTop: "10px",
+                    display: "inline-block",
+                    color: "#2563eb",
+                    fontWeight: 600,
+                    fontSize: "0.85rem",
+                  }}>
+                    Read More →
+                  </span>
+                </div>
+              </motion.div>
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* --- FEATURED VIDEOS --- */}
       <div style={section}>
         {sectionHeader("Featured Videos")}
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-        gap: '24px',
-        marginBottom: "clamp(20px, 3vw, 32px)"
-      }}>
-        {[
-          {
-            title: "News For The Week In Less Than A Minute",
-            src: "https://www.youtube.com/embed/5g8bPzI7ATk",
-          },
-          {
-            title: "Catch Up With Global Events Fast",
-            src: "https://www.youtube.com/embed/aO8flTH06-8",
-          },
-          {
-            title: "News Pulled From Sources Across The Spectrum & Globe",
-            src: "https://www.youtube.com/embed/1CNhia3X828",
-          },
-        ].map((video, index) => (
-          <motion.div
-            key={index}
-            whileHover={{ scale: 1.03 }}
-            transition={{ duration: 0.3 }}
-            style={{
-              backgroundColor: '#fff',
-              borderRadius: '16px',
-              overflow: 'hidden',
-              boxShadow: '0 6px 16px rgba(0,0,0,0.1)',
-            }}
-          >
-            <div style={{ position: 'relative', paddingTop: '56.25%' }}>
+
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gap: '24px',
+        }}>
+          {[
+            "https://www.youtube.com/embed/5g8bPzI7ATk",
+            "https://www.youtube.com/embed/aO8flTH06-8",
+            "https://www.youtube.com/embed/1CNhia3X828",
+          ].map((src, i) => (
+            <div key={i} style={{
+              background: "#fff",
+              borderRadius: "16px",
+              overflow: "hidden",
+              boxShadow: "0 6px 16px rgba(0,0,0,0.08)"
+            }}>
               <iframe
-                src={`${video.src}?controls=1&modestbranding=1&rel=0`}
-                title={video.title}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                src={src}
+                title="video"
+                style={{ width: "100%", height: "200px" }}
                 allowFullScreen
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  width: '100%',
-                  height: '100%',
-                  borderRadius: '16px 16px 0 0',
-                }}
-              ></iframe>
+              />
             </div>
-            <div style={{ padding: '16px', textAlign: 'center' }}>
-              <h3 style={{
-                fontSize: '1.1rem',
-                fontWeight: 'bold',
-                color: '#22252c',
-                margin: '8px 0 4px 0',
-              }}>
-                {video.title}
-              </h3>
-            </div>
-          </motion.div>
-        ))}
-      </div>
+          ))}
+        </div>
       </div>
 
-      
-      {/* --- Survey CTA Section --- */}
+      {/* --- SURVEY SECTION --- */}
       <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4 }}
-        viewport={{ once: true }}
         style={{
-          margin: "clamp(30px,5vw,50px) 0",
-          padding: "clamp(20px,4vw,28px)",
+          margin: "50px 0",
+          padding: "30px",
           borderRadius: "20px",
-          background: "#ffffff",
-          boxShadow: "0 20px 50px rgba(15,23,42,0.08)",
+          background: "#fff",
+          boxShadow: "0 20px 50px rgba(0,0,0,0.08)",
           display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
           justifyContent: "space-between",
-          gap: "24px",
-          maxWidth: "900px",
-          width: "100%",
-          marginLeft: "auto",
-          marginRight: "auto",
-          flexWrap: "wrap", // makes it stack on small screens
+          flexWrap: "wrap",
+          gap: "20px",
         }}
       >
-        {/* LEFT SIDE */}
-        <div
-          style={{
-            flex: 1,
-            minWidth: "260px",
-            display: "flex",
-            flexDirection: "column",
-            gap: "12px",
-            alignItems: "center",     // ✅ centers horizontally
-            textAlign: "center",      // ✅ centers text
-            justifyContent: "center", // ✅ centers vertically (nice balance)
-            width: "fit-content",
-            margin: "0 auto", // ✅ forces center
-          }}
-        >
-          {/* Icon */}
-          <div
-            style={{
-              background: "rgba(37,99,235,0.1)",
-              padding: "12px",
-              borderRadius: "16px",
-              width: "fit-content",
-            }}
-          >
-            <MessageSquareText size={24} color="#2563eb" />
-          </div>
-
-          {/* Text */}
-          <div>
-            <h3
-              style={{
-                margin: 0,
-                fontSize: "1.1rem",
-                fontWeight: 700,
-                color: "#0f172a",
-              }}
-            >
-              What News Is On Your Mind?
-            </h3>
-            <p
-              style={{
-                margin: "6px 0 0 0",
-                fontSize: "0.9rem",
-                color: "#475569",
-              }}
-            >
-              Share what stories matter most to you.
-            </p>
-          </div>
-
-          {/* Button */}
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSevB8KwJ3scUNJjpomz_Ts-Nmesbcz8dSaZpY9YFVlCc_l_Tw/viewform?usp=dialog"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              background: "#757d8d",
-              color: "#ffffff",
-              padding: "11px 22px",
-              borderRadius: "999px",
-              fontWeight: 600,
-              fontSize: "0.9rem",
-              textDecoration: "none",
-              width: "fit-content",
-            }}
-          >
-            Take the Survey
+        <div style={{ textAlign: "center", flex: 1 }}>
+          <MessageSquareText size={28} color="#2563eb" />
+          <h3>What News Is On Your Mind?</h3>
+          <a href="https://docs.google.com/forms" target="_blank" rel="noreferrer">
+            Take Survey
           </a>
         </div>
 
-        {/* RIGHT SIDE */}
-        <div
-          style={{
-            flex: 1,
-            minWidth: "260px",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "16px",
-            textAlign: "center",
-            borderLeft: "1px solid #e2e8f0",
-            paddingLeft: "24px",
-          }}
-        >
-          {/* News Icon */}
-          <div
-            style={{
-              background: "rgba(16,185,129,0.1)",
-              padding: "16px",
-              borderRadius: "16px",
-            }}
-          >
-            <Newspaper size={28} color="#10b981" />
-          </div>
-
-          {/* Button */}
-          <a
-            href="/newsinawink"
-            style={{
-              background: "#10b981",
-              color: "#ffffff",
-              padding: "11px 22px",
-              borderRadius: "999px",
-              fontWeight: 600,
-              fontSize: "0.9rem",
-              textDecoration: "none",
-              boxShadow: "0 8px 20px rgba(16,185,129,0.3)",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "translateY(-2px)";
-            }}get 
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "translateY(0)";
-            }}
-          >
-            Get Your News
-          </a>
+        <div style={{ textAlign: "center", flex: 1 }}>
+          <Newspaper size={28} color="#10b981" />
+          <h3>Get Your News</h3>
+          <Link to="/newsinawink">Go →</Link>
         </div>
       </motion.section>
-
-      {/* --- Perspective Statement Section --- */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-        style={{
-          margin: "clamp(40px,6vw,70px) 0",
-          padding: "clamp(20px,4vw,32px)",
-          borderRadius: "20px",
-          textAlign: "center",
-          background: "#ffffff",
-          boxShadow: "0 20px 50px rgba(15,23,42,0.08)",
-        }}
-      >
-        <div style={{ maxWidth: "760px", margin: "0 auto" }}>
-          <h2
-            style={{
-              fontSize: "clamp(1rem,2.5vw,1.4rem)",
-              fontWeight: 800,
-              lineHeight: 1.4,
-              letterSpacing: "-0.01em",
-              color: "#0f172a",
-              margin: 0,
-            }}
-          >
-            "News exposes the pathological problems in society,
-            <span style={{ color: "#2563eb" }}>
-              {" "}but awareness of these issues inspires us to improve, take action,
-              and accomplish big things.
-            </span>
-            "
-          </h2>
-        </div>
-      </motion.section>
-
-      {/* Section 1: Most Recent Developments */}
-      <div style={section}>
-        {sectionHeader("Staying Informed. Efficiently.")}
-
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            width: "100%",
-            marginTop: "20px",
-          }}
-        >
-          {/* Bio card */}
-          <div
-            style={{
-              ...profileCard,
-              maxWidth: "500px",
-              width: "100%",
-            }}
-            className="profile-card"
-          >
-            <img src="ai-dev.png" alt="Profile" style={profileImg} />
-
-            <h2
-              style={{
-                fontSize: "1.8rem",
-                color: "#000",
-                marginTop: "16px",
-              }}
-            >
-              Hi!
-            </h2>
-
-            <p
-              style={{
-                fontSize: "0.95rem",
-                color: "#333",
-                marginTop: "12px",
-                lineHeight: "1.6",
-              }}
-            >
-              At News In A Wink, we know it is not our job to tell you how to think.
-              Instead, we provide the information to help you get up-to-date quickly.
-              Then, you decide what to do about it. If you want quick news
-              updates, please sign up for the mailing list (free and only one email
-              every month).
-            </p>
-
-            <Link
-              to="/sign-up"
-              style={{
-                color: "#000",
-                fontWeight: "bold",
-                marginTop: "14px",
-                display: "inline-block",
-              }}
-            >
-              Join the club →
-            </Link>
-
-            <br />
-
-            <Link
-              to="/about"
-              style={{
-                color: "#000",
-                fontWeight: "bold",
-                marginTop: "10px",
-                display: "inline-block",
-              }}
-            >
-              Read more →
-            </Link>
-          </div>
-        </div>
-      </div>
 
       <Footer />
-      </div>
+    </div>
   );
 }
 
