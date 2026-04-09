@@ -92,10 +92,25 @@ Paying attention to systems like the British monarchy has reinforced something i
       </p>
 
       <h2 style={sectionHeader}>⚖️ The Bigger Picture</h2>
-      <p>
+        <p>
         Through this experience, I’ve gained a much clearer understanding of how the Royal Family functions, the significance of their actions, and what might come next. Thanks to voices like Amanda’s, it’s a lot easier (and more interesting) to follow along. 
-If 2026 has proven anything so far, it’s that the story of the Royal Family is far from static. Our world is far from static. It’s evolving in real time. To start finally feeling equipped to keep up, check out the Royal Family Rundown of 2026 here: https://www.instagram.com/p/DW5Cv3VgmOr/
-      </p>
+
+        If 2026 has proven anything so far, it’s that the story of the Royal Family is far from static. Our world is far from static. It’s evolving in real time. 
+
+        To start finally feeling equipped to keep up, check out the Royal Family Rundown of 2026{" "}
+        <a
+            href="https://www.instagram.com/p/DW5Cv3VgmOr/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+            color: "#2563eb",
+            fontWeight: 600,
+            textDecoration: "underline",
+            }}
+        >
+            here
+        </a>.
+        </p>
 
       {/* <h2 style={sectionHeader}>🚀 What To Watch</h2>
       <ul>
