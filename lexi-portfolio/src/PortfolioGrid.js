@@ -111,10 +111,10 @@ function ModernLandingPage() {
               link: "/story/1",
             },
             {
-              title: "Tech Giants Face New Regulations",
-              desc: "What new policies mean for users and companies.",
-              img: "/blog2.jpg",
-              link: "/story/2",
+              title: "New Story Coming Soon: The Future of AI Hacking",
+              desc: "Coming Friday, April 10, 2026.",
+              img: "/Monochrome logo of News In A Wink.png",
+              link: "/newsinawink",
             },
             {
               title: "Economic Outlook for the Next Quarter",
