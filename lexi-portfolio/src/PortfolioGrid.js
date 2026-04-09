@@ -106,21 +106,21 @@ function ModernLandingPage() {
           {[
             {
               title: "Seeking an understanding of the Royal Family and their endeavors",
-              desc: "Subject Matter Expert: Amanda Matta, Off With Their Headlines podcast & #1 Royal Commentator on TikTok",
+              desc: "Subject Matter Expert: Amanda Matta.",
               img: "/blog1.png",
               link: "/story/1",
+            },
+            {
+              title: "Weekly News Recaps: A Quick Way To Stay Informed",
+              desc: "Catch up on world events here.",
+              img: "/News In A Wink Image 3.png",
+              link: "/newsinawink",
             },
             {
               title: "New Story Coming Soon: The Future of AI Hacking",
               desc: "Coming Friday, April 10, 2026.",
               img: "/Monochrome logo of News In A Wink.png",
               link: "/newsinawink",
-            },
-            {
-              title: "Economic Outlook for the Next Quarter",
-              desc: "Key trends that could shape your financial future.",
-              img: "/blog3.jpg",
-              link: "/story/3",
             },
           ].map((post, i) => (
             <Link key={i} to={post.link} style={{ textDecoration: "none" }}>
