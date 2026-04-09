@@ -47,7 +47,7 @@ function StoryOne() {
         A quick breakdown of what’s happening and why it matters.
       </p>
 
-      {/* Image */}
+      {/* Image
       <img
         src="/blog1.jpg"
         alt="Eastern Europe tensions"
@@ -56,7 +56,20 @@ function StoryOne() {
           borderRadius: "12px",
           margin: "20px 0",
         }}
-      />
+      /> */}
+
+         {/* Instagram Embed */}
+      <div style={{ margin: "30px 0", display: "flex", justifyContent: "center" }}>
+        <blockquote
+            className="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/p/DW5Cv3VgmOr/"
+            data-instgrm-version="14"
+            style={{
+            maxWidth: "540px",
+            width: "100%",
+            }}
+        ></blockquote>
+        </div>
 
       {/* CONTENT */}
 

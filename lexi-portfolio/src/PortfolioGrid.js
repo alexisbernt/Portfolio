@@ -105,9 +105,9 @@ function ModernLandingPage() {
         }}>
           {[
             {
-              title: "Global Tensions Rise in Eastern Europe",
-              desc: "A quick breakdown of what’s happening and why it matters.",
-              img: "/blog1.jpg",
+              title: "Seeking an understanding of the Royal Family and their endeavors",
+              desc: "Subject Matter Expert: Amanda Matta, Off With Their Headlines podcast & #1 Royal Commentator on TikTok",
+              img: "/blog1.png",
               link: "/story/1",
             },
             {
