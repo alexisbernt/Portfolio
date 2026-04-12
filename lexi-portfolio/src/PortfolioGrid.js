@@ -113,7 +113,7 @@ function ModernLandingPage() {
             {
               title: "Weekly News Recaps: A Quick Way To Stay Informed",
               desc: "Catch up on world events here.",
-              img: "/News In A Wink Image 3.png",
+              img: "/@reese_news.png",
               link: "/newsinawink",
             },
             {
