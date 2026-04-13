@@ -111,10 +111,10 @@ function ModernLandingPage() {
               link: "/story/1",
             },
             {
-              title: "Weekly News Recaps: A Quick Way To Stay Informed",
-              desc: "Catch up on world events here.",
+              title: "Women Athletes & Founders (Volleyball & Alix Earle’s Brand)",
+              desc: "Featured: Reese (UNI Volleyball Player).",
               img: "/@reese_news.png",
-              link: "/newsinawink",
+              link: "/story/2",
             },
             {
               title: "New Story Coming Soon: The Future of AI Hacking",
