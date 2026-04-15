@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Footer from './Footer';
@@ -105,10 +104,10 @@ function ModernLandingPage() {
         }}>
           {[
             {
-              title: "Seeking an understanding of the Royal Family and their endeavors",
-              desc: "Subject Matter Expert: Amanda Matta.",
-              img: "/blog1.png",
-              link: "/story/1",
+              title: "New Story Coming Soon: The Future of AI Hacking",
+              desc: "Coming Friday, April 10, 2026.",
+              img: "/Monochrome logo of News In A Wink.png",
+              link: "/newsinawink",
             },
             {
               title: "Women Athletes & Founders (Volleyball & Alix Earle’s Brand)",
@@ -117,10 +116,10 @@ function ModernLandingPage() {
               link: "/story/2",
             },
             {
-              title: "New Story Coming Soon: The Future of AI Hacking",
-              desc: "Coming Friday, April 10, 2026.",
-              img: "/Monochrome logo of News In A Wink.png",
-              link: "/newsinawink",
+              title: "Seeking an understanding of the Royal Family and their endeavors",
+              desc: "Subject Matter Expert: Amanda Matta.",
+              img: "/blog1.jpeg",
+              link: "/story/1",
             },
           ].map((post, i) => (
             <Link key={i} to={post.link} style={{ textDecoration: "none" }}>
