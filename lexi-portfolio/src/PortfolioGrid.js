@@ -104,10 +104,10 @@ function ModernLandingPage() {
         }}>
           {[
             {
-              title: "New Story Coming Soon: The Future of AI Hacking",
-              desc: "Coming Friday, April 10, 2026.",
-              img: "/Monochrome logo of News In A Wink.png",
-              link: "/newsinawink",
+              title: "AI Is Moving Fast: What You Should Be Watching Right Now",
+              desc: "An Assessment by News In A Wink.",
+              img: "/ai-formula.png",
+              link: "/story/3",
             },
             {
               title: "Women Athletes & Founders (Volleyball & Alix Earle’s Brand)",
