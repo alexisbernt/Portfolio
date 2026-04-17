@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../../Footer";
 
-function StoryThree() {
+function StoryFour() {
 
   useEffect(() => {
     const script = document.createElement("script");
