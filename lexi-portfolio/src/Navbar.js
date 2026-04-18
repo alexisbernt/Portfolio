@@ -35,9 +35,9 @@ function Navbar() {
         <a href="https://github.com/alexisbernt//" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
         <a href="mailto:alexisbernthal4@gmail.com"><FaEnvelope /></a>
         <a href="https://www.instagram.com/alexis.wink/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-        <a href="https://tiktok.com/" target="_blank" rel="noopener noreferrer"><FaTiktok /></a>
+        <a href="https://www.tiktok.com/@newsinawink" target="_blank" rel="noopener noreferrer"><FaTiktok /></a>
         <a href="https://pinterest.com/" target="_blank" rel="noopener noreferrer"><FaPinterest /></a>
-        <a href="https://www.youtube.com/@lexicyber" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
+        <a href="https://www.youtube.com/@newsinawink" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
       </div>
 
       {/* RIGHT: Home + 3D Dropdown */}
@@ -55,6 +55,7 @@ function Navbar() {
               <ul>
                 <li><Link to="/" onClick={() => setMenuOpen(false)}>News In A Wink</Link></li>
                 <li><Link to="/newsinawink" onClick={() => setMenuOpen(false)}>Weekly News Rundown</Link></li>
+                <li><Link to="/sign-up" onClick={() => setMenuOpen(false)}>Newsletter</Link></li>
                 {/* <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li> */}
                 {/* <li><Link to="/running-log" onClick={() => setMenuOpen(false)}>Running Log ✨</Link></li> */}
               </ul>
