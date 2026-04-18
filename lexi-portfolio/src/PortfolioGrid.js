@@ -39,58 +39,112 @@ function ModernLandingPage() {
 
       {/* --- PROMO HERO --- */}
       <div style={{
-        position: "relative",
-        borderRadius: "16px",
-        overflow: "hidden",
+        display: "grid",
+        gridTemplateColumns: "1fr 1fr",
+        gap: "24px",
         marginBottom: "50px",
-        boxShadow: "0 6px 18px rgba(0,0,0,0.15)",
-        minHeight: "220px",
       }}>
-        <iframe
-          src="https://www.youtube.com/embed/0TZ_UzZETCs?autoplay=1&mute=1&loop=1&playlist=0TZ_UzZETCs&controls=0"
-          title="Promo Video"
-          allow="autoplay"
-          style={{
-            position: 'absolute',
+
+        {/* LEFT: VIDEO */}
+        <div style={{
+          position: "relative",
+          borderRadius: "16px",
+          overflow: "hidden",
+          boxShadow: "0 6px 18px rgba(0,0,0,0.15)",
+          minHeight: "220px",
+        }}>
+          <iframe
+            src="https://www.youtube.com/embed/0TZ_UzZETCs?autoplay=1&mute=1&loop=1&playlist=0TZ_UzZETCs&controls=0"
+            title="Promo Video"
+            allow="autoplay"
+            style={{
+              width: "100%",
+              height: "100%",
+              border: "none",
+              filter: "brightness(0.7)",
+            }}
+          />
+
+          <div style={{
+            position: "absolute",
             top: 0,
             left: 0,
-            width: '100%',
-            height: '100%',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center', // ✅ vertical center
-            alignItems: 'center',     // ✅ horizontal center
-            textAlign: 'center',
-            color: '#fff',
-            padding: '20px',
-            zIndex: 1,
-            filter: 'brightness(0.6)',
-          }}
-        />
-
-        <div style={{
-          position: 'relative',
-          color: '#fff',
-          textAlign: 'center',
-          padding: '70px 20px',
-        }}>
-          <h1 style={{ fontSize: "2.2rem", fontWeight: 700 }}>
-            “The Week Ahead, Made Clear.”
-          </h1>
-
-          <Link to="/newsinawink" style={{
-            marginTop: "20px",
-            display: 'inline-block',
-            padding: '12px 28px',
-            backgroundColor: '#fff',
-            color: '#111',
-            borderRadius: '10px',
-            fontWeight: 600,
-            textDecoration: 'none',
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center",
+            color: "#fff",
+            padding: "20px",
           }}>
-            Get The News Forecast →
+            <h1 style={{ fontSize: "2rem", fontWeight: 700 }}>
+              “The Week Ahead, Made Clear.”
+            </h1>
+
+            <Link to="/newsinawink" style={{
+              marginTop: "20px",
+              padding: "12px 28px",
+              backgroundColor: "#fff",
+              color: "#111",
+              borderRadius: "10px",
+              fontWeight: 600,
+              textDecoration: "none",
+            }}>
+              Get The News Forecast →
+            </Link>
+          </div>
+        </div>
+
+        {/* RIGHT: BLOG PROMO CARD */}
+        <div style={{
+          borderRadius: "16px",
+          background: "#fff",
+          boxShadow: "0 6px 18px rgba(0,0,0,0.1)",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: "30px",
+          textAlign: "center",
+        }}>
+          
+          <img 
+            src="/logo.png" 
+            alt="News In A Wink"
+            style={{ width: "80px", marginBottom: "16px" }}
+          />
+
+          <h2 style={{
+            fontSize: "1.5rem",
+            fontWeight: 700,
+            marginBottom: "10px",
+            color: "#111"
+          }}>
+            News In A Wink
+          </h2>
+
+          <p style={{
+            fontSize: "0.95rem",
+            color: "#555",
+            marginBottom: "20px"
+          }}>
+            Fast, factual, and fun stories right when you need them.
+          </p>
+
+          <Link to="/blog" style={{
+            padding: "12px 24px",
+            background: "#000000",
+            color: "#ffffff",
+            borderRadius: "999px",
+            fontWeight: 600,
+            textDecoration: "none",
+          }}>
+            Explore Blog →
           </Link>
         </div>
+
       </div>
 
       {/* --- 📰 LATEST STORIES (NEW BLOG SECTION) --- */}
