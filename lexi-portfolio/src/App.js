@@ -10,6 +10,7 @@ import Navbar from './Navbar';
 import PortfolioGrid from './PortfolioGrid';
 
 import About from './pages/About';
+import Blog from './Blog';
 import AI from './pages/AI';
 import TheraText from './pages/TheraText';
 // import CyberClub from './pages/CyberClub';
@@ -47,6 +48,7 @@ function App() {
             <Route path="/coins" element={<Coins />} />
             <Route path="/ai" element={<AI />} />
             <Route path="/theratext" element={<TheraText />} />
+            <Route path="/blog" element={<Blog />} />
             {/* <Route path="/cyberclub" element={<CyberClub />} /> */}
             {/* <Route path="/more" element={<More />} />
             <Route path="/running-log" element={<RunningLog />} />
