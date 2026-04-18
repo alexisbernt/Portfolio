@@ -95,7 +95,7 @@ function ModernLandingPage() {
 
       {/* --- 📰 LATEST STORIES (NEW BLOG SECTION) --- */}
       <div style={{ marginBottom: "60px" }}>
-        {sectionHeader("Latest Stories")}
+        {sectionHeader("")}
 
         <div style={{
           display: "grid",
@@ -167,7 +167,7 @@ function ModernLandingPage() {
 
       {/* --- FEATURED VIDEOS --- */}
       <div style={section}>
-        {sectionHeader("Featured Videos")}
+        {sectionHeader("")}
 
         <div style={{
           display: 'grid',

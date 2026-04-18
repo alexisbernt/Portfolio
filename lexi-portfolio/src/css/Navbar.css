@@ -21,6 +21,28 @@ h1, h2, h3 {
   box-sizing: border-box;
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Center the title absolutely */
+.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Fun font styling */
+.brand-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 1px;
+}
+
 /* LEFT: Social Icons */
 .social-icons {
   display: flex;

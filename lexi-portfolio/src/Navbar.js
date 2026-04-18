@@ -24,6 +24,11 @@ function Navbar() {
 
   return (
     <nav className="navbar">
+
+      {/* CENTER: Brand Title */}
+      <div className="navbar-center">
+        <h1 className="brand-title">News In A Wink ;)</h1>
+      </div>
       
       {/* LEFT: Social Icons */}
       <div className="social-icons">
@@ -50,13 +55,6 @@ function Navbar() {
               <ul>
                 <li><Link to="/" onClick={() => setMenuOpen(false)}>News In A Wink</Link></li>
                 <li><Link to="/newsinawink" onClick={() => setMenuOpen(false)}>Weekly News Rundown</Link></li>
-                {/* <li><Link to="/learninglog" onClick={() => setMenuOpen(false)}>Learning Log: Your Daily Learning</Link></li> */}
-                {/* <li><Link to="/ai" onClick={() => setMenuOpen(false)}>AI Toolkit: Technical Blog Posts</Link></li> */}
-                {/* <li><Link to="/coins" onClick={() => setMenuOpen(false)}>Selling Coins: What YOU Need to Know About eBay</Link></li> */}
-                {/* <li><Link to="/theratext" onClick={() => setMenuOpen(false)}>TheraText: Solutions for Therapists</Link></li> */}
-                {/* <li><Link to="/cyberclub" onClick={() => setMenuOpen(false)}>Lexi's Cyber Club</Link></li> */}
-                {/* <li><Link to="/giftcycle" onClick={() => setMenuOpen(false)}>Gift Cycle: Cheap Gifts</Link></li> */}
-                {/* <li><Link to="/more" onClick={() => setMenuOpen(false)}>More</Link></li> */}
                 {/* <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li> */}
                 {/* <li><Link to="/running-log" onClick={() => setMenuOpen(false)}>Running Log ✨</Link></li> */}
               </ul>
