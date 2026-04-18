@@ -165,6 +165,28 @@ function ModernLandingPage() {
         </div>
       </div>
 
+      <div style={{ textAlign: "center", marginTop: "30px" }}>
+      <Link to="/blog">
+        <button
+          style={{
+            padding: "12px 22px",
+            fontSize: "0.9rem",
+            fontWeight: 600,
+            background: "#ffffff",
+            color: "#000000",
+            border: "none",
+            borderRadius: "999px",
+            cursor: "pointer",
+            transition: "all 0.2s ease",
+          }}
+          onMouseOver={(e) => (e.target.style.opacity = "0.85")}
+          onMouseOut={(e) => (e.target.style.opacity = "1")}
+        >
+          More Stories →
+        </button>
+      </Link>
+    </div>
+
       {/* --- FEATURED VIDEOS --- */}
       <div style={section}>
         {sectionHeader("")}
