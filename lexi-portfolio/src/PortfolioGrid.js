@@ -37,115 +37,125 @@ function ModernLandingPage() {
   return (
     <div style={container}>
 
-      {/* --- PROMO HERO --- */}
+    {/* --- PROMO HERO --- */}
+    <div style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+      gap: "24px",
+      marginBottom: "50px",
+    }}>
+
+      {/* LEFT: VIDEO */}
       <div style={{
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr",
-        gap: "24px",
-        marginBottom: "50px",
+        position: "relative",
+        borderRadius: "16px",
+        overflow: "hidden",
+        boxShadow: "0 6px 18px rgba(0,0,0,0.15)",
+        width: "100%",
+        aspectRatio: "16 / 9", // ✅ keeps video responsive
       }}>
-
-        {/* LEFT: VIDEO */}
-        <div style={{
-          position: "relative",
-          borderRadius: "16px",
-          overflow: "hidden",
-          boxShadow: "0 6px 18px rgba(0,0,0,0.15)",
-          minHeight: "220px",
-        }}>
-          <iframe
-            src="https://www.youtube.com/embed/0TZ_UzZETCs?autoplay=1&mute=1&loop=1&playlist=0TZ_UzZETCs&controls=0"
-            title="Promo Video"
-            allow="autoplay"
-            style={{
-              width: "100%",
-              height: "100%",
-              border: "none",
-              filter: "brightness(0.7)",
-            }}
-          />
-
-          <div style={{
+        <iframe
+          src="https://www.youtube.com/embed/0TZ_UzZETCs?autoplay=1&mute=1&loop=1&playlist=0TZ_UzZETCs&controls=0"
+          title="Promo Video"
+          allow="autoplay"
+          style={{
             position: "absolute",
             top: 0,
             left: 0,
             width: "100%",
             height: "100%",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            textAlign: "center",
-            color: "#fff",
-            padding: "20px",
-          }}>
-            <h1 style={{ fontSize: "2rem", fontWeight: 700 }}>
-              “The Week Ahead, Made Clear.”
-            </h1>
+            border: "none",
+            filter: "brightness(0.7)",
+          }}
+        />
 
-            <Link to="/newsinawink" style={{
-              marginTop: "20px",
-              padding: "12px 28px",
-              backgroundColor: "#fff",
-              color: "#111",
-              borderRadius: "10px",
-              fontWeight: 600,
-              textDecoration: "none",
-            }}>
-              Get The News Forecast →
-            </Link>
-          </div>
-        </div>
-
-        {/* RIGHT: BLOG PROMO CARD */}
+        {/* Overlay Content */}
         <div style={{
-          borderRadius: "16px",
-          background: "#fff",
-          boxShadow: "0 6px 18px rgba(0,0,0,0.1)",
+          position: "absolute",
+          inset: 0,
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          padding: "30px",
           textAlign: "center",
+          color: "#fff",
+          padding: "20px",
         }}>
-          
-          <img 
-            src="/logo.png" 
-            alt="News In A Wink"
-            style={{ width: "80px", marginBottom: "16px" }}
-          />
-
-          <h2 style={{
-            fontSize: "1.5rem",
-            fontWeight: 700,
-            marginBottom: "10px",
-            color: "#111"
+          <h1 style={{
+            fontSize: "clamp(1.4rem, 2.5vw, 2rem)", // ✅ responsive text
+            fontWeight: 700
           }}>
-            News In A Wink
-          </h2>
+            “The Week Ahead, Made Clear.”
+          </h1>
 
-          <p style={{
-            fontSize: "0.95rem",
-            color: "#555",
-            marginBottom: "20px"
-          }}>
-            Fast, factual, and fun stories right when you need them.
-          </p>
-
-          <Link to="/blog" style={{
-            padding: "12px 24px",
-            background: "#000000",
-            color: "#ffffff",
-            borderRadius: "999px",
+          <Link to="/newsinawink" style={{
+            marginTop: "16px",
+            padding: "10px 22px",
+            backgroundColor: "#fff",
+            color: "#111",
+            borderRadius: "10px",
             fontWeight: 600,
             textDecoration: "none",
+            fontSize: "clamp(0.8rem, 1vw, 1rem)"
           }}>
-            Explore Blog →
+            Get The News Forecast →
           </Link>
         </div>
-
       </div>
+
+      {/* RIGHT: BLOG PROMO CARD */}
+      <div style={{
+        borderRadius: "16px",
+        background: "#fff",
+        boxShadow: "0 6px 18px rgba(0,0,0,0.1)",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: "clamp(20px, 4vw, 30px)", // ✅ responsive padding
+        textAlign: "center",
+      }}>
+        
+        <img 
+          src="/logo.png" 
+          alt="News In A Wink"
+          style={{ 
+            width: "clamp(70px, 10vw, 100px)", // ✅ scales nicely
+            marginBottom: "16px" 
+          }}
+        />
+
+        <h2 style={{
+          fontSize: "clamp(1.2rem, 2vw, 1.5rem)",
+          fontWeight: 700,
+          marginBottom: "6px",
+          color: "#111"
+        }}>
+          News In A Wink!
+        </h2>
+
+        <p style={{
+          fontSize: "clamp(0.85rem, 1vw, 0.95rem)",
+          color: "#555",
+          marginBottom: "18px"
+        }}>
+          Fast, factual, and fun stories right when you need them.
+        </p>
+
+        <Link to="/blog" style={{
+          padding: "10px 20px",
+          background: "#000000",
+          color: "#ffffff",
+          borderRadius: "999px",
+          fontWeight: 600,
+          textDecoration: "none",
+          fontSize: "clamp(0.8rem, 1vw, 0.95rem)"
+        }}>
+          Explore Blog →
+        </Link>
+      </div>
+
+    </div>
 
       {/* --- 📰 LATEST STORIES (NEW BLOG SECTION) --- */}
       <div style={{ marginBottom: "60px" }}>
