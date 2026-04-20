@@ -19,7 +19,7 @@ function Post1() {
           <div class="about-meta">
             <span>By: Alexis Bernthal</span>
             <span class="dot">•</span>
-            <span>November 12, 2025</span>
+            <span>Last Updated: April 5, 2026</span>
           </div>
         </div>
       </header>
@@ -61,7 +61,7 @@ function Post1() {
             (ii) Academic Help: If a student uses some particular LLMs, if they ask the model a question the RAG model will pull up relevant articles, websites, or textbook pages to better explain that specific concept. That's RAG!
             (iii) The Workplace: Corporate firms in particular are now uploading thousands of documents into their internal RAG models. For example, Microsoft Copilot now has a "Work" and "Web" mode. The "Work" mode is retrieving information from a company's internal document repository for information specific to that company. 
             The generated content from the AI model is catered toward what is specific to the company. RAG in action!</p>
-          <p>[It was RAG-ical to have you read this educational page!]. To stay up-to-date with RAG and Artificial Intelligence advancements, join the mailing list (for free!) or just keep searching up this webpage (alexisbernthal.com). The goal of alexisbernthal.com is to get people learning about real-world things and changes together. 
+          <p>[It was RAG-ical to have you read this educational page!]. To stay up-to-date with RAG and Artificial Intelligence advancements, join the mailing list (for free!) or just keep searching up this webpage (newsinawink.org). The goal of newsinawink.org is to get people learning about real-world things and changes together. 
             Thanks for joining!</p>
       </div>
       {/* Footer at the bottom */}

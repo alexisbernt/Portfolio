@@ -52,6 +52,12 @@ const Blog = () => {
               img: "/amber.png",
               link: "/story/4",
             },
+            {
+              title: "Retrieval Augmented Generation (RAG)",
+              desc: "Understanding how RAG works, what makes it powerful, and how you can apply it.",
+              img: "/rag-doll.png",
+              link: "/post1",
+            },
           ].map((post, i) => (
             <Link key={i} to={post.link} style={{ textDecoration: "none" }}>
               <motion.div
