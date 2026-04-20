@@ -56,19 +56,19 @@ function StoryThree() {
         A quick breakdown of the biggest forces shaping AI—from global competition to lawsuits and next-gen models.
       </p>
 
-      {/* YouTube Embed
+      {/* YouTube Embed */}
       <div style={{ margin: "30px 0", display: "flex", justifyContent: "center" }}>
         <iframe
           width="100%"
-          height="500"
-          src="https://www.youtube.com/embed/2ePf9rue1Ao"
+          height="500" 
+          src="https://www.youtube.com/embed/4l3CvDWyylg"
           title="AI Overview"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
           style={{ maxWidth: "540px", borderRadius: "12px" }}
         />
-      </div> */}
+      </div>
 
       {/* CONTENT */}
 
