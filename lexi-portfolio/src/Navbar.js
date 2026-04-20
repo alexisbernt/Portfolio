@@ -27,7 +27,7 @@ function Navbar() {
 
       {/* CENTER: Brand Title */}
       <div className="navbar-center">
-        <h1 className="brand-title">News In A Wink ;)</h1>
+        <h1 className="brand-title">newsinawink ;)</h1>
       </div>
       
       {/* LEFT: Social Icons */}

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const sectionHeader = (title) => (
   <h2 style={{
-    fontSize: "1.6rem",
+    fontSize: "clamp(1.3rem, 2vw, 1.6rem)",
     fontWeight: 800,
     marginBottom: "20px",
     color: "#111",
@@ -15,7 +15,7 @@ const sectionHeader = (title) => (
 
 const Blog = () => {
   return (
-    <div style={{ padding: "40px", maxWidth: "1200px", margin: "0 auto" }}>
+    <div style={{ padding: "clamp(20px, 4vw, 40px)", maxWidth: "1200px", margin: "0 auto" }}>
       {/* --- 📰 LATEST STORIES (BLOG GRID) --- */}
       <div style={{ marginBottom: "60px" }}>
         {sectionHeader("Latest Stories")}
@@ -23,7 +23,7 @@ const Blog = () => {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
             gap: "24px",
           }}
         >
@@ -81,7 +81,7 @@ const Blog = () => {
                   boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
                 }}
               >
-                <div style={{ height: "180px" }}>
+                <div style={{ width: "100%", aspectRatio: "16 / 9" }}>
                   <img
                     src={post.img}
                     alt=""
@@ -96,7 +96,7 @@ const Blog = () => {
                 <div style={{ padding: "18px" }}>
                   <h3
                     style={{
-                      fontSize: "1.1rem",
+                      fontSize: "clamp(1rem, 1.2vw, 1.1rem)",
                       fontWeight: 700,
                       color: "#111",
                     }}
@@ -104,7 +104,7 @@ const Blog = () => {
                     {post.title}
                   </h3>
 
-                  <p style={{ fontSize: "0.9rem", color: "#555" }}>
+                  <p style={{ fontSize: "clamp(0.8rem, 1vw, 0.9rem)", color: "#555" }}>
                     {post.desc}
                   </p>
 
@@ -114,7 +114,7 @@ const Blog = () => {
                       display: "inline-block",
                       color: "#2563eb",
                       fontWeight: 600,
-                      fontSize: "0.85rem",
+                      fontSize: "clamp(0.75rem, 0.9vw, 0.85rem)",
                     }}
                   >
                     Read More →
@@ -130,5 +130,3 @@ const Blog = () => {
 };
 
 export default Blog;
-
-

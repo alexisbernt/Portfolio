@@ -26,21 +26,27 @@ h1, h2, h3 {
   align-items: center;
   justify-content: space-between;
   position: relative;
+  padding: 10px 16px;
 }
 
-/* Center the title absolutely */
+/* Keep title perfectly centered */
 .navbar-center {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  max-width: 60%;
+  overflow: hidden;
 }
 
 /* Fun font styling */
 .brand-title {
-  font-size: 1.4rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.6rem); /* ✅ responsive scaling */
   font-weight: 700;
   color: #000000;
   letter-spacing: 1px;
+  text-align: center;
+  white-space: nowrap; /* prevents weird wrapping */
 }
 
 /* LEFT: Social Icons */
@@ -55,7 +61,7 @@ h1, h2, h3 {
   transition: color 0.3s ease, transform 0.2s ease;
 }
 .social-icons a:hover {
-  color: #2563eb;
+  color: #000000;
   transform: translateY(-3px);
 }
 
@@ -73,7 +79,7 @@ h1, h2, h3 {
   transition: color 0.3s ease, transform 0.2s ease;
 }
 .home-icon:hover {
-  color: #2563eb;
+  color: #000000;
   transform: translateY(-2px);
 }
 
@@ -94,7 +100,7 @@ h1, h2, h3 {
 }
 
 .dropdown-toggle:hover {
-  background: #2563eb;
+  background: #000000;
 }
 
 .dropdown-menu {
