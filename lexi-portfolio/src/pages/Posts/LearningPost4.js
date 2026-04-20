@@ -15,7 +15,7 @@ function Post4() {
           <div class="about-meta">
             <span>By: Alexis Bernthal</span>
             <span class="dot">•</span>
-            <span>November 12, 2025</span>
+            <span>Last Updated: April 12, 2026</span>
           </div>
         </div>
       </header>
@@ -24,7 +24,7 @@ function Post4() {
       <div className="post-layout">
         {/* Left: Image Section */}
         <div className="post-image-container">
-          <img src="/ai-formula.png" alt="Post" className="post-image" />
+          <img src="/ai-dev.png" alt="Post" className="post-image" />
         </div>
 
         {/* Right: Text Section */}

@@ -31,7 +31,7 @@ const Blog = () => {
             {
               title: "AI Is Moving Fast: What You Should Be Watching Right Now",
               desc: "An Assessment by News In A Wink.",
-              img: "/ai-formula.png",
+              img: "/anthropic.png",
               link: "/story/3",
             },
             {
@@ -45,6 +45,18 @@ const Blog = () => {
               desc: "Subject Matter Expert: Amanda Matta.",
               img: "/blog1.jpeg",
               link: "/story/1",
+            },
+            {
+              title: "The Formula for Prompting AI",
+              desc: "How do you optimize for the best Artificial Intelligence generated responses?",
+              img: "/ai-formula.png",
+              link: "/post2",
+            },
+            {
+              title: "Networking and Webpages Basics",
+              desc: "All of those techy terms that make our webpages load: Proxy, DNS, and more.",
+              img: "/ai-dev.png",
+              link: "/post4",
             },
             {
               title: "Awareness, Culture, and Professionalism",

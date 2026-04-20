@@ -170,7 +170,7 @@ function ModernLandingPage() {
             {
               title: "AI Is Moving Fast: What You Should Be Watching Right Now",
               desc: "An Assessment by News In A Wink.",
-              img: "/ai-formula.png",
+              img: "/anthropic.png",
               link: "/story/3",
             },
             {
