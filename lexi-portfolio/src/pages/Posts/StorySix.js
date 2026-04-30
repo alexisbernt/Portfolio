@@ -117,40 +117,28 @@ function StorySix() {
             {/* Right-side text */}
             <div style={{ flex: "1", minWidth: "260px" }}>
                 <p style={{ color: "#374151", marginBottom: "12px" }}>
-                There’s a moment in your early 20s where things quietly shift. No announcement.
-                No guidebook. Just the realization that you’re now expected to figure everything out.
+                There’s a moment in your early 20s where things quietly shift. No one announces it. No ceremony. 
+                No guidebook. Just a growing realization that you’re now expected to figure it out. 
+                Your career, identity, relationships, beliefs, and all while the world itself feels increasingly uncertain.
                 </p>
 
                 <p style={{ color: "#374151", marginBottom: "12px" }}>
-                Your career, identity, relationships, beliefs—all while the world feels increasingly uncertain.
-                And somehow, you’re supposed to do it correctly.
+                On top of that, somehow, you’re supposed to do it all correctly.
                 </p>
 
-                <p style={{ color: "#374151", fontWeight: 500 }}>
-                If you’ve felt that weight lately, you’re not alone.
+                <p style={{ color: "#374151" }}>
+                Personally, I experience these periods where it feels like so many things in my life are going sideways. 
+                Fading relationships, work stress, financial uncertainty, not liking my appearance, an overwhelming amount of things to do. 
+                If you’re feeling any of this, I’ve candidly spoken with multiple other 20-some year olds and have done a deep dive for some answers on what might help overcome the overflow of adulthood.
                 </p>
             </div>
             </div>
 
           {/* CONTENT */}
 
-          <h2 style={sectionHeader}>🧠 The Shift</h2>
+          <h2 style={sectionHeader}>🤖 The Constant - “You Must Be Using AI for That, Right?”</h2>
           <p style={paragraph}>
-            There’s a moment in your early 20s where things quietly shift. No one announces it. No ceremony. No guidebook.
-            Just a growing realization that you’re now expected to figure it out—your career, identity, relationships,
-            beliefs—all while the world itself feels increasingly uncertain.
-          </p>
-          <p style={paragraph}>
-            On top of that, somehow, you’re supposed to do it all correctly.
-          </p>
-          <p style={paragraph}>
-            There are periods where everything feels like it’s going sideways—relationships fading, work stress building,
-            finances uncertain, and an overwhelming list of things to do.
-          </p>
-
-          <h2 style={sectionHeader}>🤖 The Constant: “You Used AI for That, Right?”</h2>
-          <p style={paragraph}>
-            One of the strangest parts of modern adulting is the assumption that your work isn’t fully yours.
+            One of the strangest parts of modern adulting is the quiet assumption that your work isn’t fully yours.
           </p>
           <p style={paragraph}>
             Write something thoughtful? “ChatGPT?” <br />
@@ -160,7 +148,16 @@ function StorySix() {
             Tools are becoming normal. They help—but they also blur the line between assistance and authorship.
           </p>
           <p style={paragraph}>
-            The truth: you’re not wrong for using tools. But you are responsible for thinking.
+            We’re living through a moment where tools like AI are becoming normal. While they can make work easier, they also blur the line between assistance and authorship. 
+            That creates a weird tension: you’re trying to grow, learn, and produce meaningful work… while people question whether it’s even yours.
+          </p>
+          <p style={paragraph}>
+            The truth?
+            You’re not wrong for using tools. But you are responsible for thinking.
+            </p>
+          <p style={paragraph}>
+            Adulting today means learning how to integrate technology without letting it replace your voice. 
+            That’s harder than it sounds. 
           </p>
 
           <h2 style={sectionHeader}>🌍 The World Is Complicated</h2>
