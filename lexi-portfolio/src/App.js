@@ -29,6 +29,7 @@ import StoryOne from './pages/Posts/StoryOne';
 import StoryTwo from './pages/Posts/StoryTwo';
 import StoryThree from './pages/Posts/StoryThree';
 import StoryFour from './pages/Posts/StoryFour';
+import StorySix from './pages/Posts/StorySix';
 import SignUp from './pages/SignUp';
 import Gifts from './pages/Gifts';
 import CreateGift from './pages/CreateGift';
@@ -64,6 +65,7 @@ function App() {
             <Route path="/story/2" element={<StoryTwo />} />
             <Route path="/story/3" element={<StoryThree />} />
             <Route path="/story/4" element={<StoryFour />} />
+            <Route path="/story/6" element={<StorySix />} />
             <Route path="/funding" element={<Funding />} />
             <Route path="/sign-up" element={<SignUp />} />
             <Route path="/giftcycle" element={<Gifts />} />

@@ -29,22 +29,28 @@ const Blog = () => {
         >
           {[
             {
+              title: "Adulting 101: The Fundamentals of What Nobody Tells You Today",
+              desc: "An Assessment by Alexis from News In A Wink.",
+              img: "/anthropic.png",
+              link: "/story/6",
+            },
+            {
               title: "AI Is Moving Fast: What You Should Be Watching Right Now",
               desc: "An Assessment by News In A Wink.",
               img: "/anthropic.png",
               link: "/story/3",
             },
             {
-              title: "Women Athletes & Founders (Volleyball & Alix Earle’s Brand)",
-              desc: "Featured: Reese (UNI Volleyball Player).",
-              img: "/@reese_news.png",
-              link: "/story/2",
-            },
-            {
               title: "Seeking an understanding of the Royal Family and their endeavors",
               desc: "Subject Matter Expert: Amanda Matta.",
               img: "/blog1.jpeg",
               link: "/story/1",
+            },
+            {
+              title: "Women Athletes & Founders (Volleyball & Alix Earle’s Brand)",
+              desc: "Featured: Reese (UNI Volleyball Player).",
+              img: "/@reese_news.png",
+              link: "/story/2",
             },
             {
               title: "The Formula for Prompting AI",

@@ -28,16 +28,17 @@ h1, h2, h3 {
   position: relative;
   padding: 10px 16px;
 }
-
-/* Keep title perfectly centered */
+/* Default: show title */
 .navbar-center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 60%;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+@media (max-width: 900px) {
+  .navbar-center {
+    display: none;
+  }
+}
 /* Fun font styling */
 .brand-title {
   font-family: 'Poppins', sans-serif;
