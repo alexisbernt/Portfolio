@@ -269,10 +269,10 @@ function StorySix() {
             Adulting isn’t about having everything figured out.
           </p>
           <p style={paragraph}>
-            If it feels overwhelming or uncertain, you’re not behind.
+            It’s about learning how to operate based on past experiences and based on what you can control. 
           </p>
           <p style={paragraph}>
-            You’re right on schedule.
+            And if it feels confusing, overwhelming, or uncertain, know you’re not behind. You’re right on schedule.
           </p>
 
         </div>
