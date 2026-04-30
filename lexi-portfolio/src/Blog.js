@@ -31,7 +31,7 @@ const Blog = () => {
             {
               title: "Adulting 101: The Fundamentals of What Nobody Tells You Today",
               desc: "An Assessment by Alexis from News In A Wink.",
-              img: "/anthropic.png",
+              img: "/adulting-101.png",
               link: "/story/6",
             },
             {
