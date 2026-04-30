@@ -92,12 +92,45 @@ function StorySix() {
             A real look at your early 20s—where everything starts shifting and nothing feels fully figured out.
           </p>
 
-          {/* Hero Image */}
-          <img 
-            src="/adulting-101.png" 
-            alt="Adulting 101" 
-            style={imageStyle} 
-          />
+          {/* HERO SECTION (IMAGE + INTRO TEXT) */}
+            <div
+            style={{
+                display: "flex",
+                gap: "30px",
+                alignItems: "center",
+                flexWrap: "wrap", // makes it mobile-friendly
+                marginBottom: "30px",
+            }}
+            >
+            {/* Image */}
+            <img
+                src="/adulting-101.png"
+                alt="Adulting 101"
+                style={{
+                width: "100%",
+                maxWidth: "380px",
+                borderRadius: "12px",
+                flex: "1",
+                }}
+            />
+
+            {/* Right-side text */}
+            <div style={{ flex: "1", minWidth: "260px" }}>
+                <p style={{ color: "#374151", marginBottom: "12px" }}>
+                There’s a moment in your early 20s where things quietly shift. No announcement.
+                No guidebook. Just the realization that you’re now expected to figure everything out.
+                </p>
+
+                <p style={{ color: "#374151", marginBottom: "12px" }}>
+                Your career, identity, relationships, beliefs—all while the world feels increasingly uncertain.
+                And somehow, you’re supposed to do it correctly.
+                </p>
+
+                <p style={{ color: "#374151", fontWeight: 500 }}>
+                If you’ve felt that weight lately, you’re not alone.
+                </p>
+            </div>
+            </div>
 
           {/* CONTENT */}
 
