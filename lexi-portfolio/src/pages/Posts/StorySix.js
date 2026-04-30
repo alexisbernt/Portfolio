@@ -145,7 +145,7 @@ function StorySix() {
             Build something impressive? “AI helped, right?”
           </p>
           <p style={paragraph}>
-            Tools are becoming normal. They help—but they also blur the line between assistance and authorship.
+            Tools are becoming normal. They help, but they also blur the line between assistance and authorship.
           </p>
           <p style={paragraph}>
             We’re living through a moment where tools like AI are becoming normal. While they can make work easier, they also blur the line between assistance and authorship. 
@@ -160,60 +160,108 @@ function StorySix() {
             That’s harder than it sounds. 
           </p>
 
-          <h2 style={sectionHeader}>🌍 The World Is Complicated</h2>
+          <h2 style={sectionHeader}>🌍 The World Is Complicated (And Nobody Has the Answers)</h2>
           <p style={paragraph}>
-            At some point, you start paying attention to the world beyond headlines—and it gets overwhelming fast.
+            At some point, you start paying attention to the news. Not just headlines, but the patterns. And it’s overwhelming.
           </p>
           <p style={paragraph}>
-            You realize global instability isn’t isolated. It’s part of a bigger, constantly evolving system.
+            You see ongoing conflicts. Some big ones right now are the war in Ukraine, tensions in Gaza, and rising instability in places like Sudan and Myanmar. 
+            These aren’t isolated events. 
+            Instead, they’re part of a global pattern of conflict that continues to grow and evolve.
           </p>
           <p style={paragraph}>
-            There is no clear “good vs. bad” anymore.
+            The U.S. is often involved, financially, diplomatically, or militarily, in multiple regions at once. 
+            At the same time, experts warn that the risk of broader global conflict is still very real.
           </p>
+          <p style={paragraph}>
+            Here’s the part nobody tells you:
+            There is no clear “good vs. bad” narrative anymore.
+          </p>
+          <p style={paragraph}>
+            Every side has a story. Every country has interests. Every decision has consequences. Even experts disagree. 
+            Even leaders don’t fully know what will happen next.
+          </p>
+          <p style={paragraph}>
+            Adulting means sitting with that discomfort. Realizing the world is messy, and certainty is rare.
+         </p>
 
           <h2 style={sectionHeader}>🧩 Your Brain Is Still Catching Up</h2>
           <p style={paragraph}>
-            While everything is happening externally, something just as intense is happening internally.
+            While all of this is happening externally, something just as intense is happening internally.
+            Your early 20s are emotional chaos, but not in a dramatic, obvious way. 
           </p>
+          <p style={paragraph}>
+            It’s subtle:
+            </p>
           <ul style={listStyle}>
             <li>Overthinking small decisions</li>
             <li>Questioning your path</li>
-            <li>Comparing yourself to others</li>
+            <li>Comparing yourself to others and letting it steal your joy</li>
             <li>Feeling behind (even when you’re not)</li>
             <li>Shifting between confidence and doubt</li>
           </ul>
           <p style={paragraph}>
-            Your brain is still developing. Your identity is still forming. That’s where the friction comes from.
-          </p>
+            Medical experts explain that your brain is still developing. That means your identity is still forming. 
+            And, while all of this is happening, you’re being asked to make long-term decisions with short-term clarity.
+            That creates friction.
+        </p>
+        <p style={paragraph}>
+            We’re learning how to regulate emotions we didn’t fully understand as a teenager. 
+            Then there’s stress, competition, uncertainty, and pressure. And there’s no universal method. What works for one person doesn’t work for another.
+            That’s why adulting feels so personal - and so confusing.
+            </p>
 
           <h2 style={sectionHeader}>🔍 The Unspoken Truth</h2>
           <p style={paragraph}>
             Nobody has it fully figured out.
           </p>
           <p style={paragraph}>
-            Everyone is making decisions with incomplete information and adjusting as they go.
+            Not the celebrity. Not the politician. Not your boss. Not your professors.
+            Not the people on networks all across the spectrum from Instagram to LinkedIn posting about their “perfect journeys.”
+          </p>
+          <p style={paragraph}>
+            They’re just going along in the same process: making decisions with incomplete information, adapting as they go.
+            That realization can be unsettling… but also freeing.
           </p>
 
           <h2 style={sectionHeader}>💡 What Actually Helps</h2>
-
-          <h3 style={{ marginTop: "20px" }}>1. Use Technology, But Think for Yourself</h3>
+          <h3 style={{ marginTop: "20px" }}>1. Use Technology, But Think for Yourself: </h3>
+            <p style={paragraph}>
+                AI is a tool, not a replacement for effort. Use it to brainstorm, refine, or accelerate. Then, always ask:
+            </p>
           <ul style={listStyle}>
             <li>Do I actually understand this?</li>
             <li>Would I stand behind this without the tool?</li>
           </ul>
-
-          <h3 style={{ marginTop: "20px" }}>2. Stay Informed Without Overloading Yourself</h3>
+                <p style={paragraph}>
+                    If not, get someone or something to help explain it. What I’ve started to do is make a list. 
+                    That list lives in my planner. If I don’t understand something I’ll write it down. 
+                    If I have time then and there, I’ll research it and then get to check it off the list as understood. 
+                    If I don’t have time, it lives in the planner not checked off until I get time to learn more. You naturally prioritize that way.
+                </p>
+          <h3 style={{ marginTop: "20px" }}>2. Follow the News Without Letting It Overwhelm You: </h3>
+          <p style={paragraph}>
+                Instead of doom-scrolling:
+            </p>
           <ul style={listStyle}>
-            <li>Follow a few reliable sources</li>
+            <li>Pick 2–3 reliable sources and stick to them</li>
             <li>Focus on context, not just headlines</li>
-            <li>Accept multiple perspectives</li>
+            <li>Accept that multiple perspectives can be true at once</li>
           </ul>
+          <p style={paragraph}>
+            You’re not trying to solve global conflict. You’re trying to understand it well enough to think critically. 
+            And, if you want to try to do your best to solve a problem you’re really passionate about, 
+            the beauty of things like the internet and social media is you can probably find some type of way to get involved. 
+            </p>
 
-          <h3 style={{ marginTop: "20px" }}>3. Regulate Your Emotions</h3>
+          <h3 style={{ marginTop: "20px" }}>3. Practice Regulating Your Emotions: </h3>
+          <p style={paragraph}>
+                You won’t “fix” stress or uncertainty. That’s not the goal. Instead:
+            </p>
           <ul style={listStyle}>
-            <li>Build small habits</li>
-            <li>Create space before reacting</li>
-            <li>Treat emotions as signals</li>
+            <li>Build small habits (walks, journaling, lifting weights, silence)</li>
+            <li>Create space between reaction and response (know that time helps everything)</li>
+            <li>Recognize that emotions are signals, not instructions (ask 'how am I feeling?')</li>
           </ul>
 
           <h2 style={sectionHeader}>🧭 Final Thought</h2>
