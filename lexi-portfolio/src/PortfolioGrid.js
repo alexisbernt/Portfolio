@@ -62,7 +62,7 @@ function ModernLandingPage() {
             title="Promo Video"
             allow="autoplay"
             style={{
-              position: "absolute",
+              // position: "absolute",
               width: "100%",
               height: "100%",
               border: "none",
@@ -80,7 +80,7 @@ function ModernLandingPage() {
             textAlign: "center",
             padding: "clamp(12px, 3vw, 20px)",
             background: "rgba(0,0,0,0.25)",
-            backdropFilter: "blur(8px)",
+            // backdropFilter: "blur(8px)",
           }}>
             <h1 style={{
               fontSize: "clamp(1.2rem, 4vw, 2rem)",
