@@ -1,68 +1,42 @@
-import { Link } from 'react-router-dom';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
-import { FaGithub, FaInstagram, FaTiktok, FaPinterest, FaYoutube, FaEnvelope, FaHome } from "react-icons/fa";
+import { Link, useLocation } from 'react-router-dom';
 import './css/Navbar.css';
-import { useState } from 'react';
-
-function ThreeMenu() {
-  return (
-    <Canvas style={{ height: "200px" }}>
-      <ambientLight intensity={0.5} />
-      <directionalLight position={[0, 2, 5]} />
-      <mesh rotation={[0.4, 0.2, 0]}>
-        <torusGeometry args={[1, 0.4, 16, 100]} />
-        <meshStandardMaterial color="#2563eb" />
-      </mesh>
-      <OrbitControls enableZoom={false} enablePan={false} autoRotate />
-    </Canvas>
-  );
-}
 
 function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <nav className="navbar">
 
-      {/* CENTER: Brand Title */}
-      <div className="navbar-center">
-        <h1 className="brand-title">newsinawink ;)</h1>
-      </div>
-      
-      {/* LEFT: Social Icons */}
-      <div className="social-icons">
-        <a href="https://github.com/alexisbernt//" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
-        <a href="mailto:alexisbernthal4@gmail.com"><FaEnvelope /></a>
-        <a href="https://www.instagram.com/alexis.wink/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-        <a href="https://www.tiktok.com/@newsinawink" target="_blank" rel="noopener noreferrer"><FaTiktok /></a>
-        <a href="https://pinterest.com/" target="_blank" rel="noopener noreferrer"><FaPinterest /></a>
-        <a href="https://www.youtube.com/@newsinawink" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
+      {/* LOGO + TITLE */}
+      <div className="navbar-top">
+        <img src="/logo.png" alt="Digital Women KC Logo" className="logo" />
+        <h1 className="brand-title">
+          &lt;/digital<span>women</span>&gt; KC
+        </h1>
       </div>
 
-      {/* RIGHT: Home + 3D Dropdown */}
-      <div className="right-menu">
-        <Link to="/" className="home-icon">
-          <FaHome />
+      {/* NAV LINKS */}
+      <div className="navbar-links">
+        <Link to="/" className={location.pathname === "/" ? "active" : ""}>
+          Home
         </Link>
-        <div className="dropdown-container">
-          <button className="dropdown-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-            ☰
-          </button>
-          {menuOpen && (
-            <div className="dropdown-menu">
-              <ThreeMenu />
-              <ul>
-                <li><Link to="/" onClick={() => setMenuOpen(false)}>News In A Wink</Link></li>
-                <li><Link to="/newsinawink" onClick={() => setMenuOpen(false)}>Weekly News Rundown</Link></li>
-                <li><Link to="/sign-up" onClick={() => setMenuOpen(false)}>Newsletter</Link></li>
-                {/* <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li> */}
-                {/* <li><Link to="/running-log" onClick={() => setMenuOpen(false)}>Running Log ✨</Link></li> */}
-              </ul>
-            </div>
-          )}
-        </div>
+        <Link to="/about" className={location.pathname === "/about" ? "active" : ""}>
+          About Us
+        </Link>
+        <Link to="/get-involved" className={location.pathname === "/get-involved" ? "active" : ""}>
+          Get Involved
+        </Link>
+        <Link to="/events" className={location.pathname === "/events" ? "active" : ""}>
+          Events
+        </Link>
+        <Link to="/minicon" className={location.pathname === "/minicon" ? "active" : ""}>
+          MiniCon 2026
+        </Link>
+        <Link to="/more" className={location.pathname === "/more" ? "active" : ""}>
+          More...
+        </Link>
       </div>
+
     </nav>
   );
 }
