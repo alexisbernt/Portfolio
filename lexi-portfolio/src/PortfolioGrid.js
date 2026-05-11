@@ -118,7 +118,7 @@ function ModernLandingPage() {
           padding: "clamp(20px, 5vw, 32px)",
           textAlign: "center"
         }}>
-          <img src="/logo.png" alt="" style={{
+          <img src="/icon.png" alt="" style={{
             width: "clamp(60px, 20vw, 90px)",
             marginBottom: "16px"
           }} />

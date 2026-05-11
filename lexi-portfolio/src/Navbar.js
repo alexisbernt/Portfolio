@@ -11,7 +11,7 @@ function Navbar() {
       <div className="navbar-top">
         <img src="/logo.png" alt="Digital Women KC Logo" className="logo" />
         <h1 className="brand-title">
-          &lt;/digital<span>women</span>&gt; KC
+          &lt;/ News In A <span>Wink </span>&gt; 
         </h1>
       </div>
 
@@ -23,16 +23,16 @@ function Navbar() {
         <Link to="/about" className={location.pathname === "/about" ? "active" : ""}>
           About Us
         </Link>
-        <Link to="/get-involved" className={location.pathname === "/get-involved" ? "active" : ""}>
-          Get Involved
+        <Link to="/sign-up" className={location.pathname === "/sign-up" ? "active" : ""}>
+          Get Informed
         </Link>
-        <Link to="/events" className={location.pathname === "/events" ? "active" : ""}>
-          Events
+        <Link to="/blog" className={location.pathname === "/blog" ? "active" : ""}>
+          Blog
         </Link>
-        <Link to="/minicon" className={location.pathname === "/minicon" ? "active" : ""}>
+        {/* <Link to="/minicon" className={location.pathname === "/minicon" ? "active" : ""}>
           MiniCon 2026
-        </Link>
-        <Link to="/more" className={location.pathname === "/more" ? "active" : ""}>
+        </Link> */}
+        <Link to="/newsinawink" className={location.pathname === "/newsinawink" ? "active" : ""}>
           More...
         </Link>
       </div>
