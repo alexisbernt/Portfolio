@@ -195,8 +195,14 @@ function ModernLandingPage() {
                     </div>
                   </div>
                 </div>
+                
               </Link>
             ))}
+            <div style={{ marginTop: "1rem" }}>
+                    <Link to="/sign-up" style={styles.button}>
+                     Get The Newsletter: News In A Wink Weekly Recap (It's Free! Sent Out Every Monday) <ArrowRight size={16} />
+                    </Link>
+                  </div>
           </div>
         </div>
 
@@ -231,7 +237,7 @@ function ModernLandingPage() {
           </div>
         </section>
 
-        {/* NEWSLETTER (kept minimal like editorial footer card) */}
+        {/* NEWSLETTER (kept minimal like editorial footer card)
         <section style={{ marginTop: "4rem", borderTop: "1px solid #e5e7eb", paddingTop: "3rem" }}>
           <div style={{ textAlign: "center" }}>
             <h2 style={styles.h2}>Stay Ahead of the Week</h2>
@@ -254,7 +260,7 @@ function ModernLandingPage() {
               </Link>
             </div>
           </div>
-        </section>
+        </section> */}
       </div>
 
       <Footer />
