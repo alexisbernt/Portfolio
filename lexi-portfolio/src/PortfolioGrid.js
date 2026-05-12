@@ -141,19 +141,18 @@ function ModernLandingPage() {
           </div>
 
           <div style={{ padding: "1.5rem" }}>
-            <div style={styles.label}>Books</div>
+            <div style={styles.label}>Welcome To News In A Wink</div>
 
             <h1 style={styles.h1}>
-              Readers Agree: 11 Books That Will Change Your Perspective
+              Changing Your Perspective On The News 
             </h1>
 
             <p style={styles.text}>
-              From powerful memoirs to page-turning fiction, these are the
-              books making an impact right now.
+              Find the types of news stories that excite you. Ranging from technology, to health, to culture, and more - we break down the news into categories that make it easy to find what you care about.
             </p>
 
             <Link to={featured.link} style={styles.button}>
-              Explore the list <ArrowRight size={16} />
+              Explore the latest <ArrowRight size={16} />
             </Link>
           </div>
         </div>
@@ -185,10 +184,10 @@ function ModernLandingPage() {
                   <div>
                     <div style={styles.label}>
                       {i === 0
-                        ? "Healthy Living"
+                        ? "What To Watch In AI"
                         : i === 1
-                        ? "Career & Finance"
-                        : "Product Reviews"}
+                        ? "Women & Athletics"
+                        : "World News & The Royal Family"}
                     </div>
 
                     <div style={{ fontWeight: 700, fontSize: "0.95rem" }}>
@@ -250,7 +249,7 @@ function ModernLandingPage() {
             />
 
             <div style={{ marginTop: "1rem" }}>
-              <Link to="/newsletter" style={styles.button}>
+              <Link to="/sign-up" style={styles.button}>
                 Get Newsletter <ArrowRight size={16} />
               </Link>
             </div>
