@@ -21,7 +21,7 @@ const timelineEvents = [
       "News In A Wink was created to make staying informed feel fast, modern, and actually enjoyable.",
   },
   {
-    date: "Fresh Global Coverage Every Week",
+    date: "Bringing Information To Social Media & Applications",
     title: "The World of Tech, Business & Culture",
     img: "VS_Git_Alexis.png",
     description:
@@ -29,7 +29,7 @@ const timelineEvents = [
   },
   {
     date: "Growing Every Day",
-    title: "A Mission Bigger Than News",
+    title: "The Mission",
     img: "iPhone_Alexis.png",
     description:
       "The goal is simple: help more young adults become informed, confident thinkers in a fast-moving world.",
@@ -132,7 +132,7 @@ export default function About() {
                     fontSize: "0.9rem",
                   }}
                 >
-                  Modern News For Modern Minds
+                  Embracing The Future Of News
                 </span>
               </div>
 
@@ -146,7 +146,7 @@ export default function About() {
                   marginBottom: "2rem",
                 }}
               >
-                Stay informed with fast, high-impact updates designed for people
+                Stay informed with fast updates designed for people
                 who want clarity without information overload.
               </p>
 
@@ -160,10 +160,10 @@ export default function About() {
                 }}
               >
                 {[
-                  "⚡ Quick updates in minutes",
-                  "🌍 Global stories that matter",
+                  "⚡ Quick world updates in 1-minute",
+                  "🌍 Stories that matter with experts",
                   "📈 Business & tech insights",
-                  "🧠 Built for ambitious readers",
+                  "🧠 Blog articles that inform",
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -329,8 +329,7 @@ export default function About() {
                 margin: "0 auto",
               }}
             >
-              Built to help people stay informed without endless scrolling and
-              overwhelming news feeds.
+              Built to help people stay informed on the platforms we're on the most.
             </p>
           </motion.div>
 
