@@ -189,11 +189,11 @@ function SignUp() {
                 },
                 {
                   icon: <Brain size={20} color="#c084fc" />,
-                  text: "Compete using your news knowledge",
+                  text: "Starting June 8th, 2026. Runs until July 13th, 2026.",
                 },
                 {
                   icon: <Newspaper size={20} color="#f97316" />,
-                  text: "Stay updated on current events",
+                  text: "Stay updated on current events. Test your knowledge.",
                 },
               ].map((item, index) => (
                 <div

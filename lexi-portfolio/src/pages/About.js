@@ -12,30 +12,6 @@ import {
 import "../css/About.css";
 import Footer from "../Footer";
 
-const timelineEvents = [
-  {
-    date: "Est. 2025",
-    title: "Built for the Next Generation",
-    img: "business-image.png",
-    description:
-      "News In A Wink was created to make staying informed feel fast, modern, and actually enjoyable.",
-  },
-  {
-    date: "Bringing Information To Social Media & Applications",
-    title: "The World of Tech, Business & Culture",
-    img: "VS_Git_Alexis.png",
-    description:
-      "Every week, News In A Wink delivers the biggest headlines, emerging tech trends, and global business updates.",
-  },
-  {
-    date: "Growing Every Day",
-    title: "The Mission",
-    img: "iPhone_Alexis.png",
-    description:
-      "The goal is simple: help more young adults become informed, confident thinkers in a fast-moving world.",
-  },
-];
-
 const styles = {
   page: {
     minHeight: "100vh",
@@ -126,6 +102,7 @@ export default function About() {
                 }}
               >
                 <Sparkles size={18} color="#60a5fa" />
+
                 <span
                   style={{
                     color: "white",
@@ -137,7 +114,7 @@ export default function About() {
               </div>
 
               <h1 style={styles.sectionTitle}>
-                Quick tips and tricks to help you keep up with the news. 
+                Quick tips and tricks to help you keep up with the news.
               </h1>
 
               <p
@@ -146,8 +123,8 @@ export default function About() {
                   marginBottom: "1.5rem",
                 }}
               >
-                Stay informed with fast updates designed for people
-                who want clarity fast and without information overload.
+                Stay informed with fast updates designed for people who want
+                clarity fast and without information overload.
               </p>
 
               <div
@@ -240,7 +217,8 @@ export default function About() {
                 },
                 {
                   icon: <Globe size={28} />,
-                  title: "Global Event Updates To Help You Form Your Perspective",
+                  title:
+                    "Global Event Updates To Help You Form Your Perspective",
                   desc: "Today's most driven individuals — students, professionals, and lifelong learners — are falling behind on the news. With AI evolving overnight, political developments shifting daily, and a crowded media landscape full of unreliable sources, it's easy to feel lost. News In A Wink was built to change that: we make news fun by delivering fast, credible, and engaging news updates so you never miss what matters.",
                 },
                 {
@@ -292,128 +270,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
-      {/* TIMELINE */}
-      <section
-        style={{
-          width: "100%",
-          padding: "1rem 0 5rem",
-        }}
-      >
-        <div style={styles.container}>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            style={{
-              textAlign: "center",
-              marginBottom: "3rem",
-              width: "100%",
-            }}
-          >
-            <h2
-              style={{
-                fontSize: "clamp(2rem, 5vw, 3rem)",
-                color: "white",
-                marginBottom: "1rem",
-                wordBreak: "break-word",
-              }}
-            >
-              Why News In A Wink Exists
-            </h2>
-
-            <p
-              style={{
-                ...styles.paragraph,
-                maxWidth: "700px",
-                margin: "0 auto",
-              }}
-            >
-              Built to help people stay informed on the platforms we're on the most.
-            </p>
-          </motion.div>
-
-          <div
-            style={{
-              display: "grid",
-              gap: "2rem",
-              width: "100%",
-            }}
-          >
-            {timelineEvents.map((event, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                style={{
-                  ...styles.glassCard,
-                  display: "grid",
-                  gridTemplateColumns:
-                    "repeat(auto-fit, minmax(280px, 1fr))",
-                  alignItems: "stretch",
-                }}
-              >
-                {/* IMAGE */}
-                <div
-                  style={{
-                    width: "100%",
-                    minHeight: "250px",
-                    overflow: "hidden",
-                  }}
-                >
-                  <img
-                    src={event.img}
-                    alt={event.title}
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                      display: "block",
-                    }}
-                  />
-                </div>
-
-                {/* CONTENT */}
-                <div
-                  style={{
-                    padding: "clamp(1.5rem, 4vw, 2rem)",
-                    width: "100%",
-                    boxSizing: "border-box",
-                  }}
-                >
-                  <p
-                    style={{
-                      color: "#60a5fa",
-                      fontWeight: "700",
-                      marginBottom: "1rem",
-                      wordBreak: "break-word",
-                    }}
-                  >
-                    {event.date}
-                  </p>
-
-                  <h3
-                    style={{
-                      fontSize: "clamp(1.5rem, 4vw, 2rem)",
-                      color: "white",
-                      marginBottom: "1rem",
-                      lineHeight: "1.2",
-                      wordBreak: "break-word",
-                    }}
-                  >
-                    {event.title}
-                  </h3>
-
-                  <p style={styles.paragraph}>{event.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section
         style={{
@@ -430,53 +286,130 @@ export default function About() {
               ...styles.glassCard,
               padding: "clamp(2rem, 5vw, 4rem)",
               textAlign: "center",
+              position: "relative",
+              overflow: "hidden",
             }}
           >
-            <h2
+            {/* GLOW EFFECT */}
+            <div
               style={{
-                fontSize: "clamp(2rem, 5vw, 3rem)",
-                color: "white",
-                marginBottom: "1rem",
-                lineHeight: "1.1",
-                wordBreak: "break-word",
+                position: "absolute",
+                top: "-120px",
+                right: "-120px",
+                width: "250px",
+                height: "250px",
+                background: "rgba(59,130,246,0.18)",
+                filter: "blur(90px)",
+                borderRadius: "50%",
               }}
-            >
-              Stay Ahead Of The Curve ✉️
-            </h2>
+            />
 
-            <p
+            <div
               style={{
-                ...styles.paragraph,
-                maxWidth: "700px",
-                margin: "0 auto 2rem",
+                position: "relative",
+                zIndex: 2,
               }}
             >
-              Join readers who want smarter news, faster insights, and a better
-              understanding of the world.
-            </p>
+              <div
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  background: "rgba(255,255,255,0.08)",
+                  padding: "8px 14px",
+                  borderRadius: "999px",
+                  marginBottom: "1.5rem",
+                  color: "#bfdbfe",
+                  fontWeight: "600",
+                }}
+              >
+                🏆 Weekly News League
+              </div>
 
-            <Link
-              to="/sign-up"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "10px",
-                padding: "15px 24px",
-                borderRadius: "14px",
-                textDecoration: "none",
-                background:
-                  "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)",
-                color: "white",
-                fontWeight: "700",
-                flexWrap: "wrap",
-                textAlign: "center",
-                maxWidth: "100%",
-              }}
-            >
-              Join The Mailing List
-              <ArrowRight size={18} />
-            </Link>
+              <h2
+                style={{
+                  fontSize: "clamp(2.2rem, 5vw, 3.4rem)",
+                  color: "white",
+                  marginBottom: "1rem",
+                  lineHeight: "1.05",
+                  fontWeight: "800",
+                  wordBreak: "break-word",
+                }}
+              >
+                Think You Know The News?
+                <br />
+                Compete For <span style={{ color: "#facc15" }}>$500.</span>
+              </h2>
+
+              <p
+                style={{
+                  ...styles.paragraph,
+                  maxWidth: "760px",
+                  margin: "0 auto 2rem",
+                  fontSize: "1.08rem",
+                }}
+              >
+                Join the free News Competition and receive a quick 5-question news
+                survey every Monday (06/08/2026 - 07/13/2026). Climb the leaderboard, stay informed, and compete
+                for the $500 cash prize.
+              </p>
+
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  gap: "1rem",
+                  flexWrap: "wrap",
+                  marginBottom: "2rem",
+                }}
+              >
+                {[
+                  "📰 Weekly News Challenges",
+                  "⚡ 5 Quick Questions",
+                  "💰 $500 Prize Pool",
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    style={{
+                      background: "rgba(255,255,255,0.06)",
+                      border: "1px solid rgba(255,255,255,0.08)",
+                      padding: "10px 16px",
+                      borderRadius: "999px",
+                      color: "#e2e8f0",
+                      fontWeight: "500",
+                      fontSize: "0.95rem",
+                    }}
+                  >
+                    {item}
+                  </div>
+                ))}
+              </div>
+
+              <Link
+                to="/sign-up"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "10px",
+                  padding: "16px 28px",
+                  borderRadius: "16px",
+                  textDecoration: "none",
+                  background:
+                    "linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)",
+                  color: "white",
+                  fontWeight: "800",
+                  fontSize: "1rem",
+                  flexWrap: "wrap",
+                  textAlign: "center",
+                  maxWidth: "100%",
+                  boxShadow: "0 12px 30px rgba(37,99,235,0.35)",
+                }}
+              >
+                Join The News Competition
+                <ArrowRight size={18} />
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>

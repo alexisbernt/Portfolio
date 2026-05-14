@@ -24,7 +24,7 @@ function Navbar() {
           About Us
         </Link>
         <Link to="/sign-up" className={location.pathname === "/sign-up" ? "active" : ""}>
-          Get Informed
+          Join News League
         </Link>
         <Link to="/blog" className={location.pathname === "/blog" ? "active" : ""}>
           Blog
