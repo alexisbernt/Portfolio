@@ -73,7 +73,7 @@ const styles = {
   },
 
   sectionTitle: {
-    fontSize: "clamp(2rem, 6vw, 4.5rem)",
+    fontSize: "clamp(2rem, 4vw, 3rem)",
     lineHeight: "1.05",
     fontWeight: "800",
     marginBottom: "1.25rem",
@@ -120,7 +120,7 @@ export default function About() {
                   background: "rgba(255,255,255,0.1)",
                   padding: "8px 14px",
                   borderRadius: "999px",
-                  marginBottom: "1.5rem",
+                  marginBottom: "1rem",
                   flexWrap: "wrap",
                   maxWidth: "100%",
                 }}
@@ -132,22 +132,22 @@ export default function About() {
                     fontSize: "0.9rem",
                   }}
                 >
-                  Embracing The Future Of News
+                  Embracing The Future Of Media & Information
                 </span>
               </div>
 
               <h1 style={styles.sectionTitle}>
-                News that respects your time.
+                Quick tips and tricks to help you keep up with the news. 
               </h1>
 
               <p
                 style={{
                   ...styles.paragraph,
-                  marginBottom: "2rem",
+                  marginBottom: "1.5rem",
                 }}
               >
                 Stay informed with fast updates designed for people
-                who want clarity without information overload.
+                who want clarity fast and without information overload.
               </p>
 
               <div
@@ -161,9 +161,9 @@ export default function About() {
               >
                 {[
                   "⚡ Quick world updates in 1-minute",
-                  "🌍 Stories that matter with experts",
-                  "📈 Business & tech insights",
-                  "🧠 Blog articles that inform",
+                  "📈 Competitions and metrics when you join News League",
+                  "🌍 Stories in collaboration with subject-matter experts",
+                  "🧠 Blog articles that quickly inform",
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -235,18 +235,18 @@ export default function About() {
               {[
                 {
                   icon: <Newspaper size={28} />,
-                  title: "5 Essential Headlines",
-                  desc: "Curated stories that help you stay informed fast.",
-                },
-                {
-                  icon: <TrendingUp size={28} />,
-                  title: "Tech & Business Trends",
-                  desc: "Learn where the world is heading next.",
+                  title: "What Makes News In A Wink Different?",
+                  desc: "All the information you need to understand News In A Wink, why it was created, and how to get involved.",
                 },
                 {
                   icon: <Globe size={28} />,
-                  title: "Global Perspective",
-                  desc: "Stay connected to important global events.",
+                  title: "Global Event Updates To Help You Form Your Perspective",
+                  desc: "Today's most driven individuals — students, professionals, and lifelong learners — are falling behind on the news. With AI evolving overnight, political developments shifting daily, and a crowded media landscape full of unreliable sources, it's easy to feel lost. News In A Wink was built to change that: we make news fun by delivering fast, credible, and engaging news updates so you never miss what matters.",
+                },
+                {
+                  icon: <TrendingUp size={28} />,
+                  title: "The Competition To Stay Informed",
+                  desc: "Start keeping up to date with the latest news and trends through joining a news league.",
                 },
               ].map((card, index) => (
                 <motion.div

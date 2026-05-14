@@ -1,14 +1,18 @@
 // src/pages/SignUp.js
+
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import Footer from "../Footer";
 import { motion } from "framer-motion";
 import {
-  Sparkles,
-  Rocket,
+  Trophy,
+  DollarSign,
   Mail,
   User,
   CheckCircle,
+  Newspaper,
+  Clock3,
+  Brain,
 } from "lucide-react";
 
 // Initialize EmailJS
@@ -18,10 +22,11 @@ function SignUp() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    newsletter: true,
+    agree: true,
   });
 
   const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -35,9 +40,14 @@ function SignUp() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    setLoading(true);
+    setStatus("");
+
     const emailData = {
-      ...formData,
-      newsletter: formData.newsletter ? "Yes" : "No",
+      user_name: formData.name,
+      user_email: formData.email,
+      competition_name: "Weekly News League",
+      signup_date: new Date().toLocaleDateString(),
     };
 
     emailjs
@@ -50,18 +60,24 @@ function SignUp() {
         (result) => {
           console.log("SUCCESS!", result.text);
 
-          setStatus("🚀 You're officially on the insider list!");
+          setStatus(
+            "🏆 You're officially in the News League! Check your inbox."
+          );
 
           setFormData({
             name: "",
             email: "",
-            newsletter: true,
+            agree: true,
           });
+
+          setLoading(false);
         },
         (error) => {
           console.error("FAILED...", error.text);
 
           setStatus("❌ Something went wrong. Please try again.");
+
+          setLoading(false);
         }
       );
   };
@@ -73,7 +89,7 @@ function SignUp() {
         display: "flex",
         flexDirection: "column",
         background:
-          "linear-gradient(135deg, #0f172a 0%, #111827 40%, #1e3a8a 100%)",
+          "linear-gradient(135deg, #020617 0%, #0f172a 45%, #1d4ed8 100%)",
       }}
     >
       {/* MAIN CONTENT */}
@@ -102,94 +118,98 @@ function SignUp() {
           }}
         >
           {/* LEFT SIDE */}
-          <div style={{ width: "100%" }}>
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 }}
+          <div>
+            <div
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "8px",
+                background: "rgba(255,255,255,0.1)",
+                padding: "8px 14px",
+                borderRadius: "999px",
+                marginBottom: "1.5rem",
+              }}
             >
-              <div
+              <Trophy size={18} color="#facc15" />
+
+              <span
                 style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "8px",
-                  background: "rgba(255,255,255,0.1)",
-                  padding: "8px 14px",
-                  borderRadius: "999px",
-                  marginBottom: "1.5rem",
-                  backdropFilter: "blur(10px)",
-                  flexWrap: "wrap",
+                  color: "white",
+                  fontSize: "0.95rem",
+                  fontWeight: "600",
                 }}
               >
-                <Sparkles size={18} color="#60a5fa" />
-                <span
+                Weekly News League
+              </span>
+            </div>
+
+            <h1
+              style={{
+                fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
+                lineHeight: "1.1",
+                marginBottom: "1rem",
+                fontWeight: "900",
+                color: "white",
+              }}
+            >
+              Stay informed.
+              <br />
+              Win <span style={{ color: "#facc15" }}>$500.</span>
+            </h1>
+
+            <p
+              style={{
+                fontSize: "1.1rem",
+                lineHeight: "1.8",
+                color: "#cbd5e1",
+                marginBottom: "2rem",
+                maxWidth: "560px",
+              }}
+            >
+              Join the free News League competition. Every Monday you'll receive
+              a quick 5-question news survey. The member with the best overall
+              score wins the $500 cash prize.
+            </p>
+
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "1rem",
+              }}
+            >
+              {[
+                {
+                  icon: <DollarSign size={20} color="#4ade80" />,
+                  text: "$500 cash prize",
+                },
+                {
+                  icon: <Clock3 size={20} color="#60a5fa" />,
+                  text: "5 quick questions every Monday",
+                },
+                {
+                  icon: <Brain size={20} color="#c084fc" />,
+                  text: "Compete using your news knowledge",
+                },
+                {
+                  icon: <Newspaper size={20} color="#f97316" />,
+                  text: "Stay updated on current events",
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
                   style={{
-                    fontSize: "0.9rem",
-                    color: "white",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "12px",
+                    color: "#e2e8f0",
                   }}
                 >
-                  Exclusive Community Access
-                </span>
-              </div>
-
-              <h1
-                style={{
-                  fontSize: "clamp(2.2rem, 6vw, 4rem)",
-                  lineHeight: "1.1",
-                  marginBottom: "1rem",
-                  fontWeight: "800",
-                  color: "white",
-                }}
-              >
-                Join the people building the future.
-              </h1>
-
-              <p
-                style={{
-                  fontSize: "clamp(1rem, 2vw, 1.15rem)",
-                  lineHeight: "1.8",
-                  color: "#cbd5e1",
-                  marginBottom: "2rem",
-                  maxWidth: "550px",
-                }}
-              >
-                Get exclusive insights, early feature access, productivity
-                strategies, and member-only updates delivered straight to your
-                inbox.
-              </p>
-
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "1rem",
-                }}
-              >
-                {[
-                  "🚀 Early access to new features",
-                  "📈 Weekly growth & productivity tips",
-                  "🔥 Insider-only announcements",
-                  "💡 Exclusive resources and tools",
-                ].map((item, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.3 + index * 0.1 }}
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "12px",
-                      color: "#e2e8f0",
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    <CheckCircle color="#60a5fa" size={20} />
-                    <span>{item}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
+                  <CheckCircle color="#60a5fa" size={20} />
+                  <span>{item.text}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* RIGHT SIDE FORM */}
@@ -202,7 +222,7 @@ function SignUp() {
               background: "rgba(255,255,255,0.08)",
               border: "1px solid rgba(255,255,255,0.12)",
               borderRadius: "24px",
-              padding: "clamp(1.5rem, 4vw, 2.5rem)",
+              padding: "2rem",
               backdropFilter: "blur(18px)",
               boxShadow: "0 10px 40px rgba(0,0,0,0.3)",
               boxSizing: "border-box",
@@ -211,17 +231,17 @@ function SignUp() {
             <div style={{ marginBottom: "2rem" }}>
               <h2
                 style={{
-                  fontSize: "clamp(1.8rem, 4vw, 2.3rem)",
+                  fontSize: "2rem",
                   marginBottom: "0.5rem",
                   fontWeight: "700",
                   color: "white",
                 }}
               >
-                Become an Insider
+                Join the Competition
               </h2>
 
               <p style={{ color: "#cbd5e1" }}>
-                Free to join. Valuable from day one.
+                Free entry. Weekly challenge. $500 prize.
               </p>
             </div>
 
@@ -330,12 +350,14 @@ function SignUp() {
               >
                 <input
                   type="checkbox"
-                  name="newsletter"
-                  checked={formData.newsletter}
+                  name="agree"
+                  checked={formData.agree}
                   onChange={handleChange}
+                  required
                   style={{ marginTop: "3px" }}
                 />
-                Send me exclusive updates and insider content.
+
+                Receive the weekly Monday news survey and league updates.
               </label>
 
               {/* BUTTON */}
@@ -343,11 +365,12 @@ function SignUp() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.97 }}
                 type="submit"
+                disabled={loading}
                 style={{
                   width: "100%",
                   padding: "15px",
                   background:
-                    "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)",
+                    "linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)",
                   color: "#fff",
                   border: "none",
                   borderRadius: "14px",
@@ -361,8 +384,9 @@ function SignUp() {
                   boxShadow: "0 10px 25px rgba(37,99,235,0.4)",
                 }}
               >
-                <Rocket size={18} />
-                Join Now
+                <Trophy size={18} />
+
+                {loading ? "Joining..." : "Enter the League"}
               </motion.button>
             </form>
 
@@ -384,7 +408,7 @@ function SignUp() {
         </motion.div>
       </div>
 
-      {/* FOOTER ALWAYS AT BOTTOM */}
+      {/* FOOTER */}
       <footer
         style={{
           width: "100%",
