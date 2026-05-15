@@ -203,6 +203,55 @@ function ModernLandingPage() {
                      Get The Newsletter: News In A Wink Weekly Recap (It's Free! Sent Out Every Monday) <ArrowRight size={16} />
                     </Link>
                   </div>
+            {/* NEWSLETTER + NEWS LEAGUE (TIGHT VERSION) */}
+
+              <motion.div
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.15 }}
+                style={{
+                  marginTop: "0.75rem",
+                  border: "1px solid #e5e7eb",
+                  padding: "0.75rem",
+                  background: "#fafafa",
+                  lineHeight: 1.3,
+                }}
+              >
+                <div style={{ fontSize: "0.72rem", fontWeight: 700, color: "#6b7280" }}>
+                  NEWS COMPETITION
+                </div>
+
+                <div style={{ fontSize: "1rem", fontWeight: 800, marginTop: "0.25rem" }}>
+                  Weekly News League 🏆
+                </div>
+
+                <p
+                  style={{
+                    ...styles.text,
+                    marginTop: "0.35rem",
+                    marginBottom: "0.4rem",
+                    fontSize: "0.9rem",
+                  }}
+                >
+                  5 questions every Monday. Compete on current events. Win <strong>$500</strong>.
+                </p>
+
+                <Link
+                  to="/sign-up"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "6px",
+                    fontWeight: 700,
+                    fontSize: "0.85rem",
+                    borderBottom: "1px solid #111827",
+                    paddingBottom: "1px",
+                    marginTop: "0.2rem",
+                  }}
+                >
+                  Enter <ArrowRight size={14} />
+                </Link>
+              </motion.div>
           </div>
         </div>
 
