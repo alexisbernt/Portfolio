@@ -338,7 +338,7 @@ export default function About() {
               >
                 Think You Know The News?
                 <br />
-                Compete For <span style={{ color: "#facc15" }}>$500.</span>
+                Compete For <span style={{ color: "#facc15" }}>$250.</span>
               </h2>
 
               <p
@@ -351,7 +351,7 @@ export default function About() {
               >
                 Join the free News Competition and receive a quick 5-question news
                 survey every Monday (06/08/2026 - 07/13/2026). Climb the leaderboard, stay informed, and compete
-                for the $500 cash prize.
+                for the $250 cash prize.
               </p>
 
               <div
@@ -366,7 +366,7 @@ export default function About() {
                 {[
                   "📰 Weekly News Challenges",
                   "⚡ 5 Quick Questions",
-                  "💰 $500 Prize Pool",
+                  "💰 $250 Prize Pool",
                 ].map((item, index) => (
                   <div
                     key={index}

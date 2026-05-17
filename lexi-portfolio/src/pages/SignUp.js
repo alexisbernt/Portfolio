@@ -154,7 +154,7 @@ function SignUp() {
             >
               Stay informed.
               <br />
-              Win <span style={{ color: "#facc15" }}>$500.</span>
+              Win <span style={{ color: "#facc15" }}>$250.</span>
             </h1>
 
             <p
@@ -168,7 +168,7 @@ function SignUp() {
             >
               Join the free News League competition. Every Monday you'll receive
               a quick 5-question news survey. The member with the best overall
-              score wins the $500 cash prize.
+              score wins the $250 cash prize.
             </p>
 
             <div
@@ -181,7 +181,7 @@ function SignUp() {
               {[
                 {
                   icon: <DollarSign size={20} color="#4ade80" />,
-                  text: "$500 cash prize",
+                  text: "$250 cash prize",
                 },
                 {
                   icon: <Clock3 size={20} color="#60a5fa" />,
@@ -241,7 +241,7 @@ function SignUp() {
               </h2>
 
               <p style={{ color: "#cbd5e1" }}>
-                Free entry. Weekly challenge. $500 prize.
+                Free entry. Weekly challenge. $250 prize.
               </p>
             </div>
 

@@ -233,7 +233,7 @@ function ModernLandingPage() {
                     fontSize: "0.9rem",
                   }}
                 >
-                  5 questions every Monday. Compete on current events. Win <strong>$500</strong>.
+                  5 questions every Monday. Compete on current events. Win <strong>$250</strong>.
                 </p>
 
                 <Link
