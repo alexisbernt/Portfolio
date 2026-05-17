@@ -123,8 +123,7 @@ export default function About() {
                   marginBottom: "1.5rem",
                 }}
               >
-                Stay informed with fast updates designed for people who want
-                clarity fast and without information overload.
+                Stay informed with fast updates designed for people who want to stay aware and engaged. 
               </p>
 
               <div
@@ -213,11 +212,11 @@ export default function About() {
                 {
                   icon: <Newspaper size={28} />,
                   title: "What Makes News In A Wink Different?",
-                  desc: "All the information you need to understand News In A Wink, why it was created, and how to get involved.",
+                  desc: "News In A Wink expands past traditional journalism so news can reach more people on the platforms they use most. News In A Wink adds personality, fun, competition, and reflection when delivering current event updates to make sure you actually want to keep up with the news.",
                 },
                 {
                   icon: <Globe size={28} />,
-                  title:
+                  title: 
                     "Global Event Updates To Help You Form Your Perspective",
                   desc: "Today's most driven individuals — students, professionals, and lifelong learners — are falling behind on the news. With AI evolving overnight, political developments shifting daily, and a crowded media landscape full of unreliable sources, it's easy to feel lost. News In A Wink was built to change that: we make news fun by delivering fast, credible, and engaging news updates so you never miss what matters.",
                 },
