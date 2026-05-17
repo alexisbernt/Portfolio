@@ -351,7 +351,7 @@ export default function About() {
               >
                 Join the free News Competition and receive a quick 5-question news
                 survey every Monday (06/08/2026 - 07/13/2026). Climb the leaderboard, stay informed, and compete
-                for the $250 cash prize.
+                for the $250 prize.
               </p>
 
               <div

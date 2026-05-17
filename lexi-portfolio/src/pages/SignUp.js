@@ -168,7 +168,7 @@ function SignUp() {
             >
               Join the free News League competition. Every Monday you'll receive
               a quick 5-question news survey. The member with the best overall
-              score wins the $250 cash prize.
+              score wins the $250 prize.
             </p>
 
             <div
@@ -181,7 +181,7 @@ function SignUp() {
               {[
                 {
                   icon: <DollarSign size={20} color="#4ade80" />,
-                  text: "$250 cash prize",
+                  text: "$250 USD prize",
                 },
                 {
                   icon: <Clock3 size={20} color="#60a5fa" />,
