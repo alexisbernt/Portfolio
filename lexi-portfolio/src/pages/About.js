@@ -8,6 +8,7 @@ import {
   ArrowRight,
   CheckCircle,
   PenSquare,
+  Users,
 } from "lucide-react";
 
 import "../css/About.css";
@@ -18,52 +19,49 @@ const styles = {
     minHeight: "100vh",
     display: "flex",
     flexDirection: "column",
-    background:
-      "linear-gradient(135deg, #0f172a 0%, #111827 45%, #1e3a8a 100%)",
+    background: "#f7f6f3",
     overflowX: "hidden",
+    color: "#111111",
   },
 
   container: {
     width: "100%",
-    maxWidth: "1200px",
+    maxWidth: "1280px",
     margin: "0 auto",
-    padding: "0 1rem",
+    padding: "0 1.5rem",
     boxSizing: "border-box",
   },
 
   heroGrid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-    gap: "3rem",
-    alignItems: "center",
+    gridTemplateColumns: "1.1fr 0.9fr",
+    gap: "2rem",
+    alignItems: "stretch",
     width: "100%",
   },
 
-  glassCard: {
-    background: "rgba(255,255,255,0.08)",
-    border: "1px solid rgba(255,255,255,0.1)",
-    borderRadius: "24px",
-    backdropFilter: "blur(14px)",
-    boxSizing: "border-box",
-    width: "100%",
+  card: {
+    background: "#ffffff",
+    border: "1px solid #e7e5e4",
+    borderRadius: "28px",
     overflow: "hidden",
+    boxSizing: "border-box",
+    boxShadow: "0 1px 2px rgba(0,0,0,0.04)",
   },
 
   sectionTitle: {
-    fontSize: "clamp(2rem, 4vw, 3rem)",
-    lineHeight: "1.05",
+    fontSize: "clamp(2.5rem, 5vw, 4.4rem)",
+    lineHeight: "0.95",
     fontWeight: "800",
-    marginBottom: "1.25rem",
-    color: "white",
-    wordBreak: "break-word",
+    marginBottom: "1.4rem",
+    color: "#111111",
+    letterSpacing: "-2px",
   },
 
   paragraph: {
-    fontSize: "clamp(1rem, 2vw, 1.1rem)",
+    fontSize: "1.05rem",
     lineHeight: "1.8",
-    color: "#cbd5e1",
-    width: "100%",
-    wordBreak: "break-word",
+    color: "#5f5f5f",
   },
 };
 
@@ -73,344 +71,386 @@ export default function LearningLog() {
       {/* HERO */}
       <section
         style={{
-          padding: "clamp(4rem, 8vw, 6rem) 0 4rem",
+          padding: "3rem 0 4rem",
           width: "100%",
         }}
       >
         <div style={styles.container}>
           <div style={styles.heroGrid}>
-            {/* LEFT */}
+            {/* LEFT MAIN CARD */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
               style={{
-                width: "100%",
-                minWidth: 0,
+                ...styles.card,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
               }}
             >
+              {/* TOP CONTENT */}
               <div
                 style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "8px",
-                  background: "rgba(255,255,255,0.1)",
-                  padding: "8px 14px",
-                  borderRadius: "999px",
-                  marginBottom: "1rem",
-                  flexWrap: "wrap",
-                  maxWidth: "100%",
+                  padding: "3rem",
                 }}
               >
-                <Sparkles size={18} color="#60a5fa" />
-
-                <span
+                <div
                   style={{
-                    color: "white",
-                    fontSize: "0.9rem",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    background: "#f3f4f6",
+                    padding: "8px 14px",
+                    borderRadius: "999px",
+                    marginBottom: "1.5rem",
+                    fontWeight: "600",
+                    color: "#444",
                   }}
                 >
-                  Build Knowledge Every Day
-                </span>
-              </div>
+                  <Sparkles size={16} />
+                  Daily Learning Platform
+                </div>
 
-              <h1 style={styles.sectionTitle}>
-                Share what you learn and track your growth daily.
-              </h1>
+                <h1 style={styles.sectionTitle}>
+                  One place to
+                  <br />
+                  track everything
+                  <br />
+                  you learn.
+                </h1>
 
-              <p
-                style={{
-                  ...styles.paragraph,
-                  marginBottom: "1.5rem",
-                }}
-              >
-                Your Learning Log is a space to document insights, discoveries,
-                skills, and ideas you learn every single day.
-              </p>
+                <p
+                  style={{
+                    ...styles.paragraph,
+                    marginBottom: "2rem",
+                    maxWidth: "620px",
+                  }}
+                >
+                  Build a public learning log where you can document ideas,
+                  coding discoveries, business insights, AI breakthroughs, and
+                  personal growth every day.
+                </p>
 
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "1rem",
-                  marginBottom: "2.5rem",
-                  width: "100%",
-                }}
-              >
-                {[
-                  "🧠 Log new concepts and lessons daily",
-                  "🔥 Build learning streaks and consistency",
-                  "📚 Share knowledge with the community",
-                  "✍️ Reflect on growth and progress over time",
-                ].map((item, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2 + index * 0.1 }}
-                    style={{
-                      display: "flex",
-                      alignItems: "flex-start",
-                      gap: "12px",
-                      color: "#e2e8f0",
-                      width: "100%",
-                    }}
-                  >
-                    <CheckCircle
-                      size={20}
-                      color="#60a5fa"
-                      style={{ flexShrink: 0, marginTop: "2px" }}
-                    />
-
-                    <span
+                {/* FEATURES */}
+                <div
+                  style={{
+                    display: "grid",
+                    gap: "1rem",
+                    marginBottom: "2.5rem",
+                  }}
+                >
+                  {[
+                    "Write and publish daily learning posts",
+                    "Build streaks and stay consistent",
+                    "Learn from the community",
+                    "Create your personal knowledge archive",
+                  ].map((item, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: index * 0.08 }}
                       style={{
-                        wordBreak: "break-word",
-                        lineHeight: "1.6",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "12px",
+                        color: "#222",
+                        fontWeight: "500",
                       }}
                     >
+                      <CheckCircle size={18} color="#2563eb" />
                       {item}
-                    </span>
-                  </motion.div>
-                ))}
+                    </motion.div>
+                  ))}
+                </div>
+
+                <Link
+                  to="/sign-up"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "10px",
+                    background: "#111111",
+                    color: "white",
+                    padding: "16px 24px",
+                    borderRadius: "14px",
+                    textDecoration: "none",
+                    fontWeight: "700",
+                    fontSize: "1rem",
+                  }}
+                >
+                  Start learning
+                  <ArrowRight size={18} />
+                </Link>
               </div>
 
-              <Link
-                to="/sign-up"
+              {/* BOTTOM PANEL */}
+              <div
                 style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "10px",
-                  padding: "14px 22px",
-                  borderRadius: "14px",
-                  textDecoration: "none",
-                  background:
-                    "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)",
-                  color: "white",
-                  fontWeight: "700",
-                  flexWrap: "wrap",
-                  maxWidth: "100%",
-                  textAlign: "center",
+                  background: "#f87171",
+                  padding: "2.5rem",
                 }}
               >
-                Start Logging Today
-                <ArrowRight size={18} />
-              </Link>
+                <div
+                  style={{
+                    background: "white",
+                    borderRadius: "24px",
+                    padding: "2rem",
+                    minHeight: "260px",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      marginBottom: "1.5rem",
+                    }}
+                  >
+                    <div
+                      style={{
+                        fontWeight: "700",
+                        fontSize: "1.1rem",
+                      }}
+                    >
+                      Today's Learning Log
+                    </div>
+
+                    <div
+                      style={{
+                        background: "#f3f4f6",
+                        padding: "8px 14px",
+                        borderRadius: "999px",
+                        fontSize: "0.9rem",
+                        color: "#555",
+                      }}
+                    >
+                      AI productivity tips
+                    </div>
+                  </div>
+
+                  <div
+                    style={{
+                      display: "grid",
+                      gap: "1rem",
+                    }}
+                  >
+                    {[
+                      "Learned how vector databases improve AI memory retrieval.",
+                      "Studied React performance optimization with memoization.",
+                      "Discovered a faster workflow for TypeORM queries.",
+                    ].map((item, index) => (
+                      <div
+                        key={index}
+                        style={{
+                          padding: "1rem",
+                          borderRadius: "14px",
+                          background: "#fafafa",
+                          border: "1px solid #ececec",
+                          color: "#444",
+                          lineHeight: "1.6",
+                        }}
+                      >
+                        ✍️ {item}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </motion.div>
 
-            {/* RIGHT */}
+            {/* RIGHT COLUMN */}
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               style={{
                 display: "grid",
                 gap: "1.5rem",
-                width: "100%",
-                minWidth: 0,
               }}
             >
-              {[
-                {
-                  icon: <PenSquare size={28} />,
-                  title: "Daily Learning Entries",
-                  desc: "Write short posts about what you learned today — whether it's coding, business, AI, productivity, or life lessons.",
-                },
-                {
-                  icon: <Brain size={28} />,
-                  title: "Grow Your Knowledge Base",
-                  desc: "Over time your learning log becomes a personal archive of ideas, reflections, and skills you can revisit anytime.",
-                },
-                {
-                  icon: <BookOpen size={28} />,
-                  title: "Learn From Others",
-                  desc: "Explore community posts to discover new insights, perspectives, and useful resources from other learners.",
-                },
-              ].map((card, index) => (
-                <motion.div
-                  key={index}
-                  whileHover={{ y: -4 }}
+              {/* CARD 1 */}
+              <div style={styles.card}>
+                <div
                   style={{
-                    ...styles.glassCard,
-                    padding: "1.5rem",
+                    padding: "2.2rem",
                   }}
                 >
                   <div
                     style={{
-                      color: "#60a5fa",
-                      marginBottom: "1rem",
+                      fontSize: "0.95rem",
+                      color: "#666",
+                      marginBottom: "0.8rem",
+                      fontWeight: "600",
                     }}
                   >
-                    {card.icon}
+                    Community Learning
                   </div>
 
-                  <h3
+                  <h2
                     style={{
-                      fontSize: "1.25rem",
-                      color: "white",
-                      marginBottom: "0.75rem",
-                      wordBreak: "break-word",
+                      fontSize: "2.3rem",
+                      lineHeight: "1",
+                      fontWeight: "800",
+                      marginBottom: "1rem",
+                      color: "#111",
+                      letterSpacing: "-1px",
                     }}
                   >
-                    {card.title}
-                  </h3>
+                    Learn from people
+                    <br />
+                    every day.
+                  </h2>
+                </div>
 
-                  <p
+                {/* BLUE SECTION */}
+                <div
+                  style={{
+                    background: "#60a5fa",
+                    padding: "2rem",
+                  }}
+                >
+                  <div
                     style={{
-                      color: "#cbd5e1",
-                      lineHeight: "1.7",
-                      wordBreak: "break-word",
+                      background: "white",
+                      borderRadius: "22px",
+                      padding: "1.5rem",
                     }}
                   >
-                    {card.desc}
-                  </p>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </div>
-      </section>
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "12px",
+                        marginBottom: "1.5rem",
+                      }}
+                    >
+                      <div
+                        style={{
+                          width: "42px",
+                          height: "42px",
+                          borderRadius: "50%",
+                          background: "#111",
+                          color: "white",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          fontWeight: "700",
+                        }}
+                      >
+                        A
+                      </div>
 
-      {/* CTA */}
-      <section
-        style={{
-          padding: "0 0 5rem",
-          width: "100%",
-        }}
-      >
-        <div style={styles.container}>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            style={{
-              ...styles.glassCard,
-              padding: "clamp(2rem, 5vw, 4rem)",
-              textAlign: "center",
-              position: "relative",
-              overflow: "hidden",
-            }}
-          >
-            {/* GLOW EFFECT */}
-            <div
-              style={{
-                position: "absolute",
-                top: "-120px",
-                right: "-120px",
-                width: "250px",
-                height: "250px",
-                background: "rgba(59,130,246,0.18)",
-                filter: "blur(90px)",
-                borderRadius: "50%",
-              }}
-            />
+                      <div>
+                        <div
+                          style={{
+                            fontWeight: "700",
+                          }}
+                        >
+                          Alex's Learning Streak
+                        </div>
 
-            <div
-              style={{
-                position: "relative",
-                zIndex: 2,
-              }}
-            >
-              <div
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "8px",
-                  background: "rgba(255,255,255,0.08)",
-                  padding: "8px 14px",
-                  borderRadius: "999px",
-                  marginBottom: "1.5rem",
-                  color: "#bfdbfe",
-                  fontWeight: "600",
-                }}
-              >
-                🔥 Daily Learning Challenge
+                        <div
+                          style={{
+                            color: "#666",
+                            fontSize: "0.9rem",
+                          }}
+                        >
+                          42 day streak 🔥
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      style={{
+                        display: "grid",
+                        gap: "1rem",
+                      }}
+                    >
+                      {[
+                        "Learning advanced AI prompting techniques",
+                        "Reading about startup growth systems",
+                        "Building a React dashboard project",
+                      ].map((item, index) => (
+                        <div
+                          key={index}
+                          style={{
+                            background: "#f8fafc",
+                            padding: "1rem",
+                            borderRadius: "14px",
+                            border: "1px solid #ececec",
+                            color: "#444",
+                          }}
+                        >
+                          📚 {item}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              <h2
-                style={{
-                  fontSize: "clamp(2.2rem, 5vw, 3.4rem)",
-                  color: "white",
-                  marginBottom: "1rem",
-                  lineHeight: "1.05",
-                  fontWeight: "800",
-                  wordBreak: "break-word",
-                }}
-              >
-                Learn Something New.
-                <br />
-                Every Single Day.
-              </h2>
-
-              <p
-                style={{
-                  ...styles.paragraph,
-                  maxWidth: "760px",
-                  margin: "0 auto 2rem",
-                  fontSize: "1.08rem",
-                }}
-              >
-                Join a community of curious learners documenting their growth,
-                building consistency, and sharing valuable insights with others.
-              </p>
-
+              {/* SMALL FEATURE CARDS */}
               <div
                 style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  gap: "1rem",
-                  flexWrap: "wrap",
-                  marginBottom: "2rem",
+                  display: "grid",
+                  gridTemplateColumns: "1fr 1fr",
+                  gap: "1.5rem",
                 }}
               >
                 {[
-                  "🧠 Daily Knowledge Posts",
-                  "🔥 Streak Tracking",
-                  "🌍 Community Learning",
-                ].map((item, index) => (
-                  <div
+                  {
+                    icon: <Flame size={28} />,
+                    title: "Streaks",
+                    desc: "Stay consistent daily.",
+                  },
+                  {
+                    icon: <Users size={28} />,
+                    title: "Community",
+                    desc: "Share knowledge publicly.",
+                  },
+                ].map((card, index) => (
+                  <motion.div
+                    whileHover={{ y: -4 }}
                     key={index}
                     style={{
-                      background: "rgba(255,255,255,0.06)",
-                      border: "1px solid rgba(255,255,255,0.08)",
-                      padding: "10px 16px",
-                      borderRadius: "999px",
-                      color: "#e2e8f0",
-                      fontWeight: "500",
-                      fontSize: "0.95rem",
+                      ...styles.card,
+                      padding: "1.8rem",
                     }}
                   >
-                    {item}
-                  </div>
+                    <div
+                      style={{
+                        color: "#111",
+                        marginBottom: "1rem",
+                      }}
+                    >
+                      {card.icon}
+                    </div>
+
+                    <h3
+                      style={{
+                        fontSize: "1.3rem",
+                        fontWeight: "700",
+                        marginBottom: "0.6rem",
+                        color: "#111",
+                      }}
+                    >
+                      {card.title}
+                    </h3>
+
+                    <p
+                      style={{
+                        color: "#666",
+                        lineHeight: "1.6",
+                      }}
+                    >
+                      {card.desc}
+                    </p>
+                  </motion.div>
                 ))}
               </div>
-
-              <Link
-                to="/sign-up"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "10px",
-                  padding: "16px 28px",
-                  borderRadius: "16px",
-                  textDecoration: "none",
-                  background:
-                    "linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)",
-                  color: "white",
-                  fontWeight: "800",
-                  fontSize: "1rem",
-                  flexWrap: "wrap",
-                  textAlign: "center",
-                  maxWidth: "100%",
-                  boxShadow: "0 12px 30px rgba(37,99,235,0.35)",
-                }}
-              >
-                Create Your Learning Log
-                <ArrowRight size={18} />
-              </Link>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
