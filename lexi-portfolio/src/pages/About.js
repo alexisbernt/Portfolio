@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
-  Globe,
-  Newspaper,
-  TrendingUp,
+  Brain,
+  BookOpen,
+  Flame,
   Sparkles,
   ArrowRight,
   CheckCircle,
+  PenSquare,
 } from "lucide-react";
 
 import "../css/About.css";
@@ -66,7 +67,7 @@ const styles = {
   },
 };
 
-export default function About() {
+export default function LearningLog() {
   return (
     <div style={styles.page}>
       {/* HERO */}
@@ -109,12 +110,12 @@ export default function About() {
                     fontSize: "0.9rem",
                   }}
                 >
-                  Embracing The Future Of Media & Information
+                  Build Knowledge Every Day
                 </span>
               </div>
 
               <h1 style={styles.sectionTitle}>
-                Quick tips and tricks to help you keep up with the news.
+                Share what you learn and track your growth daily.
               </h1>
 
               <p
@@ -123,7 +124,8 @@ export default function About() {
                   marginBottom: "1.5rem",
                 }}
               >
-                Stay informed with fast updates designed for people who want to stay aware and engaged. 
+                Your Learning Log is a space to document insights, discoveries,
+                skills, and ideas you learn every single day.
               </p>
 
               <div
@@ -136,10 +138,10 @@ export default function About() {
                 }}
               >
                 {[
-                  "⚡ Quick world updates in 1-minute",
-                  "📈 Competitions and metrics when you join News League",
-                  "🌍 Stories in collaboration with subject-matter experts",
-                  "🧠 Blog articles that quickly inform",
+                  "🧠 Log new concepts and lessons daily",
+                  "🔥 Build learning streaks and consistency",
+                  "📚 Share knowledge with the community",
+                  "✍️ Reflect on growth and progress over time",
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -191,7 +193,7 @@ export default function About() {
                   textAlign: "center",
                 }}
               >
-                Join The Community
+                Start Logging Today
                 <ArrowRight size={18} />
               </Link>
             </motion.div>
@@ -210,20 +212,19 @@ export default function About() {
             >
               {[
                 {
-                  icon: <Newspaper size={28} />,
-                  title: "What Makes News In A Wink Different?",
-                  desc: "News In A Wink expands past traditional journalism so news can reach more people on the platforms they use most. News In A Wink adds personality, fun, competition, and reflection when delivering current event updates to make sure you actually want to keep up with the news.",
+                  icon: <PenSquare size={28} />,
+                  title: "Daily Learning Entries",
+                  desc: "Write short posts about what you learned today — whether it's coding, business, AI, productivity, or life lessons.",
                 },
                 {
-                  icon: <Globe size={28} />,
-                  title: 
-                    "Global Event Updates To Help You Form Your Perspective",
-                  desc: "Today's most driven individuals — students, professionals, and lifelong learners — are falling behind on the news. With AI evolving overnight, political developments shifting daily, and a crowded media landscape full of unreliable sources, it's easy to feel lost. News In A Wink was built to change that: we make news fun by delivering fast, credible, and engaging news updates so you never miss what matters.",
+                  icon: <Brain size={28} />,
+                  title: "Grow Your Knowledge Base",
+                  desc: "Over time your learning log becomes a personal archive of ideas, reflections, and skills you can revisit anytime.",
                 },
                 {
-                  icon: <TrendingUp size={28} />,
-                  title: "The Competition To Stay Informed",
-                  desc: "Start keeping up to date with the latest news and trends through joining a news league.",
+                  icon: <BookOpen size={28} />,
+                  title: "Learn From Others",
+                  desc: "Explore community posts to discover new insights, perspectives, and useful resources from other learners.",
                 },
               ].map((card, index) => (
                 <motion.div
@@ -269,6 +270,7 @@ export default function About() {
           </div>
         </div>
       </section>
+
       {/* CTA */}
       <section
         style={{
@@ -322,7 +324,7 @@ export default function About() {
                   fontWeight: "600",
                 }}
               >
-                🏆 Weekly News League
+                🔥 Daily Learning Challenge
               </div>
 
               <h2
@@ -335,9 +337,9 @@ export default function About() {
                   wordBreak: "break-word",
                 }}
               >
-                Think You Know The News?
+                Learn Something New.
                 <br />
-                Compete For <span style={{ color: "#facc15" }}>$250.</span>
+                Every Single Day.
               </h2>
 
               <p
@@ -348,9 +350,8 @@ export default function About() {
                   fontSize: "1.08rem",
                 }}
               >
-                Join the free News Competition and receive a quick 5-question news
-                survey every Monday (06/08/2026 - 07/13/2026). Climb the leaderboard, stay informed, and compete
-                for the $250 prize.
+                Join a community of curious learners documenting their growth,
+                building consistency, and sharing valuable insights with others.
               </p>
 
               <div
@@ -363,9 +364,9 @@ export default function About() {
                 }}
               >
                 {[
-                  "📰 Weekly News Challenges",
-                  "⚡ 5 Quick Questions",
-                  "💰 $250 Prize Pool",
+                  "🧠 Daily Knowledge Posts",
+                  "🔥 Streak Tracking",
+                  "🌍 Community Learning",
                 ].map((item, index) => (
                   <div
                     key={index}
@@ -405,7 +406,7 @@ export default function About() {
                   boxShadow: "0 12px 30px rgba(37,99,235,0.35)",
                 }}
               >
-                Join The News Competition
+                Create Your Learning Log
                 <ArrowRight size={18} />
               </Link>
             </div>

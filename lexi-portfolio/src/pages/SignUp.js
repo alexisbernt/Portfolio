@@ -1,418 +1,523 @@
-// src/pages/SignUp.js
-
-import React, { useState } from "react";
-import emailjs from "emailjs-com";
-import Footer from "../Footer";
+import { useState } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 import {
-  Trophy,
-  DollarSign,
-  Mail,
-  User,
+  Sparkles,
+  ArrowRight,
   CheckCircle,
-  Newspaper,
-  Clock3,
-  Brain,
+  Flame,
+  Users,
+  BookOpen,
 } from "lucide-react";
 
-// Initialize EmailJS
-emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
+import Footer from "../Footer";
 
-function SignUp() {
+const styles = {
+  page: {
+    minHeight: "100vh",
+    display: "flex",
+    flexDirection: "column",
+    background: "#f7f6f3",
+    overflowX: "hidden",
+    color: "#111111",
+  },
+
+  container: {
+    width: "100%",
+    maxWidth: "1280px",
+    margin: "0 auto",
+    padding: "0 1.5rem",
+    boxSizing: "border-box",
+  },
+
+  heroGrid: {
+    display: "grid",
+    gridTemplateColumns: "1fr 0.9fr",
+    gap: "2rem",
+    alignItems: "stretch",
+    width: "100%",
+  },
+
+  card: {
+    background: "#ffffff",
+    border: "1px solid #e7e5e4",
+    borderRadius: "28px",
+    overflow: "hidden",
+    boxSizing: "border-box",
+    boxShadow: "0 1px 2px rgba(0,0,0,0.04)",
+  },
+
+  sectionTitle: {
+    fontSize: "clamp(2.5rem, 5vw, 4.5rem)",
+    lineHeight: "0.95",
+    fontWeight: "800",
+    marginBottom: "1.4rem",
+    color: "#111111",
+    letterSpacing: "-2px",
+  },
+
+  paragraph: {
+    fontSize: "1.05rem",
+    lineHeight: "1.8",
+    color: "#5f5f5f",
+  },
+
+  input: {
+    width: "100%",
+    padding: "16px 18px",
+    borderRadius: "16px",
+    border: "1px solid #e5e7eb",
+    background: "#fafafa",
+    fontSize: "1rem",
+    outline: "none",
+    boxSizing: "border-box",
+  },
+
+  button: {
+    width: "100%",
+    background: "#111111",
+    color: "white",
+    border: "none",
+    padding: "18px",
+    borderRadius: "16px",
+    fontWeight: "700",
+    fontSize: "1rem",
+    cursor: "pointer",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "10px",
+  },
+};
+
+export default function SignUp() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    agree: true,
+    learningGoal: "",
   });
 
-  const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-
-    setFormData((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     setLoading(true);
-    setStatus("");
 
-    const emailData = {
-      user_name: formData.name,
-      user_email: formData.email,
-      competition_name: "Weekly News League",
-      signup_date: new Date().toLocaleDateString(),
-    };
-
-    emailjs
-      .send(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-        emailData
-      )
-      .then(
-        (result) => {
-          console.log("SUCCESS!", result.text);
-
-          setStatus(
-            "🏆 You're officially in the News League! Check your inbox."
-          );
-
-          setFormData({
-            name: "",
-            email: "",
-            agree: true,
-          });
-
-          setLoading(false);
+    try {
+      await emailjs.send(
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          learning_goal: formData.learningGoal,
         },
-        (error) => {
-          console.error("FAILED...", error.text);
-
-          setStatus("❌ Something went wrong. Please try again.");
-
-          setLoading(false);
-        }
+        "YOUR_PUBLIC_KEY"
       );
+
+      setSuccess(true);
+
+      setFormData({
+        name: "",
+        email: "",
+        learningGoal: "",
+      });
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong.");
+    }
+
+    setLoading(false);
   };
 
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        background:
-          "linear-gradient(135deg, #020617 0%, #0f172a 45%, #1d4ed8 100%)",
-      }}
-    >
-      {/* MAIN CONTENT */}
-      <div
+    <div style={styles.page}>
+      <section
         style={{
-          flex: 1,
+          padding: "3rem 0 4rem",
           width: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          padding: "3rem 1.5rem",
-          boxSizing: "border-box",
         }}
       >
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          style={{
-            width: "100%",
-            maxWidth: "1200px",
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-            gap: "3rem",
-            alignItems: "center",
-          }}
-        >
-          {/* LEFT SIDE */}
-          <div>
-            <div
+        <div style={styles.container}>
+          <div style={styles.heroGrid}>
+            {/* LEFT SIDE */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
               style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "8px",
-                background: "rgba(255,255,255,0.1)",
-                padding: "8px 14px",
-                borderRadius: "999px",
-                marginBottom: "1.5rem",
-              }}
-            >
-              <Trophy size={18} color="#facc15" />
-
-              <span
-                style={{
-                  color: "white",
-                  fontSize: "0.95rem",
-                  fontWeight: "600",
-                }}
-              >
-                Weekly News League
-              </span>
-            </div>
-
-            <h1
-              style={{
-                fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
-                lineHeight: "1.1",
-                marginBottom: "1rem",
-                fontWeight: "900",
-                color: "white",
-              }}
-            >
-              Stay informed.
-              <br />
-              Win <span style={{ color: "#facc15" }}>$250.</span>
-            </h1>
-
-            <p
-              style={{
-                fontSize: "1.1rem",
-                lineHeight: "1.8",
-                color: "#cbd5e1",
-                marginBottom: "2rem",
-                maxWidth: "560px",
-              }}
-            >
-              Join the free News League competition. Every Monday you'll receive
-              a quick 5-question news survey. The member with the best overall
-              score wins the $250 prize.
-            </p>
-
-            <div
-              style={{
+                ...styles.card,
                 display: "flex",
                 flexDirection: "column",
-                gap: "1rem",
+                justifyContent: "space-between",
               }}
             >
-              {[
-                {
-                  icon: <DollarSign size={20} color="#4ade80" />,
-                  text: "$250 USD prize",
-                },
-                {
-                  icon: <Clock3 size={20} color="#60a5fa" />,
-                  text: "5 quick questions every Monday",
-                },
-                {
-                  icon: <Brain size={20} color="#c084fc" />,
-                  text: "Starting June 8th, 2026. Runs until July 13th, 2026.",
-                },
-                {
-                  icon: <Newspaper size={20} color="#f97316" />,
-                  text: "Stay updated on current events. Test your knowledge.",
-                },
-              ].map((item, index) => (
+              <div
+                style={{
+                  padding: "3rem",
+                }}
+              >
                 <div
-                  key={index}
                   style={{
-                    display: "flex",
+                    display: "inline-flex",
                     alignItems: "center",
-                    gap: "12px",
-                    color: "#e2e8f0",
+                    gap: "8px",
+                    background: "#f3f4f6",
+                    padding: "8px 14px",
+                    borderRadius: "999px",
+                    marginBottom: "1.5rem",
+                    fontWeight: "600",
+                    color: "#444",
                   }}
                 >
-                  <CheckCircle color="#60a5fa" size={20} />
-                  <span>{item.text}</span>
+                  <Sparkles size={16} />
+                  Join The Learning Community
                 </div>
-              ))}
-            </div>
+
+                <h1 style={styles.sectionTitle}>
+                  Start building
+                  <br />
+                  your learning
+                  <br />
+                  streak today.
+                </h1>
+
+                <p
+                  style={{
+                    ...styles.paragraph,
+                    marginBottom: "2rem",
+                    maxWidth: "580px",
+                  }}
+                >
+                  Document what you learn every day, build consistency, and
+                  share your ideas with a growing community of learners,
+                  developers, and creators.
+                </p>
+
+                <div
+                  style={{
+                    display: "grid",
+                    gap: "1rem",
+                    marginBottom: "2.5rem",
+                  }}
+                >
+                  {[
+                    "Track your learning journey",
+                    "Build public learning streaks",
+                    "Connect with ambitious learners",
+                    "Share insights and discoveries",
+                  ].map((item, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: index * 0.08 }}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "12px",
+                        color: "#222",
+                        fontWeight: "500",
+                      }}
+                    >
+                      <CheckCircle size={18} color="#2563eb" />
+                      {item}
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+
+              {/* BOTTOM PANEL */}
+              <div
+                style={{
+                  background: "#60a5fa",
+                  padding: "2.5rem",
+                }}
+              >
+                <div
+                  style={{
+                    background: "white",
+                    borderRadius: "24px",
+                    padding: "2rem",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "12px",
+                      marginBottom: "1.5rem",
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: "44px",
+                        height: "44px",
+                        borderRadius: "50%",
+                        background: "#111",
+                        color: "white",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        fontWeight: "700",
+                      }}
+                    >
+                      M
+                    </div>
+
+                    <div>
+                      <div
+                        style={{
+                          fontWeight: "700",
+                        }}
+                      >
+                        Maya's Learning Log
+                      </div>
+
+                      <div
+                        style={{
+                          color: "#666",
+                          fontSize: "0.92rem",
+                        }}
+                      >
+                        58 day streak 🔥
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    style={{
+                      display: "grid",
+                      gap: "1rem",
+                    }}
+                  >
+                    {[
+                      "Learning advanced React architecture patterns.",
+                      "Exploring AI startup growth systems.",
+                      "Building scalable Node.js backend workflows.",
+                    ].map((item, index) => (
+                      <div
+                        key={index}
+                        style={{
+                          background: "#f8fafc",
+                          padding: "1rem",
+                          borderRadius: "14px",
+                          border: "1px solid #ececec",
+                          color: "#444",
+                        }}
+                      >
+                        📚 {item}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* RIGHT SIDE FORM */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              style={{
+                display: "grid",
+                gap: "1.5rem",
+              }}
+            >
+              {/* SIGN UP FORM */}
+              <div style={styles.card}>
+                <div
+                  style={{
+                    padding: "2.5rem",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontSize: "0.95rem",
+                      color: "#666",
+                      marginBottom: "0.8rem",
+                      fontWeight: "600",
+                    }}
+                  >
+                    Create Account
+                  </div>
+
+                  <h2
+                    style={{
+                      fontSize: "2.4rem",
+                      lineHeight: "1",
+                      fontWeight: "800",
+                      marginBottom: "1rem",
+                      color: "#111",
+                      letterSpacing: "-1px",
+                    }}
+                  >
+                    Join thousands
+                    <br />
+                    of learners.
+                  </h2>
+
+                  <p
+                    style={{
+                      color: "#666",
+                      lineHeight: "1.7",
+                      marginBottom: "2rem",
+                    }}
+                  >
+                    Sign up to start logging your daily learning journey and
+                    connect with a community focused on growth.
+                  </p>
+
+                  <form
+                    onSubmit={handleSubmit}
+                    style={{
+                      display: "grid",
+                      gap: "1rem",
+                    }}
+                  >
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Full name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      style={styles.input}
+                    />
+
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email address"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      style={styles.input}
+                    />
+
+                    <textarea
+                      name="learningGoal"
+                      placeholder="What are you currently learning?"
+                      value={formData.learningGoal}
+                      onChange={handleChange}
+                      rows={5}
+                      required
+                      style={{
+                        ...styles.input,
+                        resize: "none",
+                        fontFamily: "inherit",
+                      }}
+                    />
+
+                    <button
+                      type="submit"
+                      disabled={loading}
+                      style={styles.button}
+                    >
+                      {loading ? "Submitting..." : "Start Learning"}
+                      <ArrowRight size={18} />
+                    </button>
+
+                    {success && (
+                      <div
+                        style={{
+                          background: "#ecfdf5",
+                          color: "#065f46",
+                          padding: "14px",
+                          borderRadius: "14px",
+                          fontWeight: "600",
+                          textAlign: "center",
+                          marginTop: "0.5rem",
+                        }}
+                      >
+                        🎉 You're officially on the list!
+                      </div>
+                    )}
+                  </form>
+                </div>
+              </div>
+
+              {/* FEATURE CARDS */}
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "1fr 1fr 1fr",
+                  gap: "1rem",
+                }}
+              >
+                {[
+                  {
+                    icon: <Flame size={26} />,
+                    title: "Streaks",
+                    desc: "Stay consistent.",
+                  },
+                  {
+                    icon: <Users size={26} />,
+                    title: "Community",
+                    desc: "Learn together.",
+                  },
+                  {
+                    icon: <BookOpen size={26} />,
+                    title: "Knowledge",
+                    desc: "Track progress.",
+                  },
+                ].map((card, index) => (
+                  <motion.div
+                    whileHover={{ y: -4 }}
+                    key={index}
+                    style={{
+                      ...styles.card,
+                      padding: "1.5rem",
+                    }}
+                  >
+                    <div
+                      style={{
+                        marginBottom: "1rem",
+                      }}
+                    >
+                      {card.icon}
+                    </div>
+
+                    <h3
+                      style={{
+                        fontSize: "1.1rem",
+                        fontWeight: "700",
+                        marginBottom: "0.4rem",
+                      }}
+                    >
+                      {card.title}
+                    </h3>
+
+                    <p
+                      style={{
+                        color: "#666",
+                        lineHeight: "1.5",
+                        fontSize: "0.92rem",
+                      }}
+                    >
+                      {card.desc}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
           </div>
+        </div>
+      </section>
 
-          {/* RIGHT SIDE FORM */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3 }}
-            style={{
-              width: "100%",
-              background: "rgba(255,255,255,0.08)",
-              border: "1px solid rgba(255,255,255,0.12)",
-              borderRadius: "24px",
-              padding: "2rem",
-              backdropFilter: "blur(18px)",
-              boxShadow: "0 10px 40px rgba(0,0,0,0.3)",
-              boxSizing: "border-box",
-            }}
-          >
-            <div style={{ marginBottom: "2rem" }}>
-              <h2
-                style={{
-                  fontSize: "2rem",
-                  marginBottom: "0.5rem",
-                  fontWeight: "700",
-                  color: "white",
-                }}
-              >
-                Join the Competition
-              </h2>
-
-              <p style={{ color: "#cbd5e1" }}>
-                Free entry. Weekly challenge. $250 prize.
-              </p>
-            </div>
-
-            <form onSubmit={handleSubmit}>
-              {/* NAME */}
-              <div style={{ marginBottom: "1.2rem" }}>
-                <label
-                  style={{
-                    display: "block",
-                    marginBottom: "8px",
-                    color: "#e2e8f0",
-                    fontWeight: "500",
-                  }}
-                >
-                  Full Name
-                </label>
-
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    background: "rgba(255,255,255,0.08)",
-                    border: "1px solid rgba(255,255,255,0.1)",
-                    borderRadius: "12px",
-                    padding: "0 14px",
-                  }}
-                >
-                  <User size={18} color="#94a3b8" />
-
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    placeholder="Enter your name"
-                    style={{
-                      width: "100%",
-                      padding: "14px",
-                      border: "none",
-                      background: "transparent",
-                      color: "white",
-                      outline: "none",
-                      fontSize: "1rem",
-                    }}
-                  />
-                </div>
-              </div>
-
-              {/* EMAIL */}
-              <div style={{ marginBottom: "1.2rem" }}>
-                <label
-                  style={{
-                    display: "block",
-                    marginBottom: "8px",
-                    color: "#e2e8f0",
-                    fontWeight: "500",
-                  }}
-                >
-                  Email Address
-                </label>
-
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    background: "rgba(255,255,255,0.08)",
-                    border: "1px solid rgba(255,255,255,0.1)",
-                    borderRadius: "12px",
-                    padding: "0 14px",
-                  }}
-                >
-                  <Mail size={18} color="#94a3b8" />
-
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    placeholder="you@example.com"
-                    style={{
-                      width: "100%",
-                      padding: "14px",
-                      border: "none",
-                      background: "transparent",
-                      color: "white",
-                      outline: "none",
-                      fontSize: "1rem",
-                    }}
-                  />
-                </div>
-              </div>
-
-              {/* CHECKBOX */}
-              <label
-                style={{
-                  display: "flex",
-                  alignItems: "flex-start",
-                  gap: "10px",
-                  marginBottom: "1.8rem",
-                  color: "#cbd5e1",
-                  fontSize: "0.95rem",
-                  lineHeight: "1.5",
-                }}
-              >
-                <input
-                  type="checkbox"
-                  name="agree"
-                  checked={formData.agree}
-                  onChange={handleChange}
-                  required
-                  style={{ marginTop: "3px" }}
-                />
-
-                Receive the weekly Monday news survey and league updates.
-              </label>
-
-              {/* BUTTON */}
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.97 }}
-                type="submit"
-                disabled={loading}
-                style={{
-                  width: "100%",
-                  padding: "15px",
-                  background:
-                    "linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)",
-                  color: "#fff",
-                  border: "none",
-                  borderRadius: "14px",
-                  cursor: "pointer",
-                  fontSize: "1rem",
-                  fontWeight: "700",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "10px",
-                  boxShadow: "0 10px 25px rgba(37,99,235,0.4)",
-                }}
-              >
-                <Trophy size={18} />
-
-                {loading ? "Joining..." : "Enter the League"}
-              </motion.button>
-            </form>
-
-            {status && (
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                style={{
-                  marginTop: "1.5rem",
-                  color: "#93c5fd",
-                  textAlign: "center",
-                  fontWeight: "600",
-                }}
-              >
-                {status}
-              </motion.p>
-            )}
-          </motion.div>
-        </motion.div>
-      </div>
-
-      {/* FOOTER */}
       <footer
         style={{
-          width: "100%",
           marginTop: "auto",
+          width: "100%",
         }}
       >
         <Footer />
@@ -420,5 +525,3 @@ function SignUp() {
     </div>
   );
 }
-
-export default SignUp;
