@@ -1,28 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Sparkles } from "lucide-react";
+import { Sparkles, ArrowRight } from "lucide-react";
 
 const sectionHeader = (title) => (
-  <div style={{ marginBottom: "28px" }}>
+  <div style={{ marginBottom: "34px" }}>
     <div
       style={{
         display: "inline-flex",
         alignItems: "center",
         gap: "8px",
-        background: "rgba(255,255,255,0.08)",
+        background: "#f3f4f6",
         padding: "8px 14px",
         borderRadius: "999px",
-        marginBottom: "1rem",
-        border: "1px solid rgba(255,255,255,0.08)",
-        backdropFilter: "blur(10px)",
+        marginBottom: "1.2rem",
+        fontWeight: "600",
+        color: "#444",
       }}
     >
-      <Sparkles size={16} color="#60a5fa" />
+      <Sparkles size={16} />
 
       <span
         style={{
-          color: "white",
+          color: "#444",
           fontSize: "0.85rem",
           fontWeight: "600",
         }}
@@ -33,27 +33,16 @@ const sectionHeader = (title) => (
 
     <h2
       style={{
-        fontSize: "clamp(2rem, 4vw, 3rem)",
+        fontSize: "clamp(2.5rem, 5vw, 4.4rem)",
         fontWeight: 800,
         marginBottom: "10px",
-        color: "white",
-        lineHeight: "1.05",
+        color: "#111111",
+        lineHeight: "0.95",
+        letterSpacing: "-2px",
       }}
     >
       {title}
     </h2>
-
-    {/* <p
-      style={{
-        color: "#cbd5e1",
-        fontSize: "1rem",
-        lineHeight: "1.7",
-        maxWidth: "700px",
-      }}
-    >
-      Fast-moving stories, modern insights, and news designed for the next
-      generation of readers.
-    </p> */}
   </div>
 );
 
@@ -62,14 +51,13 @@ const Blog = () => {
     <div
       style={{
         minHeight: "100vh",
-        background:
-          "linear-gradient(135deg, #020617 0%, #0f172a 45%, #1d4ed8 100%)",
-        padding: "clamp(20px, 4vw, 40px)",
+        background: "#f7f6f3",
+        padding: "clamp(24px, 4vw, 42px)",
       }}
     >
       <div
         style={{
-          maxWidth: "1200px",
+          maxWidth: "1280px",
           margin: "0 auto",
         }}
       >
@@ -80,7 +68,7 @@ const Blog = () => {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
               gap: "24px",
             }}
           >
@@ -91,6 +79,7 @@ const Blog = () => {
                 desc: "An Assessment from News In A Wink.",
                 img: "/adulting-101.png",
                 link: "/story/6",
+                accent: "#f87171",
               },
               {
                 title:
@@ -98,6 +87,7 @@ const Blog = () => {
                 desc: "An Assessment by News In A Wink.",
                 img: "/anthropic.png",
                 link: "/story/3",
+                accent: "#60a5fa",
               },
               {
                 title:
@@ -105,6 +95,7 @@ const Blog = () => {
                 desc: "Subject Matter Expert: Amanda Matta.",
                 img: "/blog1.jpeg",
                 link: "/story/1",
+                accent: "#facc15",
               },
               {
                 title:
@@ -112,77 +103,107 @@ const Blog = () => {
                 desc: "Featured: Reese (UNI Volleyball Player).",
                 img: "/@reese_news.png",
                 link: "/story/2",
+                accent: "#c084fc",
               },
               {
                 title: "The Formula for Prompting AI",
                 desc: "How do you optimize for the best Artificial Intelligence generated responses?",
                 img: "/ai-formula.png",
                 link: "/post2",
+                accent: "#34d399",
               },
               {
                 title: "Networking and Webpages Basics",
                 desc: "All of those techy terms that make our webpages load: Proxy, DNS, and more.",
                 img: "/ai-dev.png",
                 link: "/post4",
+                accent: "#fb923c",
               },
               {
                 title: "Awareness, Culture, and Professionalism",
                 desc: "Collaborating with Amber Ferguson.",
                 img: "/amber.png",
                 link: "/story/4",
+                accent: "#38bdf8",
               },
               {
                 title: "Retrieval Augmented Generation (RAG)",
                 desc: "Understanding how RAG works, what makes it powerful, and how you can apply it.",
                 img: "/rag-doll.png",
                 link: "/post1",
+                accent: "#818cf8",
               },
             ].map((post, i) => (
               <Link
                 key={i}
                 to={post.link}
-                style={{ textDecoration: "none" }}
+                style={{
+                  textDecoration: "none",
+                  height: "100%",
+                }}
               >
                 <motion.div
-                  whileHover={{ y: -6 }}
+                  whileHover={{
+                    y: -6,
+                  }}
                   transition={{ duration: 0.2 }}
                   style={{
-                    background: "rgba(255,255,255,0.08)",
-                    border: "1px solid rgba(255,255,255,0.08)",
-                    borderRadius: "22px",
+                    background: "#ffffff",
+                    border: "1px solid #e7e5e4",
+                    borderRadius: "28px",
                     overflow: "hidden",
-                    backdropFilter: "blur(14px)",
-                    boxShadow: "0 10px 35px rgba(0,0,0,0.25)",
+                    boxShadow: "0 1px 2px rgba(0,0,0,0.04)",
                     height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
                   }}
                 >
+                  {/* TOP COLOR BLOCK */}
                   <div
                     style={{
-                      width: "100%",
-                      aspectRatio: "16 / 9",
-                      overflow: "hidden",
+                      background: post.accent,
+                      padding: "20px",
                     }}
                   >
-                    <img
-                      src={post.img}
-                      alt=""
+                    <div
                       style={{
                         width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                        transition: "transform 0.4s ease",
+                        aspectRatio: "16 / 9",
+                        overflow: "hidden",
+                        borderRadius: "22px",
+                        background: "white",
                       }}
-                    />
+                    >
+                      <img
+                        src={post.img}
+                        alt=""
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                          transition: "transform 0.4s ease",
+                        }}
+                      />
+                    </div>
                   </div>
 
-                  <div style={{ padding: "20px" }}>
+                  {/* CONTENT */}
+                  <div
+                    style={{
+                      padding: "24px",
+                      display: "flex",
+                      flexDirection: "column",
+                      flex: 1,
+                    }}
+                  >
                     <h3
                       style={{
-                        fontSize: "clamp(1rem, 1.2vw, 1.15rem)",
-                        fontWeight: 700,
-                        color: "white",
-                        lineHeight: "1.4",
-                        marginBottom: "10px",
+                        fontSize: "1.3rem",
+                        fontWeight: 800,
+                        color: "#111111",
+                        lineHeight: "1.35",
+                        marginBottom: "12px",
+                        letterSpacing: "-0.5px",
                       }}
                     >
                       {post.title}
@@ -190,10 +211,11 @@ const Blog = () => {
 
                     <p
                       style={{
-                        fontSize: "clamp(0.82rem, 1vw, 0.92rem)",
-                        color: "#cbd5e1",
+                        fontSize: "0.95rem",
+                        color: "#666",
                         lineHeight: "1.7",
-                        marginBottom: "14px",
+                        marginBottom: "20px",
+                        flex: 1,
                       }}
                     >
                       {post.desc}
@@ -203,13 +225,14 @@ const Blog = () => {
                       style={{
                         display: "inline-flex",
                         alignItems: "center",
-                        gap: "6px",
-                        color: "#60a5fa",
+                        gap: "8px",
+                        color: "#111111",
                         fontWeight: 700,
-                        fontSize: "0.88rem",
+                        fontSize: "0.92rem",
                       }}
                     >
-                      Read More →
+                      Read More
+                      <ArrowRight size={16} />
                     </span>
                   </div>
                 </motion.div>
