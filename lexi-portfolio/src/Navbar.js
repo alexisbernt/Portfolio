@@ -17,14 +17,14 @@ function Navbar() {
 
       {/* NAV LINKS */}
       <div className="navbar-links">
-        <Link to="/" className={location.pathname === "/" ? "active" : ""}>
+        <Link to="/home" className={location.pathname === "/home" ? "active" : ""}>
           Home
         </Link>
         <Link to="/about" className={location.pathname === "/about" ? "active" : ""}>
           About Us
         </Link>
-        <Link to="/sign-up" className={location.pathname === "/sign-up" ? "active" : ""}>
-          Join News League
+        <Link to="/" className={location.pathname === "/sign-up" ? "active" : ""}>
+          Join The Community of Learners
         </Link>
         <Link to="/blog" className={location.pathname === "/blog" ? "active" : ""}>
           Blog

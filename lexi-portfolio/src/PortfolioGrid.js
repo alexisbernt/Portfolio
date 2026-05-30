@@ -200,7 +200,7 @@ function ModernLandingPage() {
             ))}
             <div style={{ marginTop: "1rem" }}>
                     <Link to="/sign-up" style={styles.button}>
-                     Get The Newsletter: News In A Wink Weekly Recap (It's Free! Sent Out Every Monday) <ArrowRight size={16} />
+                     Get The Newsletter: A Monthly Recap (It's Free!) <ArrowRight size={16} />
                     </Link>
                   </div>
             {/* NEWSLETTER + NEWS LEAGUE (TIGHT VERSION) */}
@@ -218,11 +218,11 @@ function ModernLandingPage() {
                 }}
               >
                 <div style={{ fontSize: "0.72rem", fontWeight: 700, color: "#6b7280" }}>
-                  NEWS COMPETITION
+                  LEARNING COMPETITION
                 </div>
 
                 <div style={{ fontSize: "1rem", fontWeight: 800, marginTop: "0.25rem" }}>
-                  Weekly News League 🏆
+                  Learning League 🏆
                 </div>
 
                 <p
@@ -233,7 +233,7 @@ function ModernLandingPage() {
                     fontSize: "0.9rem",
                   }}
                 >
-                  5 questions every Monday. Compete on current events. Win <strong>$250</strong>.
+                 Taking entries for a new competition called learning league. Coming soon. Win <strong>$100</strong>.
                 </p>
 
                 <Link

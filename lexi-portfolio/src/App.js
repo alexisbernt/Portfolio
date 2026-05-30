@@ -43,7 +43,8 @@ function App() {
         <div className="main-container">
           <Navbar />
           <Routes>
-            <Route path="/" element={<PortfolioGrid />} />
+            <Route path="/" element={<SignUp />} />
+            <Route path="/home" element={<PortfolioGrid />} />
             <Route path="/newsinawink" element={<NewsPage1 />} />
             <Route path="/about" element={<About />} />
             <Route path="/coins" element={<Coins />} />
