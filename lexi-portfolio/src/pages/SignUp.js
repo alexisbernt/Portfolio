@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import {
@@ -26,16 +26,8 @@ const styles = {
     width: "100%",
     maxWidth: "1280px",
     margin: "0 auto",
-    padding: "0 1.5rem",
+    padding: "0 clamp(1rem, 4vw, 2rem)",
     boxSizing: "border-box",
-  },
-
-  heroGrid: {
-    display: "grid",
-    gridTemplateColumns: "1fr 0.9fr",
-    gap: "2rem",
-    alignItems: "stretch",
-    width: "100%",
   },
 
   card: {
@@ -45,19 +37,21 @@ const styles = {
     overflow: "hidden",
     boxSizing: "border-box",
     boxShadow: "0 1px 2px rgba(0,0,0,0.04)",
+    width: "100%",
   },
 
   sectionTitle: {
-    fontSize: "clamp(2.5rem, 5vw, 4.5rem)",
+    fontSize: "clamp(2.2rem, 7vw, 4.8rem)",
     lineHeight: "0.95",
     fontWeight: "800",
     marginBottom: "1.4rem",
     color: "#111111",
     letterSpacing: "-2px",
+    wordBreak: "break-word",
   },
 
   paragraph: {
-    fontSize: "1.05rem",
+    fontSize: "clamp(0.95rem, 2vw, 1.05rem)",
     lineHeight: "1.8",
     color: "#5f5f5f",
   },
@@ -87,10 +81,13 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     gap: "10px",
+    flexWrap: "wrap",
   },
 };
 
 export default function SignUp() {
+  const [isMobile, setIsMobile] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -99,6 +96,18 @@ export default function SignUp() {
 
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 968);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleChange = (e) => {
     setFormData({
@@ -143,12 +152,20 @@ export default function SignUp() {
     <div style={styles.page}>
       <section
         style={{
-          padding: "3rem 0 4rem",
+          padding: "clamp(1.5rem, 4vw, 3rem) 0 4rem",
           width: "100%",
         }}
       >
         <div style={styles.container}>
-          <div style={styles.heroGrid}>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: isMobile ? "1fr" : "1fr 0.9fr",
+              gap: "clamp(1.25rem, 3vw, 2rem)",
+              alignItems: "stretch",
+              width: "100%",
+            }}
+          >
             {/* LEFT SIDE */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -163,7 +180,7 @@ export default function SignUp() {
             >
               <div
                 style={{
-                  padding: "3rem",
+                  padding: "clamp(1.5rem, 5vw, 3rem)",
                 }}
               >
                 <div
@@ -177,6 +194,8 @@ export default function SignUp() {
                     marginBottom: "1.5rem",
                     fontWeight: "600",
                     color: "#444",
+                    fontSize: "0.9rem",
+                    flexWrap: "wrap",
                   }}
                 >
                   <Sparkles size={16} />
@@ -223,14 +242,19 @@ export default function SignUp() {
                       transition={{ delay: index * 0.08 }}
                       style={{
                         display: "flex",
-                        alignItems: "center",
+                        alignItems: "flex-start",
                         gap: "12px",
                         color: "#222",
                         fontWeight: "500",
+                        lineHeight: "1.5",
                       }}
                     >
-                      <CheckCircle size={18} color="#2563eb" />
-                      {item}
+                      <CheckCircle
+                        size={18}
+                        color="#2563eb"
+                        style={{ flexShrink: 0, marginTop: "2px" }}
+                      />
+                      <span>{item}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -240,14 +264,14 @@ export default function SignUp() {
               <div
                 style={{
                   background: "#60a5fa",
-                  padding: "2.5rem",
+                  padding: "clamp(1.25rem, 4vw, 2.5rem)",
                 }}
               >
                 <div
                   style={{
                     background: "white",
                     borderRadius: "24px",
-                    padding: "2rem",
+                    padding: "clamp(1.25rem, 4vw, 2rem)",
                   }}
                 >
                   <div
@@ -262,6 +286,7 @@ export default function SignUp() {
                       style={{
                         width: "44px",
                         height: "44px",
+                        minWidth: "44px",
                         borderRadius: "50%",
                         background: "#111",
                         color: "white",
@@ -278,6 +303,7 @@ export default function SignUp() {
                       <div
                         style={{
                           fontWeight: "700",
+                          fontSize: "clamp(0.95rem, 2vw, 1rem)",
                         }}
                       >
                         Maya's Learning Log
@@ -286,7 +312,7 @@ export default function SignUp() {
                       <div
                         style={{
                           color: "#666",
-                          fontSize: "0.92rem",
+                          fontSize: "0.9rem",
                         }}
                       >
                         58 day streak 🔥
@@ -313,6 +339,9 @@ export default function SignUp() {
                           borderRadius: "14px",
                           border: "1px solid #ececec",
                           color: "#444",
+                          lineHeight: "1.6",
+                          fontSize: "0.95rem",
+                          wordBreak: "break-word",
                         }}
                       >
                         📚 {item}
@@ -337,7 +366,7 @@ export default function SignUp() {
               <div style={styles.card}>
                 <div
                   style={{
-                    padding: "2.5rem",
+                    padding: "clamp(1.5rem, 5vw, 2.5rem)",
                   }}
                 >
                   <div
@@ -353,8 +382,8 @@ export default function SignUp() {
 
                   <h2
                     style={{
-                      fontSize: "2.4rem",
-                      lineHeight: "1",
+                      fontSize: "clamp(2rem, 6vw, 2.8rem)",
+                      lineHeight: "1.05",
                       fontWeight: "800",
                       marginBottom: "1rem",
                       color: "#111",
@@ -371,6 +400,7 @@ export default function SignUp() {
                       color: "#666",
                       lineHeight: "1.7",
                       marginBottom: "2rem",
+                      fontSize: "clamp(0.95rem, 2vw, 1rem)",
                     }}
                   >
                     Sign up to start logging your daily learning journey and
@@ -413,8 +443,9 @@ export default function SignUp() {
                       required
                       style={{
                         ...styles.input,
-                        resize: "none",
+                        resize: "vertical",
                         fontFamily: "inherit",
+                        minHeight: "140px",
                       }}
                     />
 
@@ -437,6 +468,7 @@ export default function SignUp() {
                           fontWeight: "600",
                           textAlign: "center",
                           marginTop: "0.5rem",
+                          lineHeight: "1.5",
                         }}
                       >
                         🎉 You're officially on the list!
@@ -450,7 +482,9 @@ export default function SignUp() {
               <div
                 style={{
                   display: "grid",
-                  gridTemplateColumns: "1fr 1fr 1fr",
+                  gridTemplateColumns: isMobile
+                    ? "1fr"
+                    : "repeat(auto-fit, minmax(180px, 1fr))",
                   gap: "1rem",
                 }}
               >
