@@ -27,10 +27,10 @@ function Navbar() {
           Home
         </Link>
         <Link to="/about" className={location.pathname === "/about" ? "active" : ""}>
-          About Us
+          About
         </Link>
         <Link to="/" className={location.pathname === "/sign-up" ? "active" : ""}>
-          Join The Community of Learners
+          Newsletter
         </Link>
         <Link to="/blog" className={location.pathname === "/blog" ? "active" : ""}>
           Blog

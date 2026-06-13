@@ -75,6 +75,14 @@ const Blog = () => {
             {[
               {
                 title:
+                  "FIFA World Cup 2026 Kicks Off",
+                desc: "The World's Biggest Soccer Party Has Officially Begun.",
+                img: "/world-cup.png",
+                link: "/theme-world-cup",
+                accent: "#71f4f8",
+              },
+              {
+                title:
                   "Adulting 101: The Fundamentals of What Nobody Tells You Today",
                 desc: "An Assessment from News In A Wink.",
                 img: "/adulting-101.png",

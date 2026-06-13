@@ -35,6 +35,7 @@ import Gifts from './pages/Gifts';
 import CreateGift from './pages/CreateGift';
 import Coins from './pages/eBay';
 import NewsPage1 from './pages/News';
+import ThemedNews1 from './pages/Posts/ThemedNews1';
 
 function App() {
   return (
@@ -67,6 +68,7 @@ function App() {
             <Route path="/story/3" element={<StoryThree />} />
             <Route path="/story/4" element={<StoryFour />} />
             <Route path="/story/6" element={<StorySix />} />
+            <Route path="/theme-world-cup" element={<ThemedNews1 />} />
             <Route path="/funding" element={<Funding />} />
             <Route path="/sign-up" element={<SignUp />} />
             <Route path="/giftcycle" element={<Gifts />} />
