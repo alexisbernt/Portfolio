@@ -126,15 +126,13 @@ export default function LearningLog() {
                   }}
                 >
                   <Sparkles size={16} />
-                  Daily Learning Platform
+                  Weekly Deep-Dive Publication
                 </div>
 
                 <h1 style={styles.sectionTitle}>
-                  One place to
+                  One trending
                   <br />
-                  track everything
-                  <br />
-                  you learn.
+                  story.
                 </h1>
 
                 <p
@@ -144,9 +142,8 @@ export default function LearningLog() {
                     maxWidth: "620px",
                   }}
                 >
-                  Build a public learning log where you can document ideas,
-                  coding discoveries, business insights, AI breakthroughs, and
-                  personal growth every day.
+                  Each week we pick a trending news theme and publish an
+                  in-depth piece on it. Less noise, more understanding.
                 </p>
 
                 {/* FEATURES */}
@@ -158,11 +155,11 @@ export default function LearningLog() {
                   }}
                 >
                   {[
-                    "Write and publish daily learning posts",
-                    "Build streaks and stay consistent",
-                    "Learn from the community",
-                    "Create your personal knowledge archive",
-                  ].map((item, index) => (
+                      "One trending news theme picked every week",
+                      "A single in-depth piece, not a feed of headlines",
+                      "Researched, written, and fact-checked for clarity",
+                      "Built for curious students and professionals",
+                    ].map((item, index) => (
                     <motion.div
                       key={index}
                       initial={{ opacity: 0 }}
@@ -210,7 +207,7 @@ export default function LearningLog() {
                     boxSizing: "border-box",
                   }}
                 >
-                  Start learning
+                  Read this week's story
                   <ArrowRight size={18} />
                 </Link>
               </div>
@@ -246,7 +243,7 @@ export default function LearningLog() {
                         fontSize: "1.1rem",
                       }}
                     >
-                      Today's Learning Log
+                      This Week's Theme
                     </div>
 
                     <div
@@ -261,7 +258,7 @@ export default function LearningLog() {
                         boxSizing: "border-box",
                       }}
                     >
-                      AI productivity tips
+                      The Rise of AI Agents
                     </div>
                   </div>
 
@@ -272,9 +269,9 @@ export default function LearningLog() {
                     }}
                   >
                     {[
-                      "Learned how vector databases improve AI memory retrieval.",
-                      "Studied React performance optimization with memoization.",
-                      "Discovered a faster workflow for TypeORM queries.",
+                      "How AI agents are reshaping daily workflows.",
+                      "What the latest funding wave means for the industry.",
+                      "The risks experts are watching closely this year.",
                     ].map((item, index) => (
                       <div
                         key={index}
@@ -289,7 +286,7 @@ export default function LearningLog() {
                           fontSize: "0.95rem",
                         }}
                       >
-                        ✍️ {item}
+                        📰 {item}
                       </div>
                     ))}
                   </div>
@@ -322,7 +319,7 @@ export default function LearningLog() {
                       fontWeight: "600",
                     }}
                   >
-                    Community Learning
+                    Reader Discussion
                   </div>
 
                   <h2
@@ -335,9 +332,11 @@ export default function LearningLog() {
                       letterSpacing: "-1px",
                     }}
                   >
-                    Learn from people
+                    See how others
                     <br />
-                    every day.
+                    interpret the
+                    <br />
+                    story.
                   </h2>
                 </div>
 
@@ -387,7 +386,7 @@ export default function LearningLog() {
                             fontSize: "0.98rem",
                           }}
                         >
-                          Alex's Learning Streak
+                          Alex on this week's piece
                         </div>
 
                         <div
@@ -396,7 +395,7 @@ export default function LearningLog() {
                             fontSize: "0.9rem",
                           }}
                         >
-                          42 day streak 🔥
+                          42 weeks of reading streak 🔥
                         </div>
                       </div>
                     </div>
@@ -408,9 +407,9 @@ export default function LearningLog() {
                       }}
                     >
                       {[
-                        "Learning advanced AI prompting techniques",
-                        "Reading about startup growth systems",
-                        "Building a React dashboard project",
+                        "This week's deep dive changed how I see AI agents.",
+                        "Shared three takeaways with my team this morning.",
+                        "Started a side project inspired by the analysis.",
                       ].map((item, index) => (
                         <div
                           key={index}
@@ -425,7 +424,7 @@ export default function LearningLog() {
                             wordBreak: "break-word",
                           }}
                         >
-                          📚 {item}
+                          💬 {item}
                         </div>
                       ))}
                     </div>
@@ -446,13 +445,13 @@ export default function LearningLog() {
                 {[
                   {
                     icon: <Flame size={28} />,
-                    title: "Streaks",
-                    desc: "Stay consistent daily.",
+                    title: "Weekly Drop",
+                    desc: "A new theme, every week.",
                   },
                   {
                     icon: <Users size={28} />,
                     title: "Community",
-                    desc: "Share knowledge publicly.",
+                    desc: "Discuss the story together.",
                   },
                 ].map((card, index) => (
                   <motion.div
