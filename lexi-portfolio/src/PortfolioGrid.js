@@ -144,11 +144,11 @@ function ModernLandingPage() {
             <div style={styles.label}>Welcome To News In A Wink</div>
 
             <h1 style={styles.h1}>
-              Changing Your Perspective On The News 
+              One Topic. One Week.  
             </h1>
 
             <p style={styles.text}>
-              Find the types of news stories that excite you. Ranging from technology, to health, to culture, and more - we break down the news into categories that make it easy to find what you care about.
+              News In A Week is a themed newsletter that takes one major topic dominating headlines and breaks it down into an easy-to-understand guide. Instead of trying to follow everything happening in the world, spend one week gaining a deeper understanding of one important story.
             </p>
 
             <Link to={featured.link} style={styles.button}>
