@@ -1,9 +1,24 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Footer from "./Footer";
 import { ArrowRight, Sparkles } from "lucide-react";
 
 function ModernLandingPage() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 900);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const stories = [
     {
       title:
@@ -52,7 +67,7 @@ function ModernLandingPage() {
 
     grid: {
       display: "grid",
-      gridTemplateColumns: "2fr 1fr",
+      gridTemplateColumns: isMobile ? "1fr" : "1fr 2fr",
       gap: "2.5rem",
       alignItems: "start",
     },
@@ -109,7 +124,7 @@ function ModernLandingPage() {
 
     sidebarCard: {
       display: "grid",
-      gridTemplateColumns: "100px 1fr",
+      gridTemplateColumns: isMobile ? "80px 1fr" : "100px 1fr",
       gap: "1rem",
       borderBottom: "1px solid #e5e7eb",
       paddingBottom: "1rem",
@@ -122,51 +137,8 @@ function ModernLandingPage() {
       <div style={styles.container}>
         {/* TOP GRID */}
         <div style={styles.grid}>
-      {/* LEFT FEATURE STORY */}
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-        <div style={styles.card}>
-          
-          {/* VIDEO INSTEAD OF IMAGE */}
-          <div
-            style={{
-              width: "100%",
-              height: "420px",
-              overflow: "hidden",
-            }}
-          >
-            <iframe
-              src="https://www.youtube.com/embed/0TZ_UzZETCs?autoplay=1&mute=1&loop=1&playlist=0TZ_UzZETCs&controls=0"
-              title="Promo Video"
-              allow="autoplay"
-              style={{
-                width: "100%",
-                height: "100%",
-                border: "none",
-                filter: "brightness(0.7)",
-              }}
-            />
-          </div>
-
-          <div style={{ padding: "1.5rem" }}>
-            <div style={styles.label}>Welcome To News In A Wink</div>
-
-            <h1 style={styles.h1}>
-              One Topic. One Week.  
-            </h1>
-
-            <p style={styles.text}>
-              News In A Week is a themed newsletter that takes one major topic dominating headlines and breaks it down into an easy-to-understand guide. Instead of trying to follow everything happening in the world, spend one week gaining a deeper understanding of one important story.
-            </p>
-
-            <Link to={featured.link} style={styles.button}>
-              Explore the latest <ArrowRight size={16} />
-            </Link>
-          </div>
-        </div>
-      </motion.div>
-
-          {/* RIGHT SIDEBAR */}
-          <div>
+          {/* LEFT SIDEBAR (NEW and NOW) */}
+          <div style={{ order: isMobile ? 2 : 1 }}>
             <h2 style={styles.sidebarTitle}>
               NEW <span style={{ fontStyle: "italic" }}>and</span> NOW
             </h2>
@@ -182,8 +154,8 @@ function ModernLandingPage() {
                     src={s.img}
                     alt=""
                     style={{
-                      width: "100px",
-                      height: "80px",
+                      width: "100%",
+                      height: isMobile ? "70px" : "80px",
                       objectFit: "cover",
                     }}
                   />
@@ -204,7 +176,7 @@ function ModernLandingPage() {
                     </div>
                   </div>
                 </div>
-                
+
               </Link>
             ))}
             <div style={{ marginTop: "1rem" }}>
@@ -259,63 +231,55 @@ function ModernLandingPage() {
                 </Link>
               </motion.div>
           </div>
-        </div>
 
-        {/* VIDEO SECTION (kept but simplified layout)
-        <section style={{ marginTop: "4rem" }}>
-          <div style={{ marginBottom: "1.5rem" }}>
-            <div style={styles.label}>Videos</div>
-            <h2 style={styles.h2}>Watch More</h2>
-          </div>
-
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(3, 1fr)",
-              gap: "1.5rem",
-            }}
+          {/* RIGHT FEATURE STORY (Promo Video) */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            style={{ order: isMobile ? 1 : 2 }}
           >
-            {[
-              "https://www.youtube.com/embed/5g8bPzI7ATk",
-              "https://www.youtube.com/embed/aO8flTH06-8",
-              "https://www.youtube.com/embed/1CNhia3X828",
-            ].map((src, i) => (
-              <div key={i} style={{ border: "1px solid #e5e7eb" }}>
+            <div style={styles.card}>
+
+              {/* VIDEO INSTEAD OF IMAGE */}
+              <div
+                style={{
+                  width: "100%",
+                  height: isMobile ? "240px" : "420px",
+                  overflow: "hidden",
+                }}
+              >
                 <iframe
-                  src={src}
-                  title="video"
-                  style={{ width: "100%", height: "220px", border: "none" }}
-                  allowFullScreen
+                  src="https://www.youtube.com/embed/0TZ_UzZETCs?autoplay=1&mute=1&loop=1&playlist=0TZ_UzZETCs&controls=0"
+                  title="Promo Video"
+                  allow="autoplay"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    border: "none",
+                    filter: "brightness(0.7)",
+                  }}
                 />
               </div>
-            ))}
-          </div>
-        </section> */}
 
-        {/* NEWSLETTER (kept minimal like editorial footer card)
-        <section style={{ marginTop: "4rem", borderTop: "1px solid #e5e7eb", paddingTop: "3rem" }}>
-          <div style={{ textAlign: "center" }}>
-            <h2 style={styles.h2}>Stay Ahead of the Week</h2>
-            <p style={{ ...styles.text, maxWidth: "600px", margin: "1rem auto" }}>
-              Get the clearest, fastest news breakdown delivered to you.
-            </p>
+              <div style={{ padding: "1.5rem" }}>
+                <div style={styles.label}>Welcome To News In A Wink</div>
 
-            <input
-              placeholder="Enter your email"
-              style={{
-                padding: "10px 12px",
-                border: "1px solid #d1d5db",
-                width: "280px",
-              }}
-            />
+                <h1 style={styles.h1}>
+                  One Topic. One Week.
+                </h1>
 
-            <div style={{ marginTop: "1rem" }}>
-              <Link to="/sign-up" style={styles.button}>
-                Get Newsletter <ArrowRight size={16} />
-              </Link>
+                <p style={styles.text}>
+                  News In A Week is a themed newsletter that takes one major topic dominating headlines and breaks it down into an easy-to-understand guide. Instead of trying to follow everything happening in the world, spend one week gaining a deeper understanding of one important story.
+                </p>
+
+                <Link to={featured.link} style={styles.button}>
+                  Explore the latest <ArrowRight size={16} />
+                </Link>
+              </div>
             </div>
-          </div>
-        </section> */}
+          </motion.div>
+        </div>
+
       </div>
 
       <Footer />
