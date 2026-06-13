@@ -38,9 +38,9 @@ function Navbar() {
         {/* <Link to="/minicon" className={location.pathname === "/minicon" ? "active" : ""}>
           MiniCon 2026
         </Link> */}
-        <Link to="/newsinawink" className={location.pathname === "/newsinawink" ? "active" : ""}>
+        {/* <Link to="/newsinawink" className={location.pathname === "/newsinawink" ? "active" : ""}>
           More...
-        </Link>
+        </Link> */}
       </div>
 
     </nav>

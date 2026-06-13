@@ -6,6 +6,13 @@ import { ArrowRight, Sparkles } from "lucide-react";
 function ModernLandingPage() {
   const stories = [
     {
+      title:
+        "The 2026 FIFA World Cup Has Kicked Off",
+      desc: "What we are watching at one of the FIFA Host Sites.",
+      img: "/world-cup.png",
+      link: "/theme-world-cup",
+    },
+    {
       title: "AI Is Moving Fast: What You Should Be Watching Right Now",
       desc: "An Assessment by News In A Wink.",
       img: "/anthropic.png",
@@ -184,8 +191,10 @@ function ModernLandingPage() {
                   <div>
                     <div style={styles.label}>
                       {i === 0
-                        ? "What To Watch In AI"
+                        ? "What You Need To Know"
                         : i === 1
+                        ? "What To Watch In AI"
+                        : i === 2
                         ? "Women & Athletics"
                         : "World News & The Royal Family"}
                     </div>
@@ -200,7 +209,7 @@ function ModernLandingPage() {
             ))}
             <div style={{ marginTop: "1rem" }}>
                     <Link to="/sign-up" style={styles.button}>
-                     Get The Newsletter: A Monthly Recap (It's Free!) <ArrowRight size={16} />
+                     Get The Newsletter: (It's Free!) <ArrowRight size={16} />
                     </Link>
                   </div>
             {/* NEWSLETTER + NEWS LEAGUE (TIGHT VERSION) */}
@@ -217,12 +226,9 @@ function ModernLandingPage() {
                   lineHeight: 1.3,
                 }}
               >
-                <div style={{ fontSize: "0.72rem", fontWeight: 700, color: "#6b7280" }}>
-                  LEARNING COMPETITION
-                </div>
 
                 <div style={{ fontSize: "1rem", fontWeight: 800, marginTop: "0.25rem" }}>
-                  Learning League 🏆
+                  NEWS IN A WINK NEWSLETTER
                 </div>
 
                 <p
@@ -233,7 +239,7 @@ function ModernLandingPage() {
                     fontSize: "0.9rem",
                   }}
                 >
-                 Taking entries for a new competition called learning league. Coming soon. Win <strong>$100</strong>.
+                 Sign up between now and August 1st 2026 for a chance to win <strong>$100</strong>.
                 </p>
 
                 <Link
@@ -255,7 +261,7 @@ function ModernLandingPage() {
           </div>
         </div>
 
-        {/* VIDEO SECTION (kept but simplified layout) */}
+        {/* VIDEO SECTION (kept but simplified layout)
         <section style={{ marginTop: "4rem" }}>
           <div style={{ marginBottom: "1.5rem" }}>
             <div style={styles.label}>Videos</div>
@@ -284,7 +290,7 @@ function ModernLandingPage() {
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
 
         {/* NEWSLETTER (kept minimal like editorial footer card)
         <section style={{ marginTop: "4rem", borderTop: "1px solid #e5e7eb", paddingTop: "3rem" }}>

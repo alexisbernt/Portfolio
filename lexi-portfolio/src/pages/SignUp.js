@@ -374,7 +374,7 @@ export default function SignUp() {
                       fontWeight: "600",
                     }}
                   >
-                    Create Account
+                    Sign up for the Newsletter
                   </div>
 
                   <h2
