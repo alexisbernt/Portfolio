@@ -91,7 +91,7 @@ export default function SignUp() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    learningGoal: "",
+    interestTopic: "",
   });
 
   const [loading, setLoading] = useState(false);
@@ -128,7 +128,7 @@ export default function SignUp() {
         {
           from_name: formData.name,
           from_email: formData.email,
-          learning_goal: formData.learningGoal,
+          interest_topic: formData.interestTopic,
         },
         "YOUR_PUBLIC_KEY"
       );
@@ -138,7 +138,7 @@ export default function SignUp() {
       setFormData({
         name: "",
         email: "",
-        learningGoal: "",
+        interestTopic: "",
       });
     } catch (error) {
       console.error(error);
@@ -199,15 +199,13 @@ export default function SignUp() {
                   }}
                 >
                   <Sparkles size={16} />
-                  Join The Learning Community
+                  Join The Reader Community
                 </div>
 
                 <h1 style={styles.sectionTitle}>
-                  Start building
+                  This week's
                   <br />
-                  your learning
-                  <br />
-                  streak today.
+                  big story.
                 </h1>
 
                 <p
@@ -217,9 +215,9 @@ export default function SignUp() {
                     maxWidth: "580px",
                   }}
                 >
-                  Document what you learn every day, build consistency, and
-                  share your ideas with a growing community of learners,
-                  developers, and creators.
+                  Sign up to get our weekly deep-dive delivered straight to
+                  your inbox, and join a growing community of readers who
+                  get details on the news.
                 </p>
 
                 <div
@@ -230,10 +228,9 @@ export default function SignUp() {
                   }}
                 >
                   {[
-                    "Track your learning journey",
-                    "Build public learning streaks",
-                    "Connect with ambitious learners",
-                    "Share insights and discoveries",
+                    "One trending news theme, explored every week",
+                    "Delivered straight to your inbox",
+                    "Connect with curious, engaged people who want to understand the news better",
                   ].map((item, index) => (
                     <motion.div
                       key={index}
@@ -306,7 +303,7 @@ export default function SignUp() {
                           fontSize: "clamp(0.95rem, 2vw, 1rem)",
                         }}
                       >
-                        Maya's Learning Log
+                        PREVIEW: This Week's Theme
                       </div>
 
                       <div
@@ -315,7 +312,7 @@ export default function SignUp() {
                           fontSize: "0.9rem",
                         }}
                       >
-                        58 day streak 🔥
+                        The Rise of AI Agents 🔥
                       </div>
                     </div>
                   </div>
@@ -327,9 +324,9 @@ export default function SignUp() {
                     }}
                   >
                     {[
-                      "Learning advanced React architecture patterns.",
-                      "Exploring AI startup growth systems.",
-                      "Building scalable Node.js backend workflows.",
+                      "How AI agents are reshaping daily workflows.",
+                      "What the latest funding wave means for the industry.",
+                      "The risks experts are watching closely this year.",
                     ].map((item, index) => (
                       <div
                         key={index}
@@ -344,7 +341,7 @@ export default function SignUp() {
                           wordBreak: "break-word",
                         }}
                       >
-                        📚 {item}
+                        📰 {item}
                       </div>
                     ))}
                   </div>
@@ -391,8 +388,6 @@ export default function SignUp() {
                     }}
                   >
                     Join thousands
-                    <br />
-                    of learners.
                   </h2>
 
                   <p
@@ -403,8 +398,9 @@ export default function SignUp() {
                       fontSize: "clamp(0.95rem, 2vw, 1rem)",
                     }}
                   >
-                    Sign up to start logging your daily learning journey and
-                    connect with a community focused on growth.
+                    Sign up to get this week's deep-dive and future weekly
+                    pieces, plus join a community focused on understanding
+                    the news.
                   </p>
 
                   <form
@@ -435,9 +431,9 @@ export default function SignUp() {
                     />
 
                     <textarea
-                      name="learningGoal"
-                      placeholder="What are you currently learning?"
-                      value={formData.learningGoal}
+                      name="interestTopic"
+                      placeholder="What topics or themes are you most interested in?"
+                      value={formData.interestTopic}
                       onChange={handleChange}
                       rows={5}
                       required
@@ -454,7 +450,7 @@ export default function SignUp() {
                       disabled={loading}
                       style={styles.button}
                     >
-                      {loading ? "Submitting..." : "Start Learning"}
+                      {loading ? "Submitting..." : "Subscribe Now"}
                       <ArrowRight size={18} />
                     </button>
 
@@ -491,18 +487,18 @@ export default function SignUp() {
                 {[
                   {
                     icon: <Flame size={26} />,
-                    title: "Streaks",
-                    desc: "Stay consistent.",
+                    title: "Weekly Drop",
+                    desc: "New theme weekly.",
                   },
                   {
                     icon: <Users size={26} />,
                     title: "Community",
-                    desc: "Learn together.",
+                    desc: "Discuss together.",
                   },
                   {
                     icon: <BookOpen size={26} />,
-                    title: "Knowledge",
-                    desc: "Track progress.",
+                    title: "Deep Dives",
+                    desc: "Beyond headlines.",
                   },
                 ].map((card, index) => (
                   <motion.div

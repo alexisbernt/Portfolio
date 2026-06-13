@@ -386,7 +386,7 @@ export default function LearningLog() {
                             fontSize: "0.98rem",
                           }}
                         >
-                          Alex on this week's piece
+                        PREVIEW: Andy on this week's news piece
                         </div>
 
                         <div
