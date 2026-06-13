@@ -9,12 +9,18 @@ function Navbar() {
 
       {/* LOGO + TITLE */}
       <div className="navbar-top">
-        <img src="/logo.png" alt="Digital Women KC Logo" className="logo" />
-        <h1 className="brand-title">
-          &lt;/ News In A <span>Wink </span>&gt; 
-        </h1>
-      </div>
+        <img src="/logo.png" alt="News In A Wink Logo" className="logo" />
 
+        <div className="brand-container">
+          <h1 className="brand-title">
+            &lt;/ News In A <span>Wink</span> &gt;
+          </h1>
+
+          <p className="brand-subtitle">
+            <i>The Blog For People Who Want Better News </i>
+          </p>
+        </div>
+      </div>
       {/* NAV LINKS */}
       <div className="navbar-links">
         <Link to="/home" className={location.pathname === "/home" ? "active" : ""}>
