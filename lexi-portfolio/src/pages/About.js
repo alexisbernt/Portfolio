@@ -243,7 +243,7 @@ export default function LearningLog() {
                         fontSize: "1.1rem",
                       }}
                     >
-                      This Week's Theme
+                      PREVIEW: Last Week
                     </div>
 
                     <div
@@ -319,7 +319,7 @@ export default function LearningLog() {
                       fontWeight: "600",
                     }}
                   >
-                    Reader Discussion
+                    Trending News
                   </div>
 
                   <h2
@@ -332,9 +332,7 @@ export default function LearningLog() {
                       letterSpacing: "-1px",
                     }}
                   >
-                    See how others
-                    <br />
-                    interpret the
+                    Understand the
                     <br />
                     story.
                   </h2>
@@ -386,7 +384,7 @@ export default function LearningLog() {
                             fontSize: "0.98rem",
                           }}
                         >
-                        PREVIEW: Andy on this week's news piece
+                        PREVIEW: This week's news piece
                         </div>
 
                         <div
@@ -395,7 +393,7 @@ export default function LearningLog() {
                             fontSize: "0.9rem",
                           }}
                         >
-                          42 weeks of reading streak 🔥
+                          Andy, you have a 42 week reading streak 🔥
                         </div>
                       </div>
                     </div>
@@ -407,9 +405,9 @@ export default function LearningLog() {
                       }}
                     >
                       {[
-                        "This week's deep dive changed how I see AI agents.",
-                        "Shared three takeaways with my team this morning.",
-                        "Started a side project inspired by the analysis.",
+                        "This week's deep dive covers the 2026 FIFA World Cup.",
+                        "Read the newsletter and have takeaways to share with your team this morning.",
+                        "Share your thoughts in the comments.",
                       ].map((item, index) => (
                         <div
                           key={index}

@@ -199,7 +199,7 @@ export default function SignUp() {
                   }}
                 >
                   <Sparkles size={16} />
-                  Join The Reader Community
+                  Get Your News Quick
                 </div>
 
                 <h1 style={styles.sectionTitle}>
@@ -230,7 +230,7 @@ export default function SignUp() {
                   {[
                     "One trending news theme, explored every week",
                     "Delivered straight to your inbox",
-                    "Connect with curious, engaged people who want to understand the news better",
+                    "Understand the news better",
                   ].map((item, index) => (
                     <motion.div
                       key={index}
